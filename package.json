@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "find out -name '*.html' -exec sed -i '' 's|href=\"/|href=\"/brightsupport/|g; s|src=\"/|src=\"/brightsupport/|g' {} \\;",
     "start": "next start",
     "lint": "eslint",
     "export": "next build && touch out/.nojekyll"
