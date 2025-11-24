@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/independent-living-accommodation-support/layout,_N_T_/services/independent-living-accommodation-support/page,_N_T_/services/independent-living-accommodation-support/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/services/independent-living-accommodation-support/__PAGE__",
+    "/services/independent-living-accommodation-support",
+    "/services",
+    "/_index",
+    "/_head"
+  ]
+}

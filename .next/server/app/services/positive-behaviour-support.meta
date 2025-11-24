@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/positive-behaviour-support/layout,_N_T_/services/positive-behaviour-support/page,_N_T_/services/positive-behaviour-support/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/services/positive-behaviour-support/__PAGE__",
+    "/services/positive-behaviour-support",
+    "/services",
+    "/_index",
+    "/_head"
+  ]
+}

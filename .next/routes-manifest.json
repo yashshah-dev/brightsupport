@@ -1,0 +1,205 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "/bright-support",
+  "redirects": [
+    {
+      "source": "/bright-support",
+      "destination": "/bright-support/",
+      "basePath": false,
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^/bright-support$"
+    },
+    {
+      "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
+      "destination": "/:file",
+      "internal": true,
+      "priority": true,
+      "missing": [
+        {
+          "type": "header",
+          "key": "x-nextjs-data"
+        }
+      ],
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"
+    },
+    {
+      "source": "/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)",
+      "destination": "/:notfile/",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/api/contact",
+      "regex": "^/api/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
+      "page": "/career",
+      "regex": "^/career(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/career(?:/)?$"
+    },
+    {
+      "page": "/contact-us",
+      "regex": "^/contact\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact\\-us(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/our-services",
+      "regex": "^/our\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-services(?:/)?$"
+    },
+    {
+      "page": "/privacy-policy",
+      "regex": "^/privacy\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy\\-policy(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/services/community-nursing-complex-care",
+      "regex": "^/services/community\\-nursing\\-complex\\-care(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/community\\-nursing\\-complex\\-care(?:/)?$"
+    },
+    {
+      "page": "/services/community-participation-group-programs",
+      "regex": "^/services/community\\-participation\\-group\\-programs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/community\\-participation\\-group\\-programs(?:/)?$"
+    },
+    {
+      "page": "/services/companionship",
+      "regex": "^/services/companionship(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/companionship(?:/)?$"
+    },
+    {
+      "page": "/services/daily-living-in-home-support",
+      "regex": "^/services/daily\\-living\\-in\\-home\\-support(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/daily\\-living\\-in\\-home\\-support(?:/)?$"
+    },
+    {
+      "page": "/services/hydrotherapy-pool-session",
+      "regex": "^/services/hydrotherapy\\-pool\\-session(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/hydrotherapy\\-pool\\-session(?:/)?$"
+    },
+    {
+      "page": "/services/independent-living-accommodation-support",
+      "regex": "^/services/independent\\-living\\-accommodation\\-support(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/independent\\-living\\-accommodation\\-support(?:/)?$"
+    },
+    {
+      "page": "/services/personal-training-sessions",
+      "regex": "^/services/personal\\-training\\-sessions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/personal\\-training\\-sessions(?:/)?$"
+    },
+    {
+      "page": "/services/physiotherapy-services",
+      "regex": "^/services/physiotherapy\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/physiotherapy\\-services(?:/)?$"
+    },
+    {
+      "page": "/services/positive-behaviour-support",
+      "regex": "^/services/positive\\-behaviour\\-support(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/positive\\-behaviour\\-support(?:/)?$"
+    },
+    {
+      "page": "/services/professional-cleaning",
+      "regex": "^/services/professional\\-cleaning(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/professional\\-cleaning(?:/)?$"
+    },
+    {
+      "page": "/services/travel-transport-assistance",
+      "regex": "^/services/travel\\-transport\\-assistance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/travel\\-transport\\-assistance(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

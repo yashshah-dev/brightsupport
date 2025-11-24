@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/community-nursing-complex-care/layout,_N_T_/services/community-nursing-complex-care/page,_N_T_/services/community-nursing-complex-care/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/services/community-nursing-complex-care/__PAGE__",
+    "/services/community-nursing-complex-care",
+    "/services",
+    "/_index",
+    "/_head"
+  ]
+}

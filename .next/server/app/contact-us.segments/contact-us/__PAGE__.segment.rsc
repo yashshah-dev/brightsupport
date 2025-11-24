@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[47257,["/bright-support/_next/static/chunks/ff1a16fafef87110.js","/bright-support/_next/static/chunks/247eb132b7f7b574.js"],"ClientPageRoot"]
+3:I[76292,["/bright-support/_next/static/chunks/0a367168e7a710f7.js","/bright-support/_next/static/chunks/fb263826126910ef.js"],"default"]
+6:I[97367,["/bright-support/_next/static/chunks/ff1a16fafef87110.js","/bright-support/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"buildId":"kBdl2OStoinSSxPiNAkXm","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/bright-support/_next/static/chunks/fb263826126910ef.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+4:{}
+5:{}
+8:null
