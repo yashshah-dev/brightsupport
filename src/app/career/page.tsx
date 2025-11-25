@@ -107,6 +107,7 @@ export default function CareerPage() {
                 className="w-full h-auto object-cover"
                 width={1200}
                 height={700}
+                widths={[480,768,1024]}
               />
             </div>
           </div>

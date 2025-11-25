@@ -222,6 +222,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 width={800}
                 height={1000}
+                widths={[480,768,1024]}
               />
             </div>
           </div>
