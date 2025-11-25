@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { CheckCircle, Award, TrendingUp, Heart, Users, Clock } from 'lucide-react';
+import { getAssetPath } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Career Opportunities | Join Our Team - Bright Support',
@@ -101,7 +102,7 @@ export default function CareerPage() {
             </div>
             <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
               <Image
-                src="/images/career/team-culture.webp"
+                src={getAssetPath("/images/career/team-culture.webp")}
                 alt="Bright Support team members in training and collaboration session"
                 width={1200}
                 height={700}

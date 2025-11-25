@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import { useState } from 'react';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { getAssetPath } from '@/lib/utils';
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
@@ -72,7 +73,7 @@ export default function ContactUsPage() {
           <div className="max-w-6xl mx-auto mb-16">
             <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
               <Image
-                src="/images/contact/office-welcome.webp"
+                src={getAssetPath("/images/contact/office-welcome.webp")}
                 alt="Bright Support welcoming office reception area"
                 width={800}
                 height={500}

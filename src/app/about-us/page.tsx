@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Target, Users, Heart, Award, Download } from 'lucide-react';
+import { getAssetPath } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'About Us | Bright Support - Our Story & Mission',
@@ -29,7 +30,7 @@ export default function AboutUsPage() {
           <div className="max-w-6xl mx-auto">
             <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
               <Image
-                src="/images/about/team-photo.webp"
+                src={getAssetPath("/images/about/team-photo.webp")}
                 alt="Bright Support team of healthcare professionals and support workers"
                 width={1400}
                 height={600}
@@ -205,7 +206,7 @@ export default function AboutUsPage() {
             </div>
             <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
               <Image
-                src="/images/about/community-impact.webp"
+                src={getAssetPath("/images/about/community-impact.webp")}
                 alt="NDIS participants and support workers enjoying community activities together"
                 width={1400}
                 height={600}

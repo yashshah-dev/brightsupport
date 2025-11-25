@@ -7,6 +7,7 @@ import {
 import ServiceCard from '@/components/ServiceCard';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
+import { getAssetPath } from '@/lib/utils';
 
 export default function HomePage() {
   const featuredServices = [
@@ -109,7 +110,7 @@ export default function HomePage() {
             <div className="order-1 lg:order-2">
               <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
                 <Image
-                  src="/images/hero/hero-main.webp"
+                  src={getAssetPath("/images/hero/hero-main.webp")}
                   alt="NDIS support worker providing compassionate care to participant"
                   width={1200}
                   height={800}
@@ -213,7 +214,7 @@ export default function HomePage() {
             </div>
             <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
               <Image
-                src="/images/general/services-in-action.webp"
+                src={getAssetPath("/images/general/services-in-action.webp")}
                 alt="NDIS support worker assisting participant with daily living activities"
                 width={800}
                 height={1000}

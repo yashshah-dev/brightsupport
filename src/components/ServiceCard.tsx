@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { getAssetPath } from '@/lib/utils';
 
 interface ServiceCardProps {
   title: string;
@@ -17,7 +18,7 @@ export default function ServiceCard({ title, description, href, icon, imageSrc }
         <div className="aspect-video bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 flex items-center justify-center relative overflow-hidden">
           {imageSrc ? (
             <Image
-              src={imageSrc}
+              src={getAssetPath(imageSrc)}
               alt={title}
               width={600}
               height={400}
