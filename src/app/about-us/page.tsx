@@ -25,7 +25,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Team Photo */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" style={{ contentVisibility: 'auto', containIntrinsicSize: '600px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
@@ -43,7 +43,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Story & Mission */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30" style={{ contentVisibility: 'auto', containIntrinsicSize: '900px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
@@ -151,7 +151,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30" style={{ contentVisibility: 'auto', containIntrinsicSize: '800px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-14 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">

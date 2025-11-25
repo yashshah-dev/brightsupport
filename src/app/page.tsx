@@ -1,5 +1,7 @@
+"use client";
 import Link from 'next/link';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
+import React, { useState } from 'react';
 import { 
   Heart, Users, Home, Activity, Stethoscope, Car, 
   Sparkles, Clock, Shield, CheckCircle, Phone 
@@ -10,6 +12,51 @@ import FAQ from '@/components/FAQ';
 import { getAssetPath } from '@/lib/utils';
 
 export default function HomePage() {
+  const [videoReady, setVideoReady] = useState(false);
+  function LazyVideoEmbed({ videoId, title }: { videoId: string; title: string }) {
+    const [load, setLoad] = useState(false);
+    const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    return (
+      <div className="aspect-video rounded-3xl overflow-hidden shadow-elegant-lg border-4 border-white hover:scale-[1.02] transition-transform duration-300 relative bg-black">
+        {!load && (
+          <button
+            type="button"
+            aria-label={`Play video: ${title}`}
+            onClick={() => setLoad(true)}
+            className="group w-full h-full relative"
+            style={{ display: 'block' }}
+          >
+            <img
+              src={thumb}
+              alt={title}
+              className="w-full h-full object-cover group-hover:brightness-90 transition"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="bg-white/80 backdrop-blur-sm rounded-full p-5 shadow-elegant group-hover:scale-110 transition-transform">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600">
+                  <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+          </button>
+        )}
+        {load && (
+          <iframe
+            width="100%"
+            height="100%"
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            title={title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+            className="w-full h-full"
+          ></iframe>
+        )}
+      </div>
+    );
+  }
   const featuredServices = [
     {
       title: 'Daily Living & In-Home Support',
@@ -124,8 +171,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-20 bg-gradient-to-br from-white to-slate-50">
+      {/* Video Section (lazy embed with poster) */}
+      <section className="py-20 bg-gradient-to-br from-white to-slate-50" style={{ contentVisibility: 'auto', containIntrinsicSize: '800px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -136,17 +183,7 @@ export default function HomePage() {
                 Watch our video to understand how we can support you
               </p>
             </div>
-            <div className="aspect-video rounded-3xl overflow-hidden shadow-elegant-lg border-4 border-white hover:scale-[1.02] transition-transform duration-300">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/0Vyy3CjCcKk"
-                title="Bright Support Services"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
+            <LazyVideoEmbed videoId="0Vyy3CjCcKk" title="Bright Support Services" />
           </div>
         </div>
       </section>

@@ -89,7 +89,7 @@ export default function CareerPage() {
       </section>
 
       {/* Team Culture */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30" style={{ contentVisibility: 'auto', containIntrinsicSize: '900px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto mb-20">
             <div className="text-center mb-10">
@@ -115,7 +115,7 @@ export default function CareerPage() {
       </section>
 
       {/* Criteria Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" style={{ contentVisibility: 'auto', containIntrinsicSize: '700px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">

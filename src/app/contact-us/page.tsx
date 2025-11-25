@@ -68,7 +68,7 @@ export default function ContactUsPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30" style={{ contentVisibility: 'auto', containIntrinsicSize: '750px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto mb-16">
             <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
