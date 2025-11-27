@@ -11,9 +11,38 @@ async function collectFiles(dir) {
   for (const e of entries) {
     const full = path.join(dir, e.name)
     if (e.isDirectory()) files.push(...(await collectFiles(full)))
-    else if (/\.(webp|png|jpg|jpeg)$/i.test(e.name)) files.push(full)
+    else if (/\.(webp|png|jpg|jpeg)$/i.test(e.name)) {
+      // Only process original files that don't have width suffixes
+      // Skip files that contain patterns like -480, -768, -1024, -1400
+      const baseName = path.parse(e.name).name
+      if (!/-\d+$/.test(baseName)) {
+        files.push(full)
+      }
+    }
   }
   return files
+}
+
+async function cleanupMalformedVariants(dir) {
+  const entries = await fs.readdir(dir, { withFileTypes: true })
+  for (const e of entries) {
+    const full = path.join(dir, e.name)
+    if (e.isDirectory()) {
+      await cleanupMalformedVariants(full)
+    } else if (/\.(webp|avif)$/i.test(e.name)) {
+      const baseName = path.parse(e.name).name
+      // Count width suffixes
+      const widthMatches = baseName.match(/-\d+/g)
+      const widthCount = widthMatches ? widthMatches.length : 0
+      
+      // Keep only files with 0 or 1 width suffix (originals and their direct variants)
+      // Remove files with 2 or more width suffixes (malformed variants)
+      if (widthCount > 1) {
+        console.log(`Removing malformed variant: ${e.name}`)
+        await fs.unlink(full)
+      }
+    }
+  }
 }
 
 function variantName(file, w, ext) {
@@ -27,6 +56,28 @@ async function ensureVariants(file) {
   const buf = await fs.readFile(file)
   const image = sharp(buf)
   const meta = await image.metadata()
+  
+  // Check if all variants already exist
+  let allVariantsExist = true
+  for (const w of widths) {
+    if (meta.width && meta.width < w) continue
+    const webpPath = path.join(dir, variantName(file, w, 'webp'))
+    const avifPath = path.join(dir, variantName(file, w, 'avif'))
+    try { 
+      await fs.access(webpPath)
+      await fs.access(avifPath)
+    } catch {
+      allVariantsExist = false
+      break
+    }
+  }
+  
+  // Skip if all variants exist
+  if (allVariantsExist) {
+    process.stdout.write(base + ' (skipped - variants exist)\n')
+    return
+  }
+  
   for (const w of widths) {
     if (meta.width && meta.width < w) continue
     const webpPath = path.join(dir, variantName(file, w, 'webp'))
@@ -44,7 +95,13 @@ async function ensureVariants(file) {
 }
 
 async function run() {
+  console.log('Cleaning up malformed variant files...')
+  await cleanupMalformedVariants(rootDir)
+  
+  console.log('Processing original images...')
   const originals = await collectFiles(rootDir)
+  console.log(`Found ${originals.length} original images to process`)
+  
   for (const f of originals) await ensureVariants(f)
 }
 

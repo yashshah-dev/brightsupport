@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { Phone, CheckCircle } from 'lucide-react';
 import FAQ from './FAQ';
+import { trackPhoneCall, trackButtonClick } from '@/lib/analytics';
 
 interface ServicePageTemplateProps {
   title: string;
@@ -166,6 +169,7 @@ export default function ServicePageTemplate({
               <a
                 href="tel:1800407508"
                 className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl flex items-center justify-center gap-2"
+                onClick={() => trackPhoneCall('1800 407 508', { service_page: title })}
               >
                 <Phone size={20} />
                 1800 407 508
@@ -173,6 +177,7 @@ export default function ServicePageTemplate({
               <Link
                 href="/contact-us"
                 className="bg-amber-500 hover:bg-amber-400 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
+                onClick={() => trackButtonClick('contact_us_online', { service_page: title })}
               >
                 Contact Us Online
               </Link>

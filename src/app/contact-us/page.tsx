@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import { getAssetPath } from '@/lib/utils';
+import { trackPhoneCall, trackButtonClick, trackServiceInquiry } from '@/lib/analytics';
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
@@ -41,6 +42,12 @@ export default function ContactUsPage() {
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+        // Track successful form submission
+        trackServiceInquiry('contact_form', {
+          subject: formData.subject,
+          has_phone: !!formData.phone,
+          source: 'contact_page'
+        });
       } else {
         setSubmitStatus('error');
       }
@@ -93,7 +100,11 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-1">Phone</h3>
-                    <a href="tel:1800407508" className="text-indigo-600 hover:text-purple-600 transition-colors duration-300">
+                    <a
+                      href="tel:1800407508"
+                      className="text-indigo-600 hover:text-purple-600 transition-colors duration-300"
+                      onClick={() => trackPhoneCall('1800 407 508', { source: 'contact_page' })}
+                    >
                       1800 407 508
                     </a>
                   </div>
@@ -105,7 +116,11 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-1">Email</h3>
-                    <a href="mailto:care@brightsupport.com.au" className="text-indigo-600 hover:text-purple-600 break-all transition-colors duration-300">
+                    <a
+                      href="mailto:care@brightsupport.com.au"
+                      className="text-indigo-600 hover:text-purple-600 break-all transition-colors duration-300"
+                      onClick={() => trackButtonClick('email_click', { source: 'contact_page' })}
+                    >
                       care@brightsupport.com.au
                     </a>
                   </div>

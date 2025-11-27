@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -50,6 +51,27 @@ export default function RootLayout({
           imageSrcSet="/bright-support/images/hero/hero-main-480.avif 480w, /bright-support/images/hero/hero-main-768.avif 768w, /bright-support/images/hero/hero-main-1024.avif 1024w, /bright-support/images/hero/hero-main-1400.avif 1400w"
           imageSizes="(max-width: 768px) 100vw, 50vw"
         />
+        {/* Google Analytics 4 Scripts */}
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+          />
+        )}
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <Script
+            id="google-analytics"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+              `,
+            }}
+          />
+        )}
       </head>
       <body className={`${inter.className} antialiased`}>
         <Header />

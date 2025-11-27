@@ -10,6 +10,7 @@ import ServiceCard from '@/components/ServiceCard';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import { getAssetPath } from '@/lib/utils';
+import { trackPhoneCall, trackButtonClick } from '@/lib/analytics';
 
 export default function HomePage() {
   const [videoReady, setVideoReady] = useState(false);
@@ -142,12 +143,14 @@ export default function HomePage() {
                 <Link
                   href="/our-services"
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  onClick={() => trackButtonClick('discover_services', { source: 'hero_section' })}
                 >
                   Discover More Services
                 </Link>
                 <a
                   href="tel:1800407508"
                   className="bg-white hover:bg-slate-50 text-slate-700 px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg border-2 border-slate-200 hover:border-indigo-300 flex items-center gap-2"
+                  onClick={() => trackPhoneCall('1800 407 508', { source: 'hero_section' })}
                 >
                   <Phone size={20} className="text-indigo-600" />
                   Contact Now
@@ -287,6 +290,7 @@ export default function HomePage() {
               <a
                 href="tel:1800407508"
                 className="bg-white hover:bg-amber-50 text-indigo-600 px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl flex items-center justify-center gap-2"
+                onClick={() => trackPhoneCall('1800 407 508', { source: 'cta_section' })}
               >
                 <Phone size={20} />
                 1800 407 508
@@ -294,6 +298,7 @@ export default function HomePage() {
               <Link
                 href="/contact-us"
                 className="bg-amber-500 hover:bg-amber-400 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
+                onClick={() => trackButtonClick('send_message', { source: 'cta_section' })}
               >
                 Send Us A Message
               </Link>

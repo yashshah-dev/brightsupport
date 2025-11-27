@@ -1,7 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { ArrowRight } from 'lucide-react';
 import { getAssetPath } from '@/lib/utils';
+import { trackButtonClick } from '@/lib/analytics';
 
 interface ServiceCardProps {
   title: string;
@@ -12,8 +15,12 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ title, description, href, icon, imageSrc }: ServiceCardProps) {
+  const handleClick = () => {
+    trackButtonClick('service_card_click', { service_name: title, href });
+  };
+
   return (
-    <Link href={href}>
+    <Link href={href} onClick={handleClick}>
       <div className="bg-white rounded-2xl shadow-elegant hover:shadow-elegant-lg transition-all duration-300 overflow-hidden h-full hover:-translate-y-2 group border border-slate-100">
         <div className="aspect-video bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 flex items-center justify-center relative overflow-hidden">
           {imageSrc ? (
