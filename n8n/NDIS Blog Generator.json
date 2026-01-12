@@ -1,0 +1,766 @@
+{
+  "name": "NDIS Blog Generator - Local Ollama",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "6d4e3fa7-64d6-4f2f-b29e-9e6d7c1d0ec7",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        -1312,
+        -336
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1ksc2ODaotPppuTHXu0NpJlRYPxWPBCFnk0V3jkVzEUo",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ksc2ODaotPppuTHXu0NpJlRYPxWPBCFnk0V3jkVzEUo/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "row_number",
+              "lookupValue": "2"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f56dbcfa-e797-4902-ad03-fa3598783d57",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -1120,
+        -336
+      ],
+      "typeVersion": 4.5,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "feUc9ZEtQuxL9TmA",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  try {\n    item.json.structure = JSON.parse(item.json.choices[0].message.content);\n  } catch (error) {\n    item.json.error = 'Failed to parse structure JSON: ' + error.message;\n  }\n}\nreturn $input.all();"
+      },
+      "id": "fbe9313c-9d45-43e7-9ce7-efa7601acbda",
+      "name": "Parse Structure JSON",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -672,
+        -336
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  try {\n    let articleContent = item.json.choices[0].message.content;\n    // Clean up escaped newlines and replace with actual newlines\n    articleContent = articleContent.replace(/\\\\n/g, '\\n');\n    item.json.article = articleContent;\n    if (!item.json.article || item.json.article.length < 100) {\n      item.json.error = 'Article too short or missing';\n    }\n  } catch (error) {\n    item.json.error = 'Failed to extract article: ' + error.message;\n  }\n}\nreturn $input.all();"
+      },
+      "id": "c8b69fd0-3646-4707-9f9f-794348dbf484",
+      "name": "Extract Article HTML",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -320,
+        -160
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1",
+              "operator": {
+                "name": "filter.operator.isNotEmpty"
+              },
+              "value": "=$('Extract Article HTML').item.json.article",
+              "type": "string"
+            },
+            {
+              "id": "2",
+              "operator": {
+                "name": "filter.operator.gte"
+              },
+              "value": "=$('Extract Article HTML').item.json.article.length",
+              "value2": "500",
+              "type": "number"
+            },
+            {
+              "id": "6d6dc6b9-1a7a-47bd-89c2-2b9654207761",
+              "leftValue": "={{ $json.choices[0].message.content.length }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "667f0409-4c5b-4ea9-8edb-512083d2625b",
+      "name": "Quality Check",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -48,
+        -224
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  try {\n    item.json.seoScores = JSON.parse(item.json.response);\n    // Validate required fields\n    if (!item.json.seoScores.overall_score || !item.json.seoScores.person_first_language_score) {\n      item.json.error = 'Invalid SEO scores structure';\n    }\n  } catch (error) {\n    item.json.error = 'Failed to parse SEO scores: ' + error.message;\n  }\n}\nreturn $input.all();"
+      },
+      "id": "f141f7f9-7103-42af-bdd5-973ed802e975",
+      "name": "Parse SEO Score",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        528,
+        -560
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1",
+              "operator": {
+                "name": "filter.operator.gte"
+              },
+              "value": "=$('Parse SEO Score').item.json.overall_score",
+              "value2": "70",
+              "type": "number"
+            },
+            {
+              "id": "2",
+              "operator": {
+                "name": "filter.operator.gte"
+              },
+              "value": "=$('Parse SEO Score').item.json.person_first_language_score",
+              "value2": "85",
+              "type": "number"
+            },
+            {
+              "id": "cd1591e3-13cf-4b09-afe0-481f990fe59e",
+              "leftValue": "={{ true }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "5ae1fc92-4ff5-4bd1-913c-b6fd2fdcbee1",
+      "name": "Quality Gate",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        480,
+        -336
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "url": "https://api.pexels.com/v1/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ $json.choices[0].message.content }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "3sijxSeiBYamQT4USWSrUsYHoCcsxti6IrdCPDTES7AdrDeHQpZfkrYw"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "eae9790d-1f37-47e4-b898-bb7ab5e80a7e",
+      "name": "Fetch Stock Photo (Pexels)",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        880,
+        -336
+      ],
+      "typeVersion": 4.3
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  // Extract image URL from Pexels response\n  if (item.json.photos && item.json.photos.length > 0) {\n    item.json.imageUrl = item.json.photos[0].src.original;\n  } else {\n    // Fallback image if no photos found\n    item.json.imageUrl = 'https://images.pexels.com/photos/6981086/pexels-photo-6981086.jpeg';\n  }\n}\nreturn $input.all();"
+      },
+      "id": "fd0dfef5-3650-4b47-8ed0-e3e917a8c753",
+      "name": "Extract Image URL",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1072,
+        -336
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  // Get article content and metadata\n  const articleHtml = $('Extract Article HTML').first().json.choices[0].message.content;\n  const imageUrl = item.json.imageUrl;\n  const seoScores = $('Parse SEO Score').first().json.seoScores;\n  const googleSheetData = $('Google Sheets').first().json;\n  \n  // Extract title from article HTML\n  const titleMatch = articleHtml.match(/<h2[^>]*>([^<]+)<\\/h2>/);\n  const title = titleMatch ? titleMatch[1] : 'NDIS Support Services in Shepparton';\n  \n  // Extract excerpt from first paragraph\n  const excerptMatch = articleHtml.match(/<p[^>]*>([^<]+)<\\/p>/);\n  const excerpt = excerptMatch ? excerptMatch[1].substring(0, 150) : 'Comprehensive NDIS support services for participants in Shepparton, Victoria.';\n  \n  // Generate slug from title\n  const slug = title.toLowerCase()\n    .replace(/[^a-z0-9\\\\s-]/g, '')\n    .replace(/\\\\s+/g, '-')\n    .replace(/-+/g, '-')\n    .trim();\n  \n  // Calculate word count and reading time\n  const textContent = articleHtml.replace(/<[^>]+>/g, ' ').replace(/\\\\s+/g, ' ').trim();\n  const wordCount = textContent.split(' ').length;\n  const readingTime = Math.ceil(wordCount / 200);\n  \n  // Get current timestamp\n  const publishedDate = new Date().toISOString();\n  \n  // Transform HTML with Tailwind CSS classes for better UX\n  let formattedContent = articleHtml\n    // Wrap in container with spacing\n    .replace(/^(.+)$/s, \"<div class='space-y-6'>$1</div>\")\n    // Style H2 headings\n    .replace(/<h2([^>]*)>/g, \"<h2 class='text-3xl font-bold text-gray-900 mt-8 mb-4'$1>\")\n    // Style H3 headings\n    .replace(/<h3([^>]*)>/g, \"<h3 class='text-2xl font-bold text-gray-900 mt-10 mb-4'$1>\")\n    // Style paragraphs\n    .replace(/<p([^>]*)>/g, \"<p class='text-lg leading-relaxed text-gray-700 mb-6'$1>\")\n    // Style unordered lists\n    .replace(/<ul([^>]*)>/g, \"<ul class='space-y-3 ml-6 mb-6'$1>\")\n    // Style list items\n    .replace(/<li([^>]*)>/g, \"<li class='text-gray-700 leading-relaxed pl-2'$1>\")\n    // Style strong tags\n    .replace(/<strong([^>]*)>/g, \"<strong class='text-gray-900'$1>\")\n    // Add CTA box at the end (before closing div)\n    .replace(/<\\/div>$/, \"<div class='bg-indigo-50 border-l-4 border-indigo-600 p-6 mt-8 rounded-r-lg'><p class='text-lg text-gray-800'><strong class='text-indigo-900'>Ready to get started?</strong> Contact Bright Support today for personalized assistance with your NDIS plan. Our experienced team in Shepparton is here to help you navigate the NDIS and achieve your goals.</p></div></div>\");\n  \n  // Create BlogPost JSON object\n  const blogPost = {\n    id: Date.now().toString(),\n    title: title,\n    slug: slug,\n    excerpt: excerpt,\n    content: formattedContent,\n    coverImage: imageUrl,\n    author: {\n      name: 'Bright Support Team',\n      avatar: '/images/team/bright-support-logo.png',\n      role: 'NDIS Specialists'\n    },\n    category: googleSheetData.category || 'NDIS',\n    tags: googleSheetData.keyword ? googleSheetData.keyword.split(',').map(tag => tag.trim()) : ['NDIS', 'Shepparton'],\n    publishedAt: publishedDate,\n    updatedAt: publishedDate,\n    readingTime: readingTime + ' min read',\n    featured: false,\n    seo: {\n      metaTitle: title,\n      metaDescription: excerpt,\n      keywords: googleSheetData.keyword || '',\n      ogImage: imageUrl\n    },\n    ndis: {\n      serviceName: googleSheetData.service_type || 'NDIS Support Services',\n      serviceCategory: googleSheetData.category || 'Support Coordination',\n      location: 'Shepparton, Victoria',\n      complianceScore: seoScores?.person_first_language_score || 95,\n      personFirstLanguage: true\n    },\n    wordCount: wordCount,\n    seoScore: seoScores?.overall_score || 90\n  };\n  \n  // Set the blogPost object for API submission\n  item.json.blogPost = blogPost;\n  item.json.publishedAt = publishedDate;\n  item.json.slug = slug;\n}\nreturn $input.all();"
+      },
+      "id": "e08d5bae-ec44-48db-b270-9643626df40e",
+      "name": "Publish Blog Post",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1280,
+        -336
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/blog/publish",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer nHTBzY5XBjzsdF9yXvYMoNMGuwnHg9RmZqVcB6DHUns="
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": []
+        },
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.blogPost) }}",
+        "options": {}
+      },
+      "id": "7a888886-9370-4603-a247-f7d5dae691f4",
+      "name": "Publish to Website API",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1472,
+        -336
+      ],
+      "typeVersion": 4.3
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1ksc2ODaotPppuTHXu0NpJlRYPxWPBCFnk0V3jkVzEUo",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ksc2ODaotPppuTHXu0NpJlRYPxWPBCFnk0V3jkVzEUo/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Status": "={{ 'Published' }}",
+            "Published_URL": "={{ 'https://brightsupport.com.au/blog/' + $json.slug }}",
+            "Published_Date": "={{ $json.publishedAt }}",
+            "SEO_Score": "={{ $json.blogPost.seoScore }}",
+            "Word_Count": "={{ $json.blogPost.wordCount }}",
+            "Slug": "={{ $json.slug }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "e4502002-dd12-4c28-9b37-266fd46dcdc1",
+      "name": "Update Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1680,
+        -352
+      ],
+      "typeVersion": 4.7,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "feUc9ZEtQuxL9TmA",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "#all-bright-support",
+          "mode": "name"
+        },
+        "text": "✅ Blog post published successfully!\n📝 {{ $('Publish Blog Post').item.json.blogPost.title }}\n🔗 https://brightsupport.com.au/blog/{{ $('Publish Blog Post').item.json.slug }}\n⏱️ {{ $('Publish Blog Post').item.json.blogPost.seoScore }}% SEO Score\n📊 {{ $('Publish Blog Post').item.json.blogPost.wordCount }} words",
+        "otherOptions": {}
+      },
+      "id": "cd92b51a-83e3-4399-96a8-de5dea549918",
+      "name": "Slack Success Notification",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1872,
+        -336
+      ],
+      "typeVersion": 2.3,
+      "webhookId": "c7134f48-1a9e-4cdb-88f1-f4d81d7cca8e",
+      "credentials": {
+        "slackApi": {
+          "id": "yl9zWE8WPXoiezOV",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "#all-bright-support",
+          "mode": "name"
+        },
+        "text": "❌ Blog generation failed\n📝 Topic: {{ $('Google Sheets').item.json.Topic }}\n🔍 Keyword: {{ $('Google Sheets').item.json.Primary_Keyword }}",
+        "otherOptions": {}
+      },
+      "id": "c991f7ce-c08f-4617-b046-78cd8a7e886e",
+      "name": "Error Handler",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        144,
+        -112
+      ],
+      "typeVersion": 2.3,
+      "webhookId": "ad622fda-72a0-46cb-8e20-5c02ac182f17",
+      "credentials": {
+        "slackApi": {
+          "id": "yl9zWE8WPXoiezOV",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://router.huggingface.co/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"meta-llama/Llama-3.1-8B-Instruct\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are an expert NDIS content strategist.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Analyze this topic: {{ $('Google Sheets').item.json.Topic }}. Primary keyword: {{ $('Google Sheets').item.json.Primary_Keyword }}. Return a JSON with headline, sections (with headings and key_points), and faq items.\"\n    }\n  ],\n  \"max_tokens\": 256,\n  \"temperature\": 0.7\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -912,
+        -336
+      ],
+      "id": "a3b1e3e8-d078-4a2b-a43a-0287c1d5c314",
+      "name": "Structural Planner",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "wy4c97pyCJBGODQ2",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://router.huggingface.co/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"meta-llama/Llama-3.1-8B-Instruct\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are an expert NDIS content strategist.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Write a complete, SEO-optimized blog article for NDIS participants in Shepparton, Victoria.\\n\\nTopic: {{ $('Google Sheets').item.json.Topic }}\\nPrimary Keyword: {{ $('Google Sheets').item.json.Primary_Keyword }}\\nSecondary Keywords: {{ $('Google Sheets').item.json.Secondary_Keywords }}\\nTarget Audience: {{ $('Google Sheets').item.json.Target_Audience }}\\nCTA Type: {{ $('Google Sheets').item.json.CTA_Type }}\\n\\nREQUIREMENTS:\\n- Use PERSON-FIRST LANGUAGE (never say 'disabled person', always say 'person with disability')\\n- Include Shepparton 3-5 times naturally\\n- Mention Victoria or Greater Shepparton 1-2 times\\n- Include contact info: 279 Wyndham St, Shepparton VIC 3630, (03) 5831 5786\\n- Use Australian spelling: realise, centre, programme\\n- Start with H2 heading (not H1)\\n- Article length: 800-1500 words\\n- Include FAQ section with 5-8 questions\\n- Add 3-5 internal links\\n- Meta description: 150-155 characters\\n- Dynamic CTA for {{ $('Google Sheets').item.json.CTA_Type }}\\n\\nReturn ONLY valid HTML starting with <h2>, nothing else.\"\n    }\n  ],\n  \"max_tokens\": 2048,\n  \"temperature\": 0.7\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -544,
+        -128
+      ],
+      "id": "8c78178e-08ab-4cdf-8ee0-37b5fee727a6",
+      "name": "Structural Planner1",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "wy4c97pyCJBGODQ2",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  const article = $('Structural Planner1').item.json.choices[0].message.content;\n  item.json.seoContent = JSON.stringify(`Analyze this article for NDIS compliance and SEO quality:\\n\\nArticle:\\n  ${JSON.stringify(article)}\\n\\nReturn JSON ONLY (valid format):\\n{\"person_first_language_score\": 0-100, \"shepparton_mentions\": count, \"keyword_density\": percent, \"readability_grade\": number, \"internal_links\": count, \"overall_score\": 0-100}`);\n  \n  // Extract title from article\n  const titleMatch = article.match(/<h2[^>]*>([^<]+)<\\/h2>/);\n  const title = titleMatch ? titleMatch[1] : 'NDIS Support Services';\n  const excerpt = article.substring(0, 500);\n  \n  item.json.imagePrompt = JSON.stringify(`Create a detailed, professional image prompt for a stock photo that would be suitable for this NDIS blog article. The image should represent support, independence, and community for people with disability. Focus on positive, empowering imagery. Return only the image prompt text, no explanations.\\n\\nArticle Title: ${title}\\n\\nArticle Excerpt: ${excerpt}`);\n}\nreturn $input.all();"
+      },
+      "id": "835e3e1e-7f3a-4df2-b4f8-fa9b3ed330bd",
+      "name": "Prepare SEO Analysis",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        160,
+        -320
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://router.huggingface.co/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"meta-llama/Llama-3.1-8B-Instruct\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are an expert NDIS content strategist.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": {{ $json.seoContent }}\n    }\n  ],\n  \"max_tokens\": 256,\n  \"temperature\": 0.7\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        288,
+        -592
+      ],
+      "id": "ebf0fde7-127e-4781-b193-b977949a5b2d",
+      "name": "Structural Planner2",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "wy4c97pyCJBGODQ2",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://router.huggingface.co/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"meta-llama/Llama-3.1-8B-Instruct\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are an expert NDIS content strategist.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": {{ $('Prepare SEO Analysis').item.json.imagePrompt }}\n    }\n  ],\n  \"max_tokens\": 256,\n  \"temperature\": 0.7\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        688,
+        -336
+      ],
+      "id": "9e675b16-95ff-4030-8d6f-998d08ec49b7",
+      "name": "Image Prompt Generator",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "wy4c97pyCJBGODQ2",
+          "name": "Bearer Auth account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare SEO Analysis": {
+      "main": [
+        [
+          {
+            "node": "Structural Planner2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Structure JSON": {
+      "main": [
+        [
+          {
+            "node": "Structural Planner1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Article HTML": {
+      "main": [
+        [
+          {
+            "node": "Quality Check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quality Check": {
+      "main": [
+        [
+          {
+            "node": "Prepare SEO Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Error Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse SEO Score": {
+      "main": [
+        [
+          {
+            "node": "Quality Gate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quality Gate": {
+      "main": [
+        [
+          {
+            "node": "Image Prompt Generator",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Error Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Stock Photo (Pexels)": {
+      "main": [
+        [
+          {
+            "node": "Extract Image URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Image URL": {
+      "main": [
+        [
+          {
+            "node": "Publish Blog Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Publish Blog Post": {
+      "main": [
+        [
+          {
+            "node": "Write HTML File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write HTML File": {
+      "main": [
+        [
+          {
+            "node": "Update Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Slack Success Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Structural Planner",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structural Planner": {
+      "main": [
+        [
+          {
+            "node": "Parse Structure JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structural Planner1": {
+      "main": [
+        [
+          {
+            "node": "Extract Article HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structural Planner2": {
+      "main": [
+        [
+          {
+            "node": "Parse SEO Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompt Generator": {
+      "main": [
+        [
+          {
+            "node": "Fetch Stock Photo (Pexels)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e29e9f0a-e3c3-4ecd-a183-3f2dda2001e3",
+  "meta": {
+    "instanceId": "3de1a776cc0510dcf031cea68e22a0843c46172dbdab5e9f6066db1240fc1e6d"
+  },
+  "id": "Kker4FQAYvSqvkxF",
+  "tags": []
+}

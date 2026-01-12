@@ -56,14 +56,14 @@ export default function CareerPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-24 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#1E4D8C] via-[#2563EB] to-[#38BDF8] text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Looking for a New Career Opportunity?
             </h1>
-            <p className="text-xl text-indigo-100">
+            <p className="text-xl text-sky-100">
               Join our team and make a meaningful difference in people's lives
             </p>
           </div>
@@ -79,9 +79,9 @@ export default function CareerPage() {
                 Career at Bright Support
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed">
-                At Bright Support, we believe in a <strong className="text-slate-800">person-centered approach</strong> to care. 
-                We're looking for passionate, qualified individuals who share our commitment to helping 
-                people live independently with dignity and choice. Join a team where your work truly matters 
+                At Bright Support, we believe in a <strong className="text-slate-800">person-centered approach</strong> to care.
+                We're looking for passionate, qualified individuals who share our commitment to helping
+                people live independently with dignity and choice. Join a team where your work truly matters
                 and where you'll be supported to grow professionally while making a positive impact in the community.
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function CareerPage() {
       </section>
 
       {/* Team Culture */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30" style={{ contentVisibility: 'auto', containIntrinsicSize: '900px' }}>
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-sky-50/30" style={{ contentVisibility: 'auto', containIntrinsicSize: '900px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto mb-20">
             <div className="text-center mb-10">
@@ -108,7 +108,7 @@ export default function CareerPage() {
                 className="w-full h-auto object-cover"
                 width={1200}
                 height={700}
-                widths={[480,768,1024]}
+                widths={[480, 768, 1024]}
               />
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function CareerPage() {
               <ul className="space-y-5">
                 {criteria.map((item, index) => (
                   <li key={index} className="flex items-start gap-4">
-                    <CheckCircle className="text-indigo-600 flex-shrink-0 mt-1" size={24} />
+                    <CheckCircle className="text-[#1E4D8C] flex-shrink-0 mt-1" size={24} />
                     <span className="text-lg text-slate-700">{item}</span>
                   </li>
                 ))}
@@ -149,14 +149,14 @@ export default function CareerPage() {
             <p className="text-lg text-slate-600 text-center mb-14">
               Join Bright Support and enjoy these great benefits
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 shadow-elegant border border-indigo-100 hover:shadow-elegant-lg hover:-translate-y-1 transition-all duration-300"
+                  className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 shadow-elegant border border-sky-100 hover:shadow-elegant-lg hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="text-indigo-600 mb-5">{benefit.icon}</div>
+                  <div className="text-[#1E4D8C] mb-5">{benefit.icon}</div>
                   <h3 className="text-xl font-bold mb-3 text-slate-800">{benefit.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
                 </div>
@@ -167,7 +167,7 @@ export default function CareerPage() {
       </section>
 
       {/* Professional Development */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-sky-50/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-elegant p-10 border border-slate-100">
@@ -176,18 +176,18 @@ export default function CareerPage() {
               </h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  At Bright Support, we invest in our team's growth and development. All staff members 
-                  have access to our Learning Management System (LMS) with remote learning capabilities, 
+                  At Bright Support, we invest in our team's growth and development. All staff members
+                  have access to our Learning Management System (LMS) with remote learning capabilities,
                   allowing you to complete training at your own pace.
                 </p>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  We provide formal training opportunities and upskilling programs to help you advance 
-                  your career. Whether you're new to the disability support sector or an experienced 
+                  We provide formal training opportunities and upskilling programs to help you advance
+                  your career. Whether you're new to the disability support sector or an experienced
                   professional, we offer pathways for continuous improvement and career progression.
                 </p>
                 <p className="text-slate-700 leading-relaxed">
-                  Our supportive team environment means you'll always have backup and guidance. We believe 
-                  in recognizing and rewarding excellent work, and we're committed to creating a positive, 
+                  Our supportive team environment means you'll always have backup and guidance. We believe
+                  in recognizing and rewarding excellent work, and we're committed to creating a positive,
                   inclusive workplace culture.
                 </p>
               </div>
@@ -197,18 +197,18 @@ export default function CareerPage() {
       </section>
 
       {/* Ready to Join */}
-      <section className="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden relative">
+      <section className="py-20 bg-gradient-to-br from-[#1E4D8C] via-[#2563EB] to-[#38BDF8] text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Join?
             </h2>
-            <p className="text-xl mb-10 text-indigo-100 leading-relaxed">
-              We're always looking for talented, compassionate individuals to join our team. 
+            <p className="text-xl mb-10 text-sky-100 leading-relaxed">
+              We're always looking for talented, compassionate individuals to join our team.
               If you meet our criteria and are passionate about making a difference, we'd love to hear from you!
             </p>
-            
+
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-10 mb-10">
               <h3 className="text-2xl font-bold mb-4">How to Apply</h3>
               <p className="text-lg text-indigo-100 mb-6">
@@ -216,7 +216,7 @@ export default function CareerPage() {
               </p>
               <a
                 href="mailto:care@brightsupport.com.au?subject=Career Application - Support Worker"
-                className="inline-block bg-amber-500 hover:bg-amber-400 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
+                className="inline-block bg-[#DC3545] hover:bg-[#C82333] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 care@brightsupport.com.au
               </a>
@@ -228,7 +228,7 @@ export default function CareerPage() {
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <a
                 href="tel:1800407508"
-                className="bg-white hover:bg-amber-50 text-indigo-600 px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
+                className="bg-white hover:bg-sky-50 text-[#1E4D8C] px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 Call Us: 1800 407 508
               </a>

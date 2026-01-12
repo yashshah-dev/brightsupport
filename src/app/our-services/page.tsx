@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ServiceCard from '@/components/ServiceCard';
-import { 
+import {
   Home, Building2, Stethoscope, Users, Activity, Dumbbell,
   Droplets, Brain, Heart, Car, Sparkles, ShieldCheck
 } from 'lucide-react';
@@ -96,12 +96,12 @@ export default function OurServicesPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-24 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#1E4D8C] via-[#2563EB] to-[#38BDF8] text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-indigo-100">
+            <p className="text-xl text-sky-100">
               Comprehensive NDIS support services tailored to your unique needs and goals
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function OurServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-sky-50/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">
@@ -117,7 +117,7 @@ export default function OurServicesPage() {
                 All Our Services
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Discover our full range of NDIS services designed to support your independence, 
+                Discover our full range of NDIS services designed to support your independence,
                 health, and wellbeing. Click on any service to learn more.
               </p>
             </div>
@@ -151,13 +151,13 @@ export default function OurServicesPage() {
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <a
                 href="tel:1800407508"
-                className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-elegant-lg"
+                className="bg-gradient-to-r from-[#1E4D8C] to-[#2563EB] hover:from-[#0F2D4D] hover:to-[#1E4D8C] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-elegant-lg"
               >
                 Call Us: 1800 407 508
               </a>
               <Link
                 href="/contact-us"
-                className="bg-amber-500 hover:bg-amber-400 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-elegant-lg"
+                className="bg-[#DC3545] hover:bg-[#C82333] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-elegant-lg"
               >
                 Contact Us Online
               </Link>

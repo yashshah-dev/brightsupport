@@ -120,12 +120,12 @@ export default function ContactUsPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-24 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#1E4D8C] via-[#2563EB] to-[#38BDF8] text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-indigo-100">
+            <p className="text-xl text-sky-100">
               We're here to help. Get in touch with us today.
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function ContactUsPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30" style={{ contentVisibility: 'auto', containIntrinsicSize: '750px' }}>
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-sky-50/30" style={{ contentVisibility: 'auto', containIntrinsicSize: '750px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto mb-16">
             <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
@@ -150,17 +150,17 @@ export default function ContactUsPage() {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold mb-10 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">Get In Touch</h2>
-              
+
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-indigo-100 to-purple-100 p-4 rounded-2xl">
-                    <Phone className="text-indigo-600" size={24} />
+                  <div className="bg-gradient-to-br from-sky-100 to-blue-100 p-4 rounded-2xl">
+                    <Phone className="text-[#1E4D8C]" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-1">Phone</h3>
                     <a
                       href="tel:1800407508"
-                      className="text-indigo-600 hover:text-purple-600 transition-colors duration-300"
+                      className="text-[#1E4D8C] hover:text-[#38BDF8] transition-colors duration-300"
                       onClick={() => trackPhoneCall('1800 407 508', { source: 'contact_page' })}
                     >
                       1800 407 508
@@ -169,14 +169,14 @@ export default function ContactUsPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-amber-100 to-orange-100 p-4 rounded-2xl">
-                    <Mail className="text-amber-600" size={24} />
+                  <div className="bg-gradient-to-br from-red-100 to-rose-100 p-4 rounded-2xl">
+                    <Mail className="text-[#DC3545]" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-1">Email</h3>
                     <a
                       href="mailto:care@brightsupport.com.au"
-                      className="text-indigo-600 hover:text-purple-600 break-all transition-colors duration-300"
+                      className="text-[#1E4D8C] hover:text-[#38BDF8] break-all transition-colors duration-300"
                       onClick={() => trackButtonClick('email_click', { source: 'contact_page' })}
                     >
                       care@brightsupport.com.au
@@ -185,8 +185,8 @@ export default function ContactUsPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-pink-100 to-rose-100 p-4 rounded-2xl">
-                    <MapPin className="text-pink-600" size={24} />
+                  <div className="bg-gradient-to-br from-cyan-100 to-sky-100 p-4 rounded-2xl">
+                    <MapPin className="text-[#38BDF8]" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-1">Address</h3>
@@ -199,7 +199,7 @@ export default function ContactUsPage() {
                       href="https://maps.google.com/?q=279+Wyndham+St,+Shepparton+VIC+3630,+Australia"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mt-2 text-indigo-600 hover:text-purple-600 font-semibold transition-colors duration-300"
+                      className="inline-block mt-2 text-[#1E4D8C] hover:text-[#38BDF8] font-semibold transition-colors duration-300"
                     >
                       Get Directions →
                     </a>
@@ -207,8 +207,8 @@ export default function ContactUsPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-purple-100 to-indigo-100 p-4 rounded-2xl">
-                    <Clock className="text-purple-600" size={24} />
+                  <div className="bg-gradient-to-br from-sky-100 to-blue-100 p-4 rounded-2xl">
+                    <Clock className="text-[#1E4D8C]" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-1">Opening Hours</h3>
@@ -239,7 +239,7 @@ export default function ContactUsPage() {
             <div>
               <div className="bg-white rounded-3xl shadow-elegant-lg p-10 border border-slate-100">
                 <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">Send Us A Message</h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
@@ -252,9 +252,8 @@ export default function ContactUsPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className={`w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300 bg-slate-50 hover:bg-white ${
-                        fieldErrors.name ? 'border-red-300 bg-red-50' : 'border-slate-200'
-                      }`}
+                      className={`w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-[#1E4D8C] focus:border-[#1E4D8C] outline-none transition-all duration-300 bg-slate-50 hover:bg-white ${fieldErrors.name ? 'border-red-300 bg-red-50' : 'border-slate-200'
+                        }`}
                       placeholder="John Smith"
                     />
                     {fieldErrors.name && (
@@ -273,9 +272,8 @@ export default function ContactUsPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className={`w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300 bg-slate-50 hover:bg-white ${
-                        fieldErrors.email ? 'border-red-300 bg-red-50' : 'border-slate-200'
-                      }`}
+                      className={`w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-[#1E4D8C] focus:border-[#1E4D8C] outline-none transition-all duration-300 bg-slate-50 hover:bg-white ${fieldErrors.email ? 'border-red-300 bg-red-50' : 'border-slate-200'
+                        }`}
                       placeholder="john@example.com"
                     />
                     {fieldErrors.email && (
@@ -293,7 +291,7 @@ export default function ContactUsPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-5 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300 bg-slate-50 hover:bg-white"
+                      className="w-full px-5 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#1E4D8C] focus:border-[#1E4D8C] outline-none transition-all duration-300 bg-slate-50 hover:bg-white"
                       placeholder="0400 000 000"
                     />
                   </div>
@@ -308,9 +306,8 @@ export default function ContactUsPage() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className={`w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300 bg-slate-50 hover:bg-white ${
-                        fieldErrors.subject ? 'border-red-300 bg-red-50' : 'border-slate-200'
-                      }`}
+                      className={`w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-[#1E4D8C] focus:border-[#1E4D8C] outline-none transition-all duration-300 bg-slate-50 hover:bg-white ${fieldErrors.subject ? 'border-red-300 bg-red-50' : 'border-slate-200'
+                        }`}
                     >
                       <option value="">Select a subject</option>
                       <option value="general">General Inquiry</option>
@@ -335,9 +332,8 @@ export default function ContactUsPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className={`w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300 resize-none bg-slate-50 hover:bg-white ${
-                        fieldErrors.message ? 'border-red-300 bg-red-50' : 'border-slate-200'
-                      }`}
+                      className={`w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-[#1E4D8C] focus:border-[#1E4D8C] outline-none transition-all duration-300 resize-none bg-slate-50 hover:bg-white ${fieldErrors.message ? 'border-red-300 bg-red-50' : 'border-slate-200'
+                        }`}
                       placeholder="How can we help you?"
                     ></textarea>
                     {fieldErrors.message && (
@@ -360,7 +356,7 @@ export default function ContactUsPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-elegant-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-[#1E4D8C] to-[#2563EB] hover:from-[#0F2D4D] hover:to-[#1E4D8C] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-elegant-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>Sending...</>
