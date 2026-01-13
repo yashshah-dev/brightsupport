@@ -1,5 +1,5 @@
 export function getAssetPath(path: string): string {
-  const isProd = process.env.NODE_ENV === 'production';
-  const basePath = isProd ? '/brightsupport' : '';
+  const deployTarget = process.env.NEXT_PUBLIC_DEPLOY_TARGET || 'default';
+  const basePath = deployTarget === 'gh-pages' ? '/brightsupport' : '';
   return `${basePath}${path}`;
 }

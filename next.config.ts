@@ -4,11 +4,13 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const isProd = process.env.NODE_ENV === 'production';
+const deployTarget = process.env.DEPLOY_TARGET || 'default';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: isProd ? '/brightsupport' : '',
-  assetPrefix: isProd ? '/brightsupport' : '',
+  // Only use basePath for GitHub Pages subdirectory deployment
+  basePath: deployTarget === 'gh-pages' ? '/brightsupport' : '',
+  assetPrefix: deployTarget === 'gh-pages' ? '/brightsupport' : '',
   images: {
     unoptimized: true, // Required for static export
     formats: ['image/webp'],

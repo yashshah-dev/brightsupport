@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/optimize-images.mjs && next build && npm run copy-headers",
+    "build": "DEPLOY_TARGET=gh-pages NEXT_PUBLIC_DEPLOY_TARGET=gh-pages node scripts/optimize-images.mjs && next build && npm run copy-headers",
+    "build:beta": "DEPLOY_TARGET=beta NEXT_PUBLIC_DEPLOY_TARGET=beta node scripts/optimize-images.mjs && next build && npm run copy-headers",
     "copy-headers": "cp public/_headers out/_headers 2>/dev/null || true",
     "start": "next start",
     "lint": "eslint",
