@@ -1,0 +1,65 @@
+{
+    "Header": {
+        "phone": "1800 407 508",
+        "email": "care@brightsupport.com.au",
+        "hours": "周一至周五 8点-6点",
+        "nav": {
+            "home": "首页",
+            "about": "关于我们",
+            "services": "我们的服务",
+            "career": "加入我们",
+            "contact": "联系我们"
+        },
+        "cta": "发送转介",
+        "languageSwitch": "语言"
+    },
+    "Hero": {
+        "trusted": "获得500+人的信赖",
+        "title": "NDIS残障支持服务提供商",
+        "subtitle": "欢迎来到Bright Support",
+        "description": "我们以专业、富有同情心的服务，让您轻松浏览NDIS，获得满足您独特需求和目标的量身定制支持。",
+        "cta": {
+            "services": "探索更多服务",
+            "contact": "立即联系"
+        }
+    },
+    "Services": {
+        "title": "我们的NDIS服务",
+        "subtitle": "全面的残障支持服务，旨在增强您的独立性和生活质量。"
+    },
+    "WhyChoose": {
+        "title": "为什么选择Bright Support？",
+        "subtitle": "我们致力于提供卓越的NDIS服务，真正改变您的生活。",
+        "items": {
+            "experienced": {
+                "title": "经验丰富的团队",
+                "description": "我们训练有素的支持人员是专业的护理人员，致力于提供个性化护理。"
+            },
+            "person": {
+                "title": "以人为本的方法",
+                "description": "我们专注于您的个人目标和偏好，制定量身定制的支持计划。"
+            },
+            "available": {
+                "title": "随时为您服务",
+                "description": "灵活的时间安排，在最适合您的时候提供支持。"
+            },
+            "registered": {
+                "title": "NDIS注册服务商",
+                "description": "完全注册的NDIS服务提供商，符合所有质量和安全标准。"
+            }
+        }
+    },
+    "CTA": {
+        "title": "准备好开始了吗？",
+        "description": "立即联系我们，讨论我们如何帮助您实现NDIS目标。",
+        "phone": "致电 1800 407 508",
+        "online": "在线联系我们"
+    },
+    "Footer": {
+        "description": "您信赖的NDIS支持服务提供商，在整个维多利亚州提供优质护理服务。",
+        "quickLinks": "快速链接",
+        "services": "服务",
+        "contact": "联系方式",
+        "copyright": "© 2024 Bright Support。保留所有权利。"
+    }
+}

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Phone, Mail, Clock, Menu, X, ChevronRight } from 'lucide-react';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,8 +29,8 @@ export default function Header() {
 
   return (
     <header className={`w-full sticky top-0 z-50 transition-all duration-500 ${scrolled
-        ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-100'
-        : 'bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200'
+      ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-100'
+      : 'bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200'
       }`}>
       {/* Modern Top Bar */}
       <div className="bg-gradient-to-r from-[#0F2D4D] via-[#1E4D8C] to-[#2563EB] text-white">
@@ -53,13 +54,14 @@ export default function Header() {
               </a>
             </div>
 
-            {/* Hours Badge */}
-            <div className="flex items-center gap-2 text-sm">
-              <div className="flex items-center gap-2 bg-gradient-to-r from-[#38BDF8]/20 to-[#7DD3FC]/20 px-4 py-1.5 rounded-full border border-white/10">
+            {/* Hours Badge + Language Switcher */}
+            <div className="flex items-center gap-3 text-sm">
+              <div className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#38BDF8]/20 to-[#7DD3FC]/20 px-4 py-1.5 rounded-full border border-white/10">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <Clock size={14} className="text-[#7DD3FC]" />
                 <span className="font-medium">Mon-Fri 8am-6pm</span>
               </div>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
