@@ -4,7 +4,7 @@ import { ResponsiveImage } from '@/components/ResponsiveImage';
 import React, { useState } from 'react';
 import {
   Heart, Users, Home, Activity, Stethoscope, Car,
-  Sparkles, Clock, Shield, CheckCircle, Phone
+  Sparkles, Clock, Shield, CheckCircle, Phone, Award
 } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import Testimonials from '@/components/Testimonials';
@@ -275,6 +275,57 @@ export default function HomePage() {
                 widths={[480, 768, 1024]}
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+              Why Choose Bright Support?
+            </h2>
+            <p className="text-lg text-slate-600">
+              We're committed to providing exceptional NDIS services that make a real difference in your life.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Users,
+                title: 'Experienced Team',
+                description: 'Our skilled support workers are trained professionals dedicated to providing personalized care.'
+              },
+              {
+                icon: Heart,
+                title: 'Person-Centered Approach',
+                description: 'We focus on your individual goals and preferences to create tailored support plans.'
+              },
+              {
+                icon: Clock,
+                title: 'Available When You Need Us',
+                description: 'Flexible scheduling with support available when it suits you best.'
+              },
+              {
+                icon: Award,
+                title: 'NDIS Registered',
+                description: 'Fully registered NDIS provider meeting all quality and safety standards.'
+              },
+            ].map((item, index) => (
+              <div key={index} className="bg-gradient-to-br from-slate-50 to-sky-50/50 p-8 rounded-2xl shadow-elegant hover:shadow-elegant-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#1E4D8C] to-[#38BDF8] rounded-xl flex items-center justify-center mb-6 text-white">
+                  <item.icon size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-slate-900">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

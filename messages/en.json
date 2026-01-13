@@ -13,6 +13,33 @@
         "cta": "Send Us Referral",
         "languageSwitch": "Language"
     },
+    "Footer": {
+        "description": "Your trusted NDIS support provider, delivering quality care services across Victoria.",
+        "quickLinks": "Quick Links",
+        "services": "Services",
+        "contact": "Contact",
+        "privacy": "Privacy Policy",
+        "copyright": "© 2024 Bright Support. All rights reserved.",
+        "locations": {
+            "melbourne": "Melbourne",
+            "shepparton": "Shepparton"
+        }
+    },
+    "Common": {
+        "learnMore": "Learn More",
+        "getStarted": "Get Started",
+        "contactUs": "Contact Us",
+        "callNow": "Call Now",
+        "readMore": "Read More",
+        "viewAll": "View All",
+        "backToHome": "Back to Home",
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "submit": "Submit",
+        "send": "Send",
+        "required": "Required",
+        "optional": "Optional"
+    },
     "Hero": {
         "trusted": "Trusted by More than 500+ People",
         "title": "NDIS Disability & Support Services Provider",
@@ -25,7 +52,38 @@
     },
     "Services": {
         "title": "Our NDIS Services",
-        "subtitle": "Comprehensive disability support services designed to enhance your independence and quality of life."
+        "subtitle": "Comprehensive disability support services designed to enhance your independence and quality of life.",
+        "viewAllServices": "View All Services",
+        "items": {
+            "communityNursing": {
+                "title": "Community Nursing & Complex Care",
+                "description": "Professional nursing care including wound care, medication management, and chronic disease support delivered by qualified nurses in your home."
+            },
+            "dailyLiving": {
+                "title": "Daily Living & In-Home Support",
+                "description": "Assistance with everyday activities to help you maintain independence at home, including personal care, meal preparation, and household tasks."
+            },
+            "independentLiving": {
+                "title": "Independent Living & Accommodation Support",
+                "description": "Support to live independently in your own home or supported accommodation, with assistance tailored to your needs."
+            },
+            "communityParticipation": {
+                "title": "Community Participation & Group Programs",
+                "description": "Engaging programs to build social connections, develop skills, and participate in community activities."
+            },
+            "physiotherapy": {
+                "title": "Physiotherapy Services",
+                "description": "Expert physiotherapy to improve mobility, manage pain, and enhance physical function with personalized treatment plans."
+            },
+            "companionship": {
+                "title": "Companionship Services",
+                "description": "Meaningful companionship and emotional support to reduce isolation and improve wellbeing through genuine connections."
+            },
+            "transport": {
+                "title": "Travel & Transport Assistance",
+                "description": "Safe and reliable transport to appointments, activities, and community participation with trained support workers."
+            }
+        }
     },
     "WhyChoose": {
         "title": "Why Choose Bright Support?",
@@ -49,17 +107,749 @@
             }
         }
     },
+    "Video": {
+        "title": "Learn More About Our Services",
+        "subtitle": "Watch our video to understand how we can support you"
+    },
+    "OurGoal": {
+        "title": "Our Goal Is To Make Your Life Better",
+        "subtitle": "Providing exceptional support services with a person-centered approach",
+        "items": {
+            "easy": {
+                "title": "We Make Navigating The NDIS Easy",
+                "description": "Our experienced team helps you understand and access NDIS services with ease. Available 24/7 through our hotline to support you whenever you need assistance."
+            },
+            "support": {
+                "title": "Disabilities Support Services",
+                "description": "Comprehensive, person-centered support services designed to help you live independently with dignity and choice. Our qualified team is dedicated to your goals and wellbeing."
+            }
+        }
+    },
     "CTA": {
         "title": "Ready to Get Started?",
         "description": "Contact us today to discuss how we can help you achieve your NDIS goals.",
         "phone": "Call 1800 407 508",
         "online": "Contact Us Online"
     },
-    "Footer": {
-        "description": "Your trusted NDIS support provider, delivering quality care services across Victoria.",
-        "quickLinks": "Quick Links",
-        "services": "Services",
-        "contact": "Contact",
-        "copyright": "© 2024 Bright Support. All rights reserved."
+    "AboutUs": {
+        "meta": {
+            "title": "About Us | Bright Support - Our Story & Mission",
+            "description": "Learn about Bright Support's journey, mission, and values. Founded in 2019, we are a trusted NDIS service provider serving Melbourne, Shepparton, and beyond."
+        },
+        "hero": {
+            "title": "About Bright Support",
+            "subtitle": "Your Trusted NDIS Partner",
+            "description": "Founded in 2019, Bright Support has grown from a small local provider to a trusted name in disability support services across Victoria."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "description": "To empower individuals with disabilities to live their best lives through compassionate, person-centered support services that promote independence, choice, and community participation."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "description": "A world where every person with a disability has the opportunity to thrive, participate fully in their community, and achieve their personal goals."
+        },
+        "values": {
+            "title": "Our Values",
+            "compassion": {
+                "title": "Compassion",
+                "description": "We approach every interaction with empathy and understanding."
+            },
+            "integrity": {
+                "title": "Integrity",
+                "description": "We are honest, transparent, and accountable in all we do."
+            },
+            "excellence": {
+                "title": "Excellence",
+                "description": "We strive for the highest quality in every service we provide."
+            },
+            "respect": {
+                "title": "Respect",
+                "description": "We honor the dignity and worth of every individual."
+            }
+        },
+        "team": {
+            "title": "Our Team",
+            "description": "Our dedicated team of qualified support workers, nurses, and allied health professionals are passionate about making a difference in the lives of the people we support."
+        },
+        "stats": {
+            "clients": "500+ Clients Supported",
+            "staff": "100+ Team Members",
+            "years": "5+ Years Experience",
+            "locations": "Multiple Locations"
+        }
+    },
+    "ContactUs": {
+        "meta": {
+            "title": "Contact Us | Bright Support - Get in Touch",
+            "description": "Contact Bright Support for NDIS disability services. Call us at 1800 407 508 or visit our offices in Melbourne and Shepparton."
+        },
+        "hero": {
+            "title": "Contact Us",
+            "subtitle": "We're Here to Help",
+            "description": "Have questions about our services or want to discuss how we can support you? Get in touch with our friendly team today."
+        },
+        "form": {
+            "title": "Send Us a Message",
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "service": "Service Interest",
+            "selectService": "Select a service",
+            "message": "Your Message",
+            "submit": "Send Message",
+            "success": "Thank you! Your message has been sent successfully.",
+            "error": "Sorry, there was an error sending your message. Please try again."
+        },
+        "info": {
+            "title": "Contact Information",
+            "phone": "Phone",
+            "email": "Email",
+            "hours": "Business Hours",
+            "hoursValue": "Monday - Friday: 8am - 6pm"
+        },
+        "locations": {
+            "title": "Our Locations",
+            "melbourne": {
+                "name": "Melbourne Office",
+                "address": "123 Collins Street, Melbourne VIC 3000"
+            },
+            "shepparton": {
+                "name": "Shepparton Office",
+                "address": "456 Wyndham Street, Shepparton VIC 3630"
+            }
+        }
+    },
+    "Career": {
+        "meta": {
+            "title": "Careers | Join Bright Support Team",
+            "description": "Looking for a rewarding career in disability support? Join Bright Support and make a difference. Competitive pay, flexible roles, and professional development opportunities."
+        },
+        "hero": {
+            "title": "Join Our Team",
+            "subtitle": "Build a Rewarding Career",
+            "description": "Make a real difference in people's lives while growing your career in disability support services."
+        },
+        "benefits": {
+            "title": "Why Work With Us?",
+            "items": {
+                "pay": {
+                    "title": "Competitive Pay",
+                    "description": "Above-award wages with penalty rates and allowances."
+                },
+                "flexibility": {
+                    "title": "Flexible Hours",
+                    "description": "Choose shifts that work around your schedule and lifestyle."
+                },
+                "training": {
+                    "title": "Professional Development",
+                    "description": "Ongoing training and career advancement opportunities."
+                },
+                "support": {
+                    "title": "Supportive Team",
+                    "description": "Join a friendly, collaborative team that values your contribution."
+                },
+                "impact": {
+                    "title": "Make a Difference",
+                    "description": "Meaningful work that positively impacts lives every day."
+                },
+                "growth": {
+                    "title": "Career Growth",
+                    "description": "Clear pathways for advancement within the organization."
+                }
+            }
+        },
+        "positions": {
+            "title": "Current Openings",
+            "supportWorker": {
+                "title": "Support Worker",
+                "description": "Provide direct support to NDIS participants in their homes and community."
+            },
+            "nurse": {
+                "title": "Registered Nurse",
+                "description": "Deliver complex care and nursing services to participants."
+            },
+            "coordinator": {
+                "title": "Support Coordinator",
+                "description": "Help participants understand and implement their NDIS plans."
+            }
+        },
+        "cta": {
+            "title": "Ready to Apply?",
+            "description": "Send your resume to our HR team and start your journey with Bright Support.",
+            "button": "Apply Now"
+        }
+    },
+    "OurServices": {
+        "meta": {
+            "title": "Our Services | NDIS Support Services - Bright Support",
+            "description": "Comprehensive NDIS services including daily living support, community nursing, physiotherapy, community participation, personal training, hydrotherapy, and more."
+        },
+        "hero": {
+            "title": "Our Services",
+            "subtitle": "Comprehensive NDIS Support",
+            "description": "We offer a wide range of NDIS-funded services designed to support your independence and help you achieve your goals."
+        },
+        "categories": {
+            "daily": "Daily Living Support",
+            "health": "Health & Allied Services",
+            "community": "Community Participation",
+            "specialist": "Specialist Services"
+        }
+    },
+    "ServicePage": {
+        "features": "Key Features",
+        "services": "Services Include",
+        "benefits": "Benefits",
+        "process": "How It Works",
+        "faq": "Frequently Asked Questions",
+        "ctaTitle": "Ready to Get Started?",
+        "ctaDescription": "Contact us today to discuss how this service can support your NDIS goals.",
+        "ctaButton": "Contact Us"
+    },
+    "ServiceDetails": {
+        "dailyLiving": {
+            "title": "Daily Living & In-Home Support",
+            "subtitle": "Supporting your independence at home",
+            "description": "Our Daily Living and In-Home Support services are designed to help you maintain your independence and quality of life in the comfort of your own home. We provide personalized assistance with daily activities, household tasks, and personal care, enabling you to live the life you choose with dignity and respect.",
+            "services": [
+                "Personal hygiene (toileting, bathing, showering)",
+                "Cleaning and house maintenance",
+                "Laundry and ironing drop-off/pick up",
+                "Assist with pet care",
+                "Help with personal meals and mealtime support",
+                "Grocery shopping",
+                "Attending appointments",
+                "Walking around the house",
+                "Medication reminders",
+                "Light gardening and outdoor maintenance"
+            ],
+            "features": {
+                "support247": {
+                    "title": "24/7 Support Available",
+                    "description": "We have full capacity for all-day and overnight support to meet your needs around the clock."
+                },
+                "qualified": {
+                    "title": "Qualified Support Workers",
+                    "description": "Our team consists of experienced, trained support workers who understand your unique needs."
+                },
+                "personCentered": {
+                    "title": "Person-Centered Approach",
+                    "description": "Your goals, preferences, and choices guide all the support we provide."
+                },
+                "flexible": {
+                    "title": "Flexible Service Delivery",
+                    "description": "Services can be tailored to your schedule and specific requirements."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What is included in daily living support?",
+                    "answer": "Daily living support includes assistance with personal care, household tasks, meal preparation, shopping, and other activities that help you live independently. Services are customized to your individual needs and NDIS plan."
+                },
+                {
+                    "question": "Can I choose my support worker?",
+                    "answer": "Yes! We believe in building strong relationships. We work to match you with support workers who share your interests and values, and you can request changes if needed."
+                },
+                {
+                    "question": "How often can I receive support?",
+                    "answer": "Support frequency depends on your NDIS plan and funding. We offer flexible scheduling from a few hours per week to 24/7 support, depending on your needs."
+                }
+            ]
+        },
+        "communityNursing": {
+            "title": "Community Nursing & Complex Care",
+            "subtitle": "Professional nursing care in your home",
+            "description": "Our Community Nursing and Complex Care services bring professional healthcare to you. Our registered nurses provide skilled nursing care, medication management, and support for complex health needs in the comfort of your home.",
+            "services": [
+                "Wound care and dressing changes",
+                "Medication administration and management",
+                "PEG feeding and enteral nutrition",
+                "Catheter care and management",
+                "Tracheostomy care",
+                "Vital signs monitoring",
+                "Diabetes management",
+                "Post-surgical care",
+                "Palliative care support",
+                "Health education and training"
+            ],
+            "features": {
+                "registered": {
+                    "title": "Registered Nurses",
+                    "description": "All our nurses are fully registered with AHPRA and experienced in community care."
+                },
+                "available": {
+                    "title": "Available 7 Days",
+                    "description": "Nursing services available throughout the week to meet your healthcare needs."
+                },
+                "coordinated": {
+                    "title": "Coordinated Care",
+                    "description": "We work closely with your doctors and specialists to ensure seamless care."
+                },
+                "training": {
+                    "title": "Carer Training",
+                    "description": "We provide training for family and carers to support your health needs."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What qualifications do your nurses have?",
+                    "answer": "All our nurses are Registered Nurses (RN) or Enrolled Nurses (EN) with current AHPRA registration and relevant experience in community and complex care."
+                },
+                {
+                    "question": "Can nursing services be provided at night?",
+                    "answer": "Yes, we offer nursing support during evenings and overnight for participants who require around-the-clock care."
+                },
+                {
+                    "question": "Do you coordinate with my existing healthcare providers?",
+                    "answer": "Absolutely. We work closely with your GP, specialists, and other healthcare providers to ensure coordinated, comprehensive care."
+                }
+            ]
+        },
+        "physiotherapy": {
+            "title": "Physiotherapy Services",
+            "subtitle": "Improve mobility and physical function",
+            "description": "Our physiotherapy services help you improve mobility, reduce pain, and enhance your physical function. Our qualified physiotherapists work with you to develop personalized treatment plans that support your goals and independence.",
+            "services": [
+                "Mobility assessments and therapy",
+                "Strength and conditioning programs",
+                "Balance and falls prevention",
+                "Pain management",
+                "Post-surgery rehabilitation",
+                "Neurological physiotherapy",
+                "Respiratory physiotherapy",
+                "Equipment prescription and training",
+                "Home exercise programs",
+                "Group exercise sessions"
+            ],
+            "features": {
+                "qualified": {
+                    "title": "Qualified Physiotherapists",
+                    "description": "Our team includes experienced physiotherapists registered with AHPRA."
+                },
+                "homeVisits": {
+                    "title": "Home Visits Available",
+                    "description": "We come to you for convenient physiotherapy in your own environment."
+                },
+                "personalized": {
+                    "title": "Personalized Programs",
+                    "description": "Treatment plans tailored to your specific needs and goals."
+                },
+                "equipment": {
+                    "title": "Equipment Advice",
+                    "description": "Expert guidance on mobility aids and assistive equipment."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Is physiotherapy covered by NDIS?",
+                    "answer": "Yes, physiotherapy is a capacity building support under the NDIS. It may be included in your plan under Improved Daily Living or other relevant categories."
+                },
+                {
+                    "question": "How often will I need physiotherapy sessions?",
+                    "answer": "Frequency varies based on your needs and goals. Your physiotherapist will recommend an appropriate schedule during your initial assessment."
+                },
+                {
+                    "question": "Can physiotherapy help with chronic pain?",
+                    "answer": "Yes, our physiotherapists use various techniques to help manage chronic pain, including exercise therapy, manual therapy, and education about pain management strategies."
+                }
+            ]
+        },
+        "communityParticipation": {
+            "title": "Community Participation & Group Programs",
+            "subtitle": "Connect, participate, and belong",
+            "description": "Our Community Participation programs help you build connections, develop skills, and engage with your community. From social groups to skill-building activities, we support you to participate in the activities that matter to you.",
+            "services": [
+                "Social outings and group activities",
+                "Skill development workshops",
+                "Recreation and leisure programs",
+                "Volunteering opportunities",
+                "Community events and festivals",
+                "Arts and cultural activities",
+                "Sports and fitness groups",
+                "Educational programs",
+                "Life skills training",
+                "Peer support groups"
+            ],
+            "features": {
+                "variety": {
+                    "title": "Wide Variety of Activities",
+                    "description": "Choose from diverse programs that match your interests and goals."
+                },
+                "inclusive": {
+                    "title": "Inclusive Environment",
+                    "description": "All our activities are designed to be welcoming and accessible."
+                },
+                "skills": {
+                    "title": "Skill Building",
+                    "description": "Develop new skills while making friends and having fun."
+                },
+                "connections": {
+                    "title": "Build Connections",
+                    "description": "Meet new people and build lasting friendships in your community."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What types of group activities are available?",
+                    "answer": "We offer a wide range of activities including social outings, arts and crafts, cooking classes, fitness groups, community gardening, and more. Activities are regularly updated based on participant interests."
+                },
+                {
+                    "question": "Can I bring a friend or family member?",
+                    "answer": "Some activities are designed for participants only, while others welcome family and friends. We can advise on specific program requirements when you enquire."
+                },
+                {
+                    "question": "How do I join a group program?",
+                    "answer": "Contact us to discuss your interests and goals. We'll help match you with suitable programs and arrange any necessary support for your participation."
+                }
+            ]
+        },
+        "companionship": {
+            "title": "Companionship Services",
+            "subtitle": "Social connection and emotional support",
+            "description": "Our Companionship services provide meaningful social connection and emotional support. Whether you want someone to share activities with, accompany you on outings, or simply provide friendly company, our compassionate companions are here for you.",
+            "services": [
+                "Social companionship at home",
+                "Accompanying on community outings",
+                "Shared hobbies and interests",
+                "Conversation and emotional support",
+                "Attending events and appointments",
+                "Support with social activities",
+                "Technology assistance and connection",
+                "Reading and shared activities",
+                "Walking and gentle exercise",
+                "Meal companionship"
+            ],
+            "features": {
+                "matched": {
+                    "title": "Matched Companions",
+                    "description": "We carefully match you with companions who share your interests."
+                },
+                "flexible": {
+                    "title": "Flexible Scheduling",
+                    "description": "Companionship available when and where you need it."
+                },
+                "trained": {
+                    "title": "Trained Staff",
+                    "description": "Our companions are trained to provide supportive, respectful company."
+                },
+                "meaningful": {
+                    "title": "Meaningful Connection",
+                    "description": "We focus on building genuine, supportive relationships."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What's the difference between companionship and support work?",
+                    "answer": "Companionship focuses on social connection and emotional wellbeing, while support work may include personal care and daily living tasks. Companionship is about having someone to share time and activities with."
+                },
+                {
+                    "question": "Can I have the same companion each visit?",
+                    "answer": "Yes, we strive for consistency and will do our best to match you with the same companion for ongoing visits. Building a relationship is important to us."
+                },
+                {
+                    "question": "What activities can we do together?",
+                    "answer": "Activities are based on your interests and preferences. This might include going for walks, visiting cafes, playing games, watching movies, attending community events, or simply enjoying conversation."
+                }
+            ]
+        },
+        "transport": {
+            "title": "Travel & Transport Assistance",
+            "subtitle": "Getting you where you need to go",
+            "description": "Our Travel and Transport Assistance services help you get to where you need to be. Whether it's medical appointments, community activities, or social outings, we provide safe, reliable transport and support to help you stay connected and independent.",
+            "services": [
+                "Medical appointment transport",
+                "Community access transport",
+                "Shopping trips",
+                "Social and recreational outings",
+                "Education and employment transport",
+                "Family visits",
+                "Travel training and support",
+                "Accessible vehicle options",
+                "Door-to-door assistance",
+                "Support during travel"
+            ],
+            "features": {
+                "reliable": {
+                    "title": "Reliable Service",
+                    "description": "Punctual, dependable transport you can count on."
+                },
+                "accessible": {
+                    "title": "Accessible Vehicles",
+                    "description": "Options for wheelchair and mobility equipment transport."
+                },
+                "trained": {
+                    "title": "Trained Drivers",
+                    "description": "All drivers are trained in disability support and safety."
+                },
+                "flexible": {
+                    "title": "Flexible Booking",
+                    "description": "Book regular trips or one-off transport as needed."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Do you have wheelchair-accessible vehicles?",
+                    "answer": "Yes, we have vehicles that accommodate wheelchairs and other mobility equipment. Please let us know your requirements when booking."
+                },
+                {
+                    "question": "How far in advance do I need to book?",
+                    "answer": "We recommend booking regular transport at least 48 hours in advance. For ongoing appointments, we can set up recurring bookings for your convenience."
+                },
+                {
+                    "question": "Can someone accompany me during transport?",
+                    "answer": "Absolutely. Our drivers can provide support during the journey, and we can also arrange for a support worker to accompany you if needed."
+                }
+            ]
+        },
+        "hydrotherapy": {
+            "title": "Hydrotherapy & Pool Sessions",
+            "subtitle": "Therapeutic water-based exercise",
+            "description": "Our Hydrotherapy services use the therapeutic properties of water to improve your mobility, strength, and overall wellbeing. Our qualified therapists provide individualized programs in warm water pools to help you achieve your physical goals.",
+            "services": [
+                "Individual hydrotherapy sessions",
+                "Group aquatic exercise",
+                "Pain management therapy",
+                "Post-surgical rehabilitation",
+                "Mobility improvement programs",
+                "Relaxation and stress relief",
+                "Water safety skills",
+                "Supervised pool access",
+                "Exercise prescription",
+                "Progress monitoring"
+            ],
+            "features": {
+                "warm": {
+                    "title": "Warm Water Therapy",
+                    "description": "Sessions in heated pools for comfort and therapeutic benefit."
+                },
+                "qualified": {
+                    "title": "Qualified Therapists",
+                    "description": "Trained physiotherapists and exercise physiologists lead sessions."
+                },
+                "individual": {
+                    "title": "Individual Programs",
+                    "description": "Tailored exercises designed for your specific needs and goals."
+                },
+                "progress": {
+                    "title": "Track Progress",
+                    "description": "Regular assessments to monitor your improvements."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What do I need to bring to hydrotherapy?",
+                    "answer": "Bring swimwear, a towel, and any mobility aids you use. We recommend bringing a water bottle and arriving a few minutes early to change."
+                },
+                {
+                    "question": "I'm not a confident swimmer. Is hydrotherapy still suitable?",
+                    "answer": "Absolutely! Hydrotherapy takes place in shallow, warm water with your therapist right beside you. You don't need to know how to swim to benefit from hydrotherapy."
+                },
+                {
+                    "question": "How often should I attend hydrotherapy?",
+                    "answer": "Frequency depends on your goals and NDIS plan. Many participants attend weekly sessions, but your therapist will recommend an appropriate schedule for you."
+                }
+            ]
+        },
+        "personalTraining": {
+            "title": "Personal Training Sessions",
+            "subtitle": "Fitness tailored to your abilities",
+            "description": "Our Personal Training services provide individualized fitness programs designed for your unique abilities and goals. Our qualified trainers create safe, effective exercise programs that help you build strength, improve fitness, and feel your best.",
+            "services": [
+                "Individual fitness assessments",
+                "Customized exercise programs",
+                "Strength training",
+                "Cardiovascular fitness",
+                "Flexibility and mobility work",
+                "Balance and coordination",
+                "Functional fitness training",
+                "Home exercise programs",
+                "Progress tracking",
+                "Nutrition guidance"
+            ],
+            "features": {
+                "qualified": {
+                    "title": "Qualified Trainers",
+                    "description": "Experienced trainers with disability-specific fitness qualifications."
+                },
+                "personalized": {
+                    "title": "Personalized Programs",
+                    "description": "Exercise plans designed specifically for your abilities and goals."
+                },
+                "location": {
+                    "title": "Flexible Location",
+                    "description": "Train at home, in the gym, or outdoors based on your preference."
+                },
+                "safe": {
+                    "title": "Safe Environment",
+                    "description": "All exercises adapted for your safety and comfort."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Do I need any equipment for personal training?",
+                    "answer": "Not necessarily. Our trainers can design programs using minimal equipment, bodyweight exercises, or items you have at home. They can also advise on suitable equipment if you want to invest in some."
+                },
+                {
+                    "question": "Is personal training suitable for all fitness levels?",
+                    "answer": "Yes! Our trainers specialize in adaptive fitness and can create programs for any fitness level, from complete beginners to those looking to improve their current fitness."
+                },
+                {
+                    "question": "How is this different from regular gym training?",
+                    "answer": "Our trainers have specialized qualifications in working with people with disabilities. They understand how to adapt exercises for different abilities and conditions, ensuring safe, effective workouts."
+                }
+            ]
+        },
+        "behaviourSupport": {
+            "title": "Positive Behaviour Support",
+            "subtitle": "Understanding and supporting behaviour",
+            "description": "Our Positive Behaviour Support services help understand the reasons behind challenging behaviours and develop strategies that improve quality of life. Our qualified practitioners create comprehensive support plans focused on positive outcomes.",
+            "services": [
+                "Functional behaviour assessments",
+                "Behaviour support plan development",
+                "Crisis prevention strategies",
+                "Environment modifications",
+                "Staff and carer training",
+                "Implementation support",
+                "Regular plan reviews",
+                "Multi-disciplinary collaboration",
+                "Family support and education",
+                "Progress monitoring and reporting"
+            ],
+            "features": {
+                "qualified": {
+                    "title": "Qualified Practitioners",
+                    "description": "NDIS-registered behaviour support practitioners with extensive experience."
+                },
+                "evidenceBased": {
+                    "title": "Evidence-Based",
+                    "description": "Strategies based on current research and best practices."
+                },
+                "personCentered": {
+                    "title": "Person-Centered",
+                    "description": "Focus on individual needs, preferences, and quality of life."
+                },
+                "collaborative": {
+                    "title": "Collaborative Approach",
+                    "description": "Working with families, carers, and other providers."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What is Positive Behaviour Support?",
+                    "answer": "Positive Behaviour Support (PBS) is an evidence-based approach that focuses on understanding why challenging behaviours occur and developing strategies to improve quality of life and reduce the need for restrictive practices."
+                },
+                {
+                    "question": "Who develops the behaviour support plan?",
+                    "answer": "Behaviour support plans are developed by NDIS-registered behaviour support practitioners who work closely with the participant, their family, and other support providers."
+                },
+                {
+                    "question": "How long does it take to see results?",
+                    "answer": "Results vary depending on individual circumstances. Some strategies may show immediate improvement, while others require time and consistent implementation. Regular reviews help track progress and adjust strategies as needed."
+                }
+            ]
+        },
+        "cleaning": {
+            "title": "Professional Cleaning Services",
+            "subtitle": "Maintaining a clean, healthy home",
+            "description": "Our Professional Cleaning services help you maintain a clean, healthy living environment. Our trained cleaners provide thorough, reliable cleaning services tailored to your needs and preferences, giving you more time to focus on what matters most.",
+            "services": [
+                "Regular house cleaning",
+                "Deep cleaning services",
+                "Kitchen and bathroom cleaning",
+                "Vacuuming and floor care",
+                "Dusting and surface cleaning",
+                "Window cleaning",
+                "Laundry assistance",
+                "Bed making and linen changes",
+                "Garbage and recycling management",
+                "Organizing and decluttering"
+            ],
+            "features": {
+                "reliable": {
+                    "title": "Reliable Service",
+                    "description": "Consistent, dependable cleaning you can count on."
+                },
+                "trained": {
+                    "title": "Trained Staff",
+                    "description": "All cleaners are trained in respectful, client-centered service."
+                },
+                "flexible": {
+                    "title": "Flexible Scheduling",
+                    "description": "Weekly, fortnightly, or one-off cleaning to suit your needs."
+                },
+                "products": {
+                    "title": "Quality Products",
+                    "description": "We use safe, effective cleaning products, with options for sensitivities."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Do I need to provide cleaning supplies?",
+                    "answer": "We can bring our own cleaning supplies and equipment, or use products you prefer. Just let us know your preference when booking."
+                },
+                {
+                    "question": "How often can I schedule cleaning?",
+                    "answer": "Cleaning frequency is flexible based on your needs and NDIS plan. Many participants have weekly or fortnightly cleaning, but we can arrange services as often as you need."
+                },
+                {
+                    "question": "Can I request specific tasks be prioritized?",
+                    "answer": "Absolutely. We work with you to understand your priorities and ensure the most important tasks are always completed during each visit."
+                }
+            ]
+        },
+        "independentLiving": {
+            "title": "Independent Living & Accommodation Support",
+            "subtitle": "Support for independent living",
+            "description": "Our Independent Living and Accommodation Support services help you live independently in your own home or supported accommodation. We provide the support you need to manage daily life, build skills, and achieve your accommodation goals.",
+            "services": [
+                "Supported Independent Living (SIL)",
+                "In-home living skills development",
+                "Tenancy support",
+                "Housemate matching",
+                "24/7 on-call support",
+                "Emergency response",
+                "Life skills training",
+                "Budgeting and financial literacy",
+                "Household management",
+                "Community integration support"
+            ],
+            "features": {
+                "personCentered": {
+                    "title": "Person-Centered",
+                    "description": "Support tailored to your individual goals and preferences."
+                },
+                "skillBuilding": {
+                    "title": "Skill Building",
+                    "description": "Develop the skills you need for greater independence."
+                },
+                "flexible": {
+                    "title": "Flexible Support",
+                    "description": "From a few hours a week to 24/7 support as needed."
+                },
+                "quality": {
+                    "title": "Quality Accommodation",
+                    "description": "Clean, safe, comfortable living environments."
+                },
+                "accessible": {
+                    "title": "Accessible Accommodation",
+                    "description": "Housing options designed to meet your accessibility needs."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What is Supported Independent Living (SIL)?",
+                    "answer": "SIL is NDIS-funded support that helps you live as independently as possible in your own home or shared accommodation. It can include help with daily activities, personal care, and household tasks."
+                },
+                {
+                    "question": "Can I choose where I live?",
+                    "answer": "Yes, choice and control are fundamental to NDIS. We work with you to find accommodation that suits your preferences, needs, and budget."
+                },
+                {
+                    "question": "What if I already have accommodation?",
+                    "answer": "We can provide support in your existing home. Our services are flexible and can be delivered wherever you live, helping you maintain your independence in your current environment."
+                }
+            ]
+        }
     }
 }

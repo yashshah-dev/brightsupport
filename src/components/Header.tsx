@@ -3,12 +3,28 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { Phone, Mail, Clock, Menu, X, ChevronRight } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
+import { locales, type Locale } from '@/i18n/config';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  // Detect current locale from pathname
+  const currentLocale = locales.find(locale =>
+    pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  // Helper function to get locale-aware href
+  const getLocalizedHref = (path: string) => {
+    if (currentLocale) {
+      return `/${currentLocale}${path}`;
+    }
+    return path;
+  };
 
   // Add scroll effect for header
   useEffect(() => {
@@ -20,11 +36,11 @@ export default function Header() {
   }, []);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Our Services', href: '/our-services' },
-    { name: 'Career', href: '/career' },
-    { name: 'Contact Us', href: '/contact-us' },
+    { name: 'Home', href: currentLocale ? `/${currentLocale}` : '/' },
+    { name: 'About Us', href: getLocalizedHref('/about-us') },
+    { name: 'Our Services', href: getLocalizedHref('/our-services') },
+    { name: 'Career', href: getLocalizedHref('/career') },
+    { name: 'Contact Us', href: getLocalizedHref('/contact-us') },
   ];
 
   return (
@@ -72,19 +88,26 @@ export default function Header() {
         <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'py-3' : 'py-4'
           }`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center group relative">
+          <Link href={currentLocale ? `/${currentLocale}` : '/'} className="flex items-center gap-3 group relative">
             <div className="relative">
               <Image
-                src="/images/logo/bright-support-logo.png"
+                src="/images/logo-new.jpg"
                 alt="Bright Support Logo"
-                width={200}
-                height={70}
-                className={`w-auto transition-all duration-300 group-hover:scale-[1.02] ${scrolled ? 'h-12' : 'h-16'
+                width={80}
+                height={80}
+                className={`w-auto transition-all duration-300 group-hover:rotate-3 ${scrolled ? 'h-12' : 'h-16'
                   }`}
                 priority
               />
-              {/* Subtle glow effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#1E4D8C]/0 to-[#38BDF8]/0 group-hover:from-[#1E4D8C]/5 group-hover:to-[#38BDF8]/5 rounded-xl transition-all duration-500"></div>
+            </div>
+            <div className="flex flex-col">
+              <span className={`font-bold text-[#254689] leading-tight transition-all duration-300 ${scrolled ? 'text-xl' : 'text-2xl'
+                }`}>
+                Bright Support
+              </span>
+              <span className="text-[10px] sm:text-xs tracking-[0.2em] text-[#05A5C6] font-bold uppercase">
+                BARRIER-FREE LIFE
+              </span>
             </div>
           </Link>
 
@@ -104,7 +127,7 @@ export default function Header() {
 
             {/* CTA Button with modern styling */}
             <Link
-              href="/contact-us"
+              href={getLocalizedHref('/contact-us')}
               className="ml-4 group relative overflow-hidden bg-gradient-to-r from-[#DC3545] to-[#E74C5C] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/30 hover:-translate-y-0.5"
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -176,7 +199,7 @@ export default function Header() {
 
             {/* Mobile CTA */}
             <Link
-              href="/contact-us"
+              href={getLocalizedHref('/contact-us')}
               className="block w-full mt-4 bg-gradient-to-r from-[#DC3545] to-[#E74C5C] text-white px-6 py-4 rounded-2xl font-semibold text-center shadow-lg shadow-red-500/20 transition-all duration-300 hover:shadow-xl"
               onClick={() => setMobileMenuOpen(false)}
             >

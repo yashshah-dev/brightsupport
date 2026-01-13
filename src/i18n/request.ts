@@ -12,5 +12,18 @@ export default getRequestConfig(async ({ requestLocale }) => {
     return {
         locale,
         messages: (await import(`../../messages/${locale}.json`)).default,
+        onError(error) {
+            if (error.code === 'MISSING_MESSAGE') {
+                return;
+            }
+            console.error(error);
+        },
+        getMessageFallback({ namespace, key, error }) {
+            const path = [namespace, key].filter((part) => part != null).join('.');
+            if (error.code === 'MISSING_MESSAGE') {
+                return ''; // Return empty string for missing translations instead of key
+            }
+            return 'FIXME: ' + path;
+        }
     };
 });

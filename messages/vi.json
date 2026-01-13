@@ -1,0 +1,855 @@
+{
+    "Header": {
+        "phone": "1800 407 508",
+        "email": "care@brightsupport.com.au",
+        "hours": "Thứ 2-6 8h-18h",
+        "nav": {
+            "home": "Trang chủ",
+            "about": "Về chúng tôi",
+            "services": "Dịch vụ",
+            "career": "Tuyển dụng",
+            "contact": "Liên hệ"
+        },
+        "cta": "Gửi giới thiệu",
+        "languageSwitch": "Ngôn ngữ"
+    },
+    "Footer": {
+        "description": "Nhà cung cấp dịch vụ NDIS đáng tin cậy, mang đến dịch vụ chăm sóc chất lượng trên khắp Victoria.",
+        "quickLinks": "Liên kết nhanh",
+        "services": "Dịch vụ",
+        "contact": "Liên hệ",
+        "privacy": "Chính sách bảo mật",
+        "copyright": "© 2024 Bright Support. Bản quyền thuộc về chúng tôi.",
+        "locations": {
+            "melbourne": "Melbourne",
+            "shepparton": "Shepparton"
+        }
+    },
+    "Common": {
+        "learnMore": "Tìm hiểu thêm",
+        "getStarted": "Bắt đầu",
+        "contactUs": "Liên hệ",
+        "callNow": "Gọi ngay",
+        "readMore": "Đọc thêm",
+        "viewAll": "Xem tất cả",
+        "backToHome": "Về trang chủ",
+        "loading": "Đang tải...",
+        "error": "Đã xảy ra lỗi",
+        "submit": "Gửi",
+        "send": "Gửi",
+        "required": "Bắt buộc",
+        "optional": "Tùy chọn"
+    },
+    "Hero": {
+        "trusted": "Được tin tưởng bởi hơn 500 người",
+        "title": "Nhà cung cấp dịch vụ hỗ trợ người khuyết tật NDIS",
+        "subtitle": "Chào mừng đến với Bright Support",
+        "description": "Giúp việc tiếp cận NDIS trở nên dễ dàng với các dịch vụ hỗ trợ chuyên nghiệp, tận tâm, được thiết kế riêng cho nhu cầu và mục tiêu của bạn.",
+        "cta": {
+            "services": "Khám phá dịch vụ",
+            "contact": "Liên hệ ngay"
+        }
+    },
+    "Services": {
+        "title": "Dịch vụ NDIS của chúng tôi",
+        "subtitle": "Dịch vụ hỗ trợ người khuyết tật toàn diện được thiết kế để nâng cao sự độc lập và chất lượng cuộc sống của bạn.",
+        "viewAllServices": "Xem tất cả dịch vụ",
+        "items": {
+            "communityNursing": {
+                "title": "Điều dưỡng cộng đồng & Chăm sóc phức tạp",
+                "description": "Chăm sóc điều dưỡng chuyên nghiệp bao gồm chăm sóc vết thương, quản lý thuốc và hỗ trợ bệnh mãn tính do y tá có bằng cấp cung cấp tại nhà bạn."
+            },
+            "dailyLiving": {
+                "title": "Hỗ trợ sinh hoạt hàng ngày & Tại nhà",
+                "description": "Hỗ trợ các hoạt động hàng ngày giúp bạn duy trì sự độc lập tại nhà, bao gồm chăm sóc cá nhân, chuẩn bị bữa ăn và công việc nhà."
+            },
+            "independentLiving": {
+                "title": "Sống độc lập & Hỗ trợ chỗ ở",
+                "description": "Hỗ trợ sống độc lập trong nhà riêng hoặc chỗ ở được hỗ trợ, với sự trợ giúp được điều chỉnh theo nhu cầu của bạn."
+            },
+            "communityParticipation": {
+                "title": "Tham gia cộng đồng & Chương trình nhóm",
+                "description": "Các chương trình hấp dẫn để xây dựng kết nối xã hội, phát triển kỹ năng và tham gia các hoạt động cộng đồng."
+            },
+            "physiotherapy": {
+                "title": "Dịch vụ vật lý trị liệu",
+                "description": "Vật lý trị liệu chuyên môn để cải thiện khả năng vận động, quản lý đau và nâng cao chức năng thể chất với kế hoạch điều trị cá nhân hóa."
+            },
+            "companionship": {
+                "title": "Dịch vụ đồng hành",
+                "description": "Sự đồng hành có ý nghĩa và hỗ trợ tinh thần để giảm cô đơn và cải thiện sức khỏe thông qua kết nối chân thành."
+            },
+            "transport": {
+                "title": "Hỗ trợ đi lại & Vận chuyển",
+                "description": "Vận chuyển an toàn và đáng tin cậy đến các cuộc hẹn, hoạt động và tham gia cộng đồng với nhân viên hỗ trợ được đào tạo."
+            }
+        }
+    },
+    "WhyChoose": {
+        "title": "Tại sao chọn Bright Support?",
+        "subtitle": "Chúng tôi cam kết cung cấp dịch vụ NDIS xuất sắc tạo nên sự khác biệt thực sự trong cuộc sống của bạn.",
+        "items": {
+            "experienced": {
+                "title": "Đội ngũ giàu kinh nghiệm",
+                "description": "Nhân viên hỗ trợ của chúng tôi là những chuyên gia được đào tạo, tận tụy cung cấp dịch vụ chăm sóc cá nhân hóa."
+            },
+            "person": {
+                "title": "Lấy con người làm trung tâm",
+                "description": "Chúng tôi tập trung vào mục tiêu và sở thích cá nhân của bạn để tạo ra kế hoạch hỗ trợ phù hợp."
+            },
+            "available": {
+                "title": "Sẵn sàng khi bạn cần",
+                "description": "Lịch trình linh hoạt với dịch vụ hỗ trợ sẵn có khi phù hợp nhất với bạn."
+            },
+            "registered": {
+                "title": "Đã đăng ký NDIS",
+                "description": "Nhà cung cấp NDIS được đăng ký đầy đủ, đáp ứng mọi tiêu chuẩn chất lượng và an toàn."
+            }
+        }
+    },
+    "Video": {
+        "title": "Tìm hiểu thêm về dịch vụ của chúng tôi",
+        "subtitle": "Xem video để hiểu cách chúng tôi có thể hỗ trợ bạn"
+    },
+    "OurGoal": {
+        "title": "Mục tiêu của chúng tôi là làm cho cuộc sống của bạn tốt hơn",
+        "subtitle": "Cung cấp dịch vụ hỗ trợ xuất sắc với phương pháp lấy con người làm trung tâm",
+        "items": {
+            "easy": {
+                "title": "Chúng tôi làm cho việc điều hướng NDIS trở nên dễ dàng",
+                "description": "Đội ngũ giàu kinh nghiệm của chúng tôi giúp bạn hiểu và tiếp cận dịch vụ NDIS một cách dễ dàng. Sẵn sàng 24/7 qua đường dây nóng để hỗ trợ bạn bất cứ khi nào bạn cần."
+            },
+            "support": {
+                "title": "Dịch vụ hỗ trợ người khuyết tật",
+                "description": "Dịch vụ hỗ trợ toàn diện, lấy con người làm trung tâm được thiết kế để giúp bạn sống độc lập với phẩm giá và quyền lựa chọn. Đội ngũ có bằng cấp của chúng tôi tận tụy với mục tiêu và sức khỏe của bạn."
+            }
+        }
+    },
+    "CTA": {
+        "title": "Sẵn sàng bắt đầu?",
+        "description": "Liên hệ với chúng tôi hôm nay để thảo luận về cách chúng tôi có thể giúp bạn đạt được mục tiêu NDIS.",
+        "phone": "Gọi 1800 407 508",
+        "online": "Liên hệ trực tuyến"
+    },
+    "AboutUs": {
+        "meta": {
+            "title": "Về chúng tôi | Bright Support - Câu chuyện & Sứ mệnh",
+            "description": "Tìm hiểu về hành trình, sứ mệnh và giá trị của Bright Support. Thành lập năm 2019, chúng tôi là nhà cung cấp dịch vụ NDIS đáng tin cậy phục vụ Melbourne, Shepparton và hơn thế nữa."
+        },
+        "hero": {
+            "title": "Về Bright Support",
+            "subtitle": "Đối tác NDIS đáng tin cậy của bạn",
+            "description": "Thành lập năm 2019, Bright Support đã phát triển từ một nhà cung cấp địa phương nhỏ thành một tên tuổi đáng tin cậy trong lĩnh vực dịch vụ hỗ trợ người khuyết tật trên khắp Victoria."
+        },
+        "mission": {
+            "title": "Sứ mệnh của chúng tôi",
+            "description": "Trao quyền cho người khuyết tật sống cuộc sống tốt đẹp nhất thông qua các dịch vụ hỗ trợ tận tâm, lấy con người làm trung tâm, thúc đẩy sự độc lập, quyền lựa chọn và tham gia cộng đồng."
+        },
+        "vision": {
+            "title": "Tầm nhìn của chúng tôi",
+            "description": "Một thế giới nơi mọi người khuyết tật đều có cơ hội phát triển, tham gia đầy đủ vào cộng đồng và đạt được mục tiêu cá nhân."
+        },
+        "values": {
+            "title": "Giá trị của chúng tôi",
+            "compassion": {
+                "title": "Lòng trắc ẩn",
+                "description": "Chúng tôi tiếp cận mọi tương tác với sự đồng cảm và thấu hiểu."
+            },
+            "integrity": {
+                "title": "Chính trực",
+                "description": "Chúng tôi trung thực, minh bạch và có trách nhiệm trong mọi việc làm."
+            },
+            "excellence": {
+                "title": "Xuất sắc",
+                "description": "Chúng tôi phấn đấu đạt chất lượng cao nhất trong mọi dịch vụ cung cấp."
+            },
+            "respect": {
+                "title": "Tôn trọng",
+                "description": "Chúng tôi tôn trọng phẩm giá và giá trị của mọi cá nhân."
+            }
+        },
+        "team": {
+            "title": "Đội ngũ của chúng tôi",
+            "description": "Đội ngũ tận tụy gồm nhân viên hỗ trợ, y tá và chuyên gia y tế đồng nghiệp đam mê tạo sự khác biệt trong cuộc sống của những người chúng tôi hỗ trợ."
+        },
+        "stats": {
+            "clients": "500+ khách hàng được hỗ trợ",
+            "staff": "100+ thành viên đội ngũ",
+            "years": "5+ năm kinh nghiệm",
+            "locations": "Nhiều địa điểm"
+        }
+    },
+    "ContactUs": {
+        "meta": {
+            "title": "Liên hệ | Bright Support - Kết nối với chúng tôi",
+            "description": "Liên hệ Bright Support để nhận dịch vụ hỗ trợ người khuyết tật NDIS. Gọi 1800 407 508 hoặc đến văn phòng của chúng tôi tại Melbourne và Shepparton."
+        },
+        "hero": {
+            "title": "Liên hệ với chúng tôi",
+            "subtitle": "Chúng tôi sẵn sàng giúp đỡ",
+            "description": "Có câu hỏi về dịch vụ hoặc muốn thảo luận về cách chúng tôi hỗ trợ bạn? Liên hệ với đội ngũ thân thiện của chúng tôi hôm nay."
+        },
+        "form": {
+            "title": "Gửi tin nhắn cho chúng tôi",
+            "name": "Họ và tên",
+            "email": "Địa chỉ email",
+            "phone": "Số điện thoại",
+            "service": "Dịch vụ quan tâm",
+            "selectService": "Chọn một dịch vụ",
+            "message": "Tin nhắn của bạn",
+            "submit": "Gửi tin nhắn",
+            "success": "Cảm ơn bạn! Tin nhắn đã được gửi thành công.",
+            "error": "Xin lỗi, đã xảy ra lỗi khi gửi. Vui lòng thử lại."
+        },
+        "info": {
+            "title": "Thông tin liên hệ",
+            "phone": "Điện thoại",
+            "email": "Email",
+            "hours": "Giờ làm việc",
+            "hoursValue": "Thứ 2 - Thứ 6: 8h - 18h"
+        },
+        "locations": {
+            "title": "Địa điểm của chúng tôi",
+            "melbourne": {
+                "name": "Văn phòng Melbourne",
+                "address": "123 Collins Street, Melbourne VIC 3000"
+            },
+            "shepparton": {
+                "name": "Văn phòng Shepparton",
+                "address": "456 Wyndham Street, Shepparton VIC 3630"
+            }
+        }
+    },
+    "Career": {
+        "meta": {
+            "title": "Tuyển dụng | Gia nhập đội ngũ Bright Support",
+            "description": "Tìm kiếm sự nghiệp ý nghĩa trong lĩnh vực hỗ trợ người khuyết tật? Gia nhập Bright Support và tạo nên sự khác biệt. Lương cạnh tranh, vai trò linh hoạt và cơ hội phát triển chuyên môn."
+        },
+        "hero": {
+            "title": "Gia nhập đội ngũ của chúng tôi",
+            "subtitle": "Xây dựng sự nghiệp ý nghĩa",
+            "description": "Tạo nên sự khác biệt thực sự trong cuộc sống của mọi người trong khi phát triển sự nghiệp trong lĩnh vực dịch vụ hỗ trợ người khuyết tật."
+        },
+        "benefits": {
+            "title": "Tại sao làm việc với chúng tôi?",
+            "items": {
+                "pay": {
+                    "title": "Lương cạnh tranh",
+                    "description": "Mức lương cao hơn tiêu chuẩn ngành với phụ cấp và trợ cấp."
+                },
+                "flexibility": {
+                    "title": "Giờ làm linh hoạt",
+                    "description": "Chọn ca làm phù hợp với lịch trình và lối sống của bạn."
+                },
+                "training": {
+                    "title": "Phát triển chuyên môn",
+                    "description": "Đào tạo liên tục và cơ hội thăng tiến nghề nghiệp."
+                },
+                "support": {
+                    "title": "Đội ngũ hỗ trợ",
+                    "description": "Gia nhập đội ngũ thân thiện, hợp tác, trân trọng đóng góp của bạn."
+                },
+                "impact": {
+                    "title": "Tạo sự khác biệt",
+                    "description": "Công việc ý nghĩa tác động tích cực đến cuộc sống hàng ngày."
+                },
+                "growth": {
+                    "title": "Phát triển sự nghiệp",
+                    "description": "Lộ trình thăng tiến rõ ràng trong tổ chức."
+                }
+            }
+        },
+        "positions": {
+            "title": "Vị trí đang tuyển",
+            "supportWorker": {
+                "title": "Nhân viên hỗ trợ",
+                "description": "Cung cấp hỗ trợ trực tiếp cho người tham gia NDIS tại nhà và cộng đồng."
+            },
+            "nurse": {
+                "title": "Y tá đăng ký",
+                "description": "Cung cấp dịch vụ chăm sóc phức tạp và điều dưỡng cho người tham gia."
+            },
+            "coordinator": {
+                "title": "Điều phối viên hỗ trợ",
+                "description": "Giúp người tham gia hiểu và thực hiện kế hoạch NDIS của họ."
+            }
+        },
+        "cta": {
+            "title": "Sẵn sàng ứng tuyển?",
+            "description": "Gửi hồ sơ xin việc cho bộ phận nhân sự và bắt đầu hành trình với Bright Support.",
+            "button": "Ứng tuyển ngay"
+        }
+    },
+    "OurServices": {
+        "meta": {
+            "title": "Dịch vụ | Dịch vụ hỗ trợ NDIS - Bright Support",
+            "description": "Dịch vụ NDIS toàn diện bao gồm hỗ trợ sinh hoạt hàng ngày, điều dưỡng cộng đồng, vật lý trị liệu, tham gia cộng đồng, huấn luyện cá nhân, thủy trị liệu và nhiều hơn nữa."
+        },
+        "hero": {
+            "title": "Dịch vụ của chúng tôi",
+            "subtitle": "Hỗ trợ NDIS toàn diện",
+            "description": "Chúng tôi cung cấp nhiều dịch vụ được NDIS tài trợ được thiết kế để hỗ trợ sự độc lập của bạn và giúp bạn đạt được mục tiêu."
+        },
+        "categories": {
+            "daily": "Hỗ trợ sinh hoạt hàng ngày",
+            "health": "Dịch vụ y tế & Đồng nghiệp",
+            "community": "Tham gia cộng đồng",
+            "specialist": "Dịch vụ chuyên môn"
+        }
+    },
+    "ServicePage": {
+        "features": "Tính năng chính",
+        "services": "Dịch vụ bao gồm",
+        "benefits": "Lợi ích",
+        "process": "Quy trình",
+        "faq": "Câu hỏi thường gặp",
+        "ctaTitle": "Sẵn sàng bắt đầu?",
+        "ctaDescription": "Liên hệ với chúng tôi hôm nay để thảo luận về cách dịch vụ này có thể hỗ trợ mục tiêu NDIS của bạn.",
+        "ctaButton": "Liên hệ"
+    },
+    "ServiceDetails": {
+        "dailyLiving": {
+            "title": "Hỗ trợ sinh hoạt hàng ngày & Tại nhà",
+            "subtitle": "Hỗ trợ sự độc lập của bạn tại nhà",
+            "description": "Dịch vụ hỗ trợ sinh hoạt hàng ngày và tại nhà được thiết kế để giúp bạn duy trì sự độc lập và chất lượng cuộc sống trong sự thoải mái của ngôi nhà bạn.",
+            "services": [
+                "Vệ sinh cá nhân",
+                "Dọn dẹp nhà cửa",
+                "Giặt là và ủi đồ",
+                "Chăm sóc thú cưng",
+                "Hỗ trợ bữa ăn",
+                "Mua sắm tạp hóa",
+                "Đưa đón đến các cuộc hẹn",
+                "Di chuyển trong nhà",
+                "Nhắc nhở uống thuốc",
+                "Làm vườn nhẹ"
+            ],
+            "features": {
+                "support247": {
+                    "title": "Hỗ trợ 24/7",
+                    "description": "Chúng tôi có khả năng hỗ trợ cả ngày và đêm để đáp ứng nhu cầu của bạn."
+                },
+                "qualified": {
+                    "title": "Nhân viên hỗ trợ chuyên nghiệp",
+                    "description": "Đội ngũ nhân viên hỗ trợ giàu kinh nghiệm, được đào tạo bài bản."
+                },
+                "personCentered": {
+                    "title": "Lấy con người làm trung tâm",
+                    "description": "Mục tiêu, sở thích và lựa chọn của bạn định hướng mọi hỗ trợ chúng tôi cung cấp."
+                },
+                "flexible": {
+                    "title": "Cung cấp dịch vụ linh hoạt",
+                    "description": "Dịch vụ được điều chỉnh theo lịch trình và yêu cầu cụ thể của bạn."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Hỗ trợ sinh hoạt hàng ngày bao gồm những gì?",
+                    "answer": "Hỗ trợ sinh hoạt hàng ngày bao gồm hỗ trợ chăm sóc cá nhân, công việc nhà, chuẩn bị bữa ăn, mua sắm và các hoạt động khác giúp bạn sống độc lập."
+                },
+                {
+                    "question": "Tôi có thể chọn nhân viên hỗ trợ không?",
+                    "answer": "Có! Chúng tôi tin vào việc xây dựng mối quan hệ bền chặt. Chúng tôi sẽ kết nối bạn với nhân viên hỗ trợ phù hợp."
+                },
+                {
+                    "question": "Tôi có thể nhận hỗ trợ bao nhiêu lần?",
+                    "answer": "Tần suất hỗ trợ phụ thuộc vào kế hoạch NDIS và nguồn tài trợ của bạn."
+                }
+            ]
+        },
+        "communityNursing": {
+            "title": "Điều dưỡng cộng đồng & Chăm sóc phức tạp",
+            "subtitle": "Chăm sóc điều dưỡng chuyên nghiệp tại nhà bạn",
+            "description": "Dịch vụ điều dưỡng cộng đồng và chăm sóc phức tạp mang dịch vụ chăm sóc sức khỏe chuyên nghiệp đến với bạn.",
+            "services": [
+                "Chăm sóc vết thương",
+                "Quản lý thuốc",
+                "Cho ăn qua ống PEG",
+                "Chăm sóc ống thông",
+                "Chăm sóc lỗ khí quản",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Quản lý tiểu đường",
+                "Chăm sóc sau phẫu thuật",
+                "Hỗ trợ chăm sóc giảm nhẹ",
+                "Giáo dục sức khỏe"
+            ],
+            "features": {
+                "registered": {
+                    "title": "Y tá đăng ký",
+                    "description": "Tất cả y tá đều đăng ký đầy đủ với AHPRA và có kinh nghiệm trong chăm sóc cộng đồng."
+                },
+                "available": {
+                    "title": "Khả dụng 7 ngày",
+                    "description": "Dịch vụ điều dưỡng khả dụng suốt tuần để đáp ứng nhu cầu chăm sóc sức khỏe của bạn."
+                },
+                "coordinated": {
+                    "title": "Chăm sóc phối hợp",
+                    "description": "Chúng tôi phối hợp chặt chẽ với bác sĩ và chuyên gia của bạn."
+                },
+                "training": {
+                    "title": "Đào tạo người chăm sóc",
+                    "description": "Chúng tôi đào tạo gia đình và người chăm sóc để hỗ trợ nhu cầu sức khỏe của bạn."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Y tá của các bạn có bằng cấp gì?",
+                    "answer": "Tất cả y tá đều là Y tá đăng ký (RN) hoặc Y tá Enrolled (EN) với đăng ký AHPRA hiện hành."
+                },
+                {
+                    "question": "Dịch vụ điều dưỡng có thể cung cấp vào ban đêm không?",
+                    "answer": "Có, chúng tôi cung cấp hỗ trợ điều dưỡng vào buổi tối và qua đêm."
+                },
+                {
+                    "question": "Các bạn có phối hợp với nhà cung cấp chăm sóc sức khỏe hiện tại không?",
+                    "answer": "Hoàn toàn. Chúng tôi phối hợp chặt chẽ với bác sĩ GP, chuyên gia và các nhà cung cấp khác của bạn."
+                }
+            ]
+        },
+        "physiotherapy": {
+            "title": "Dịch vụ vật lý trị liệu",
+            "subtitle": "Cải thiện khả năng vận động và chức năng thể chất",
+            "description": "Dịch vụ vật lý trị liệu giúp bạn cải thiện khả năng vận động, giảm đau và nâng cao chức năng thể chất.",
+            "services": [
+                "Đánh giá vận động",
+                "Chương trình sức mạnh",
+                "Phòng ngừa té ngã",
+                "Quản lý đau",
+                "Phục hồi sau phẫu thuật",
+                "Vật lý trị liệu thần kinh",
+                "Vật lý trị liệu hô hấp",
+                "Kê đơn thiết bị",
+                "Chương trình tập tại nhà",
+                "Lớp tập nhóm"
+            ],
+            "features": {
+                "qualified": {
+                    "title": "Chuyên gia vật lý trị liệu có bằng cấp",
+                    "description": "Đội ngũ chuyên gia vật lý trị liệu giàu kinh nghiệm đã đăng ký với AHPRA."
+                },
+                "homeVisits": {
+                    "title": "Thăm khám tại nhà",
+                    "description": "Chúng tôi đến nhà bạn để thuận tiện vật lý trị liệu trong môi trường quen thuộc."
+                },
+                "personalized": {
+                    "title": "Chương trình cá nhân hóa",
+                    "description": "Kế hoạch điều trị được thiết kế riêng cho nhu cầu và mục tiêu cụ thể của bạn."
+                },
+                "equipment": {
+                    "title": "Tư vấn thiết bị",
+                    "description": "Hướng dẫn chuyên môn về dụng cụ hỗ trợ di chuyển và thiết bị hỗ trợ."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Vật lý trị liệu có được NDIS chi trả không?",
+                    "answer": "Có, vật lý trị liệu là hỗ trợ xây dựng năng lực theo NDIS."
+                },
+                {
+                    "question": "Tôi cần vật lý trị liệu bao nhiêu lần?",
+                    "answer": "Tần suất phụ thuộc vào nhu cầu và mục tiêu của bạn."
+                },
+                {
+                    "question": "Vật lý trị liệu có thể giúp đau mãn tính không?",
+                    "answer": "Có, chúng tôi sử dụng các kỹ thuật khác nhau để giúp quản lý đau mãn tính."
+                }
+            ]
+        },
+        "communityParticipation": {
+            "title": "Tham gia cộng đồng & Chương trình nhóm",
+            "subtitle": "Kết nối, tham gia và thuộc về",
+            "description": "Chương trình tham gia cộng đồng giúp bạn xây dựng mối quan hệ, phát triển kỹ năng và hòa nhập với cộng đồng.",
+            "services": [
+                "Hoạt động xã hội nhóm",
+                "Hội thảo phát triển kỹ năng",
+                "Chương trình giải trí",
+                "Cơ hội tình nguyện",
+                "Sự kiện cộng đồng",
+                "Hoạt động nghệ thuật văn hóa",
+                "Nhóm thể thao và thể dục",
+                "Chương trình giáo dục",
+                "Đào tạo kỹ năng sống",
+                "Nhóm hỗ trợ đồng đẳng"
+            ],
+            "features": {
+                "variety": {
+                    "title": "Đa dạng hoạt động",
+                    "description": "Chọn từ các chương trình đa dạng phù hợp với sở thích và mục tiêu của bạn."
+                },
+                "inclusive": {
+                    "title": "Môi trường hòa nhập",
+                    "description": "Tất cả hoạt động được thiết kế để chào đón và dễ tiếp cận."
+                },
+                "skills": {
+                    "title": "Xây dựng kỹ năng",
+                    "description": "Phát triển kỹ năng mới trong khi kết bạn và vui chơi."
+                },
+                "connections": {
+                    "title": "Xây dựng kết nối",
+                    "description": "Gặp gỡ người mới và xây dựng tình bạn lâu dài trong cộng đồng."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Có những loại hoạt động nhóm nào?",
+                    "answer": "Chúng tôi có nhiều hoạt động như đi dạo xã hội, lớp nấu ăn, nhóm thể dục và nhiều hơn nữa."
+                },
+                {
+                    "question": "Tôi có thể đưa bạn bè hoặc gia đình đến không?",
+                    "answer": "Một số hoạt động chỉ dành cho người tham gia, một số khác chào đón gia đình và bạn bè."
+                },
+                {
+                    "question": "Làm thế nào để tham gia chương trình nhóm?",
+                    "answer": "Liên hệ với chúng tôi để thảo luận về sở thích và mục tiêu của bạn."
+                }
+            ]
+        },
+        "companionship": {
+            "title": "Dịch vụ đồng hành",
+            "subtitle": "Kết nối xã hội và hỗ trợ tinh thần",
+            "description": "Dịch vụ đồng hành cung cấp kết nối xã hội có ý nghĩa và hỗ trợ tinh thần.",
+            "services": [
+                "Đồng hành xã hội tại nhà",
+                "Đồng hành đi dạo",
+                "Sở thích chung",
+                "Trò chuyện và hỗ trợ tinh thần",
+                "Tham dự sự kiện",
+                "Hỗ trợ hoạt động xã hội",
+                "Hỗ trợ công nghệ",
+                "Đọc sách và hoạt động chung",
+                "Đi bộ và tập thể dục nhẹ",
+                "Đồng hành bữa ăn"
+            ],
+            "features": {
+                "matched": {
+                    "title": "Đồng hành phù hợp",
+                    "description": "Chúng tôi kết nối bạn với người đồng hành có cùng sở thích."
+                },
+                "flexible": {
+                    "title": "Lịch trình linh hoạt",
+                    "description": "Đồng hành khả dụng khi và nơi bạn cần."
+                },
+                "trained": {
+                    "title": "Nhân viên được đào tạo",
+                    "description": "Người đồng hành được đào tạo để cung cấp sự đồng hành tôn trọng và hỗ trợ."
+                },
+                "meaningful": {
+                    "title": "Kết nối có ý nghĩa",
+                    "description": "Chúng tôi tập trung vào xây dựng mối quan hệ chân thành và hỗ trợ."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Đồng hành khác với công việc hỗ trợ như thế nào?",
+                    "answer": "Đồng hành tập trung vào kết nối xã hội và sức khỏe tinh thần."
+                },
+                {
+                    "question": "Tôi có thể có cùng người đồng hành mỗi lần không?",
+                    "answer": "Có, chúng tôi cố gắng giữ sự nhất quán và kết nối bạn với cùng người đồng hành."
+                },
+                {
+                    "question": "Chúng tôi có thể làm gì cùng nhau?",
+                    "answer": "Hoạt động dựa trên sở thích của bạn - đi dạo, uống cà phê, xem phim, v.v."
+                }
+            ]
+        },
+        "transport": {
+            "title": "Hỗ trợ đi lại & Vận chuyển",
+            "subtitle": "Đưa bạn đến nơi bạn cần",
+            "description": "Dịch vụ hỗ trợ đi lại và vận chuyển giúp bạn đến nơi bạn cần đến một cách an toàn và đáng tin cậy.",
+            "services": [
+                "Vận chuyển đến cuộc hẹn y tế",
+                "Vận chuyển tiếp cận cộng đồng",
+                "Đi mua sắm",
+                "Đi dạo xã hội và giải trí",
+                "Vận chuyển đến trường/làm việc",
+                "Thăm gia đình",
+                "Đào tạo và hỗ trợ đi lại",
+                "Xe tiếp cận được",
+                "Hỗ trợ từ cửa đến cửa",
+                "Hỗ trợ trong suốt chuyến đi"
+            ],
+            "features": {
+                "reliable": {
+                    "title": "Dịch vụ đáng tin cậy",
+                    "description": "Vận chuyển đúng giờ, đáng tin cậy mà bạn có thể tin tưởng."
+                },
+                "accessible": {
+                    "title": "Xe tiếp cận được",
+                    "description": "Tùy chọn cho vận chuyển xe lăn và thiết bị di chuyển."
+                },
+                "trained": {
+                    "title": "Tài xế được đào tạo",
+                    "description": "Tất cả tài xế được đào tạo về hỗ trợ người khuyết tật và an toàn."
+                },
+                "flexible": {
+                    "title": "Đặt xe linh hoạt",
+                    "description": "Đặt xe thường xuyên hoặc vận chuyển một lần theo nhu cầu."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Các bạn có xe cho xe lăn không?",
+                    "answer": "Có, chúng tôi có xe phù hợp cho xe lăn và thiết bị di chuyển khác."
+                },
+                {
+                    "question": "Cần đặt trước bao lâu?",
+                    "answer": "Chúng tôi khuyến nghị đặt trước ít nhất 48 giờ cho vận chuyển thường xuyên."
+                },
+                {
+                    "question": "Có thể có người đi cùng tôi không?",
+                    "answer": "Hoàn toàn. Tài xế có thể hỗ trợ trong chuyến đi, hoặc chúng tôi có thể sắp xếp nhân viên hỗ trợ đi cùng."
+                }
+            ]
+        },
+        "hydrotherapy": {
+            "title": "Thủy trị liệu & Buổi tập hồ bơi",
+            "subtitle": "Tập thể dục trị liệu trong nước",
+            "description": "Dịch vụ thủy trị liệu sử dụng đặc tính trị liệu của nước để cải thiện khả năng vận động, sức mạnh và sức khỏe tổng thể.",
+            "services": [
+                "Buổi thủy trị liệu cá nhân",
+                "Tập thể dục nhóm dưới nước",
+                "Trị liệu quản lý đau",
+                "Phục hồi sau phẫu thuật",
+                "Chương trình cải thiện vận động",
+                "Thư giãn và giảm căng thẳng",
+                "Kỹ năng an toàn dưới nước",
+                "Truy cập hồ bơi có giám sát",
+                "Kê đơn bài tập",
+                "Theo dõi tiến triển"
+            ],
+            "features": {
+                "warm": {
+                    "title": "Trị liệu nước ấm",
+                    "description": "Buổi tập trong hồ bơi nước ấm cho sự thoải mái và lợi ích trị liệu."
+                },
+                "qualified": {
+                    "title": "Chuyên gia có bằng cấp",
+                    "description": "Chuyên gia vật lý trị liệu và sinh lý học thể thao dẫn dắt các buổi tập."
+                },
+                "individual": {
+                    "title": "Chương trình cá nhân",
+                    "description": "Bài tập được thiết kế riêng cho nhu cầu và mục tiêu cụ thể của bạn."
+                },
+                "progress": {
+                    "title": "Theo dõi tiến triển",
+                    "description": "Đánh giá định kỳ để giám sát sự cải thiện của bạn."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Tôi cần mang gì đến thủy trị liệu?",
+                    "answer": "Mang đồ bơi, khăn tắm và bất kỳ dụng cụ hỗ trợ di chuyển nào bạn sử dụng."
+                },
+                {
+                    "question": "Tôi không biết bơi. Thủy trị liệu vẫn phù hợp chứ?",
+                    "answer": "Hoàn toàn! Thủy trị liệu diễn ra trong nước ấm, nông với chuyên gia ngay bên cạnh."
+                },
+                {
+                    "question": "Tôi nên tham gia thủy trị liệu bao nhiêu lần?",
+                    "answer": "Tần suất phụ thuộc vào mục tiêu và kế hoạch NDIS của bạn."
+                }
+            ]
+        },
+        "personalTraining": {
+            "title": "Buổi huấn luyện cá nhân",
+            "subtitle": "Thể dục phù hợp với khả năng của bạn",
+            "description": "Dịch vụ huấn luyện cá nhân cung cấp chương trình thể dục được thiết kế cho khả năng và mục tiêu độc đáo của bạn.",
+            "services": [
+                "Đánh giá thể dục cá nhân",
+                "Chương trình tập tùy chỉnh",
+                "Tập sức mạnh",
+                "Thể dục tim mạch",
+                "Linh hoạt và di động",
+                "Thăng bằng và phối hợp",
+                "Tập thể dục chức năng",
+                "Chương trình tập tại nhà",
+                "Theo dõi tiến triển",
+                "Hướng dẫn dinh dưỡng"
+            ],
+            "features": {
+                "qualified": {
+                    "title": "Huấn luyện viên có bằng cấp",
+                    "description": "Huấn luyện viên giàu kinh nghiệm với chứng chỉ thể dục cho người khuyết tật."
+                },
+                "personalized": {
+                    "title": "Chương trình cá nhân hóa",
+                    "description": "Kế hoạch tập được thiết kế riêng cho khả năng và mục tiêu của bạn."
+                },
+                "location": {
+                    "title": "Địa điểm linh hoạt",
+                    "description": "Tập tại nhà, phòng gym hoặc ngoài trời theo sở thích của bạn."
+                },
+                "safe": {
+                    "title": "Môi trường an toàn",
+                    "description": "Tất cả bài tập được điều chỉnh cho sự an toàn và thoải mái của bạn."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Tôi có cần thiết bị gì không?",
+                    "answer": "Không nhất thiết. Huấn luyện viên có thể thiết kế chương trình với thiết bị tối thiểu hoặc bài tập sử dụng trọng lượng cơ thể."
+                },
+                {
+                    "question": "Huấn luyện cá nhân phù hợp với mọi mức độ thể dục?",
+                    "answer": "Có! Huấn luyện viên chuyên về thể dục thích ứng cho mọi mức độ."
+                },
+                {
+                    "question": "Điều này khác gì với tập gym thông thường?",
+                    "answer": "Huấn luyện viên có chứng chỉ chuyên môn làm việc với người khuyết tật."
+                }
+            ]
+        },
+        "behaviourSupport": {
+            "title": "Hỗ trợ hành vi tích cực",
+            "subtitle": "Hiểu và hỗ trợ hành vi",
+            "description": "Dịch vụ hỗ trợ hành vi tích cực giúp hiểu lý do đằng sau các hành vi thách thức và phát triển chiến lược cải thiện chất lượng cuộc sống.",
+            "services": [
+                "Đánh giá hành vi chức năng",
+                "Phát triển kế hoạch hỗ trợ hành vi",
+                "Chiến lược phòng ngừa khủng hoảng",
+                "Điều chỉnh môi trường",
+                "Đào tạo nhân viên và người chăm sóc",
+                "Hỗ trợ thực hiện",
+                "Đánh giá kế hoạch định kỳ",
+                "Hợp tác đa ngành",
+                "Hỗ trợ và giáo dục gia đình",
+                "Giám sát và báo cáo tiến triển"
+            ],
+            "features": {
+                "qualified": {
+                    "title": "Chuyên viên có bằng cấp",
+                    "description": "Chuyên viên hỗ trợ hành vi đã đăng ký NDIS với kinh nghiệm phong phú."
+                },
+                "evidenceBased": {
+                    "title": "Dựa trên bằng chứng",
+                    "description": "Chiến lược dựa trên nghiên cứu hiện tại và thực hành tốt nhất."
+                },
+                "personCentered": {
+                    "title": "Lấy con người làm trung tâm",
+                    "description": "Tập trung vào nhu cầu cá nhân, sở thích và chất lượng cuộc sống."
+                },
+                "collaborative": {
+                    "title": "Phương pháp hợp tác",
+                    "description": "Làm việc với gia đình, người chăm sóc và các nhà cung cấp khác."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Hỗ trợ hành vi tích cực là gì?",
+                    "answer": "PBS là phương pháp dựa trên bằng chứng tập trung vào hiểu lý do hành vi thách thức xảy ra và phát triển chiến lược cải thiện chất lượng cuộc sống."
+                },
+                {
+                    "question": "Ai phát triển kế hoạch hỗ trợ hành vi?",
+                    "answer": "Kế hoạch được phát triển bởi chuyên viên hỗ trợ hành vi đã đăng ký NDIS làm việc chặt chẽ với người tham gia và gia đình."
+                },
+                {
+                    "question": "Mất bao lâu để thấy kết quả?",
+                    "answer": "Kết quả khác nhau tùy theo hoàn cảnh. Một số chiến lược có thể thấy cải thiện ngay lập tức, một số khác cần thời gian."
+                }
+            ]
+        },
+        "cleaning": {
+            "title": "Dịch vụ dọn dẹp chuyên nghiệp",
+            "subtitle": "Duy trì ngôi nhà sạch sẽ, lành mạnh",
+            "description": "Dịch vụ dọn dẹp chuyên nghiệp giúp bạn duy trì môi trường sống sạch sẽ, lành mạnh.",
+            "services": [
+                "Dọn dẹp nhà thường xuyên",
+                "Dịch vụ dọn dẹp sâu",
+                "Dọn bếp và phòng tắm",
+                "Hút bụi và chăm sóc sàn",
+                "Lau bụi và làm sạch bề mặt",
+                "Lau cửa sổ",
+                "Hỗ trợ giặt là",
+                "Dọn giường và thay ga trải giường",
+                "Quản lý rác và tái chế",
+                "Sắp xếp và dọn dẹp đồ đạc"
+            ],
+            "features": {
+                "reliable": {
+                    "title": "Dịch vụ đáng tin cậy",
+                    "description": "Dọn dẹp nhất quán, đáng tin cậy mà bạn có thể tin tưởng."
+                },
+                "trained": {
+                    "title": "Nhân viên được đào tạo",
+                    "description": "Tất cả nhân viên dọn dẹp được đào tạo về dịch vụ tôn trọng, lấy khách hàng làm trung tâm."
+                },
+                "flexible": {
+                    "title": "Lịch trình linh hoạt",
+                    "description": "Dọn dẹp hàng tuần, hai tuần một lần hoặc một lần theo nhu cầu."
+                },
+                "products": {
+                    "title": "Sản phẩm chất lượng",
+                    "description": "Chúng tôi sử dụng sản phẩm dọn dẹp an toàn, hiệu quả, với tùy chọn cho người nhạy cảm."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Tôi có cần cung cấp đồ dùng dọn dẹp không?",
+                    "answer": "Chúng tôi có thể mang đồ dùng riêng hoặc sử dụng sản phẩm bạn thích."
+                },
+                {
+                    "question": "Tôi có thể lên lịch dọn dẹp bao nhiêu lần?",
+                    "answer": "Tần suất dọn dẹp linh hoạt dựa trên nhu cầu và kế hoạch NDIS của bạn."
+                },
+                {
+                    "question": "Tôi có thể yêu cầu ưu tiên các công việc cụ thể không?",
+                    "answer": "Hoàn toàn. Chúng tôi làm việc với bạn để hiểu ưu tiên và đảm bảo hoàn thành công việc quan trọng nhất."
+                }
+            ]
+        },
+        "independentLiving": {
+            "title": "Sống độc lập & Hỗ trợ chỗ ở",
+            "subtitle": "Hỗ trợ sống độc lập",
+            "description": "Dịch vụ sống độc lập và hỗ trợ chỗ ở giúp bạn sống độc lập trong nhà riêng hoặc chỗ ở được hỗ trợ.",
+            "services": [
+                "Sống độc lập được hỗ trợ (SIL)",
+                "Phát triển kỹ năng sống tại nhà",
+                "Hỗ trợ thuê nhà",
+                "Ghép cặp bạn cùng phòng",
+                "Hỗ trợ theo cuộc gọi 24/7",
+                "Phản ứng khẩn cấp",
+                "Đào tạo kỹ năng sống",
+                "Ngân sách và hiểu biết tài chính",
+                "Quản lý gia đình",
+                "Hỗ trợ hòa nhập cộng đồng"
+            ],
+            "features": {
+                "personCentered": {
+                    "title": "Lấy con người làm trung tâm",
+                    "description": "Hỗ trợ được điều chỉnh theo mục tiêu và sở thích cá nhân của bạn."
+                },
+                "skillBuilding": {
+                    "title": "Xây dựng kỹ năng",
+                    "description": "Phát triển kỹ năng bạn cần để độc lập hơn."
+                },
+                "flexible": {
+                    "title": "Hỗ trợ linh hoạt",
+                    "description": "Từ vài giờ một tuần đến hỗ trợ 24/7 theo nhu cầu."
+                },
+                "quality": {
+                    "title": "Chỗ ở chất lượng",
+                    "description": "Môi trường sống sạch sẽ, an toàn, thoải mái."
+                },
+                "accessible": {
+                    "title": "Chỗ ở dễ tiếp cận",
+                    "description": "Các lựa chọn nhà ở được thiết kế để đáp ứng nhu cầu tiếp cận của bạn."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Sống độc lập được hỗ trợ (SIL) là gì?",
+                    "answer": "SIL là hỗ trợ được NDIS tài trợ giúp bạn sống độc lập nhất có thể trong nhà riêng hoặc chỗ ở chung."
+                },
+                {
+                    "question": "Tôi có thể chọn nơi sống không?",
+                    "answer": "Có, lựa chọn và kiểm soát là cơ bản trong NDIS. Chúng tôi làm việc với bạn để tìm chỗ ở phù hợp."
+                },
+                {
+                    "question": "Nếu tôi đã có chỗ ở thì sao?",
+                    "answer": "Chúng tôi có thể cung cấp hỗ trợ tại nhà hiện tại của bạn. Dịch vụ linh hoạt và có thể cung cấp bất cứ nơi nào bạn sống."
+                }
+            ]
+        }
+    }
+}
