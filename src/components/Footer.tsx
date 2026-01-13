@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
+import { getAssetPath } from '@/lib/utils';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
@@ -30,8 +31,8 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-6">
             <div className="flex flex-col sm:flex-row gap-4 items-center">
               <div className="bg-white p-4 rounded-xl shadow-lg shadow-black/5 flex items-center justify-center h-24 w-auto">
-                <Image
-                  src="/images/logo/bright-support-logo.png"
+                <img
+                  src={getAssetPath('/images/logo/bright-support-logo.png')}
                   alt="Bright Support Logo"
                   width={180}
                   height={60}
@@ -39,8 +40,8 @@ export default function Footer() {
                 />
               </div>
               <div className="bg-white p-2 rounded-xl shadow-lg shadow-black/5 flex items-center justify-center h-24 w-auto">
-                <Image
-                  src="/images/ndis-badge.jpg"
+                <img
+                  src={getAssetPath('/images/ndis-badge.jpg')}
                   alt="NDIS Registered Provider"
                   width={120}
                   height={60}

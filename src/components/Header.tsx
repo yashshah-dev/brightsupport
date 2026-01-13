@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
+import { getAssetPath } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Phone, Mail, Clock, Menu, X, ChevronRight } from 'lucide-react';
@@ -90,14 +91,13 @@ export default function Header() {
           {/* Logo */}
           <Link href={currentLocale ? `/${currentLocale}` : '/'} className="flex items-center gap-3 group relative">
             <div className="relative">
-              <Image
-                src="/images/logo-new.jpg"
+              <img
+                src={getAssetPath('/images/logo-new.jpg')}
                 alt="Bright Support Logo"
                 width={80}
                 height={80}
                 className={`w-auto transition-all duration-300 group-hover:rotate-3 ${scrolled ? 'h-12' : 'h-16'
                   }`}
-                priority
               />
             </div>
             <div className="flex flex-col">
