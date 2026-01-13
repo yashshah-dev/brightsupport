@@ -44,6 +44,47 @@ export default function Header() {
     { name: 'Contact Us', href: getLocalizedHref('/contact-us') },
   ];
 
+  // Check for landing page
+  const isLandingPage = pathname?.includes('/landing/');
+
+  if (isLandingPage) {
+    return (
+      <header className="w-full sticky top-0 z-50 bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-100">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          {/* Logo - Simplified */}
+          <div className="flex items-center gap-3">
+            <div className="relative">
+              <img
+                src={getAssetPath('/images/logo-new.jpg')}
+                alt="Bright Support Logo"
+                width={60}
+                height={60}
+                className="w-auto h-12"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-bold text-[#254689] text-xl leading-tight">
+                Bright Support
+              </span>
+              <span className="text-[10px] tracking-[0.2em] text-[#05A5C6] font-bold uppercase">
+                NDIS PROVIDER
+              </span>
+            </div>
+          </div>
+
+          {/* CTA - Simplified */}
+          <a
+            href="tel:1800407508"
+            className="flex items-center gap-2 bg-[#1E4D8C] hover:bg-[#0F2D4D] text-white px-5 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg"
+          >
+            <Phone size={18} />
+            <span className="hidden sm:inline">1800 407 508</span>
+          </a>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header className={`w-full sticky top-0 z-50 transition-all duration-500 ${scrolled
       ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-100'

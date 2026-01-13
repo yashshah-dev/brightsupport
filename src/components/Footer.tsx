@@ -1,9 +1,15 @@
+'use client';
+
 import Link from 'next/link';
 // import Image from 'next/image';
 import { getAssetPath } from '@/lib/utils';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isLandingPage = pathname?.includes('/landing/');
+
   const exploreLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about-us' },
@@ -21,6 +27,20 @@ export default function Footer() {
     { name: 'Transport Assistance', href: '/services/travel-transport-assistance' },
     { name: 'Companionship', href: '/services/companionship' },
   ];
+
+  if (isLandingPage) {
+    return (
+      <footer className="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <p>© {new Date().getFullYear()} Bright Support. All Rights Reserved.</p>
+          <div className="flex gap-6">
+            <span>ABN: 32659000978</span>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300 font-sans border-t border-slate-800">
