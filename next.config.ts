@@ -7,8 +7,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  // basePath: isProd ? '/brightsupport' : '',
-  // assetPrefix: isProd ? '/brightsupport' : '',
+  basePath: isProd ? '/brightsupport' : '',
+  assetPrefix: isProd ? '/brightsupport' : '',
   images: {
     unoptimized: true, // Required for static export
     formats: ['image/webp'],
