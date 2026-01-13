@@ -56,7 +56,7 @@ A modern, fast, and fully SEO-optimized website for Bright Support, an NDIS serv
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bright-support.git
+git clone git@github.com:yashshah-dev/brightsupport.git
 cd brightsupport
 
 # Install dependencies

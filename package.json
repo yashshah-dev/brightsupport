@@ -2,6 +2,10 @@
   "name": "brightsupport",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yashshah-dev/brightsupport.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/optimize-images.mjs && next build && npm run copy-headers",
