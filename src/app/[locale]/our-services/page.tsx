@@ -19,36 +19,42 @@ export default function OurServicesPage() {
             titleKey: 'dailyLiving.title',
             descriptionKey: 'dailyLiving.subtitle',
             link: '/services/daily-living-in-home-support',
+            imageSrc: '/images/services/daily-living.webp',
         },
         {
             icon: Stethoscope,
             titleKey: 'communityNursing.title',
             descriptionKey: 'communityNursing.subtitle',
             link: '/services/community-nursing-complex-care',
+            imageSrc: '/images/services/nursing.webp',
         },
         {
             icon: Activity,
             titleKey: 'physiotherapy.title',
             descriptionKey: 'physiotherapy.subtitle',
             link: '/services/physiotherapy-services',
+            imageSrc: '/images/services/physiotherapy.webp',
         },
         {
             icon: Users,
             titleKey: 'communityParticipation.title',
             descriptionKey: 'communityParticipation.subtitle',
             link: '/services/community-participation-group-programs',
+            imageSrc: '/images/services/community-participation.webp',
         },
         {
             icon: Heart,
             titleKey: 'companionship.title',
             descriptionKey: 'companionship.subtitle',
             link: '/services/companionship',
+            imageSrc: '/images/services/companionship.webp',
         },
         {
             icon: Car,
             titleKey: 'transport.title',
             descriptionKey: 'transport.subtitle',
             link: '/services/travel-transport-assistance',
+            imageSrc: '/images/services/transport.webp',
         },
         {
             icon: Droplets,
@@ -101,17 +107,15 @@ export default function OurServicesPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                         {services.map((service) => (
-                            <Link href={`/${locale}${service.link}`} key={service.titleKey} className="block group">
-                                <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-navy-500 to-sky-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                        <service.icon className="w-7 h-7 text-white" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-navy-900 mb-2 group-hover:text-sky-600 transition-colors">
-                                        {tService(service.titleKey)}
-                                    </h3>
-                                    <p className="text-gray-600">{tService(service.descriptionKey)}</p>
-                                </div>
-                            </Link>
+                            <div key={service.titleKey} className="h-full">
+                                <ServiceCard
+                                    title={tService(service.titleKey)}
+                                    description={tService(service.descriptionKey)}
+                                    href={`/${locale}${service.link}`}
+                                    icon={<service.icon size={64} />}
+                                    imageSrc={service.imageSrc}
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>

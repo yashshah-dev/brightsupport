@@ -355,7 +355,24 @@
                     "question": "Tôi có thể nhận hỗ trợ bao nhiêu lần?",
                     "answer": "Tần suất hỗ trợ phụ thuộc vào kế hoạch NDIS và nguồn tài trợ của bạn."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Friendly support worker helping participant prepare a healthy meal together in modern Australian kitchen, natural sunlight streaming through window, genuine smiles, warm lifestyle photography",
+                "gallery": [
+                    {
+                        "prompt": "Compassionate support worker assisting with personal care routine, respectful and dignified interaction, soft bathroom lighting",
+                        "caption": "Chăm sóc cá nhân tôn trọng"
+                    },
+                    {
+                        "prompt": "Support worker and participant doing light gardening together in sunny Australian backyard, planting flowers, teamwork and joy",
+                        "caption": "Tận hưởng không gian ngoài trời"
+                    },
+                    {
+                        "prompt": "Person receiving help with grocery shopping, organized kitchen pantry, independence and choice",
+                        "caption": "Duy trì sự độc lập"
+                    }
+                ]
+            }
         },
         "communityNursing": {
             "title": "Điều dưỡng cộng đồng & Chăm sóc phức tạp",
@@ -404,7 +421,24 @@
                     "question": "Các bạn có phối hợp với nhà cung cấp chăm sóc sức khỏe hiện tại không?",
                     "answer": "Hoàn toàn. Chúng tôi phối hợp chặt chẽ với bác sĩ GP, chuyên gia và các nhà cung cấp khác của bạn."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Professional registered nurse in uniform checking blood pressure of seated participant in comfortable living room, medical equipment visible, calm reassuring atmosphere, soft natural lighting",
+                "gallery": [
+                    {
+                        "prompt": "Nurse performing careful wound dressing change, close-up of gloved hands, clean medical setting, professional and gentle care",
+                        "caption": "Chăm sóc vết thương chuyên nghiệp"
+                    },
+                    {
+                        "prompt": "Nurse discussing medication schedule with participant using weekly pill organizer, educational moment, kitchen table setting",
+                        "caption": "Hỗ trợ thuốc & giáo dục"
+                    },
+                    {
+                        "prompt": "Nurse training family member on care procedures, supportive teaching moment, home environment",
+                        "caption": "Trao quyền mạng lưới hỗ trợ"
+                    }
+                ]
+            }
         },
         "physiotherapy": {
             "title": "Dịch vụ vật lý trị liệu",
@@ -453,7 +487,24 @@
                     "question": "Vật lý trị liệu có thể giúp đau mãn tính không?",
                     "answer": "Có, chúng tôi sử dụng các kỹ thuật khác nhau để giúp quản lý đau mãn tính."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Professional physiotherapist guiding participant through mobility exercises in bright therapy room, resistance bands, genuine encouragement, healthcare photography",
+                "gallery": [
+                    {
+                        "prompt": "Physio helping with balance training using stability equipment, focus and concentration, modern clinic setting",
+                        "caption": "Huấn luyện thăng bằng & phối hợp"
+                    },
+                    {
+                        "prompt": "Physiotherapist demonstrating home exercises in living room, exercise mat, practical skill transfer",
+                        "caption": "Chương trình tập tại nhà"
+                    },
+                    {
+                        "prompt": "Person using mobility equipment prescribed by physiotherapist, walker or wheelchair, outdoor setting, independence",
+                        "caption": "Giải pháp thiết bị & di chuyển"
+                    }
+                ]
+            }
         },
         "communityParticipation": {
             "title": "Tham gia cộng đồng & Chương trình nhóm",
@@ -502,7 +553,24 @@
                     "question": "Làm thế nào để tham gia chương trình nhóm?",
                     "answer": "Liên hệ với chúng tôi để thảo luận về sở thích và mục tiêu của bạn."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Diverse group of people laughing and enjoying outdoor picnic in sunny Australian park, genuine friendship, vibrant colors, lifestyle photography",
+                "gallery": [
+                    {
+                        "prompt": "Participants engaged in creative art workshop, colorful canvases, paintbrushes, joyful expression",
+                        "caption": "Khám phá sáng tạo"
+                    },
+                    {
+                        "prompt": "Mixed ability sports group playing lawn games in park, teamwork, cheering, community spirit",
+                        "caption": "Vui chơi năng động & xã hội"
+                    },
+                    {
+                        "prompt": "Group cooking class with participants preparing food together, shared laughter, learning new skills",
+                        "caption": "Học tập cùng nhau"
+                    }
+                ]
+            }
         },
         "companionship": {
             "title": "Dịch vụ đồng hành",
@@ -551,7 +619,24 @@
                     "question": "Chúng tôi có thể làm gì cùng nhau?",
                     "answer": "Hoạt động dựa trên sở thích của bạn - đi dạo, uống cà phê, xem phim, v.v."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Two people sharing warm conversation over tea at cozy cafe table, genuine smiles, soft lighting, friendship and connection",
+                "gallery": [
+                    {
+                        "prompt": "Companion and participant playing board game together at dining table, focused engagement, having fun",
+                        "caption": "Sở thích chung"
+                    },
+                    {
+                        "prompt": "Two people walking together in local park, gentle exercise, conversation, morning light",
+                        "caption": "Năng động cùng nhau"
+                    },
+                    {
+                        "prompt": "Companion helping participant use tablet to video call family, technology connection, support",
+                        "caption": "Giữ kết nối"
+                    }
+                ]
+            }
         },
         "transport": {
             "title": "Hỗ trợ đi lại & Vận chuyển",
@@ -600,7 +685,24 @@
                     "question": "Có thể có người đi cùng tôi không?",
                     "answer": "Hoàn toàn. Tài xế có thể hỗ trợ trong chuyến đi, hoặc chúng tôi có thể sắp xếp nhân viên hỗ trợ đi cùng."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Friendly driver helping participant into modern accessible vehicle with wheelchair ramp, welcoming smile, suburban setting, safe transport",
+                "gallery": [
+                    {
+                        "prompt": "Participant arriving at medical center with support worker, door-to-door service, professional assistance",
+                        "caption": "Đưa đón y tế đáng tin cậy"
+                    },
+                    {
+                        "prompt": "Person exiting vehicle at shopping center with shopping bags, independence, community engagement",
+                        "caption": "Dễ dàng tiếp cận cộng đồng"
+                    },
+                    {
+                        "prompt": "Support worker and participant traveling together, conversation in vehicle, comfortable journey",
+                        "caption": "Di chuyển có hỗ trợ"
+                    }
+                ]
+            }
         },
         "hydrotherapy": {
             "title": "Thủy trị liệu & Buổi tập hồ bơi",
@@ -649,7 +751,24 @@
                     "question": "Tôi nên tham gia thủy trị liệu bao nhiêu lần?",
                     "answer": "Tần suất phụ thuộc vào mục tiêu và kế hoạch NDIS của bạn."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Therapist and participant doing gentle exercises in warm hydrotherapy pool, water at chest height, calming blue water, rehabilitation focus",
+                "gallery": [
+                    {
+                        "prompt": "Group aquatic exercise class in heated pool, foam noodles, smiling participants, inclusive fitness",
+                        "caption": "Buổi tập nhóm vui vẻ"
+                    },
+                    {
+                        "prompt": "Accessible hydrotherapy pool facility with hoist and ramp, modern clean environment, therapeutic setting",
+                        "caption": "Cơ sở hoàn toàn tiếp cận được"
+                    },
+                    {
+                        "prompt": "Participant relaxing in warm water after exercise, peaceful expression, stress relief",
+                        "caption": "Thư giãn & phục hồi"
+                    }
+                ]
+            }
         },
         "personalTraining": {
             "title": "Buổi huấn luyện cá nhân",
@@ -698,7 +817,24 @@
                     "question": "Điều này khác gì với tập gym thông thường?",
                     "answer": "Huấn luyện viên có chứng chỉ chuyên môn làm việc với người khuyết tật."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Energetic personal trainer high-fiving participant after completing exercise set, gym equipment, achievement and celebration, dynamic lighting",
+                "gallery": [
+                    {
+                        "prompt": "Trainer guiding participant through safe dumbbell exercise, correct form, encouraging atmosphere, modern gym",
+                        "caption": "Tập sức mạnh dễ tiếp cận"
+                    },
+                    {
+                        "prompt": "Outdoor personal training session in park, bodyweight exercises, fresh air, smiles and energy",
+                        "caption": "Tập bất cứ đâu"
+                    },
+                    {
+                        "prompt": "Adaptive fitness equipment being used with trainer support, wheelchair user exercising, inclusive fitness",
+                        "caption": "Thể hình cho mọi khả năng"
+                    }
+                ]
+            }
         },
         "behaviourSupport": {
             "title": "Hỗ trợ hành vi tích cực",
@@ -747,7 +883,24 @@
                     "question": "Mất bao lâu để thấy kết quả?",
                     "answer": "Kết quả khác nhau tùy theo hoàn cảnh. Một số chiến lược có thể thấy cải thiện ngay lập tức, một số khác cần thời gian."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Behaviour support practitioner in calm, supportive discussion with participant and family member, comfortable office setting, understanding and collaboration",
+                "gallery": [
+                    {
+                        "prompt": "Professional writing behaviour support plan at desk, documents and laptop, thoughtful and detail-oriented approach",
+                        "caption": "Đánh giá toàn diện"
+                    },
+                    {
+                        "prompt": "Practitioner training support workers on de-escalation strategies, group learning session, whiteboard",
+                        "caption": "Đào tạo & hỗ trợ"
+                    },
+                    {
+                        "prompt": "Person engaging in calming activity with sensory tools, peaceful environment, self-regulation",
+                        "caption": "Xây dựng kỹ năng & chiến lược"
+                    }
+                ]
+            }
         },
         "cleaning": {
             "title": "Dịch vụ dọn dẹp chuyên nghiệp",
@@ -796,7 +949,24 @@
                     "question": "Tôi có thể yêu cầu ưu tiên các công việc cụ thể không?",
                     "answer": "Hoàn toàn. Chúng tôi làm việc với bạn để hiểu ưu tiên và đảm bảo hoàn thành công việc quan trọng nhất."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Professional cleaner vacuuming in bright, organized living room, clean surfaces, professional and friendly service",
+                "gallery": [
+                    {
+                        "prompt": "Cleaner wiping down kitchen counters with sparkling result, attention to detail, organized space",
+                        "caption": "Nhà bếp sạch bóng"
+                    },
+                    {
+                        "prompt": "Fresh clean bathroom with folded towels, hygienic and sparkling, professional result",
+                        "caption": "Phòng tắm vệ sinh"
+                    },
+                    {
+                        "prompt": "Organized wardrobe and bedroom space, decluttered, peaceful home environment",
+                        "caption": "Không gian ngăn nắp"
+                    }
+                ]
+            }
         },
         "independentLiving": {
             "title": "Sống độc lập & Hỗ trợ chỗ ở",
@@ -849,7 +1019,24 @@
                     "question": "Nếu tôi đã có chỗ ở thì sao?",
                     "answer": "Chúng tôi có thể cung cấp hỗ trợ tại nhà hiện tại của bạn. Dịch vụ linh hoạt và có thể cung cấp bất cứ nơi nào bạn sống."
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Modern accessible apartment interior, person cooking in adaptive kitchen, independence, bright and welcoming space",
+                "gallery": [
+                    {
+                        "prompt": "Exterior of well-maintained supported living house, accessible entrance, welcoming Australian suburban setting",
+                        "caption": "Nhà SIL chất lượng"
+                    },
+                    {
+                        "prompt": "Participant learning budgeting skills with support worker, laptop and documents, skill building session",
+                        "caption": "Phát triển kỹ năng sống"
+                    },
+                    {
+                        "prompt": "Housemates enjoying meal together in shared living space, friendship and community, independence",
+                        "caption": "Cộng đồng & tình bạn"
+                    }
+                ]
+            }
         }
     }
 }

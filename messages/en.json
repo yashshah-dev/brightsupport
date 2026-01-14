@@ -310,544 +310,731 @@
     "ServiceDetails": {
         "dailyLiving": {
             "title": "Daily Living & In-Home Support",
-            "subtitle": "Supporting your independence at home",
-            "description": "Our Daily Living and In-Home Support services are designed to help you maintain your independence and quality of life in the comfort of your own home. We provide personalized assistance with daily activities, household tasks, and personal care, enabling you to live the life you choose with dignity and respect.",
+            "subtitle": "Empowering Your Independence, One Day at a Time",
+            "description": "Your home is where you feel most comfortable, and that's exactly where we believe you should thrive. Our Daily Living & In-Home Support services are designed around YOU—your routines, your preferences, and your goals. Whether you need a helping hand with morning routines, someone to share a home-cooked meal with, or support mastering new skills for independent living, our friendly team is here to make every day a little easier and a lot more enjoyable.",
+            "images": {
+                "hero": "Friendly support worker helping participant prepare a healthy meal together in modern Australian kitchen, natural sunlight streaming through window, genuine smiles, warm lifestyle photography",
+                "gallery": [
+                    {
+                        "prompt": "Compassionate support worker assisting with personal care routine, respectful and dignified interaction, soft bathroom lighting",
+                        "caption": "Personal Care with Dignity"
+                    },
+                    {
+                        "prompt": "Support worker and participant doing light gardening together in sunny Australian backyard, planting flowers, teamwork and joy",
+                        "caption": "Enjoying the Outdoors Together"
+                    },
+                    {
+                        "prompt": "Person receiving help with grocery shopping, organized kitchen pantry, independence and choice",
+                        "caption": "Maintaining Your Independence"
+                    }
+                ]
+            },
             "services": [
-                "Personal hygiene (toileting, bathing, showering)",
-                "Cleaning and house maintenance",
-                "Laundry and ironing drop-off/pick up",
-                "Assist with pet care",
-                "Help with personal meals and mealtime support",
-                "Grocery shopping",
-                "Attending appointments",
-                "Walking around the house",
-                "Medication reminders",
-                "Light gardening and outdoor maintenance"
+                "Personal hygiene support (showering, dressing, grooming)",
+                "Light housekeeping and home organization",
+                "Laundry, ironing, and linen changes",
+                "Meal planning, preparation, and cooking together",
+                "Grocery shopping and running errands",
+                "Medication reminders and health monitoring",
+                "Pet care assistance",
+                "Light gardening and outdoor maintenance",
+                "Skill building for independent living",
+                "Attending appointments with support"
             ],
             "features": {
                 "support247": {
-                    "title": "24/7 Support Available",
-                    "description": "We have full capacity for all-day and overnight support to meet your needs around the clock."
+                    "title": "Around-the-Clock Care",
+                    "description": "From a few hours of support to 24/7 live-in care, we're here whenever you need us—day, night, or weekends."
                 },
                 "qualified": {
-                    "title": "Qualified Support Workers",
-                    "description": "Our team consists of experienced, trained support workers who understand your unique needs."
+                    "title": "Trusted & Trained Team",
+                    "description": "Every support worker is carefully screened, professionally trained, and matched to your personality and needs."
                 },
                 "personCentered": {
-                    "title": "Person-Centered Approach",
-                    "description": "Your goals, preferences, and choices guide all the support we provide."
+                    "title": "Your Life, Your Way",
+                    "description": "We don't just complete tasks—we work alongside you, respecting your choices and helping you achieve your goals."
                 },
                 "flexible": {
-                    "title": "Flexible Service Delivery",
-                    "description": "Services can be tailored to your schedule and specific requirements."
+                    "title": "Flexible & Reliable",
+                    "description": "Consistent support you can count on, with the flexibility to adjust as your life and needs change."
                 }
             },
             "faq": [
                 {
-                    "question": "What is included in daily living support?",
-                    "answer": "Daily living support includes assistance with personal care, household tasks, meal preparation, shopping, and other activities that help you live independently. Services are customized to your individual needs and NDIS plan."
+                    "question": "What tasks can a support worker help me with at home?",
+                    "answer": "Our support workers can assist with a wide range of daily tasks including personal care (showering, dressing, toileting), household tasks (cleaning, laundry, cooking), community access (shopping, appointments), and skill development. We work with you to create a personalized support plan based on your NDIS goals—no two plans are the same!"
                 },
                 {
-                    "question": "Can I choose my support worker?",
-                    "answer": "Yes! We believe in building strong relationships. We work to match you with support workers who share your interests and values, and you can request changes if needed."
+                    "question": "Will I have the same support worker each time?",
+                    "answer": "Consistency matters to us! We prioritize matching you with a small, dedicated team of regular support workers so you always see familiar, friendly faces. You'll have a primary worker and a reliable backup, and you can always request changes if the match doesn't feel right."
                 },
                 {
-                    "question": "How often can I receive support?",
-                    "answer": "Support frequency depends on your NDIS plan and funding. We offer flexible scheduling from a few hours per week to 24/7 support, depending on your needs."
+                    "question": "Can you help me learn to do things independently?",
+                    "answer": "Absolutely—that's our favorite kind of support! If your goal is to learn cooking, manage your household, or build other life skills, we'll teach, guide, and cheer you on at your own pace. It's about building YOUR confidence and capability."
                 }
             ]
         },
         "communityNursing": {
             "title": "Community Nursing & Complex Care",
-            "subtitle": "Professional nursing care in your home",
-            "description": "Our Community Nursing and Complex Care services bring professional healthcare to you. Our registered nurses provide skilled nursing care, medication management, and support for complex health needs in the comfort of your home.",
+            "subtitle": "Hospital-Quality Care in the Comfort of Home",
+            "description": "Managing complex health needs doesn't mean you have to stay in a hospital. Our Community Nursing team brings expert clinical care directly to your doorstep. Led by experienced Registered Nurses, we provide specialized medical support, health assessments, and complex care management tailored to your specific condition—all while you relax in your own home, surrounded by the people and things you love.",
+            "images": {
+                "hero": "Professional registered nurse in uniform checking blood pressure of seated participant in comfortable living room, medical equipment visible, calm reassuring atmosphere, soft natural lighting",
+                "gallery": [
+                    {
+                        "prompt": "Nurse performing careful wound dressing change, close-up of gloved hands, clean medical setting, professional and gentle care",
+                        "caption": "Expert Wound Care Management"
+                    },
+                    {
+                        "prompt": "Nurse discussing medication schedule with participant using weekly pill organizer, educational moment, kitchen table setting",
+                        "caption": "Medication Support & Education"
+                    },
+                    {
+                        "prompt": "Nurse training family member on care procedures, supportive teaching moment, home environment",
+                        "caption": "Empowering Your Support Network"
+                    }
+                ]
+            },
             "services": [
-                "Wound care and dressing changes",
+                "Complex wound management and dressing changes",
                 "Medication administration and management",
-                "PEG feeding and enteral nutrition",
-                "Catheter care and management",
-                "Tracheostomy care",
-                "Vital signs monitoring",
-                "Diabetes management",
-                "Post-surgical care",
-                "Palliative care support",
-                "Health education and training"
+                "PEG feeding and enteral nutrition support",
+                "Urinary catheter care (SPC/IDC)",
+                "Tracheostomy care and airway management",
+                "Chronic disease management (Diabetes, Respiratory, Cardiac)",
+                "Post-hospital discharge care",
+                "Palliative and end-of-life care at home",
+                "Vital signs monitoring and health assessments",
+                "Training for family carers and support workers"
             ],
             "features": {
                 "registered": {
-                    "title": "Registered Nurses",
-                    "description": "All our nurses are fully registered with AHPRA and experienced in community care."
+                    "title": "Expert Clinical Team",
+                    "description": "All care delivered by AHPRA-registered Nurses with extensive acute and community experience."
                 },
                 "available": {
-                    "title": "Available 7 Days",
-                    "description": "Nursing services available throughout the week to meet your healthcare needs."
+                    "title": "7-Day Availability",
+                    "description": "Consistent clinical support available weekends and public holidays—your health doesn't take days off."
                 },
                 "coordinated": {
-                    "title": "Coordinated Care",
-                    "description": "We work closely with your doctors and specialists to ensure seamless care."
+                    "title": "Integrated Healthcare",
+                    "description": "We coordinate closely with your GP, specialists, and hospitals to ensure seamless, holistic care."
                 },
                 "training": {
-                    "title": "Carer Training",
-                    "description": "We provide training for family and carers to support your health needs."
+                    "title": "Carer Empowerment",
+                    "description": "We train your family and support network to confidently manage day-to-day health needs."
                 }
             },
             "faq": [
                 {
-                    "question": "What qualifications do your nurses have?",
-                    "answer": "All our nurses are Registered Nurses (RN) or Enrolled Nurses (EN) with current AHPRA registration and relevant experience in community and complex care."
+                    "question": "Who provides the nursing care?",
+                    "answer": "All clinical services are provided by our qualified Registered Nurses (RNs) and Enrolled Nurses (ENs) with current AHPRA registration. Each nurse has specialized experience in community and complex care settings, ensuring you receive hospital-quality care at home."
                 },
                 {
-                    "question": "Can nursing services be provided at night?",
-                    "answer": "Yes, we offer nursing support during evenings and overnight for participants who require around-the-clock care."
+                    "question": "Is community nursing covered by the NDIS?",
+                    "answer": "Yes, if your plan includes 'CB Daily Activity' or 'Disability Related Health Supports'. We can help you check your funding and arrange the necessary assessments to secure nursing care funding."
                 },
                 {
-                    "question": "Do you coordinate with my existing healthcare providers?",
-                    "answer": "Absolutely. We work closely with your GP, specialists, and other healthcare providers to ensure coordinated, comprehensive care."
+                    "question": "Can you train my family to help with my care?",
+                    "answer": "Absolutely! Education is a key part of our service. We can train you, your family, or your support workers on correct procedures for medications, manual handling, wound care, and more—giving everyone confidence and peace of mind."
                 }
             ]
         },
         "physiotherapy": {
             "title": "Physiotherapy Services",
-            "subtitle": "Improve mobility and physical function",
-            "description": "Our physiotherapy services help you improve mobility, reduce pain, and enhance your physical function. Our qualified physiotherapists work with you to develop personalized treatment plans that support your goals and independence.",
+            "subtitle": "Restoring Movement, Enhancing Life",
+            "description": "Movement is freedom. Our Physiotherapy services are dedicated to helping you maximize your physical potential, reduce pain, and improve your daily function. Whether you live with a neurological condition, are recovering from surgery, or want to improve your balance and strength, our experienced Physiotherapists design personalized programs around what YOU want to achieve—making therapy meaningful and motivating.",
+            "images": {
+                "hero": "Professional physiotherapist guiding participant through mobility exercises in bright therapy room, resistance bands, genuine encouragement, healthcare photography",
+                "gallery": [
+                    {
+                        "prompt": "Physio helping with balance training using stability equipment, focus and concentration, modern clinic setting",
+                        "caption": "Balance & Coordination Training"
+                    },
+                    {
+                        "prompt": "Physiotherapist demonstrating home exercises in living room, exercise mat, practical skill transfer",
+                        "caption": "Home Exercise Programs"
+                    },
+                    {
+                        "prompt": "Person using mobility equipment prescribed by physiotherapist, walker or wheelchair, outdoor setting, independence",
+                        "caption": "Equipment & Mobility Solutions"
+                    }
+                ]
+            },
             "services": [
-                "Mobility assessments and therapy",
-                "Strength and conditioning programs",
-                "Balance and falls prevention",
-                "Pain management",
-                "Post-surgery rehabilitation",
-                "Neurological physiotherapy",
-                "Respiratory physiotherapy",
-                "Equipment prescription and training",
-                "Home exercise programs",
-                "Group exercise sessions"
+                "Comprehensive mobility and gait assessments",
+                "Personalized strength and conditioning programs",
+                "Balance training and falls prevention",
+                "Chronic pain management strategies",
+                "Post-surgical rehabilitation",
+                "Neurological rehabilitation (Stroke, MS, Parkinson's)",
+                "Respiratory physiotherapy and chest care",
+                "Mobility aid and equipment prescription",
+                "Home exercise program design",
+                "Manual handling training for carers"
             ],
             "features": {
                 "qualified": {
-                    "title": "Qualified Physiotherapists",
-                    "description": "Our team includes experienced physiotherapists registered with AHPRA."
+                    "title": "Experienced Physios",
+                    "description": "Our AHPRA-registered Physiotherapists have specialized expertise in disability and neurological rehabilitation."
                 },
                 "homeVisits": {
-                    "title": "Home Visits Available",
-                    "description": "We come to you for convenient physiotherapy in your own environment."
+                    "title": "We Come to You",
+                    "description": "Therapy in your own home, gym, or pool—wherever it's most convenient and effective for you."
                 },
                 "personalized": {
-                    "title": "Personalized Programs",
-                    "description": "Treatment plans tailored to your specific needs and goals."
+                    "title": "Goal-Directed Therapy",
+                    "description": "We build your program around what YOU want to achieve—walking to the shops, playing with grandkids, returning to work."
                 },
                 "equipment": {
-                    "title": "Equipment Advice",
-                    "description": "Expert guidance on mobility aids and assistive equipment."
+                    "title": "Assistive Technology",
+                    "description": "Expert advice on wheelchairs, walkers, and mobility equipment with trials and NDIS report writing."
                 }
             },
             "faq": [
                 {
                     "question": "Is physiotherapy covered by NDIS?",
-                    "answer": "Yes, physiotherapy is a capacity building support under the NDIS. It may be included in your plan under Improved Daily Living or other relevant categories."
+                    "answer": "Yes, physiotherapy falls under 'Improved Daily Living' (Capacity Building) within the NDIS. We can help you understand your plan's funding categories and make the most of your allocation."
                 },
                 {
-                    "question": "How often will I need physiotherapy sessions?",
-                    "answer": "Frequency varies based on your needs and goals. Your physiotherapist will recommend an appropriate schedule during your initial assessment."
+                    "question": "Do I need a referral to see a physiotherapist?",
+                    "answer": "No referral is needed for NDIS participants. We'll conduct an initial assessment to understand your history, goals, and create a personalized treatment plan."
                 },
                 {
-                    "question": "Can physiotherapy help with chronic pain?",
-                    "answer": "Yes, our physiotherapists use various techniques to help manage chronic pain, including exercise therapy, manual therapy, and education about pain management strategies."
+                    "question": "Can you help me choose the right wheelchair or walker?",
+                    "answer": "Absolutely! Our physios are skilled in Assistive Technology prescription. We organize trials, write NDIS reports, and ensure equipment is perfectly set up for your needs."
                 }
             ]
         },
         "communityParticipation": {
             "title": "Community Participation & Group Programs",
-            "subtitle": "Connect, participate, and belong",
-            "description": "Our Community Participation programs help you build connections, develop skills, and engage with your community. From social groups to skill-building activities, we support you to participate in the activities that matter to you.",
+            "subtitle": "Connect, Belong, and Thrive Together",
+            "description": "Life is better shared! Our Community Participation programs are all about building genuine connections, discovering new passions, and being an active, valued member of your community. Whether you want to join a cooking class, try your hand at art, attend local events, or simply catch up for coffee with new friends, we make it happen. Our supported group activities are designed to be safe, inclusive, and—most importantly—fun!",
+            "images": {
+                "hero": "Diverse group of people laughing and enjoying outdoor picnic in sunny Australian park, genuine friendship, vibrant colors, lifestyle photography",
+                "gallery": [
+                    {
+                        "prompt": "Participants engaged in creative art workshop, colorful canvases, paintbrushes, joyful expression",
+                        "caption": "Discover Your Creative Side"
+                    },
+                    {
+                        "prompt": "Mixed ability sports group playing lawn games in park, teamwork, cheering, community spirit",
+                        "caption": "Active & Social Fun"
+                    },
+                    {
+                        "prompt": "Group cooking class with participants preparing food together, shared laughter, learning new skills",
+                        "caption": "Learning Together"
+                    }
+                ]
+            },
             "services": [
-                "Social outings and group activities",
-                "Skill development workshops",
-                "Recreation and leisure programs",
-                "Volunteering opportunities",
-                "Community events and festivals",
-                "Arts and cultural activities",
+                "Supported social outings (cafes, movies, museums)",
+                "Group skill-building workshops (cooking, art, music)",
+                "Recreational and leisure activities",
+                "Community volunteering opportunities",
+                "Local festivals and event attendance",
                 "Sports and fitness groups",
-                "Educational programs",
-                "Life skills training",
-                "Peer support groups"
+                "Travel training for public transport",
+                "Educational courses and classes",
+                "Peer support and social groups",
+                "Weekend day trips and adventures"
             ],
             "features": {
                 "variety": {
-                    "title": "Wide Variety of Activities",
-                    "description": "Choose from diverse programs that match your interests and goals."
+                    "title": "Something for Everyone",
+                    "description": "A diverse calendar of activities catering to different ages, interests, and abilities."
                 },
                 "inclusive": {
-                    "title": "Inclusive Environment",
-                    "description": "All our activities are designed to be welcoming and accessible."
+                    "title": "Fully Inclusive",
+                    "description": "We ensure all venues and activities are accessible and welcoming for everyone."
                 },
                 "skills": {
-                    "title": "Skill Building",
-                    "description": "Develop new skills while making friends and having fun."
+                    "title": "Learning Through Fun",
+                    "description": "Develop communication, teamwork, and independence skills in a natural social setting."
                 },
                 "connections": {
-                    "title": "Build Connections",
-                    "description": "Meet new people and build lasting friendships in your community."
+                    "title": "Real Friendships",
+                    "description": "Meet like-minded people and build a supportive social network in your local area."
                 }
             },
             "faq": [
                 {
-                    "question": "What types of group activities are available?",
-                    "answer": "We offer a wide range of activities including social outings, arts and crafts, cooking classes, fitness groups, community gardening, and more. Activities are regularly updated based on participant interests."
+                    "question": "Can I suggest an activity or program?",
+                    "answer": "Absolutely! Our programs are participant-led. If there's something you've always wanted to try—pottery, fishing, dancing—just let us know and we can look at organizing it!"
                 },
                 {
-                    "question": "Can I bring a friend or family member?",
-                    "answer": "Some activities are designed for participants only, while others welcome family and friends. We can advise on specific program requirements when you enquire."
+                    "question": "Is transport included in group programs?",
+                    "answer": "We often use our accessible vehicles for group outings and can pick you up from home or a central meeting point. Transport arrangements depend on the specific activity."
                 },
                 {
-                    "question": "How do I join a group program?",
-                    "answer": "Contact us to discuss your interests and goals. We'll help match you with suitable programs and arrange any necessary support for your participation."
+                    "question": "Can I bring a friend who isn't an NDIS participant?",
+                    "answer": "Of course! Friends and family are welcome to join many activities as guests. If your friend is also an NDIS participant, they can join as a full participant."
                 }
             ]
         },
         "companionship": {
-            "title": "Companionship Services",
-            "subtitle": "Social connection and emotional support",
-            "description": "Our Companionship services provide meaningful social connection and emotional support. Whether you want someone to share activities with, accompany you on outings, or simply provide friendly company, our compassionate companions are here for you.",
+            "title": "Companionship & Social Support",
+            "subtitle": "Meaningful Connections, Genuine Care",
+            "description": "Loneliness shouldn't be a part of anyone's life. Our Companionship services are about more than just having someone in the room—they're about sharing life's moments with a friend. Whether you enjoy a quiet chat over tea, need a partner for your hobbies, or want someone to accompany you to a show, our companions are here to brighten your day and support your wellbeing.",
+            "images": {
+                "hero": "Two people sharing warm conversation over tea at cozy cafe table, genuine smiles, soft lighting, friendship and connection",
+                "gallery": [
+                    {
+                        "prompt": "Companion and participant playing board game together at dining table, focused engagement, having fun",
+                        "caption": "Shared Hobbies & Interests"
+                    },
+                    {
+                        "prompt": "Two people walking together in local park, gentle exercise, conversation, morning light",
+                        "caption": "Staying Active Together"
+                    },
+                    {
+                        "prompt": "Companion helping participant use tablet to video call family, technology connection, support",
+                        "caption": "Staying Connected"
+                    }
+                ]
+            },
             "services": [
-                "Social companionship at home",
-                "Accompanying on community outings",
-                "Shared hobbies and interests",
-                "Conversation and emotional support",
-                "Attending events and appointments",
-                "Support with social activities",
-                "Technology assistance and connection",
-                "Reading and shared activities",
-                "Walking and gentle exercise",
-                "Meal companionship"
+                "Friendly home visits for conversation and company",
+                "Accompanying to social events and family gatherings",
+                "Participating in shared hobbies (gardening, crafts, games)",
+                "Support with technology to stay connected with loved ones",
+                "Walking buddies for gentle exercise",
+                "Library visits, movies, and cultural outings",
+                "Café outings and lunch dates",
+                "Reading together and shared activities",
+                "Respite for family carers",
+                "Emotional support and a listening ear"
             ],
             "features": {
                 "matched": {
-                    "title": "Matched Companions",
-                    "description": "We carefully match you with companions who share your interests."
+                    "title": "Perfectly Matched",
+                    "description": "We consider personality, language, and interests to find the right companion for YOU."
                 },
                 "flexible": {
-                    "title": "Flexible Scheduling",
-                    "description": "Companionship available when and where you need it."
+                    "title": "Here When Needed",
+                    "description": "Available for a few hours a week or daily visits, tailored to your social needs."
                 },
                 "trained": {
-                    "title": "Trained Staff",
-                    "description": "Our companions are trained to provide supportive, respectful company."
+                    "title": "More Than a Friend",
+                    "description": "Our companions are trained support workers who can also assist with basic needs if required."
                 },
                 "meaningful": {
-                    "title": "Meaningful Connection",
-                    "description": "We focus on building genuine, supportive relationships."
+                    "title": "Emotional Wellbeing",
+                    "description": "Regular social interaction improves mental health, reduces isolation, and enhances quality of life."
                 }
             },
             "faq": [
                 {
-                    "question": "What's the difference between companionship and support work?",
-                    "answer": "Companionship focuses on social connection and emotional wellbeing, while support work may include personal care and daily living tasks. Companionship is about having someone to share time and activities with."
+                    "question": "What if my companion and I don't click?",
+                    "answer": "Chemistry is important! If you don't feel a connection with your companion, just let us know. We'll happily arrange meet-and-greets to find someone you truly get along with."
                 },
                 {
-                    "question": "Can I have the same companion each visit?",
-                    "answer": "Yes, we strive for consistency and will do our best to match you with the same companion for ongoing visits. Building a relationship is important to us."
+                    "question": "Can my companion take me places?",
+                    "answer": "Yes! If your plan includes transport, your companion can pick you up and take you to cafes, events, appointments, or anywhere you'd like to go."
                 },
                 {
-                    "question": "What activities can we do together?",
-                    "answer": "Activities are based on your interests and preferences. This might include going for walks, visiting cafes, playing games, watching movies, attending community events, or simply enjoying conversation."
+                    "question": "Is companionship different from personal care support?",
+                    "answer": "Yes. While our companions are trained in support work, the primary focus is social interaction and emotional wellbeing. It's about 'being with' rather than 'doing for'—though we can help with light tasks too."
                 }
             ]
         },
         "transport": {
             "title": "Travel & Transport Assistance",
-            "subtitle": "Getting you where you need to go",
-            "description": "Our Travel and Transport Assistance services help you get to where you need to be. Whether it's medical appointments, community activities, or social outings, we provide safe, reliable transport and support to help you stay connected and independent.",
+            "subtitle": "Getting You Where Life Takes You",
+            "description": "Don't let transport be a barrier to living your life. Our Travel & Transport Assistance ensures you can get from A to B safely, reliably, and comfortably. Whether it's a critical medical appointment, a weekly grocery shop, or a trip to catch up with friends, our friendly support workers are ready to help. We provide more than just a ride—we offer door-to-door support, helping you into the vehicle and accompanying you to your destination if needed.",
+            "images": {
+                "hero": "Friendly driver helping participant into modern accessible vehicle with wheelchair ramp, welcoming smile, suburban setting, safe transport",
+                "gallery": [
+                    {
+                        "prompt": "Participant arriving at medical center with support worker, door-to-door service, professional assistance",
+                        "caption": "Reliable Medical Transport"
+                    },
+                    {
+                        "prompt": "Person exiting vehicle at shopping center with shopping bags, independence, community engagement",
+                        "caption": "Community Access Made Easy"
+                    },
+                    {
+                        "prompt": "Support worker and participant traveling together, conversation in vehicle, comfortable journey",
+                        "caption": "Supported Travel"
+                    }
+                ]
+            },
             "services": [
-                "Medical appointment transport",
-                "Community access transport",
-                "Shopping trips",
-                "Social and recreational outings",
-                "Education and employment transport",
-                "Family visits",
-                "Travel training and support",
-                "Accessible vehicle options",
-                "Door-to-door assistance",
-                "Support during travel"
+                "Transport to medical and specialist appointments",
+                "Grocery shopping and errand assistance",
+                "Social outings and community events",
+                "School, TAFE, or workplace transport",
+                "Travel training for public transport confidence",
+                "Wheelchair accessible vehicle options",
+                "Airport transfers and holiday support",
+                "Family visit transport",
+                "Accompanied support during travel",
+                "Door-to-door assistance getting in and out"
             ],
             "features": {
                 "reliable": {
-                    "title": "Reliable Service",
-                    "description": "Punctual, dependable transport you can count on."
+                    "title": "On Time, Every Time",
+                    "description": "We understand punctuality matters, especially for appointments. You can count on us."
                 },
                 "accessible": {
-                    "title": "Accessible Vehicles",
-                    "description": "Options for wheelchair and mobility equipment transport."
+                    "title": "Accessible Fleet",
+                    "description": "Our vehicles include wheelchair accessible options with hoists and ramps."
                 },
                 "trained": {
-                    "title": "Trained Drivers",
-                    "description": "All drivers are trained in disability support and safety."
+                    "title": "Supportive Drivers",
+                    "description": "All drivers are trained support workers who can assist you throughout the journey."
                 },
                 "flexible": {
                     "title": "Flexible Booking",
-                    "description": "Book regular trips or one-off transport as needed."
+                    "description": "Regular recurring trips or one-off bookings—whatever works for you."
                 }
             },
             "faq": [
                 {
-                    "question": "Do you have wheelchair-accessible vehicles?",
-                    "answer": "Yes, we have vehicles that accommodate wheelchairs and other mobility equipment. Please let us know your requirements when booking."
+                    "question": "Can I use my own car?",
+                    "answer": "Yes! If you prefer, a support worker can drive your vehicle, provided it is comprehensively insured and roadworthy."
                 },
                 {
-                    "question": "How far in advance do I need to book?",
-                    "answer": "We recommend booking regular transport at least 48 hours in advance. For ongoing appointments, we can set up recurring bookings for your convenience."
+                    "question": "How does billing work for transport?",
+                    "answer": "We charge per kilometer for vehicle usage plus the support worker's time, in line with NDIS Price Guide limits. We'll explain all costs upfront."
                 },
                 {
-                    "question": "Can someone accompany me during transport?",
-                    "answer": "Absolutely. Our drivers can provide support during the journey, and we can also arrange for a support worker to accompany you if needed."
+                    "question": "Can someone stay with me at my appointment?",
+                    "answer": "Absolutely! If you wish, your support worker can stay with you during appointments to offer support and help communicate your needs."
                 }
             ]
         },
         "hydrotherapy": {
             "title": "Hydrotherapy & Pool Sessions",
-            "subtitle": "Therapeutic water-based exercise",
-            "description": "Our Hydrotherapy services use the therapeutic properties of water to improve your mobility, strength, and overall wellbeing. Our qualified therapists provide individualized programs in warm water pools to help you achieve your physical goals.",
+            "subtitle": "Healing Through the Power of Water",
+            "description": "Discover the therapeutic magic of water. Our Hydrotherapy sessions utilize warm water to relax muscles, support body weight, and reduce pain—making movement easier and more effective. Led by qualified professionals, these sessions are perfect for rehabilitation, improving circulation, and building strength without the impact of land-based exercise. It's a gentle yet powerful way to achieve your physical therapy goals in a soothing environment.",
+            "images": {
+                "hero": "Therapist and participant doing gentle exercises in warm hydrotherapy pool, water at chest height, calming blue water, rehabilitation focus",
+                "gallery": [
+                    {
+                        "prompt": "Group aquatic exercise class in heated pool, foam noodles, smiling participants, inclusive fitness",
+                        "caption": "Fun Group Sessions"
+                    },
+                    {
+                        "prompt": "Accessible hydrotherapy pool facility with hoist and ramp, modern clean environment, therapeutic setting",
+                        "caption": "Fully Accessible Facilities"
+                    },
+                    {
+                        "prompt": "Participant relaxing in warm water after exercise, peaceful expression, stress relief",
+                        "caption": "Relaxation & Recovery"
+                    }
+                ]
+            },
             "services": [
-                "Individual hydrotherapy sessions",
-                "Group aquatic exercise",
-                "Pain management therapy",
-                "Post-surgical rehabilitation",
-                "Mobility improvement programs",
-                "Relaxation and stress relief",
-                "Water safety skills",
-                "Supervised pool access",
-                "Exercise prescription",
-                "Progress monitoring"
+                "Individual hydrotherapy programs",
+                "Post-surgical aquatic rehabilitation",
+                "Pain management and muscle relaxation",
+                "Arthritis and joint mobility support",
+                "Neurological condition management in water",
+                "Balance and coordination exercises",
+                "Deep water running and walking",
+                "Group aquatic fitness classes",
+                "Water safety and confidence building",
+                "Pediatric hydrotherapy programs"
             ],
             "features": {
                 "warm": {
-                    "title": "Warm Water Therapy",
-                    "description": "Sessions in heated pools for comfort and therapeutic benefit."
+                    "title": "Therapeutic Warmth",
+                    "description": "Sessions in heated pools (32-34°C) to relax muscles and ease joint pain."
                 },
                 "qualified": {
-                    "title": "Qualified Therapists",
-                    "description": "Trained physiotherapists and exercise physiologists lead sessions."
+                    "title": "Expert Guidance",
+                    "description": "Sessions led by Physiotherapists or Exercise Physiologists for safety and results."
                 },
                 "individual": {
-                    "title": "Individual Programs",
-                    "description": "Tailored exercises designed for your specific needs and goals."
+                    "title": "Custom Programs",
+                    "description": "Exercises tailored specifically to your condition and physical abilities."
                 },
                 "progress": {
-                    "title": "Track Progress",
-                    "description": "Regular assessments to monitor your improvements."
+                    "title": "Low Impact, High Results",
+                    "description": "Reduce stress on joints while building muscle strength and endurance."
                 }
             },
             "faq": [
                 {
-                    "question": "What do I need to bring to hydrotherapy?",
-                    "answer": "Bring swimwear, a towel, and any mobility aids you use. We recommend bringing a water bottle and arriving a few minutes early to change."
+                    "question": "Do I need to be able to swim?",
+                    "answer": "Not at all! Most hydrotherapy exercises are done standing in chest-deep water with full support from your therapist. You don't need to be a swimmer to benefit."
                 },
                 {
-                    "question": "I'm not a confident swimmer. Is hydrotherapy still suitable?",
-                    "answer": "Absolutely! Hydrotherapy takes place in shallow, warm water with your therapist right beside you. You don't need to know how to swim to benefit from hydrotherapy."
+                    "question": "What should I wear to hydrotherapy?",
+                    "answer": "Standard swimwear is fine. Some people prefer wearing a rash vest for extra warmth or coverage. We can discuss appropriate attire before your first session."
                 },
                 {
-                    "question": "How often should I attend hydrotherapy?",
-                    "answer": "Frequency depends on your goals and NDIS plan. Many participants attend weekly sessions, but your therapist will recommend an appropriate schedule for you."
+                    "question": "Is the pool facility accessible?",
+                    "answer": "Yes! We use facilities with hoist access, ramps, and accessible changing rooms to ensure everyone can participate safely and comfortably."
                 }
             ]
         },
         "personalTraining": {
             "title": "Personal Training Sessions",
-            "subtitle": "Fitness tailored to your abilities",
-            "description": "Our Personal Training services provide individualized fitness programs designed for your unique abilities and goals. Our qualified trainers create safe, effective exercise programs that help you build strength, improve fitness, and feel your best.",
+            "subtitle": "Fitness for Everybody and Every Body",
+            "description": "Fitness is a journey, and we're here to walk (or run!) it with you. Our Personal Training services are inclusive, adaptive, and designed to help you feel your best. Whether you want to build muscle, improve your cardiovascular health, or simply have fun moving your body, our qualified trainers create safe programs adapted to YOUR abilities. We believe exercise promotes not just physical strength, but mental resilience and confidence too.",
+            "images": {
+                "hero": "Energetic personal trainer high-fiving participant after completing exercise set, gym equipment, achievement and celebration, dynamic lighting",
+                "gallery": [
+                    {
+                        "prompt": "Trainer guiding participant through safe dumbbell exercise, correct form, encouraging atmosphere, modern gym",
+                        "caption": "Strength Training Made Accessible"
+                    },
+                    {
+                        "prompt": "Outdoor personal training session in park, bodyweight exercises, fresh air, smiles and energy",
+                        "caption": "Train Anywhere"
+                    },
+                    {
+                        "prompt": "Adaptive fitness equipment being used with trainer support, wheelchair user exercising, inclusive fitness",
+                        "caption": "Fitness for Every Ability"
+                    }
+                ]
+            },
             "services": [
-                "Individual fitness assessments",
-                "Customized exercise programs",
-                "Strength training",
-                "Cardiovascular fitness",
-                "Flexibility and mobility work",
-                "Balance and coordination",
-                "Functional fitness training",
-                "Home exercise programs",
-                "Progress tracking",
-                "Nutrition guidance"
+                "One-on-one adaptive personal training",
+                "Functional strength and conditioning",
+                "Cardiovascular fitness improvement",
+                "Weight management support",
+                "Mobility and flexibility training",
+                "Balance and coordination exercises",
+                "Inclusive group fitness classes",
+                "Home-based workout programs",
+                "Nutritional guidance and advice",
+                "Gym orientation and confidence building"
             ],
             "features": {
                 "qualified": {
-                    "title": "Qualified Trainers",
-                    "description": "Experienced trainers with disability-specific fitness qualifications."
+                    "title": "Adaptive Experts",
+                    "description": "Trainers qualified in disability fitness who know how to adapt exercises safely."
                 },
                 "personalized": {
-                    "title": "Personalized Programs",
-                    "description": "Exercise plans designed specifically for your abilities and goals."
+                    "title": "Tailored to You",
+                    "description": "No cookie-cutter programs. Every workout is designed around your specific goals and capacity."
                 },
                 "location": {
-                    "title": "Flexible Location",
-                    "description": "Train at home, in the gym, or outdoors based on your preference."
+                    "title": "Train Anywhere",
+                    "description": "We can meet you at a local gym, a park, or even in your own living room."
                 },
                 "safe": {
-                    "title": "Safe Environment",
-                    "description": "All exercises adapted for your safety and comfort."
+                    "title": "Health First",
+                    "description": "We prioritize correct technique and safety to prevent injury and maximize results."
                 }
             },
             "faq": [
                 {
-                    "question": "Do I need any equipment for personal training?",
-                    "answer": "Not necessarily. Our trainers can design programs using minimal equipment, bodyweight exercises, or items you have at home. They can also advise on suitable equipment if you want to invest in some."
+                    "question": "I've never been to a gym before. Is that okay?",
+                    "answer": "Absolutely! Everyone starts somewhere. We'll introduce you to equipment slowly and help you feel comfortable and confident in the gym environment."
                 },
                 {
-                    "question": "Is personal training suitable for all fitness levels?",
-                    "answer": "Yes! Our trainers specialize in adaptive fitness and can create programs for any fitness level, from complete beginners to those looking to improve their current fitness."
+                    "question": "Do I need medical clearance to start training?",
+                    "answer": "Depending on your condition, we may recommend a clearance from your GP or Physio to ensure we prescribe safe exercises for you."
                 },
                 {
-                    "question": "How is this different from regular gym training?",
-                    "answer": "Our trainers have specialized qualifications in working with people with disabilities. They understand how to adapt exercises for different abilities and conditions, ensuring safe, effective workouts."
+                    "question": "Can I train with a friend or partner?",
+                    "answer": "Yes! Training with a buddy can be great motivation. Ask us about small group sessions or partner training options."
                 }
             ]
         },
         "behaviourSupport": {
             "title": "Positive Behaviour Support",
-            "subtitle": "Understanding and supporting behaviour",
-            "description": "Our Positive Behaviour Support services help understand the reasons behind challenging behaviours and develop strategies that improve quality of life. Our qualified practitioners create comprehensive support plans focused on positive outcomes.",
+            "subtitle": "Understanding, Not Judging",
+            "description": "Behind every behaviour is a need trying to be communicated. Our Positive Behaviour Support (PBS) service works to understand the 'why' behind behaviours of concern and develops evidence-based strategies to improve quality of life—for the participant AND their support network. We take a compassionate, person-centered approach, focusing on skill-building, environmental modifications, and reducing the need for restrictive practices.",
+            "images": {
+                "hero": "Behaviour support practitioner in calm, supportive discussion with participant and family member, comfortable office setting, understanding and collaboration",
+                "gallery": [
+                    {
+                        "prompt": "Professional writing behaviour support plan at desk, documents and laptop, thoughtful and detail-oriented approach",
+                        "caption": "Comprehensive Assessments"
+                    },
+                    {
+                        "prompt": "Practitioner training support workers on de-escalation strategies, group learning session, whiteboard",
+                        "caption": "Training & Support"
+                    },
+                    {
+                        "prompt": "Person engaging in calming activity with sensory tools, peaceful environment, self-regulation",
+                        "caption": "Skill Building & Strategies"
+                    }
+                ]
+            },
             "services": [
-                "Functional behaviour assessments",
-                "Behaviour support plan development",
-                "Crisis prevention strategies",
-                "Environment modifications",
-                "Staff and carer training",
-                "Implementation support",
-                "Regular plan reviews",
-                "Multi-disciplinary collaboration",
-                "Family support and education",
-                "Progress monitoring and reporting"
+                "Comprehensive functional behaviour assessments",
+                "Individualized behaviour support plan development",
+                "Crisis prevention and de-escalation strategies",
+                "Environmental and sensory modifications",
+                "Support worker and carer training",
+                "Implementation support and coaching",
+                "Quarterly plan reviews and updates",
+                "Collaboration with allied health professionals",
+                "Family education and psychoeducation",
+                "Restrictive practices reduction plans"
             ],
             "features": {
                 "qualified": {
-                    "title": "Qualified Practitioners",
-                    "description": "NDIS-registered behaviour support practitioners with extensive experience."
+                    "title": "Registered PBS Practitioners",
+                    "description": "NDIS-registered practitioners with specialized qualifications in complex behaviour."
                 },
                 "evidenceBased": {
-                    "title": "Evidence-Based",
-                    "description": "Strategies based on current research and best practices."
+                    "title": "Evidence-Based Practice",
+                    "description": "Strategies grounded in Applied Behaviour Analysis (ABA) and contemporary PBS research."
                 },
                 "personCentered": {
-                    "title": "Person-Centered",
-                    "description": "Focus on individual needs, preferences, and quality of life."
+                    "title": "Dignity & Respect",
+                    "description": "We see the person first, working with them to improve their quality of life."
                 },
                 "collaborative": {
-                    "title": "Collaborative Approach",
-                    "description": "Working with families, carers, and other providers."
+                    "title": "Whole-Team Approach",
+                    "description": "We work closely with families, support workers, therapists, and educators."
                 }
             },
             "faq": [
                 {
-                    "question": "What is Positive Behaviour Support?",
-                    "answer": "Positive Behaviour Support (PBS) is an evidence-based approach that focuses on understanding why challenging behaviours occur and developing strategies to improve quality of life and reduce the need for restrictive practices."
+                    "question": "What does a PBS Practitioner actually do?",
+                    "answer": "PBS Practitioners assess why behaviours are occurring, write comprehensive support plans with evidence-based strategies, train everyone working with you (or your loved one) on how to implement the plan, and monitor progress regularly."
                 },
                 {
-                    "question": "Who develops the behaviour support plan?",
-                    "answer": "Behaviour support plans are developed by NDIS-registered behaviour support practitioners who work closely with the participant, their family, and other support providers."
+                    "question": "Will you work with my other therapists?",
+                    "answer": "Absolutely. Behaviour is often linked to communication, sensory needs, and health. We actively collaborate with Speech Pathologists, OTs, Psychologists, and Nurses to ensure a holistic approach."
                 },
                 {
-                    "question": "How long does it take to see results?",
-                    "answer": "Results vary depending on individual circumstances. Some strategies may show immediate improvement, while others require time and consistent implementation. Regular reviews help track progress and adjust strategies as needed."
+                    "question": "Is PBS just for children?",
+                    "answer": "Not at all. Positive Behaviour Support is effective for people of all ages, including adults with intellectual disabilities, autism, acquired brain injury, or mental health conditions."
                 }
             ]
         },
         "cleaning": {
             "title": "Professional Cleaning Services",
-            "subtitle": "Maintaining a clean, healthy home",
-            "description": "Our Professional Cleaning services help you maintain a clean, healthy living environment. Our trained cleaners provide thorough, reliable cleaning services tailored to your needs and preferences, giving you more time to focus on what matters most.",
+            "subtitle": "A Clean Home, A Clear Mind",
+            "description": "A tidy home isn't a luxury—it's essential for health, comfort, and peace of mind. Our Professional Cleaning services help you maintain a spotless living space without the stress. Whether it's a weekly surface clean, a deep bathroom scrub, or help organizing your space, our friendly cleaners work to YOUR standards and preferences. Sit back, relax, and enjoy coming home to a fresh, clean space.",
+            "images": {
+                "hero": "Professional cleaner vacuuming in bright, organized living room, clean surfaces, professional and friendly service",
+                "gallery": [
+                    {
+                        "prompt": "Cleaner wiping down kitchen counters with sparkling result, attention to detail, organized space",
+                        "caption": "Spotless Kitchens"
+                    },
+                    {
+                        "prompt": "Fresh clean bathroom with folded towels, hygienic and sparkling, professional result",
+                        "caption": "Hygienic Bathrooms"
+                    },
+                    {
+                        "prompt": "Organized wardrobe and bedroom space, decluttered, peaceful home environment",
+                        "caption": "Organized Spaces"
+                    }
+                ]
+            },
             "services": [
-                "Regular house cleaning",
-                "Deep cleaning services",
-                "Kitchen and bathroom cleaning",
-                "Vacuuming and floor care",
-                "Dusting and surface cleaning",
-                "Window cleaning",
-                "Laundry assistance",
+                "Regular weekly or fortnightly cleaning",
+                "Deep spring cleaning and move-out cleans",
+                "Kitchen cleaning (benches, stovetop, fridge)",
+                "Bathroom sanitization and polishing",
+                "Vacuuming, mopping, and floor care",
+                "Dusting and surface wiping",
+                "Internal window cleaning",
                 "Bed making and linen changes",
-                "Garbage and recycling management",
-                "Organizing and decluttering"
+                "Laundry and folding assistance",
+                "Decluttering and organization help"
             ],
             "features": {
                 "reliable": {
-                    "title": "Reliable Service",
-                    "description": "Consistent, dependable cleaning you can count on."
+                    "title": "Same Team, Same Standard",
+                    "description": "Consistent cleaners who learn your preferences for a personalized service."
                 },
                 "trained": {
-                    "title": "Trained Staff",
-                    "description": "All cleaners are trained in respectful, client-centered service."
+                    "title": "Respectful & Trained",
+                    "description": "All staff trained in respectful, client-centered service delivery."
                 },
                 "flexible": {
-                    "title": "Flexible Scheduling",
-                    "description": "Weekly, fortnightly, or one-off cleaning to suit your needs."
+                    "title": "Fits Your Schedule",
+                    "description": "Choose your preferred day, time, and frequency—we work around you."
                 },
                 "products": {
-                    "title": "Quality Products",
-                    "description": "We use safe, effective cleaning products, with options for sensitivities."
+                    "title": "Safe Products",
+                    "description": "Eco-friendly and hypoallergenic options available for sensitivities."
                 }
             },
             "faq": [
                 {
-                    "question": "Do I need to provide cleaning supplies?",
-                    "answer": "We can bring our own cleaning supplies and equipment, or use products you prefer. Just let us know your preference when booking."
+                    "question": "Do you bring cleaning supplies?",
+                    "answer": "We can provide all cleaning supplies and equipment, or use products you already have at home if you prefer. Just let us know!"
                 },
                 {
-                    "question": "How often can I schedule cleaning?",
-                    "answer": "Cleaning frequency is flexible based on your needs and NDIS plan. Many participants have weekly or fortnightly cleaning, but we can arrange services as often as you need."
+                    "question": "Can the same person clean my home each time?",
+                    "answer": "Absolutely. We know consistency matters. We'll assign a regular cleaner (with a backup) who will get to know your home and preferences."
                 },
                 {
-                    "question": "Can I request specific tasks be prioritized?",
-                    "answer": "Absolutely. We work with you to understand your priorities and ensure the most important tasks are always completed during each visit."
+                    "question": "Do I need to be home during cleaning?",
+                    "answer": "That's completely up to you. Many clients provide a key or safe access code. Others prefer to be home—whatever makes you comfortable."
                 }
             ]
         },
         "independentLiving": {
             "title": "Independent Living & Accommodation Support",
-            "subtitle": "Support for independent living",
-            "description": "Our Independent Living and Accommodation Support services help you live independently in your own home or supported accommodation. We provide the support you need to manage daily life, build skills, and achieve your accommodation goals.",
+            "subtitle": "Your Home, Your Rules, Our Support",
+            "description": "Everyone deserves a place to call home. Our Independent Living & Accommodation Support services—including Supported Independent Living (SIL)—help you live in a home of your choosing with the level of support that's right for you. Whether you need 24-hour assistance, overnight support, or just a few hours a day to help with household tasks and skill-building, we're here to help you achieve your living goals.",
+            "images": {
+                "hero": "Modern accessible apartment interior, person cooking in adaptive kitchen, independence, bright and welcoming space",
+                "gallery": [
+                    {
+                        "prompt": "Exterior of well-maintained supported living house, accessible entrance, welcoming Australian suburban setting",
+                        "caption": "Quality SIL Homes"
+                    },
+                    {
+                        "prompt": "Participant learning budgeting skills with support worker, laptop and documents, skill building session",
+                        "caption": "Life Skills Development"
+                    },
+                    {
+                        "prompt": "Housemates enjoying meal together in shared living space, friendship and community, independence",
+                        "caption": "Community & Friendship"
+                    }
+                ]
+            },
             "services": [
-                "Supported Independent Living (SIL)",
-                "In-home living skills development",
-                "Tenancy support",
-                "Housemate matching",
-                "24/7 on-call support",
-                "Emergency response",
-                "Life skills training",
-                "Budgeting and financial literacy",
-                "Household management",
-                "Community integration support"
+                "Supported Independent Living (SIL) arrangements",
+                "24/7 on-site or on-call support options",
+                "Life skills development (cooking, cleaning, budgeting)",
+                "Tenancy skills and rental management",
+                "Housemate matching and compatibility assessment",
+                "Transition support from family home or other accommodation",
+                "Emergency response and crisis support",
+                "Community access and social participation",
+                "Health and wellbeing monitoring",
+                "Coordination with housing providers"
             ],
             "features": {
                 "personCentered": {
-                    "title": "Person-Centered",
-                    "description": "Support tailored to your individual goals and preferences."
+                    "title": "You Choose Your Home",
+                    "description": "We support you to find accommodation that fits your lifestyle, preferences, and location."
                 },
                 "skillBuilding": {
-                    "title": "Skill Building",
-                    "description": "Develop the skills you need for greater independence."
+                    "title": "Build Independence",
+                    "description": "We actively teach skills so you can do more for yourself over time."
                 },
                 "flexible": {
-                    "title": "Flexible Support",
-                    "description": "From a few hours a week to 24/7 support as needed."
+                    "title": "Flexible Support Levels",
+                    "description": "From a few hours of drop-in support to 24/7 overnight care—tailored to your needs."
                 },
                 "quality": {
                     "title": "Quality Accommodation",
-                    "description": "Clean, safe, comfortable living environments."
+                    "description": "Modern, comfortable homes meeting SDA specifications where applicable."
                 },
                 "accessible": {
-                    "title": "Accessible Accommodation",
-                    "description": "Housing options designed to meet your accessibility needs."
+                    "title": "Accessible Design",
+                    "description": "Housing options with accessibility features for mobility, sensory, and other needs."
                 }
             },
             "faq": [
                 {
-                    "question": "What is Supported Independent Living (SIL)?",
-                    "answer": "SIL is NDIS-funded support that helps you live as independently as possible in your own home or shared accommodation. It can include help with daily activities, personal care, and household tasks."
+                    "question": "What is SIL and how do I get it?",
+                    "answer": "Supported Independent Living (SIL) is NDIS funding for daily personal activities support in a shared living arrangement. To access SIL, you'll need an NDIS assessment and 'reasonable and necessary' determination. We can help guide you through the process."
                 },
                 {
-                    "question": "Can I choose where I live?",
-                    "answer": "Yes, choice and control are fundamental to NDIS. We work with you to find accommodation that suits your preferences, needs, and budget."
+                    "question": "Can I live on my own or do I have to share?",
+                    "answer": "Both options are available! Some people prefer living solo with drop-in support, while others enjoy the companionship of shared accommodation. We work with you to find the right fit."
                 },
                 {
-                    "question": "What if I already have accommodation?",
-                    "answer": "We can provide support in your existing home. Our services are flexible and can be delivered wherever you live, helping you maintain your independence in your current environment."
+                    "question": "What if I don't get along with my housemates?",
+                    "answer": "We take housemate matching seriously. Before anyone moves in, we facilitate meetings to ensure compatibility. If issues arise, we work with everyone to resolve them or find alternative arrangements."
                 }
             ]
         }

@@ -1,9 +1,10 @@
 'use client';
 
+import { useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Phone, CheckCircle, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 // Map slugs to translation keys
 const slugToKeyMap: Record<string, string> = {
@@ -22,9 +23,11 @@ const slugToKeyMap: Record<string, string> = {
 
 interface ServicePageClientProps {
     slug: string;
+    heroImage?: string;
+    galleryImages?: string[];
 }
 
-export default function ServicePageClient({ slug }: ServicePageClientProps) {
+export default function ServicePageClient({ slug, heroImage, galleryImages }: ServicePageClientProps) {
     const translationKey = slugToKeyMap[slug] || 'dailyLiving';
 
     const t = useTranslations(`ServiceDetails.${translationKey}`);
@@ -85,17 +88,99 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
 
     return (
         <div className="min-h-screen">
-            {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-sky-900 text-white pt-32 pb-20">
+            {/* Hero Section with Image */}
+            <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-sky-900 text-white pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('title')}</h1>
-                        <p className="text-xl text-sky-200 mb-4">{t('subtitle')}</p>
-                        <p className="text-lg text-gray-300">{t('description')}</p>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="max-w-xl">
+                            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">{t('title')}</h1>
+                            <p className="text-xl text-sky-200 mb-4 font-medium">{t('subtitle')}</p>
+                            <p className="text-lg text-gray-300 leading-relaxed">{t('description')}</p>
+                        </div>
+                        <div className="relative hidden lg:block">
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 aspect-[4/3]">
+                                {heroImage ? (
+                                    <ResponsiveImage
+                                        src={heroImage}
+                                        alt={t('title')}
+                                        className="w-full h-full object-cover"
+                                        sizes="(max-width: 1024px) 100vw, 50vw"
+                                        priority
+                                    />
+                                ) : (
+                                    /* Hero Image Placeholder */
+                                    <div className="absolute inset-0 bg-gradient-to-br from-navy-700 to-sky-800 flex items-center justify-center p-8">
+                                        <div className="text-center space-y-3">
+                                            <div className="w-16 h-16 mx-auto bg-sky-500/20 rounded-full flex items-center justify-center">
+                                                <svg className="w-8 h-8 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                </svg>
+                                            </div>
+                                            <p className="text-sky-200 text-sm font-medium">Hero Image 1</p>
+                                            {t.has('images.hero') && (
+                                                <p className="text-sky-300/60 text-xs italic max-w-xs mx-auto">{t('images.hero')}</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                            {/* Decorative elements */}
+                            <div className="absolute -z-10 top-10 -right-10 w-40 h-40 bg-coral-500 rounded-full blur-3xl opacity-20"></div>
+                            <div className="absolute -z-10 -bottom-10 -left-10 w-40 h-40 bg-sky-500 rounded-full blur-3xl opacity-20"></div>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            {/* Image Gallery Section */}
+            {t.has('images.gallery') && (
+                <section className="py-12 bg-gray-50">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-5xl mx-auto">
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {[0, 1, 2].map((index) => {
+                                    const hasImage = t.has(`images.gallery.${index}`);
+                                    if (!hasImage) return null;
+                                    const galleryImage = galleryImages?.[index];
+
+                                    return (
+                                        <div key={index} className="group">
+                                            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white aspect-[4/3]">
+                                                {galleryImage ? (
+                                                    <ResponsiveImage
+                                                        src={galleryImage}
+                                                        alt={t(`images.gallery.${index}.caption`)}
+                                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                                    />
+                                                ) : (
+                                                    /* Gallery Image Placeholder */
+                                                    <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-4">
+                                                        <div className="text-center space-y-2">
+                                                            <div className="w-12 h-12 mx-auto bg-gray-300/50 rounded-full flex items-center justify-center">
+                                                                <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                                </svg>
+                                                            </div>
+                                                            <p className="text-gray-500 text-xs italic px-2 line-clamp-3">
+                                                                {t(`images.gallery.${index}.prompt`)}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <p className="mt-3 text-sm text-gray-600 text-center font-medium">
+                                                {t(`images.gallery.${index}.caption`)}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Services List */}
             {services.length > 0 && (

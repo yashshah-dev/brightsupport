@@ -312,6 +312,23 @@
             "title": "日常生活与居家支持",
             "subtitle": "支持您在家的独立生活",
             "description": "我们的日常生活和居家支持服务旨在帮助您在舒适的家中保持独立性和生活质量。我们提供个性化的日常活动、家务和个人护理协助，让您能够有尊严、有尊重地过上您选择的生活。",
+            "images": {
+                "hero": "Friendly support worker helping participant prepare a healthy meal together in modern Australian kitchen, natural sunlight streaming through window, genuine smiles, warm lifestyle photography",
+                "gallery": [
+                    {
+                        "prompt": "Compassionate support worker assisting with personal care routine, respectful and dignified interaction, soft bathroom lighting",
+                        "caption": "个人护理服务"
+                    },
+                    {
+                        "prompt": "Support worker and participant doing light gardening together in sunny Australian backyard, planting flowers, teamwork and joy",
+                        "caption": "户外活动支持"
+                    },
+                    {
+                        "prompt": "Person receiving help with grocery shopping, organized kitchen pantry, independence and choice",
+                        "caption": "保持独立生活"
+                    }
+                ]
+            },
             "services": [
                 "个人卫生（如厕、沐浴、淋浴）",
                 "清洁和房屋维护",
@@ -404,7 +421,24 @@
                     "question": "你们与我现有的医疗保健提供者协调吗？",
                     "answer": "当然。我们与您的全科医生、专家和其他医疗保健提供者密切合作，以确保协调、全面的护理。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Professional registered nurse in uniform checking blood pressure of seated participant in comfortable living room, medical equipment visible, calm reassuring atmosphere, soft natural lighting",
+                "gallery": [
+                    {
+                        "prompt": "Nurse performing careful wound dressing change, close-up of gloved hands, clean medical setting, professional and gentle care",
+                        "caption": "专业伤口护理"
+                    },
+                    {
+                        "prompt": "Nurse discussing medication schedule with participant using weekly pill organizer, educational moment, kitchen table setting",
+                        "caption": "药物支持与教育"
+                    },
+                    {
+                        "prompt": "Nurse training family member on care procedures, supportive teaching moment, home environment",
+                        "caption": "支持网络培训"
+                    }
+                ]
+            }
         },
         "physiotherapy": {
             "title": "物理治疗服务",
@@ -453,7 +487,24 @@
                     "question": "物理治疗能帮助慢性疼痛吗？",
                     "answer": "是的，我们的物理治疗师使用各种技术来帮助管理慢性疼痛，包括运动治疗、手法治疗和疼痛管理策略教育。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Professional physiotherapist guiding participant through mobility exercises in bright therapy room, resistance bands, genuine encouragement, healthcare photography",
+                "gallery": [
+                    {
+                        "prompt": "Physio helping with balance training using stability equipment, focus and concentration, modern clinic setting",
+                        "caption": "平衡与协调训练"
+                    },
+                    {
+                        "prompt": "Physiotherapist demonstrating home exercises in living room, exercise mat, practical skill transfer",
+                        "caption": "家庭运动计划"
+                    },
+                    {
+                        "prompt": "Person using mobility equipment prescribed by physiotherapist, walker or wheelchair, outdoor setting, independence",
+                        "caption": "设备与移动解决方案"
+                    }
+                ]
+            }
         },
         "communityParticipation": {
             "title": "社区参与与团体活动",
@@ -502,7 +553,24 @@
                     "question": "如何加入团体活动？",
                     "answer": "联系我们讨论您的兴趣和目标。我们将帮助您匹配合适的项目，并安排您参与所需的任何支持。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Diverse group of people laughing and enjoying outdoor picnic in sunny Australian park, genuine friendship, vibrant colors, lifestyle photography",
+                "gallery": [
+                    {
+                        "prompt": "Participants engaged in creative art workshop, colorful canvases, paintbrushes, joyful expression",
+                        "caption": "发现创意潜能"
+                    },
+                    {
+                        "prompt": "Mixed ability sports group playing lawn games in park, teamwork, cheering, community spirit",
+                        "caption": "积极社交活动"
+                    },
+                    {
+                        "prompt": "Group cooking class with participants preparing food together, shared laughter, learning new skills",
+                        "caption": "共同学习"
+                    }
+                ]
+            }
         },
         "companionship": {
             "title": "陪伴服务",
@@ -551,7 +619,24 @@
                     "question": "我们可以一起做什么活动？",
                     "answer": "活动基于您的兴趣和偏好。这可能包括散步、参观咖啡馆、玩游戏、看电影、参加社区活动或只是享受交谈。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Two people sharing warm conversation over tea at cozy cafe table, genuine smiles, soft lighting, friendship and connection",
+                "gallery": [
+                    {
+                        "prompt": "Companion and participant playing board game together at dining table, focused engagement, having fun",
+                        "caption": "共享兴趣爱好"
+                    },
+                    {
+                        "prompt": "Two people walking together in local park, gentle exercise, conversation, morning light",
+                        "caption": "一起保持活跃"
+                    },
+                    {
+                        "prompt": "Companion helping participant use tablet to video call family, technology connection, support",
+                        "caption": "保持联系"
+                    }
+                ]
+            }
         },
         "transport": {
             "title": "旅行与交通协助",
@@ -600,7 +685,24 @@
                     "question": "交通途中可以有人陪同吗？",
                     "answer": "当然可以。我们的司机可以在旅途中提供支持，如果需要，我们也可以安排支持工作者陪同您。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Friendly driver helping participant into modern accessible vehicle with wheelchair ramp, welcoming smile, suburban setting, safe transport",
+                "gallery": [
+                    {
+                        "prompt": "Participant arriving at medical center with support worker, door-to-door service, professional assistance",
+                        "caption": "可靠的医疗接送"
+                    },
+                    {
+                        "prompt": "Person exiting vehicle at shopping center with shopping bags, independence, community engagement",
+                        "caption": "便捷的社区通行"
+                    },
+                    {
+                        "prompt": "Support worker and participant traveling together, conversation in vehicle, comfortable journey",
+                        "caption": "陪伴出行"
+                    }
+                ]
+            }
         },
         "hydrotherapy": {
             "title": "水疗与泳池课程",
@@ -649,7 +751,24 @@
                     "question": "我应该多频繁参加水疗？",
                     "answer": "频率取决于您的目标和NDIS计划。许多参与者每周参加一次课程，但您的治疗师会为您推荐适当的时间表。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Therapist and participant doing gentle exercises in warm hydrotherapy pool, water at chest height, calming blue water, rehabilitation focus",
+                "gallery": [
+                    {
+                        "prompt": "Group aquatic exercise class in heated pool, foam noodles, smiling participants, inclusive fitness",
+                        "caption": "有趣的团体课程"
+                    },
+                    {
+                        "prompt": "Accessible hydrotherapy pool facility with hoist and ramp, modern clean environment, therapeutic setting",
+                        "caption": "全面无障碍设施"
+                    },
+                    {
+                        "prompt": "Participant relaxing in warm water after exercise, peaceful expression, stress relief",
+                        "caption": "放松与恢复"
+                    }
+                ]
+            }
         },
         "personalTraining": {
             "title": "个人训练课程",
@@ -698,7 +817,24 @@
                     "question": "这与普通健身房训练有什么不同？",
                     "answer": "我们的教练具有与残障人士合作的专业资格。他们了解如何为不同能力和状况调整锻炼，确保安全、有效的锻炼。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Energetic personal trainer high-fiving participant after completing exercise set, gym equipment, achievement and celebration, dynamic lighting",
+                "gallery": [
+                    {
+                        "prompt": "Trainer guiding participant through safe dumbbell exercise, correct form, encouraging atmosphere, modern gym",
+                        "caption": "无障碍力量训练"
+                    },
+                    {
+                        "prompt": "Outdoor personal training session in park, bodyweight exercises, fresh air, smiles and energy",
+                        "caption": "随地训练"
+                    },
+                    {
+                        "prompt": "Adaptive fitness equipment being used with trainer support, wheelchair user exercising, inclusive fitness",
+                        "caption": "适合每种能力"
+                    }
+                ]
+            }
         },
         "behaviourSupport": {
             "title": "积极行为支持",
@@ -747,7 +883,24 @@
                     "question": "多久能看到效果？",
                     "answer": "结果因个人情况而异。一些策略可能会立即显示改善，而其他策略需要时间和持续实施。定期审查有助于跟踪进度并根据需要调整策略。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Behaviour support practitioner in calm, supportive discussion with participant and family member, comfortable office setting, understanding and collaboration",
+                "gallery": [
+                    {
+                        "prompt": "Professional writing behaviour support plan at desk, documents and laptop, thoughtful and detail-oriented approach",
+                        "caption": "全面评估"
+                    },
+                    {
+                        "prompt": "Practitioner training support workers on de-escalation strategies, group learning session, whiteboard",
+                        "caption": "培训与支持"
+                    },
+                    {
+                        "prompt": "Person engaging in calming activity with sensory tools, peaceful environment, self-regulation",
+                        "caption": "技能建设与策略"
+                    }
+                ]
+            }
         },
         "cleaning": {
             "title": "专业清洁服务",
@@ -796,7 +949,24 @@
                     "question": "我可以要求优先处理特定任务吗？",
                     "answer": "当然可以。我们与您合作了解您的优先事项，并确保每次访问都完成最重要的任务。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Professional cleaner vacuuming in bright, organized living room, clean surfaces, professional and friendly service",
+                "gallery": [
+                    {
+                        "prompt": "Cleaner wiping down kitchen counters with sparkling result, attention to detail, organized space",
+                        "caption": "一尘不染的厨房"
+                    },
+                    {
+                        "prompt": "Fresh clean bathroom with folded towels, hygienic and sparkling, professional result",
+                        "caption": "卫生的浴室"
+                    },
+                    {
+                        "prompt": "Organized wardrobe and bedroom space, decluttered, peaceful home environment",
+                        "caption": "整洁的空间"
+                    }
+                ]
+            }
         },
         "independentLiving": {
             "title": "独立生活与住宿支持",
@@ -849,7 +1019,24 @@
                     "question": "如果我已经有住处怎么办？",
                     "answer": "我们可以在您现有的家中提供支持。我们的服务灵活，可以在您居住的任何地方提供，帮助您在当前环境中保持独立。"
                 }
-            ]
+            ],
+            "images": {
+                "hero": "Modern accessible apartment interior, person cooking in adaptive kitchen, independence, bright and welcoming space",
+                "gallery": [
+                    {
+                        "prompt": "Exterior of well-maintained supported living house, accessible entrance, welcoming Australian suburban setting",
+                        "caption": "优质SIL住所"
+                    },
+                    {
+                        "prompt": "Participant learning budgeting skills with support worker, laptop and documents, skill building session",
+                        "caption": "生活技能发展"
+                    },
+                    {
+                        "prompt": "Housemates enjoying meal together in shared living space, friendship and community, independence",
+                        "caption": "社区与友谊"
+                    }
+                ]
+            }
         }
     }
 }
