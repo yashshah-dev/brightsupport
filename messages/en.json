@@ -21,7 +21,6 @@
         "privacy": "Privacy Policy",
         "copyright": "© 2024 Bright Support. All rights reserved.",
         "locations": {
-            "melbourne": "Melbourne",
             "shepparton": "Shepparton"
         }
     },
@@ -134,7 +133,7 @@
     "AboutUs": {
         "meta": {
             "title": "About Us | Bright Support - Our Story & Mission",
-            "description": "Learn about Bright Support's journey, mission, and values. Founded in 2019, we are a trusted NDIS service provider serving Melbourne, Shepparton, and beyond."
+            "description": "Learn about Bright Support's journey, mission, and values. Founded in 2019, we are a trusted NDIS service provider serving Shepparton and surrounding areas."
         },
         "hero": {
             "title": "About Bright Support",
@@ -182,7 +181,7 @@
     "ContactUs": {
         "meta": {
             "title": "Contact Us | Bright Support - Get in Touch",
-            "description": "Contact Bright Support for NDIS disability services. Call us at 1800 407 508 or visit our offices in Melbourne and Shepparton."
+            "description": "Contact Bright Support for NDIS disability services. Call us at 1800 407 508 or visit our office in Shepparton."
         },
         "hero": {
             "title": "Contact Us",
@@ -210,10 +209,6 @@
         },
         "locations": {
             "title": "Our Locations",
-            "melbourne": {
-                "name": "Melbourne Office",
-                "address": "123 Collins Street, Melbourne VIC 3000"
-            },
             "shepparton": {
                 "name": "Shepparton Office",
                 "address": "456 Wyndham Street, Shepparton VIC 3630"

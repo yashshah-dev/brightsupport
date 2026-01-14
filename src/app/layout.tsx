@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Bright Support | NDIS Disability & Support Services Provider",
   description: "Trusted NDIS disability and support services provider in Australia. Offering daily living support, community nursing, physiotherapy, and more. Making navigating the NDIS easy.",
-  keywords: "NDIS, disability support, aged care, community nursing, physiotherapy, Melbourne, Shepparton, Australia",
+  keywords: "NDIS, disability support, aged care, community nursing, physiotherapy, Shepparton, Australia",
   authors: [{ name: "Bright Support" }],
   openGraph: {
     title: "Bright Support | NDIS Disability & Support Services Provider",

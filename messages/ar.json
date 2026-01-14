@@ -21,7 +21,6 @@
         "privacy": "سياسة الخصوصية",
         "copyright": "© ٢٠٢٤ Bright Support. جميع الحقوق محفوظة.",
         "locations": {
-            "melbourne": "ملبورن",
             "shepparton": "شيبارتون"
         }
     },
@@ -134,7 +133,7 @@
     "AboutUs": {
         "meta": {
             "title": "من نحن | Bright Support - قصتنا ومهمتنا",
-            "description": "تعرف على رحلة Bright Support ومهمتها وقيمها. تأسسنا في ٢٠١٩، ونحن مقدم خدمات NDIS موثوق نخدم ملبورن وشيبارتون والمناطق المحيطة."
+            "description": "تعرف على رحلة Bright Support ومهمتها وقيمها. تأسسنا في ٢٠١٩، ونحن مقدم خدمات NDIS موثوق نخدم شيبارتون والمناطق المحيطة."
         },
         "hero": {
             "title": "عن Bright Support",
@@ -182,7 +181,7 @@
     "ContactUs": {
         "meta": {
             "title": "اتصل بنا | Bright Support - تواصل معنا",
-            "description": "اتصل بـ Bright Support للحصول على خدمات الإعاقة NDIS. اتصل بنا على ١٨٠٠ ٤٠٧ ٥٠٨ أو قم بزيارة مكاتبنا في ملبورن وشيبارتون."
+            "description": "اتصل بـ Bright Support للحصول على خدمات الإعاقة NDIS. اتصل بنا على ١٨٠٠ ٤٠٧ ٥٠٨ أو قم بزيارة مكاتبنا في شيبارتون."
         },
         "hero": {
             "title": "اتصل بنا",
@@ -210,10 +209,6 @@
         },
         "locations": {
             "title": "مواقعنا",
-            "melbourne": {
-                "name": "مكتب ملبورن",
-                "address": "123 Collins Street, Melbourne VIC 3000"
-            },
             "shepparton": {
                 "name": "مكتب شيبارتون",
                 "address": "456 Wyndham Street, Shepparton VIC 3630"

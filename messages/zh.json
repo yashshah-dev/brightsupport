@@ -21,7 +21,6 @@
         "privacy": "隐私政策",
         "copyright": "© 2024 Bright Support。保留所有权利。",
         "locations": {
-            "melbourne": "墨尔本",
             "shepparton": "谢帕顿"
         }
     },
@@ -134,7 +133,7 @@
     "AboutUs": {
         "meta": {
             "title": "关于我们 | Bright Support - 我们的故事和使命",
-            "description": "了解Bright Support的发展历程、使命和价值观。自2019年成立以来，我们是服务于墨尔本、谢帕顿及更广泛地区的值得信赖的NDIS服务提供商。"
+            "description": "了解Bright Support的发展历程、使命和价值观。自2019年成立以来，我们是服务于谢帕顿及更广泛地区的值得信赖的NDIS服务提供商。"
         },
         "hero": {
             "title": "关于Bright Support",
@@ -182,7 +181,7 @@
     "ContactUs": {
         "meta": {
             "title": "联系我们 | Bright Support - 取得联系",
-            "description": "联系Bright Support获取NDIS残障服务。拨打1800 407 508或访问我们位于墨尔本和谢帕顿的办公室。"
+            "description": "联系Bright Support获取NDIS残障服务。拨打1800 407 508或访问我们位于谢帕顿的办公室。"
         },
         "hero": {
             "title": "联系我们",
@@ -210,10 +209,6 @@
         },
         "locations": {
             "title": "我们的地点",
-            "melbourne": {
-                "name": "墨尔本办公室",
-                "address": "123 Collins Street, Melbourne VIC 3000"
-            },
             "shepparton": {
                 "name": "谢帕顿办公室",
                 "address": "456 Wyndham Street, Shepparton VIC 3630"

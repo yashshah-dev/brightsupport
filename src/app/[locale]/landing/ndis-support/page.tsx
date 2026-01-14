@@ -64,7 +64,7 @@ export default function LandingPage() {
                             </h1>
 
                             <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-                                Experience personalized care with our compassionate team in Shepparton & Melbourne. We help you achieve your goals with dignity and independence.
+                                Experience personalized care with our compassionate team in Shepparton and surrounding areas. We help you achieve your goals with dignity and independence.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4">

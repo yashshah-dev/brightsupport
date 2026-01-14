@@ -219,15 +219,6 @@ export default function ContactUsPage() {
                                 <h2 className="text-2xl font-bold text-navy-900 mb-6">{tLocations('title')}</h2>
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">
-                                        <div className="w-10 h-10 bg-navy-100 rounded-lg flex items-center justify-center mt-1">
-                                            <MapPin className="w-5 h-5 text-navy-600" />
-                                        </div>
-                                        <div>
-                                            <div className="font-semibold text-navy-900">{tLocations('melbourne.name')}</div>
-                                            <div className="text-gray-600">{tLocations('melbourne.address')}</div>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-start gap-4">
                                         <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center mt-1">
                                             <MapPin className="w-5 h-5 text-sky-600" />
                                         </div>

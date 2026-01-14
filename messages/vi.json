@@ -21,7 +21,6 @@
         "privacy": "Chính sách bảo mật",
         "copyright": "© 2024 Bright Support. Bản quyền thuộc về chúng tôi.",
         "locations": {
-            "melbourne": "Melbourne",
             "shepparton": "Shepparton"
         }
     },
@@ -134,7 +133,7 @@
     "AboutUs": {
         "meta": {
             "title": "Về chúng tôi | Bright Support - Câu chuyện & Sứ mệnh",
-            "description": "Tìm hiểu về hành trình, sứ mệnh và giá trị của Bright Support. Thành lập năm 2019, chúng tôi là nhà cung cấp dịch vụ NDIS đáng tin cậy phục vụ Melbourne, Shepparton và hơn thế nữa."
+            "description": "Tìm hiểu về hành trình, sứ mệnh và giá trị của Bright Support. Thành lập năm 2019, chúng tôi là nhà cung cấp dịch vụ NDIS đáng tin cậy phục vụ Shepparton và hơn thế nữa."
         },
         "hero": {
             "title": "Về Bright Support",
@@ -182,7 +181,7 @@
     "ContactUs": {
         "meta": {
             "title": "Liên hệ | Bright Support - Kết nối với chúng tôi",
-            "description": "Liên hệ Bright Support để nhận dịch vụ hỗ trợ người khuyết tật NDIS. Gọi 1800 407 508 hoặc đến văn phòng của chúng tôi tại Melbourne và Shepparton."
+            "description": "Liên hệ Bright Support để nhận dịch vụ hỗ trợ người khuyết tật NDIS. Gọi 1800 407 508 hoặc đến văn phòng của chúng tôi tại Shepparton."
         },
         "hero": {
             "title": "Liên hệ với chúng tôi",
@@ -210,10 +209,6 @@
         },
         "locations": {
             "title": "Địa điểm của chúng tôi",
-            "melbourne": {
-                "name": "Văn phòng Melbourne",
-                "address": "123 Collins Street, Melbourne VIC 3000"
-            },
             "shepparton": {
                 "name": "Văn phòng Shepparton",
                 "address": "456 Wyndham Street, Shepparton VIC 3630"
