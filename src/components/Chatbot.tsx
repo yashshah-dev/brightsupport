@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, ChevronRight, Send } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 
 interface Message {
@@ -20,6 +20,7 @@ interface Option {
 
 export default function Chatbot() {
     // We can add translations later, hardcoding for speed/demo first
+    const locale = useLocale();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
         {
@@ -111,7 +112,8 @@ export default function Chatbot() {
                         options: []
                     };
                     if (option.payload) {
-                        window.location.href = option.payload; // Simple nav
+                        const path = option.payload.startsWith('/') ? option.payload : `/${option.payload}`;
+                        window.location.href = `/${locale}${path}`;
                     }
                     break;
                 default:
@@ -160,8 +162,8 @@ export default function Chatbot() {
                             <div key={msg.id} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div
                                     className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm shadow-sm ${msg.type === 'user'
-                                            ? 'bg-navy-900 text-white rounded-br-none'
-                                            : 'bg-white text-gray-700 rounded-bl-none border border-gray-100'
+                                        ? 'bg-navy-900 text-white rounded-br-none'
+                                        : 'bg-white text-gray-700 rounded-bl-none border border-gray-100'
                                         }`}
                                 >
                                     {msg.text}
