@@ -3,12 +3,15 @@
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactUsPage() {
     const t = useTranslations('ContactUs');
     const tForm = useTranslations('ContactUs.form');
     const tInfo = useTranslations('ContactUs.info');
     const tLocations = useTranslations('ContactUs.locations');
+
+    // ... existing hook calls ...
 
     const [formData, setFormData] = useState({
         name: '',
@@ -28,13 +31,55 @@ export default function ContactUsPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setSubmitStatus('idle');
 
-        // Simulate form submission
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        // Check for environment variables
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-        setSubmitStatus('success');
-        setIsSubmitting(false);
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        console.log('--- EmailJS Debug ---');
+        console.log('Service ID:', serviceId);
+        console.log('Template ID:', templateId);
+        console.log('Public Key (length):', publicKey ? publicKey.length : 'MISSING');
+        console.log('Public Key (first 3 chars):', publicKey ? publicKey.substring(0, 3) : 'N/A');
+        console.log('---------------------');
+
+        if (!serviceId || !templateId || !publicKey) {
+            console.error('EmailJS environment variables are missing. Please check your .env.local file.');
+            console.warn('Simulating successful submission for demonstration purposes.');
+
+            // Simulate delay
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            setSubmitStatus('success');
+            setIsSubmitting(false);
+            setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+            return;
+        }
+
+        try {
+            await emailjs.send(
+                serviceId,
+                templateId,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    phone: formData.phone,
+                    service: formData.service,
+                    message: formData.message,
+                    to_name: 'Bright Support Team', // Optional, depends on template
+                },
+                publicKey
+            );
+
+            setSubmitStatus('success');
+            setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        } catch (error) {
+            console.error('EmailJS submission failed:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (

@@ -98,7 +98,7 @@ export default function AboutUsPage() {
                             </div>
                             <div className="relative">
                                 <ResponsiveImage
-                                    src={getAssetPath('/images/team/team-photo')}
+                                    src={getAssetPath('/images/about/team-photo.webp')}
                                     alt="Bright Support Team"
                                     className="rounded-2xl shadow-xl"
                                     priority={false}

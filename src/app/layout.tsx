@@ -4,7 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
+
 import StructuredData from "@/components/StructuredData";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 
@@ -119,7 +119,6 @@ export default function RootLayout({
           <Header />
           <main className="min-h-screen">{children}</main>
           <Footer />
-          <ChatWidget />
         </AnalyticsProvider>
       </body>
     </html>

@@ -157,6 +157,7 @@ export default function ServicePageClient({ slug, heroImage, galleryImages }: Se
                                                         alt={t(`images.gallery.${index}.caption`)}
                                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                                         sizes="(max-width: 768px) 100vw, 33vw"
+                                                        widths={[480, 768, 1024]}
                                                     />
                                                 ) : (
                                                     /* Gallery Image Placeholder */
