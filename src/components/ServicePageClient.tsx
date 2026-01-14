@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Phone, CheckCircle, ChevronDown } from 'lucide-react';
+import { getAssetPath } from '@/lib/utils';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 // Map slugs to translation keys
@@ -90,7 +91,10 @@ export default function ServicePageClient({ slug, heroImage, galleryImages }: Se
         <div className="min-h-screen">
             {/* Hero Section with Image */}
             <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-sky-900 text-white pt-32 pb-20 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
+                <div
+                    className="absolute inset-0 opacity-5"
+                    style={{ backgroundImage: `url(${getAssetPath('/images/pattern.svg')})` }}
+                ></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="max-w-xl">
@@ -98,7 +102,7 @@ export default function ServicePageClient({ slug, heroImage, galleryImages }: Se
                             <p className="text-xl text-sky-200 mb-4 font-medium">{t('subtitle')}</p>
                             <p className="text-lg text-gray-300 leading-relaxed">{t('description')}</p>
                         </div>
-                        <div className="relative hidden lg:block">
+                        <div className="relative block">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 aspect-[4/3]">
                                 {heroImage ? (
                                     <ResponsiveImage
