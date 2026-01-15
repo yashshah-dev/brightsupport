@@ -133,6 +133,34 @@ export default function HomePage() {
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
+                            {/* Trust Badges & Acceptance Banner */}
+                            <div className="mb-8 space-y-4">
+                                {/* Accepting Participants Banner */}
+                                <div className="inline-flex items-center gap-2 bg-green-50 border-2 border-green-200 px-6 py-3 rounded-full shadow-sm">
+                                    <CheckCircle size={20} className="text-green-600" />
+                                    <span className="text-sm md:text-base font-semibold text-green-700">
+                                        {t('Hero.acceptingBanner')}
+                                    </span>
+                                </div>
+
+                                {/* NDIS Registration Badges */}
+                                <div className="flex flex-wrap gap-3 items-center justify-center lg:justify-start">
+                                    <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-sky-100 flex items-center gap-2">
+                                        <Award size={18} className="text-[#1E4D8C]" />
+                                        <div className="text-left">
+                                            <p className="text-xs font-semibold text-slate-800">{t('Hero.trustBadge.registered')}</p>
+                                            <p className="text-xs text-slate-600">{t('Hero.trustBadge.since')}</p>
+                                        </div>
+                                    </div>
+                                    <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-sky-100">
+                                        <p className="text-xs font-medium text-slate-700">{t('Hero.trustBadge.registrationNumber')}</p>
+                                    </div>
+                                    <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-sky-100 flex items-center gap-2">
+                                        <Clock size={16} className="text-green-600" />
+                                        <p className="text-xs font-semibold text-slate-800">{t('Hero.responseGuarantee')}</p>
+                                    </div>
+                                </div>
+                            </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent animate-scale-in text-center lg:text-left">
                                 {t('Hero.title')}
@@ -151,14 +179,14 @@ export default function HomePage() {
                                 >
                                     {t('Hero.cta.services')}
                                 </Link>
-                                <a
-                                    href="tel:1800407508"
+                                <Link
+                                    href={getLocalizedHref('/contact-us/')}
                                     className="bg-white hover:bg-slate-50 text-slate-700 px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg border-2 border-slate-200 hover:border-indigo-300 flex items-center gap-2"
-                                    onClick={() => trackPhoneCall('1800 407 508', { source: 'hero_section' })}
+                                    onClick={() => trackButtonClick('book_assessment', { source: 'hero_section' })}
                                 >
                                     <Phone size={20} className="text-[#1E4D8C]" />
                                     {t('Hero.cta.contact')}
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
@@ -310,6 +338,37 @@ export default function HomePage() {
                                 </h3>
                                 <p className="text-slate-600">
                                     {t(`WhyChoose.items.${key}.description`)}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Service Guarantees Section */}
+            <section className="py-16 bg-gradient-to-br from-[#1E4D8C] via-[#2563EB] to-[#38BDF8] text-white">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                            {t('Hero.guarantees.title')}
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        {[
+                            { key: 'response', icon: Clock },
+                            { key: 'sameDay', icon: Users },
+                            { key: 'emergency', icon: Phone },
+                        ].map(({ key, icon: Icon }) => (
+                            <div key={key} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                    <Icon size={32} className="text-white" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3 text-center">
+                                    {t(`Hero.guarantees.items.${key}.title`)}
+                                </h3>
+                                <p className="text-sky-100 text-center">
+                                    {t(`Hero.guarantees.items.${key}.description`)}
                                 </p>
                             </div>
                         ))}

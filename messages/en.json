@@ -40,12 +40,36 @@
         "optional": "Optional"
     },
     "Hero": {
+        "trustBadge": {
+            "registered": "NDIS Registered Provider",
+            "since": "Since 2019",
+            "registrationNumber": "Registration #4050086161"
+        },
+        "acceptingBanner": "Currently Accepting New Participants",
+        "responseGuarantee": "24-Hour Response Guaranteed",
         "title": "NDIS Disability & Support Services Provider",
         "subtitle": "Welcome To Bright Support",
         "description": "Making navigating the NDIS easy with compassionate, professional support services tailored to your unique needs and goals.",
         "cta": {
-            "services": "Discover More Services",
-            "contact": "Contact Now"
+            "services": "Explore Our Services",
+            "contact": "Book Free Assessment"
+        },
+        "guarantees": {
+            "title": "Our Service Commitments",
+            "items": {
+                "response": {
+                    "title": "24-Hour Response",
+                    "description": "We respond to all enquiries within 24 hours, guaranteed."
+                },
+                "sameDay": {
+                    "title": "Same-Day Coordination",
+                    "description": "Urgent support coordination available same day."
+                },
+                "emergency": {
+                    "title": "24/7 Emergency Support",
+                    "description": "Call us anytime for emergency assistance."
+                }
+            }
         }
     },
     "Services": {
