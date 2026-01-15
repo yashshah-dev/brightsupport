@@ -134,12 +134,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="inline-block bg-white/90 backdrop-blur-md px-8 py-3 rounded-full mb-8 shadow-lg border border-sky-100 animate-fade-in">
-                <p className="text-sm md:text-base font-semibold flex items-center justify-center lg:justify-start gap-2 bg-gradient-to-r from-[#1E4D8C] to-[#38BDF8] bg-clip-text text-transparent">
-                  <CheckCircle size={20} className="text-[#1E4D8C]" />
-                  Trusted by More than 500+ People
-                </p>
-              </div>
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent animate-scale-in text-center lg:text-left">
                 NDIS Disability & Support Services Provider
               </h1>
