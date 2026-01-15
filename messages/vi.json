@@ -40,13 +40,36 @@
         "optional": "Tùy chọn"
     },
     "Hero": {
-        "trusted": "Được tin tưởng bởi hơn 500 người",
+        "trustBadge": {
+            "registered": "Nhà cung cấp đã đăng ký NDIS",
+            "since": "Từ năm 2019",
+            "registrationNumber": "Số đăng ký #4050086161"
+        },
+        "acceptingBanner": "Hiện đang nhận người tham gia mới",
+        "responseGuarantee": "Đảm bảo phản hồi trong 24 giờ",
         "title": "Nhà cung cấp dịch vụ hỗ trợ người khuyết tật NDIS",
         "subtitle": "Chào mừng đến với Bright Support",
         "description": "Giúp việc tiếp cận NDIS trở nên dễ dàng với các dịch vụ hỗ trợ chuyên nghiệp, tận tâm, được thiết kế riêng cho nhu cầu và mục tiêu của bạn.",
         "cta": {
             "services": "Khám phá dịch vụ",
-            "contact": "Liên hệ ngay"
+            "contact": "Đặt đánh giá miễn phí"
+        },
+        "guarantees": {
+            "title": "Cam kết dịch vụ của chúng tôi",
+            "items": {
+                "response": {
+                    "title": "Phản hồi trong 24 giờ",
+                    "description": "Chúng tôi phản hồi tất cả các câu hỏi trong vòng 24 giờ, được đảm bảo."
+                },
+                "sameDay": {
+                    "title": "Điều phối trong ngày",
+                    "description": "Điều phối hỗ trợ khẩn cấp có sẵn trong cùng ngày."
+                },
+                "emergency": {
+                    "title": "Hỗ trợ khẩn cấp 24/7",
+                    "description": "Gọi cho chúng tôi bất cứ lúc nào để được hỗ trợ khẩn cấp."
+                }
+            }
         }
     },
     "Services": {

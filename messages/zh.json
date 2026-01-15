@@ -40,13 +40,36 @@
         "optional": "可选"
     },
     "Hero": {
-        "trusted": "已获得500+用户信赖",
+        "trustBadge": {
+            "registered": "NDIS注册服务提供商",
+            "since": "注册于2019年",
+            "registrationNumber": "注册号 #4050086161"
+        },
+        "acceptingBanner": "目前接受新参与者",
+        "responseGuarantee": "24小时内保证回复",
         "title": "NDIS残障与支持服务提供商",
         "subtitle": "欢迎来到Bright Support",
         "description": "通过富有同情心的专业支持服务，让您轻松了解和使用NDIS，根据您的独特需求和目标量身定制服务方案。",
         "cta": {
             "services": "发现更多服务",
-            "contact": "立即联系"
+            "contact": "预约免费评估"
+        },
+        "guarantees": {
+            "title": "我们的服务承诺",
+            "items": {
+                "response": {
+                    "title": "24小时回复",
+                    "description": "我们保证在24小时内回复所有询问。"
+                },
+                "sameDay": {
+                    "title": "当日协调",
+                    "description": "紧急支持协调可在当日提供。"
+                },
+                "emergency": {
+                    "title": "24/7紧急支持",
+                    "description": "随时致电我们寻求紧急援助。"
+                }
+            }
         }
     },
     "Services": {
