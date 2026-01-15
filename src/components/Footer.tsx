@@ -1,22 +1,25 @@
 'use client';
 
 import Link from 'next/link';
-// import Image from 'next/image';
 import { getAssetPath } from '@/lib/utils';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
   const pathname = usePathname();
   const isLandingPage = pathname?.includes('/landing/');
+  const t = useTranslations('Footer');
+  const tHeader = useTranslations('Header');
+  const tContact = useTranslations('ContactUs');
 
   const exploreLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Our Services', href: '/our-services' },
-    { name: 'Career', href: '/career' },
-    { name: 'Contact Us', href: '/contact-us' },
-    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: tHeader('nav.home'), href: '/' },
+    { name: tHeader('nav.about'), href: '/about-us' },
+    { name: tHeader('nav.services'), href: '/our-services' },
+    { name: tHeader('nav.career'), href: '/career' },
+    { name: tHeader('nav.contact'), href: '/contact-us' },
+    { name: t('privacy'), href: '/privacy-policy' },
   ];
 
   const services = [
@@ -28,14 +31,21 @@ export default function Footer() {
     { name: 'Companionship', href: '/services/companionship' },
   ];
 
+  const socialLinks = [
+    { icon: Facebook, href: "https://facebook.com/brightsupportcare", label: "Facebook" },
+    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" }
+  ];
+
   if (isLandingPage) {
     return (
       <footer className="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>© {new Date().getFullYear()} Bright Support. All Rights Reserved.</p>
+          <p>{t('copyright').replace('2024', new Date().getFullYear().toString())}</p>
           <div className="flex gap-6">
             <span>ABN: 32659000978</span>
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">{t('privacy')}</Link>
           </div>
         </div>
       </footer>
@@ -43,51 +53,53 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300 font-sans border-t border-slate-800">
-      <div className="container mx-auto px-4 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+    <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300 font-sans border-t border-slate-800 relative overflow-hidden">
+      {/* Subtle Background Pattern */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#05A5C6] to-transparent opacity-50"></div>
+
+      <div className="container mx-auto px-4 py-16 lg:py-24 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-16">
 
           {/* Brand Column */}
-          <div className="lg:col-span-4 space-y-6">
-            <div className="flex flex-col sm:flex-row gap-4 items-center">
-              <div className="bg-white p-4 rounded-xl shadow-lg shadow-black/5 flex items-center justify-center h-24 w-auto">
+          <div className="lg:col-span-4 space-y-8">
+            <div className="flex flex-row gap-5 items-center">
+              {/* Logo 1 - Bright Support */}
+              <div className="bg-white p-4 rounded-2xl shadow-xl shadow-black/10 flex items-center justify-center h-28 w-40">
                 <img
                   src={getAssetPath('/images/logo/bright-support-logo.png')}
                   alt="Bright Support Logo"
-                  width={180}
-                  height={60}
-                  className="h-auto w-40 object-contain"
+                  width={160}
+                  height={80}
+                  className="h-full w-full object-contain"
                 />
               </div>
-              <div className="bg-white p-2 rounded-xl shadow-lg shadow-black/5 flex items-center justify-center h-24 w-auto">
+              {/* Logo 2 - NDIS Badge */}
+              <div className="bg-white p-2 rounded-2xl shadow-lg flex items-center justify-center h-28 w-40">
                 <img
                   src={getAssetPath('/images/ndis-badge.jpg')}
                   alt="NDIS Registered Provider"
-                  width={120}
-                  height={60}
-                  className="h-auto w-28 object-contain"
+                  width={160}
+                  height={80}
+                  className="h-full w-full object-contain"
                 />
               </div>
             </div>
-            <p className="text-slate-400 leading-relaxed text-sm lg:text-base max-w-sm">
-              Empowering individuals with NDIS Disability & Support Services to live independently with dignity, choice, and control.
+
+            <p className="text-slate-400 leading-relaxed text-base max-w-sm">
+              {t('description')}
             </p>
-            <div className="flex gap-3 pt-2">
-              {[
-                { icon: Facebook, href: "https://facebook.com/brightsupportcare", label: "Facebook" },
-                { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-                { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" }
-              ].map((social, idx) => (
+
+            <div className="flex gap-3">
+              {socialLinks.map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-slate-800 hover:bg-[#05A5C6] text-white p-2.5 rounded-full transition-all duration-300 hover:-translate-y-1 shadow-md"
+                  className="bg-slate-800 text-slate-400 hover:bg-[#05A5C6] hover:text-white p-3 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#05A5C6]/20"
                   aria-label={social.label}
                 >
-                  <social.icon size={18} />
+                  <social.icon size={20} strokeWidth={1.5} />
                 </a>
               ))}
             </div>
@@ -95,15 +107,18 @@ export default function Footer() {
 
           {/* Links Column */}
           <div className="lg:col-span-2 lg:col-start-6">
-            <h4 className="text-lg font-bold text-white mb-6 relative inline-block">
-              Explore
-              <span className="absolute -bottom-2 left-0 w-10 h-1 bg-[#05A5C6] rounded-full"></span>
+            <h4 className="text-lg font-bold text-white mb-8 relative inline-flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#05A5C6]"></span>
+              {t('quickLinks')}
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {exploreLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-slate-400 hover:text-[#05A5C6] transition-colors duration-200 text-sm flex items-center group">
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#05A5C6] mr-0 group-hover:mr-2 transition-all duration-300 opacity-0 group-hover:opacity-100"></span>
+                  <Link
+                    href={link.href}
+                    className="text-slate-400 hover:text-[#05A5C6] hover:translate-x-1.5 transition-all duration-300 text-[15px] flex items-center gap-2 group w-fit"
+                  >
+                    <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-[#05A5C6]" />
                     {link.name}
                   </Link>
                 </li>
@@ -113,15 +128,18 @@ export default function Footer() {
 
           {/* Services Column */}
           <div className="lg:col-span-3">
-            <h4 className="text-lg font-bold text-white mb-6 relative inline-block">
-              Our Services
-              <span className="absolute -bottom-2 left-0 w-10 h-1 bg-[#05A5C6] rounded-full"></span>
+            <h4 className="text-lg font-bold text-white mb-8 relative inline-flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#05A5C6]"></span>
+              {t('services')}
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="text-slate-400 hover:text-[#05A5C6] transition-colors duration-200 text-sm flex items-center group">
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#05A5C6] mr-0 group-hover:mr-2 transition-all duration-300 opacity-0 group-hover:opacity-100"></span>
+                  <Link
+                    href={service.href}
+                    className="text-slate-400 hover:text-[#05A5C6] hover:translate-x-1.5 transition-all duration-300 text-[15px] flex items-center gap-2 group w-fit"
+                  >
+                    <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-[#05A5C6]" />
                     {service.name}
                   </Link>
                 </li>
@@ -131,44 +149,48 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div className="lg:col-span-3">
-            <h4 className="text-lg font-bold text-white mb-6 relative inline-block">
-              Contact Us
-              <span className="absolute -bottom-2 left-0 w-10 h-1 bg-[#05A5C6] rounded-full"></span>
+            <h4 className="text-lg font-bold text-white mb-8 relative inline-flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#05A5C6]"></span>
+              {t('contact')}
             </h4>
-            <ul className="space-y-5">
-              <li className="flex items-start gap-4">
-                <div className="bg-slate-800 p-2.5 rounded-lg text-[#05A5C6] shrink-0">
-                  <Phone size={18} />
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4 group">
+                <div className="bg-slate-800/50 p-3 rounded-xl text-[#05A5C6] group-hover:bg-[#05A5C6] group-hover:text-white transition-all duration-300 shrink-0 border border-slate-700/50 group-hover:border-[#05A5C6] shadow-sm">
+                  <Phone size={20} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-0.5">Call Us</p>
-                  <a href="tel:1800407508" className="hover:text-white transition-colors font-semibold text-slate-200">1800 407 508</a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="bg-slate-800 p-2.5 rounded-lg text-[#FF5A5F] shrink-0">
-                  <Mail size={18} />
-                </div>
-                <div>
-                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-0.5">Email Us</p>
-                  <a href="mailto:care@brightsupport.com.au" className="hover:text-white transition-colors font-semibold text-slate-200 break-all">
-                    care@brightsupport.com.au
+                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Call Us</p>
+                  <a href={`tel:${tHeader('phone').replace(/\s/g, '')}`} className="hover:text-[#05A5C6] transition-colors font-semibold text-slate-200 text-lg">
+                    {tHeader('phone')}
                   </a>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="bg-slate-800 p-2.5 rounded-lg text-[#38BDF8] shrink-0">
-                  <MapPin size={18} />
+
+              <li className="flex items-start gap-4 group">
+                <div className="bg-slate-800/50 p-3 rounded-xl text-[#FF5A5F] group-hover:bg-[#FF5A5F] group-hover:text-white transition-all duration-300 shrink-0 border border-slate-700/50 group-hover:border-[#FF5A5F] shadow-sm">
+                  <Mail size={20} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-0.5">Location</p>
+                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Email Us</p>
+                  <a href={`mailto:${tHeader('email')}`} className="hover:text-[#FF5A5F] transition-colors font-medium text-slate-200 break-all">
+                    {tHeader('email')}
+                  </a>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-4 group">
+                <div className="bg-slate-800/50 p-3 rounded-xl text-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-white transition-all duration-300 shrink-0 border border-slate-700/50 group-hover:border-[#38BDF8] shadow-sm">
+                  <MapPin size={20} strokeWidth={1.5} />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Location</p>
                   <a
-                    href="https://maps.google.com/?q=279+Wyndham+St,+Shepparton+VIC+3630,+Australia"
+                    href={`https://maps.google.com/?q=${encodeURIComponent(tContact('locations.shepparton.address'))}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white transition-colors text-slate-300 leading-tight block"
+                    className="hover:text-[#38BDF8] transition-colors text-slate-300 leading-snug block"
                   >
-                    279 Wyndham St, Shepparton VIC 3630, Australia
+                    {tContact('locations.shepparton.address')}
                   </a>
                 </div>
               </li>
@@ -177,15 +199,10 @@ export default function Footer() {
         </div>
 
         {/* Aboriginal and Torres Strait Islander Acknowledgment */}
-        <div className="mt-16 pt-10 border-t border-slate-800/60">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-8">
-            {/* <div className="w-16 h-10 bg-[url('/images/flag-aboriginal.png')] bg-cover bg-center rounded shadow-md opacity-80 hover:opacity-100 transition-opacity" title="Aboriginal Flag"></div>
-            <p className="text-sm text-slate-500 text-center max-w-2xl leading-relaxed italic">
-              "Bright Support acknowledges the Traditional Custodians of the land on which we work and live.
-              We pay our respects to Elders past, present and emerging."
-            </p>
-            <div className="w-16 h-10 bg-[url('/images/flag-torres.png')] bg-cover bg-center rounded shadow-md opacity-80 hover:opacity-100 transition-opacity" title="Torres Strait Islander Flag"></div> */}
-            <p className="text-sm text-slate-500 text-center max-w-2xl leading-relaxed italic">
+        <div className="mt-20 pt-10 border-t border-slate-800/60">
+          <div className="max-w-3xl mx-auto text-center space-y-4">
+            {/* Optional flags implementation can go here if needed again */}
+            <p className="text-sm text-slate-500 leading-relaxed italic">
               "Bright Support acknowledges the Traditional Custodians of the land on which we work and live.
               We pay our respects to Elders past, present and emerging."
             </p>
@@ -193,11 +210,11 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-6 border-t border-slate-800/60 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} Bright Support. All Rights Reserved.</p>
+        <div className="mt-10 pt-6 border-t border-slate-800/60 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+          <p>{t('copyright').replace('2024', new Date().getFullYear().toString())}</p>
           <div className="flex gap-6">
             <span>ABN: 32659000978</span>
-            <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">{t('privacy')}</Link>
             <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
           </div>
         </div>

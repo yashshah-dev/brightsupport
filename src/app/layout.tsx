@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 import StructuredData from "@/components/StructuredData";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
@@ -116,9 +114,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <AnalyticsProvider>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          {children}
         </AnalyticsProvider>
       </body>
     </html>

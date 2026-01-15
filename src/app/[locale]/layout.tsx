@@ -2,6 +2,8 @@ import { setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { locales, type Locale, isRtl } from '@/i18n/config';
 import Chatbot from '@/components/Chatbot';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 // Import messages statically for static export compatibility
 import enMessages from '../../../messages/en.json';
@@ -42,7 +44,9 @@ export default async function LocaleLayout({
   return (
     <div dir={dir} lang={validLocale}>
       <NextIntlClientProvider locale={validLocale} messages={localeMessages}>
-        {children}
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
         <Chatbot />
       </NextIntlClientProvider>
     </div>
