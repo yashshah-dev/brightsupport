@@ -1,0 +1,52 @@
+# 301 Redirects: Old WordPress URLs → New Site URLs
+# Format: <old-path> <new-path> <status-code>
+# Compatible with: Netlify, Cloudflare Pages
+
+# Service page redirects (WordPress → New URL structure)
+/dailylivingin-homesupport/                             /en/services/daily-living-in-home-support/            301
+/dailylivingin-homesupport                              /en/services/daily-living-in-home-support/            301
+/communitynursingandcomplexcare/                        /en/services/community-nursing-complex-care/          301
+/communitynursingandcomplexcare                         /en/services/community-nursing-complex-care/          301
+/physiotherapyservices/                                 /en/services/physiotherapy-services/                  301
+/physiotherapyservices                                  /en/services/physiotherapy-services/                  301
+/communityparticipationgroupactivities/                 /en/services/community-participation-group-programs/  301
+/communityparticipationgroupactivities                  /en/services/community-participation-group-programs/  301
+/companionship/                                        /en/services/companionship/                           301
+/companionship                                         /en/services/companionship/                           301
+/travelandtransportassistance/                         /en/services/travel-transport-assistance/              301
+/travelandtransportassistance                          /en/services/travel-transport-assistance/              301
+/hydrotherapyandpoolsessions/                          /en/services/hydrotherapy-pool-session/                301
+/hydrotherapyandpoolsessions                           /en/services/hydrotherapy-pool-session/                301
+/personaltrainingsessions/                             /en/services/personal-training-sessions/               301
+/personaltrainingsessions                              /en/services/personal-training-sessions/               301
+/positivebehavioursupport/                             /en/services/positive-behaviour-support/               301
+/positivebehavioursupport                              /en/services/positive-behaviour-support/               301
+/professional-cleaning/                                /en/services/professional-cleaning/                    301
+/professional-cleaning                                 /en/services/professional-cleaning/                    301
+/accommodation-support-services/                       /en/services/independent-living-accommodation-support/ 301
+/accommodation-support-services                        /en/services/independent-living-accommodation-support/ 301
+
+# Main page redirects
+/about-us/                                             /en/about-us/                                         301
+/about-us                                              /en/about-us/                                         301
+/our-services/                                         /en/our-services/                                     301
+/our-services                                          /en/our-services/                                     301
+/contact-us/                                           /en/contact-us/                                       301
+/contact-us                                            /en/contact-us/                                       301
+
+# WordPress-specific page redirects
+/our-location/                                         /en/contact-us/                                       301
+/our-location                                          /en/contact-us/                                       301
+
+# WordPress feed redirects
+/feed/                                                 /en/                                                  301
+/comments/feed/                                        /en/                                                  301
+
+# WordPress admin/login redirects (prevent 404s from bots)
+/wp-admin/                                             /en/                                                  301
+/wp-login.php                                          /en/                                                  301
+/xmlrpc.php                                            /en/                                                  301
+
+# Sitemap redirects (old sitemap locations)
+/sitemap_index.xml                                     /sitemap.xml                                          301
+/page-sitemap.xml                                      /sitemap.xml                                          301

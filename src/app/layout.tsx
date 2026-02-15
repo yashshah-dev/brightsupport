@@ -13,16 +13,34 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bright Support | NDIS Disability & Support Services Provider",
-  description: "Trusted NDIS disability and support services provider in Australia. Offering daily living support, community nursing, physiotherapy, and more. Making navigating the NDIS easy.",
-  keywords: "NDIS, disability support, aged care, community nursing, physiotherapy, Shepparton, Australia",
+  title: {
+    default: "Bright Support | NDIS Disability & Support Services in Shepparton & Melbourne",
+    template: "%s | Bright Support - NDIS Services Shepparton",
+  },
+  description: "Trusted NDIS disability & support services provider in Shepparton, Mooroopna & Melbourne. Offering daily living support, community nursing, physiotherapy, companionship, and more. NDIS registered since 2019.",
+  keywords: "NDIS, NDIS provider Shepparton, disability support Shepparton, aged care, community nursing, physiotherapy, Mooroopna, Melbourne, Australia, NDIS support services",
   authors: [{ name: "Bright Support" }],
   openGraph: {
-    title: "Bright Support | NDIS Disability & Support Services Provider",
-    description: "Trusted NDIS disability and support services provider in Australia",
+    title: "Bright Support | NDIS Disability & Support Services in Shepparton & Melbourne",
+    description: "NDIS registered disability & support services provider in Shepparton, Mooroopna & Melbourne. Daily living support, community nursing, physiotherapy, and more.",
     type: "website",
     locale: "en_AU",
     siteName: "Bright Support",
+    images: [{
+      url: '/images/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Bright Support - NDIS Disability & Support Services Provider in Shepparton',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bright Support | NDIS Support Services Shepparton & Melbourne',
+    description: 'Trusted NDIS disability & support services provider. Daily living, nursing, physiotherapy & more.',
+    images: ['/images/og-image.png'],
+  },
+  alternates: {
+    canonical: 'https://www.brightsupport.com.au',
   },
   metadataBase: new URL('https://www.brightsupport.com.au'),
 };

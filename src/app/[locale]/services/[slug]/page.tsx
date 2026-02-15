@@ -1,20 +1,77 @@
+import type { Metadata } from 'next';
 import { locales } from '@/i18n/config';
 import ServicePageClient from '@/components/ServicePageClient';
 
+// SEO metadata for each service page
+const serviceMetadata: Record<string, { title: string; description: string }> = {
+    'daily-living-in-home-support': {
+        title: 'Daily Living & In-Home Support - NDIS Services Shepparton',
+        description: 'Professional NDIS daily living & in-home support in Shepparton. Personal care, meal preparation, household tasks, and assistance to maintain independence at home.',
+    },
+    'community-nursing-complex-care': {
+        title: 'Community Nursing & Complex Care - NDIS Services Shepparton',
+        description: 'Expert community nursing and complex care services in Shepparton. Medication management, wound care, catheter care, and support for complex medical needs by qualified Registered Nurses.',
+    },
+    'physiotherapy-services': {
+        title: 'Physiotherapy Services - NDIS Provider Shepparton',
+        description: 'NDIS physiotherapy services in Shepparton. Personalised treatment for neurological, musculoskeletal, and cardio-pulmonary conditions. Home visits available.',
+    },
+    'community-participation-group-programs': {
+        title: 'Community Participation & Group Programs - NDIS Shepparton',
+        description: 'NDIS community participation and group programs in Shepparton. Social activities, skills development, and community outings to build connections and enhance quality of life.',
+    },
+    'companionship': {
+        title: 'Companionship Services - NDIS Support Shepparton',
+        description: 'NDIS companionship services in Shepparton. Meaningful companionship and emotional support to reduce isolation and improve wellbeing through genuine connections.',
+    },
+    'travel-transport-assistance': {
+        title: 'Travel & Transport Assistance - NDIS Shepparton',
+        description: 'NDIS travel and transport assistance in Shepparton. Safe, reliable transport to appointments, social outings, and community activities. Wheelchair-accessible vehicles available.',
+    },
+    'hydrotherapy-pool-session': {
+        title: 'Hydrotherapy & Pool Sessions - NDIS Shepparton',
+        description: 'NDIS hydrotherapy and pool session services in Shepparton. Water-based therapy for pain management, mobility improvement, and rehabilitation.',
+    },
+    'personal-training-sessions': {
+        title: 'Personal Training Sessions - NDIS Shepparton',
+        description: 'NDIS personal training sessions in Shepparton. Tailored exercise programs to improve physical fitness, strength, and overall wellbeing.',
+    },
+    'positive-behaviour-support': {
+        title: 'Positive Behaviour Support - NDIS Shepparton',
+        description: 'NDIS positive behaviour support services in Shepparton. Evidence-based strategies to understand behaviour and develop positive support plans.',
+    },
+    'professional-cleaning': {
+        title: 'Professional Cleaning Services - NDIS Shepparton',
+        description: 'NDIS professional cleaning services in Shepparton. Reliable house cleaning, laundry, and home maintenance support for NDIS participants.',
+    },
+    'independent-living-accommodation-support': {
+        title: 'Independent Living & Accommodation Support - NDIS Shepparton',
+        description: 'NDIS independent living and accommodation support in Shepparton. Assistance finding suitable accommodation, tenancy support, and supported independent living (SIL).',
+    },
+};
+
 // Generate static params for all locale + service combinations
-const serviceSlugs = [
-    'daily-living-in-home-support',
-    'community-nursing-complex-care',
-    'physiotherapy-services',
-    'community-participation-group-programs',
-    'companionship',
-    'travel-transport-assistance',
-    'hydrotherapy-pool-session',
-    'personal-training-sessions',
-    'positive-behaviour-support',
-    'professional-cleaning',
-    'independent-living-accommodation-support',
-];
+const serviceSlugs = Object.keys(serviceMetadata);
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const meta = serviceMetadata[slug] || {
+        title: 'NDIS Support Services',
+        description: 'NDIS disability and support services by Bright Support in Shepparton.',
+    };
+
+    return {
+        title: meta.title,
+        description: meta.description,
+        openGraph: {
+            title: meta.title,
+            description: meta.description,
+        },
+        alternates: {
+            canonical: `https://www.brightsupport.com.au/services/${slug}/`,
+        },
+    };
+}
 
 export function generateStaticParams() {
     const params = [];

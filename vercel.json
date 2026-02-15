@@ -1,0 +1,184 @@
+{
+    "redirects": [
+        {
+            "source": "/dailylivingin-homesupport",
+            "destination": "/en/services/daily-living-in-home-support/",
+            "permanent": true
+        },
+        {
+            "source": "/dailylivingin-homesupport/",
+            "destination": "/en/services/daily-living-in-home-support/",
+            "permanent": true
+        },
+        {
+            "source": "/communitynursingandcomplexcare",
+            "destination": "/en/services/community-nursing-complex-care/",
+            "permanent": true
+        },
+        {
+            "source": "/communitynursingandcomplexcare/",
+            "destination": "/en/services/community-nursing-complex-care/",
+            "permanent": true
+        },
+        {
+            "source": "/physiotherapyservices",
+            "destination": "/en/services/physiotherapy-services/",
+            "permanent": true
+        },
+        {
+            "source": "/physiotherapyservices/",
+            "destination": "/en/services/physiotherapy-services/",
+            "permanent": true
+        },
+        {
+            "source": "/communityparticipationgroupactivities",
+            "destination": "/en/services/community-participation-group-programs/",
+            "permanent": true
+        },
+        {
+            "source": "/communityparticipationgroupactivities/",
+            "destination": "/en/services/community-participation-group-programs/",
+            "permanent": true
+        },
+        {
+            "source": "/companionship",
+            "destination": "/en/services/companionship/",
+            "permanent": true
+        },
+        {
+            "source": "/companionship/",
+            "destination": "/en/services/companionship/",
+            "permanent": true
+        },
+        {
+            "source": "/travelandtransportassistance",
+            "destination": "/en/services/travel-transport-assistance/",
+            "permanent": true
+        },
+        {
+            "source": "/travelandtransportassistance/",
+            "destination": "/en/services/travel-transport-assistance/",
+            "permanent": true
+        },
+        {
+            "source": "/hydrotherapyandpoolsessions",
+            "destination": "/en/services/hydrotherapy-pool-session/",
+            "permanent": true
+        },
+        {
+            "source": "/hydrotherapyandpoolsessions/",
+            "destination": "/en/services/hydrotherapy-pool-session/",
+            "permanent": true
+        },
+        {
+            "source": "/personaltrainingsessions",
+            "destination": "/en/services/personal-training-sessions/",
+            "permanent": true
+        },
+        {
+            "source": "/personaltrainingsessions/",
+            "destination": "/en/services/personal-training-sessions/",
+            "permanent": true
+        },
+        {
+            "source": "/positivebehavioursupport",
+            "destination": "/en/services/positive-behaviour-support/",
+            "permanent": true
+        },
+        {
+            "source": "/positivebehavioursupport/",
+            "destination": "/en/services/positive-behaviour-support/",
+            "permanent": true
+        },
+        {
+            "source": "/professional-cleaning",
+            "destination": "/en/services/professional-cleaning/",
+            "permanent": true
+        },
+        {
+            "source": "/professional-cleaning/",
+            "destination": "/en/services/professional-cleaning/",
+            "permanent": true
+        },
+        {
+            "source": "/accommodation-support-services",
+            "destination": "/en/services/independent-living-accommodation-support/",
+            "permanent": true
+        },
+        {
+            "source": "/accommodation-support-services/",
+            "destination": "/en/services/independent-living-accommodation-support/",
+            "permanent": true
+        },
+        {
+            "source": "/about-us",
+            "destination": "/en/about-us/",
+            "permanent": true
+        },
+        {
+            "source": "/about-us/",
+            "destination": "/en/about-us/",
+            "permanent": true
+        },
+        {
+            "source": "/our-services",
+            "destination": "/en/our-services/",
+            "permanent": true
+        },
+        {
+            "source": "/our-services/",
+            "destination": "/en/our-services/",
+            "permanent": true
+        },
+        {
+            "source": "/contact-us",
+            "destination": "/en/contact-us/",
+            "permanent": true
+        },
+        {
+            "source": "/contact-us/",
+            "destination": "/en/contact-us/",
+            "permanent": true
+        },
+        {
+            "source": "/our-location",
+            "destination": "/en/contact-us/",
+            "permanent": true
+        },
+        {
+            "source": "/our-location/",
+            "destination": "/en/contact-us/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-admin/:path*",
+            "destination": "/en/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-login.php",
+            "destination": "/en/",
+            "permanent": true
+        },
+        {
+            "source": "/feed",
+            "destination": "/en/",
+            "permanent": true
+        },
+        {
+            "source": "/feed/",
+            "destination": "/en/",
+            "permanent": true
+        },
+        {
+            "source": "/sitemap_index.xml",
+            "destination": "/sitemap.xml",
+            "permanent": true
+        },
+        {
+            "source": "/page-sitemap.xml",
+            "destination": "/sitemap.xml",
+            "permanent": true
+        }
+    ]
+}
