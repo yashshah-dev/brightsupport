@@ -35,9 +35,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
   languages['x-default'] = `${BASE_URL}/en`;
 
-  // Explicit, rich description — ensures Lighthouse never flags a missing meta description
+  // Explicit, rich description — ensures Lighthouse and Screaming Frog never flag missing/long meta
   const description =
-    'Trusted NDIS disability & support services provider in Shepparton & Mooroopna. Registered NDIS provider offering daily living support, community nursing, physiotherapy, companionship, transport, and more. Accepting new participants.';
+    'Trusted NDIS disability support provider in Shepparton. Daily living, community nursing, physiotherapy, companionship, transport and more.';
 
   return {
     title: localeMessages.Hero.title,

@@ -14,10 +14,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Bright Support | NDIS Disability & Support Services in Shepparton",
-    template: "%s | Bright Support - NDIS Services Shepparton",
+    default: "Bright Support | NDIS Support Services Shepparton",
+    template: "%s | Bright Support NDIS Shepparton",
   },
-  description: "Trusted NDIS disability & support services provider in Shepparton & Mooroopna. Offering daily living support, community nursing, physiotherapy, companionship, and more.",
+  description: "Trusted NDIS disability support provider in Shepparton. Daily living, community nursing, physiotherapy, companionship and more.",
   keywords: "NDIS, NDIS provider Shepparton, disability support Shepparton, aged care, community nursing, physiotherapy, Mooroopna, Australia, NDIS support services",
   authors: [{ name: "Bright Support" }],
   openGraph: {
