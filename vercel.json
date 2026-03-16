@@ -41,12 +41,32 @@
             "permanent": true
         },
         {
+            "source": "/communityparticipationgroupprograms",
+            "destination": "/en/services/community-participation-group-programs/",
+            "permanent": true
+        },
+        {
+            "source": "/communityparticipationgroupprograms/",
+            "destination": "/en/services/community-participation-group-programs/",
+            "permanent": true
+        },
+        {
             "source": "/companionship",
             "destination": "/en/services/companionship/",
             "permanent": true
         },
         {
             "source": "/companionship/",
+            "destination": "/en/services/companionship/",
+            "permanent": true
+        },
+        {
+            "source": "/companion-care-services",
+            "destination": "/en/services/companionship/",
+            "permanent": true
+        },
+        {
+            "source": "/companion-care-services/",
             "destination": "/en/services/companionship/",
             "permanent": true
         },
@@ -61,6 +81,16 @@
             "permanent": true
         },
         {
+            "source": "/ndis-transport-service-provider",
+            "destination": "/en/services/travel-transport-assistance/",
+            "permanent": true
+        },
+        {
+            "source": "/ndis-transport-service-provider/",
+            "destination": "/en/services/travel-transport-assistance/",
+            "permanent": true
+        },
+        {
             "source": "/hydrotherapyandpoolsessions",
             "destination": "/en/services/hydrotherapy-pool-session/",
             "permanent": true
@@ -71,12 +101,32 @@
             "permanent": true
         },
         {
+            "source": "/ndis-hydrotherapy-services",
+            "destination": "/en/services/hydrotherapy-pool-session/",
+            "permanent": true
+        },
+        {
+            "source": "/ndis-hydrotherapy-services/",
+            "destination": "/en/services/hydrotherapy-pool-session/",
+            "permanent": true
+        },
+        {
             "source": "/personaltrainingsessions",
             "destination": "/en/services/personal-training-sessions/",
             "permanent": true
         },
         {
             "source": "/personaltrainingsessions/",
+            "destination": "/en/services/personal-training-sessions/",
+            "permanent": true
+        },
+        {
+            "source": "/ndispersonaltrainingsessions",
+            "destination": "/en/services/personal-training-sessions/",
+            "permanent": true
+        },
+        {
+            "source": "/ndispersonaltrainingsessions/",
             "destination": "/en/services/personal-training-sessions/",
             "permanent": true
         },
@@ -101,6 +151,16 @@
             "permanent": true
         },
         {
+            "source": "/ndis-cleaning-services",
+            "destination": "/en/services/professional-cleaning/",
+            "permanent": true
+        },
+        {
+            "source": "/ndis-cleaning-services/",
+            "destination": "/en/services/professional-cleaning/",
+            "permanent": true
+        },
+        {
             "source": "/accommodation-support-services",
             "destination": "/en/services/independent-living-accommodation-support/",
             "permanent": true
@@ -108,6 +168,21 @@
         {
             "source": "/accommodation-support-services/",
             "destination": "/en/services/independent-living-accommodation-support/",
+            "permanent": true
+        },
+        {
+            "source": "/independent-living-accommodation-support",
+            "destination": "/en/services/independent-living-accommodation-support/",
+            "permanent": true
+        },
+        {
+            "source": "/independent-living-accommodation-support/",
+            "destination": "/en/services/independent-living-accommodation-support/",
+            "permanent": true
+        },
+        {
+            "source": "/privacy-policy/",
+            "destination": "/privacy-policy",
             "permanent": true
         },
         {

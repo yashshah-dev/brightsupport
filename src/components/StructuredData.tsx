@@ -31,7 +31,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             telephone: '+61-1800-407-508',
             contactType: 'customer service',
             email: 'care@brightsupport.com.au',
-            availableLanguage: ['English'],
+            availableLanguage: ['English', 'Chinese', 'Arabic', 'Vietnamese'],
             areaServed: 'AU',
           },
           sameAs: [
@@ -77,9 +77,19 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               opens: '08:00',
               closes: '18:00',
             },
+            {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Saturday'],
+              opens: '09:00',
+              closes: '14:00',
+            },
           ],
           priceRange: '$$',
           paymentAccepted: 'NDIS',
+          currenciesAccepted: 'AUD',
+          taxID: '32659000978',
+          url: baseUrl,
+          hasMap: 'https://maps.google.com/?cid=2822930396149587949',
           ...data,
         };
 
@@ -116,10 +126,14 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
 
   if (!structuredData) return null;
 
+  // Escape & as \u0026 to prevent HTML parsers from corrupting the JSON
+  // inside <script> tags (a well-known browser/HTML5 parser issue).
+  const safeJson = JSON.stringify(structuredData).replace(/&/g, '\\u0026');
+
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      dangerouslySetInnerHTML={{ __html: safeJson }}
     />
   );
 }

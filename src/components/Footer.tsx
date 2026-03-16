@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { getAssetPath } from '@/lib/utils';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -19,7 +19,6 @@ export default function Footer() {
     { name: tHeader('nav.services'), href: '/our-services' },
     { name: tHeader('nav.career'), href: '/career' },
     { name: tHeader('nav.contact'), href: '/contact-us' },
-    { name: t('privacy'), href: '/privacy-policy' },
   ];
 
   const services = [
@@ -33,9 +32,8 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Facebook, href: "https://facebook.com/brightsupportcare", label: "Facebook" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
     { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" }
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   ];
 
   if (isLandingPage) {
@@ -53,72 +51,71 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300 font-sans border-t border-slate-800 relative overflow-hidden">
-      {/* Subtle Background Pattern */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#05A5C6] to-transparent opacity-50"></div>
+    <footer className="bg-slate-900 text-slate-300 font-sans relative overflow-hidden">
+      {/* Top accent line */}
+      <div className="h-0.5 bg-gradient-to-r from-[#1E4D8C] via-[#05A5C6] to-[#1E4D8C]"></div>
 
-      <div className="container mx-auto px-4 py-16 lg:py-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-16">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-10 lg:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
 
           {/* Brand Column */}
-          <div className="lg:col-span-4 space-y-8">
-            <div className="flex flex-row gap-5 items-center">
-              {/* Logo 1 - Bright Support */}
-              <div className="bg-white p-4 rounded-2xl shadow-xl shadow-black/10 flex items-center justify-center h-28 w-40">
+          <div className="lg:col-span-4 space-y-5">
+            {/* Logos row */}
+            <div className="flex items-center gap-4">
+              <div className="bg-white rounded-xl p-1.5 shadow-lg">
                 <img
                   src={getAssetPath('/images/logo/bright-support-logo.png')}
                   alt="Bright Support Logo"
-                  width={160}
-                  height={80}
-                  className="h-full w-full object-contain"
+                  width={200}
+                  height={120}
+                  className="h-20 w-auto object-contain"
                 />
               </div>
-              {/* Logo 2 - NDIS Badge */}
-              <div className="bg-white p-2 rounded-2xl shadow-lg flex items-center justify-center h-28 w-40">
+              <div className="bg-white rounded-xl p-1.5 shadow-lg">
                 <img
                   src={getAssetPath('/images/ndis-badge.jpg')}
                   alt="NDIS Registered Provider"
-                  width={160}
-                  height={80}
-                  className="h-full w-full object-contain"
+                  width={120}
+                  height={120}
+                  className="h-14 w-auto object-contain"
                 />
               </div>
             </div>
 
-            <p className="text-slate-400 leading-relaxed text-base max-w-sm">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               {t('description')}
             </p>
 
-            <div className="flex gap-3">
+            {/* Social icons */}
+            <div className="flex gap-2">
               {socialLinks.map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-slate-800 text-slate-400 hover:bg-[#05A5C6] hover:text-white p-3 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#05A5C6]/20"
+                  className="text-slate-500 hover:text-[#05A5C6] p-2 rounded-lg hover:bg-slate-800 transition-all duration-200"
                   aria-label={social.label}
                 >
-                  <social.icon size={20} strokeWidth={1.5} />
+                  <social.icon size={18} strokeWidth={1.5} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Links Column */}
+          {/* Quick Links */}
           <div className="lg:col-span-2 lg:col-start-6">
-            <h4 className="text-lg font-bold text-white mb-8 relative inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#05A5C6]"></span>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               {t('quickLinks')}
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               {exploreLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 hover:text-[#05A5C6] hover:translate-x-1.5 transition-all duration-300 text-[15px] flex items-center gap-2 group w-fit"
+                    className="text-slate-400 hover:text-[#05A5C6] transition-colors text-sm"
                   >
-                    <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-[#05A5C6]" />
                     {link.name}
                   </Link>
                 </li>
@@ -126,20 +123,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services Column */}
+          {/* Services */}
           <div className="lg:col-span-3">
-            <h4 className="text-lg font-bold text-white mb-8 relative inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#05A5C6]"></span>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               {t('services')}
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-slate-400 hover:text-[#05A5C6] hover:translate-x-1.5 transition-all duration-300 text-[15px] flex items-center gap-2 group w-fit"
+                    className="text-slate-400 hover:text-[#05A5C6] transition-colors text-sm"
                   >
-                    <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-[#05A5C6]" />
                     {service.name}
                   </Link>
                 </li>
@@ -147,75 +142,64 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Column */}
+          {/* Contact */}
           <div className="lg:col-span-3">
-            <h4 className="text-lg font-bold text-white mb-8 relative inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#05A5C6]"></span>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               {t('contact')}
             </h4>
-            <ul className="space-y-6">
-              <li className="flex items-start gap-4 group">
-                <div className="bg-slate-800/50 p-3 rounded-xl text-[#05A5C6] group-hover:bg-[#05A5C6] group-hover:text-white transition-all duration-300 shrink-0 border border-slate-700/50 group-hover:border-[#05A5C6] shadow-sm">
-                  <Phone size={20} strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Call Us</p>
-                  <a href={`tel:${tHeader('phone').replace(/\s/g, '')}`} className="hover:text-[#05A5C6] transition-colors font-semibold text-slate-200 text-lg">
-                    {tHeader('phone')}
-                  </a>
-                </div>
+            <ul className="space-y-3">
+              <li>
+                <a href={`tel:${tHeader('phone').replace(/\s/g, '')}`} className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#05A5C6] transition-colors group">
+                  <Phone size={15} className="text-[#05A5C6] shrink-0" />
+                  <span>{tHeader('phone')}</span>
+                </a>
               </li>
-
-              <li className="flex items-start gap-4 group">
-                <div className="bg-slate-800/50 p-3 rounded-xl text-[#FF5A5F] group-hover:bg-[#FF5A5F] group-hover:text-white transition-all duration-300 shrink-0 border border-slate-700/50 group-hover:border-[#FF5A5F] shadow-sm">
-                  <Mail size={20} strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Email Us</p>
-                  <a href={`mailto:${tHeader('email')}`} className="hover:text-[#FF5A5F] transition-colors font-medium text-slate-200 break-all">
-                    {tHeader('email')}
-                  </a>
-                </div>
+              <li>
+                <a href={`mailto:${tHeader('email')}`} className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#05A5C6] transition-colors group">
+                  <Mail size={15} className="text-[#05A5C6] shrink-0" />
+                  <span className="break-all">{tHeader('email')}</span>
+                </a>
               </li>
-
-              <li className="flex items-start gap-4 group">
-                <div className="bg-slate-800/50 p-3 rounded-xl text-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-white transition-all duration-300 shrink-0 border border-slate-700/50 group-hover:border-[#38BDF8] shadow-sm">
-                  <MapPin size={20} strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Location</p>
-                  <a
-                    href={`https://maps.google.com/?q=${encodeURIComponent(tContact('locations.shepparton.address'))}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-[#38BDF8] transition-colors text-slate-300 leading-snug block"
-                  >
-                    {tContact('locations.shepparton.address')}
-                  </a>
-                </div>
+              <li>
+                <a
+                  href={`https://maps.google.com/?q=${encodeURIComponent(tContact('locations.shepparton.address'))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2.5 text-sm text-slate-400 hover:text-[#05A5C6] transition-colors group"
+                >
+                  <MapPin size={15} className="text-[#05A5C6] shrink-0 mt-0.5" />
+                  <span>{tContact('locations.shepparton.address')}</span>
+                </a>
               </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Aboriginal and Torres Strait Islander Acknowledgment */}
-        <div className="mt-20 pt-10 border-t border-slate-800/60">
-          <div className="max-w-3xl mx-auto text-center space-y-4">
-            {/* Optional flags implementation can go here if needed again */}
-            <p className="text-sm text-slate-500 leading-relaxed italic">
-              "Bright Support acknowledges the Traditional Custodians of the land on which we work and live.
-              We pay our respects to Elders past, present and emerging."
+      {/* Bottom Bar */}
+      <div className="border-t border-slate-800">
+        <div className="container mx-auto px-4 py-5">
+          {/* Acknowledgment of Country */}
+          <div className="flex flex-col items-center gap-3 mb-4">
+            <img
+              src={getAssetPath('/images/aboriginal-torres-strait-islander-flags.webp')}
+              alt="Aboriginal and Torres Strait Islander Flags"
+              width={220}
+              height={76}
+              className="h-12 w-auto object-contain opacity-90"
+            />
+            <p className="text-xs text-slate-500 text-center leading-relaxed max-w-2xl mx-auto italic">
+              Bright Support acknowledges the Traditional Custodians of the land on which we work and live.
+              We pay our respects to Elders past, present and emerging.
             </p>
           </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="mt-10 pt-6 border-t border-slate-800/60 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-          <p>{t('copyright').replace('2024', new Date().getFullYear().toString())}</p>
-          <div className="flex gap-6">
-            <span>ABN: 32659000978</span>
-            <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">{t('privacy')}</Link>
-            <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
+          {/* Copyright row */}
+          <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
+            <p>{t('copyright').replace('2024', new Date().getFullYear().toString())}</p>
+            <div className="flex gap-4">
+              <span>ABN: 32659000978</span>
+              <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">{t('privacy')}</Link>
+            </div>
           </div>
         </div>
       </div>

@@ -128,7 +128,7 @@ export default function HomePage() {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-50 text-slate-800 py-24 md:py-36 overflow-hidden">
+            <section className="relative bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-50 text-slate-800 pt-8 pb-24 md:pt-12 md:pb-36 overflow-hidden">
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDk5LCAxMDIsIDI0MSwgMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-40"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -152,9 +152,7 @@ export default function HomePage() {
                                             <p className="text-xs text-slate-600">{t('Hero.trustBadge.since')}</p>
                                         </div>
                                     </div>
-                                    <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-sky-100">
-                                        <p className="text-xs font-medium text-slate-700">{t('Hero.trustBadge.registrationNumber')}</p>
-                                    </div>
+
                                     <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-sky-100 flex items-center gap-2">
                                         <Clock size={16} className="text-green-600" />
                                         <p className="text-xs font-semibold text-slate-800">{t('Hero.responseGuarantee')}</p>

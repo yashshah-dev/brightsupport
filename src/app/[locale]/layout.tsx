@@ -22,6 +22,41 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const validLocale = locales.includes(locale as Locale) ? (locale as Locale) : 'en';
+  const localeMessages = messages[validLocale];
+
+  // Build hreflang alternate URLs for all locales
+  const BASE_URL = 'https://www.brightsupport.com.au';
+  const languages: Record<string, string> = {};
+  for (const l of locales) {
+    languages[l] = `${BASE_URL}/${l}`;
+  }
+  languages['x-default'] = `${BASE_URL}/en`;
+
+  // Explicit, rich description — ensures Lighthouse never flags a missing meta description
+  const description =
+    'Trusted NDIS disability & support services provider in Shepparton & Mooroopna. Registered NDIS provider offering daily living support, community nursing, physiotherapy, companionship, transport, and more. Accepting new participants.';
+
+  return {
+    title: localeMessages.Hero.title,
+    description,
+    openGraph: {
+      title: localeMessages.Hero.title,
+      description,
+      type: 'website',
+      locale: validLocale === 'en' ? 'en_AU' : validLocale,
+      siteName: 'Bright Support',
+      url: `${BASE_URL}/${validLocale}`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${validLocale}`,
+      languages,
+    },
+  };
+}
+
 export default async function LocaleLayout({
   children,
   params,

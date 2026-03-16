@@ -43,6 +43,7 @@ function generateAlternates(path: string) {
   for (const locale of locales) {
     languages[locale] = `${BASE_URL}/${locale}${path}`;
   }
+  languages['x-default'] = `${BASE_URL}/en${path}`;
   return { languages };
 }
 
@@ -50,20 +51,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
   const now = new Date().toISOString();
 
-  // Main pages with all locale variants
+  // Canonical non-locale main pages (match what's in each layout's canonical tag)
+  for (const page of mainPages) {
+    entries.push({
+      url: page === '' ? BASE_URL : `${BASE_URL}${page}/`,
+      lastModified: now,
+      changeFrequency: page === '' ? 'weekly' : 'monthly',
+      priority: page === '' ? 1.0 : 0.8,
+      alternates: generateAlternates(page),
+    });
+  }
+
+  // Locale-prefixed main pages
   for (const locale of locales) {
     for (const page of mainPages) {
       entries.push({
         url: `${BASE_URL}/${locale}${page}`,
         lastModified: now,
         changeFrequency: page === '' ? 'weekly' : 'monthly',
-        priority: page === '' ? 1.0 : 0.8,
+        priority: page === '' ? 0.9 : 0.7,
         alternates: generateAlternates(page),
       });
     }
   }
 
-  // Service pages with all locale variants + images
+  // Canonical service pages (match the canonical tags set in service page metadata)
+  for (const slug of serviceSlugs) {
+    const images = serviceImages[slug];
+    entries.push({
+      url: `${BASE_URL}/services/${slug}/`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+      alternates: generateAlternates(`/services/${slug}`),
+      ...(images && {
+        images: images.map(img => `${BASE_URL}${img}`),
+      }),
+    });
+  }
+
+  // Locale-prefixed service pages
   for (const locale of locales) {
     for (const slug of serviceSlugs) {
       const images = serviceImages[slug];
@@ -80,7 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Static pages (privacy policy, NDIS landing)
+  // Static pages
   entries.push({
     url: `${BASE_URL}/privacy-policy`,
     lastModified: now,

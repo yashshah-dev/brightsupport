@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { locales } from '@/i18n/config';
 import ServicePageClient from '@/components/ServicePageClient';
+import StructuredData from '@/components/StructuredData';
 
 // SEO metadata for each service page
 const serviceMetadata: Record<string, { title: string; description: string }> = {
@@ -94,33 +95,64 @@ const imageMap: Record<string, string> = {
     'community-participation-group-programs': '/images/services/community-participation.webp',
     'companionship': '/images/services/companionship.webp',
     'travel-transport-assistance': '/images/services/transport.webp',
+    'hydrotherapy-pool-session': '/images/services/hydrotherapy.webp',
+    'personal-training-sessions': '/images/services/personal-training.webp',
+    'positive-behaviour-support': '/images/services/positive-behaviour-support.webp',
+    //'professional-cleaning': '/images/services/professional-cleaning.webp',
+    'independent-living-accommodation-support': '/images/services/independent-living.webp',
+
 };
 
 const galleryMap: Record<string, string[]> = {
     'daily-living-in-home-support': [
-        '/images/services/daily-living/gallery-1.jpg',
-        '/images/services/daily-living/gallery-2.jpg',
-        '/images/services/daily-living/gallery-3.jpg',
+        '/images/services/daily-living/gallery-1.webp',
+        '/images/services/daily-living/gallery-2.webp',
+        '/images/services/daily-living/gallery-3.webp',
     ],
     'community-nursing-complex-care': [
-        '/images/services/community-nursing/gallery-3.jpg',
-        '/images/services/community-nursing/gallery-2.jpg',
+        '/images/services/community-nursing/gallery-3.webp',
+        '/images/services/community-nursing/gallery-2.webp',
         '/images/services/community-nursing/gallery-1.png',
     ],
     'physiotherapy-services': [
         '/images/services/physiotherapy/gallery-1.png',
-        '/images/services/physiotherapy/gallery-2.jpg',
-        '/images/services/physiotherapy/gallery-3.jpg',
+        '/images/services/physiotherapy/gallery-2.webp',
+        '/images/services/physiotherapy/gallery-3.webp',
     ],
     'community-participation-group-programs': [
-        '/images/services/community-participation/gallery-1.jpg',
-        '/images/services/community-participation/gallery-3.jpg',
-        '/images/services/community-participation/gallery-2.jpg',
+        '/images/services/community-participation/gallery-1.webp',
+        '/images/services/community-participation/gallery-3.webp',
+        '/images/services/community-participation/gallery-2.webp',
     ],
     'companionship': [
-        '/images/services/companionship/gallery-2.jpg',
-        '/images/services/companionship/gallery-3.jpg',
-        '/images/services/companionship/gallery-1.jpg',
+        '/images/services/companionship/gallery-2.webp',
+        '/images/services/companionship/gallery-3.webp',
+        '/images/services/companionship/gallery-1.webp',
+    ],
+    'hydrotherapy-pool-session': [
+        '/images/services/hydrotherapy/gallery-1.webp',
+        '/images/services/hydrotherapy/gallery-3.webp',
+        '/images/services/hydrotherapy/gallery-2.webp',
+    ],
+    'personal-training-sessions': [
+        '/images/services/personal-training/gallery-1.webp',
+        '/images/services/personal-training/gallery-2.webp',
+        '/images/services/personal-training/gallery-3.webp',
+    ],
+    'positive-behaviour-support': [
+        '/images/services/positive-behaviour-support/gallery-3.webp',
+        '/images/services/positive-behaviour-support/gallery-2.webp',
+        '/images/services/positive-behaviour-support/gallery-1.webp',
+    ],
+    'professional-cleaning': [
+        // '/images/services/professional-cleaning/gallery-1.webp',
+        // '/images/services/professional-cleaning/gallery-2.webp',
+        // '/images/services/professional-cleaning/gallery-3.webp',
+    ],
+    'independent-living-accommodation-support': [
+        '/images/services/independent-living/gallery-1.webp',
+        '/images/services/independent-living/gallery-2.webp',
+        '/images/services/independent-living/gallery-3.webp',
     ],
 };
 
@@ -128,6 +160,29 @@ export default async function ServicePage({ params }: ServicePageProps) {
     const { slug } = await params;
     const heroImage = imageMap[slug];
     const galleryImages = galleryMap[slug];
+    const meta = serviceMetadata[slug] || { title: 'NDIS Support Services', description: 'NDIS disability and support services by Bright Support in Shepparton.' };
 
-    return <ServicePageClient slug={slug} heroImage={heroImage} galleryImages={galleryImages} />;
+    return (
+        <>
+            <StructuredData
+                type="Service"
+                data={{
+                    name: meta.title,
+                    description: meta.description,
+                    serviceType: meta.title,
+                    url: `https://www.brightsupport.com.au/en/services/${slug}/`,
+                    areaServed: {
+                        '@type': 'City',
+                        name: 'Shepparton',
+                        containedInPlace: {
+                            '@type': 'State',
+                            name: 'Victoria',
+                            containedInPlace: { '@type': 'Country', name: 'Australia' },
+                        },
+                    },
+                }}
+            />
+            <ServicePageClient slug={slug} heroImage={heroImage} galleryImages={galleryImages} />
+        </>
+    );
 }

@@ -14,15 +14,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Bright Support | NDIS Disability & Support Services in Shepparton & Melbourne",
+    default: "Bright Support | NDIS Disability & Support Services in Shepparton",
     template: "%s | Bright Support - NDIS Services Shepparton",
   },
-  description: "Trusted NDIS disability & support services provider in Shepparton, Mooroopna & Melbourne. Offering daily living support, community nursing, physiotherapy, companionship, and more. NDIS registered since 2019.",
-  keywords: "NDIS, NDIS provider Shepparton, disability support Shepparton, aged care, community nursing, physiotherapy, Mooroopna, Melbourne, Australia, NDIS support services",
+  description: "Trusted NDIS disability & support services provider in Shepparton & Mooroopna. Offering daily living support, community nursing, physiotherapy, companionship, and more.",
+  keywords: "NDIS, NDIS provider Shepparton, disability support Shepparton, aged care, community nursing, physiotherapy, Mooroopna, Australia, NDIS support services",
   authors: [{ name: "Bright Support" }],
   openGraph: {
-    title: "Bright Support | NDIS Disability & Support Services in Shepparton & Melbourne",
-    description: "NDIS registered disability & support services provider in Shepparton, Mooroopna & Melbourne. Daily living support, community nursing, physiotherapy, and more.",
+    title: "Bright Support | NDIS Disability & Support Services in Shepparton",
+    description: "NDIS registered disability & support services provider in Shepparton & Mooroopna. Daily living support, community nursing, physiotherapy, and more.",
     type: "website",
     locale: "en_AU",
     siteName: "Bright Support",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bright Support | NDIS Support Services Shepparton & Melbourne',
+    title: 'Bright Support | NDIS Support Services Shepparton',
     description: 'Trusted NDIS disability & support services provider. Daily living, nursing, physiotherapy & more.',
     images: ['/images/og-image.png'],
   },
@@ -51,10 +51,57 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <StructuredData type="Organization" />
         <StructuredData type="LocalBusiness" />
+        <StructuredData
+          type="FAQPage"
+          data={{
+            questions: [
+              {
+                '@type': 'Question',
+                name: 'What is the NDIS and how does Bright Support help?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The NDIS (National Disability Insurance Scheme) is an Australian government initiative funding support for people with permanent and significant disabilities. Bright Support is a registered NDIS provider in Shepparton offering daily living support, community nursing, physiotherapy, companionship, transport, and more.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What NDIS services does Bright Support offer in Shepparton?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Bright Support offers daily living & in-home support, community nursing & complex care, physiotherapy, community participation & group programs, companionship, travel & transport assistance, hydrotherapy, personal training, positive behaviour support, professional cleaning, and independent living accommodation support.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Can I access NDIS services from Bright Support if I already receive support from other programs?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. You may access NDIS services even if you currently receive support from other programs. The NDIS works alongside existing supports where possible. Contact us to discuss your individual situation and plan.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Where does Bright Support provide NDIS services?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Bright Support provides NDIS disability support services across Shepparton, Mooroopna, and surrounding suburbs in Victoria, Australia.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do I get started with Bright Support?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Call us on 1800 407 508 or fill in our online contact form. We respond within 24 hours and can help you understand your NDIS plan and which services suit your needs.',
+                },
+              },
+            ],
+          }}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
@@ -130,7 +177,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <AnalyticsProvider>
           {children}
         </AnalyticsProvider>

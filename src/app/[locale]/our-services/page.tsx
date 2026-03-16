@@ -61,18 +61,22 @@ export default function OurServicesPage() {
             titleKey: 'hydrotherapy.title',
             descriptionKey: 'hydrotherapy.subtitle',
             link: '/services/hydrotherapy-pool-session',
+            imageSrc: '/images/services/hydrotherapy.webp',
         },
         {
             icon: Dumbbell,
             titleKey: 'personalTraining.title',
             descriptionKey: 'personalTraining.subtitle',
             link: '/services/personal-training-sessions',
+            imageSrc: '/images/services/personal-training.webp',
         },
         {
             icon: Brain,
             titleKey: 'behaviourSupport.title',
             descriptionKey: 'behaviourSupport.subtitle',
             link: '/services/positive-behaviour-support',
+            imageSrc: '/images/services/positive-behaviour-support.webp',
+
         },
         {
             icon: Sparkles,
