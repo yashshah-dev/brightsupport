@@ -11,20 +11,34 @@
 /physiotherapyservices                                  /en/services/physiotherapy-services/                  301
 /communityparticipationgroupactivities/                 /en/services/community-participation-group-programs/  301
 /communityparticipationgroupactivities                  /en/services/community-participation-group-programs/  301
+/communityparticipationgroupprograms/                   /en/services/community-participation-group-programs/  301
+/communityparticipationgroupprograms                    /en/services/community-participation-group-programs/  301
 /companionship/                                        /en/services/companionship/                           301
 /companionship                                         /en/services/companionship/                           301
+/companion-care-services/                              /en/services/companionship/                           301
+/companion-care-services                               /en/services/companionship/                           301
 /travelandtransportassistance/                         /en/services/travel-transport-assistance/              301
 /travelandtransportassistance                          /en/services/travel-transport-assistance/              301
+/ndis-transport-service-provider/                      /en/services/travel-transport-assistance/              301
+/ndis-transport-service-provider                       /en/services/travel-transport-assistance/              301
 /hydrotherapyandpoolsessions/                          /en/services/hydrotherapy-pool-session/                301
 /hydrotherapyandpoolsessions                           /en/services/hydrotherapy-pool-session/                301
+/ndis-hydrotherapy-services/                           /en/services/hydrotherapy-pool-session/                301
+/ndis-hydrotherapy-services                            /en/services/hydrotherapy-pool-session/                301
 /personaltrainingsessions/                             /en/services/personal-training-sessions/               301
 /personaltrainingsessions                              /en/services/personal-training-sessions/               301
+/ndispersonaltrainingsessions/                         /en/services/personal-training-sessions/               301
+/ndispersonaltrainingsessions                          /en/services/personal-training-sessions/               301
 /positivebehavioursupport/                             /en/services/positive-behaviour-support/               301
 /positivebehavioursupport                              /en/services/positive-behaviour-support/               301
 /professional-cleaning/                                /en/services/professional-cleaning/                    301
 /professional-cleaning                                 /en/services/professional-cleaning/                    301
+/ndis-cleaning-services/                               /en/services/professional-cleaning/                    301
+/ndis-cleaning-services                                /en/services/professional-cleaning/                    301
 /accommodation-support-services/                       /en/services/independent-living-accommodation-support/ 301
 /accommodation-support-services                        /en/services/independent-living-accommodation-support/ 301
+/independent-living-accommodation-support/             /en/services/independent-living-accommodation-support/ 301
+/independent-living-accommodation-support              /en/services/independent-living-accommodation-support/ 301
 
 # Main page redirects
 /about-us/                                             /en/about-us/                                         301
@@ -37,13 +51,15 @@
 # WordPress-specific page redirects
 /our-location/                                         /en/contact-us/                                       301
 /our-location                                          /en/contact-us/                                       301
+/privacy-policy/                                       /privacy-policy                                       301
 
 # WordPress feed redirects
 /feed/                                                 /en/                                                  301
+/feed                                                  /en/                                                  301
 /comments/feed/                                        /en/                                                  301
 
 # WordPress admin/login redirects (prevent 404s from bots)
-/wp-admin/                                             /en/                                                  301
+/wp-admin/*                                            /en/                                                  301
 /wp-login.php                                          /en/                                                  301
 /xmlrpc.php                                            /en/                                                  301
 

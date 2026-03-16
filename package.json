@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/optimize-images.mjs && next build",
+    "build": "node scripts/optimize-images.mjs && next build && npm run copy-headers",
     "build:gh-pages": "DEPLOY_TARGET=gh-pages NEXT_PUBLIC_DEPLOY_TARGET=gh-pages node scripts/optimize-images.mjs && next build && npm run copy-headers",
     "build:beta": "DEPLOY_TARGET=beta NEXT_PUBLIC_DEPLOY_TARGET=beta node scripts/optimize-images.mjs && next build && npm run copy-headers",
     "build:production": "DEPLOY_TARGET=production NEXT_PUBLIC_DEPLOY_TARGET=production node scripts/optimize-images.mjs && next build && npm run copy-headers",

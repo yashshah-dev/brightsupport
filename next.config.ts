@@ -7,12 +7,12 @@ const isProd = process.env.NODE_ENV === 'production';
 const deployTarget = process.env.DEPLOY_TARGET || 'default';
 
 const nextConfig: NextConfig = {
-  // Only use static export for GitHub Pages; Vercel runs Next.js natively
-  ...(deployTarget === 'gh-pages' && { output: 'export' as const }),
+  output: 'export',
+  // Only use basePath for GitHub Pages subdirectory deployment
   basePath: deployTarget === 'gh-pages' ? '/brightsupport' : '',
   assetPrefix: deployTarget === 'gh-pages' ? '/brightsupport' : '',
   images: {
-    unoptimized: deployTarget === 'gh-pages', // Vercel supports image optimization
+    unoptimized: true, // Required for static export
     formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
