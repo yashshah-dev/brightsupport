@@ -58,12 +58,19 @@ const serviceMetadata: Record<string, { title: string; description: string }> = 
 // Generate static params for all locale + service combinations
 const serviceSlugs = Object.keys(serviceMetadata);
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-    const { slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+    const { locale, slug } = await params;
     const meta = serviceMetadata[slug] || {
         title: 'NDIS Support Services',
         description: 'NDIS disability and support services by Bright Support in Shepparton.',
     };
+
+    const BASE_URL = 'https://www.brightsupport.com.au';
+    const languages: Record<string, string> = {};
+    for (const l of locales) {
+        languages[l] = `${BASE_URL}/${l}/services/${slug}/`;
+    }
+    languages['x-default'] = `${BASE_URL}/en/services/${slug}/`;
 
     return {
         title: meta.title,
@@ -73,7 +80,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             description: meta.description,
         },
         alternates: {
-            canonical: `https://www.brightsupport.com.au/services/${slug}/`,
+            canonical: `${BASE_URL}/${locale}/services/${slug}/`,
+            languages,
         },
     };
 }

@@ -14,6 +14,20 @@ export default function Footer() {
   const tHeader = useTranslations('Header');
   const tContact = useTranslations('ContactUs');
 
+  // Detect current locale from pathname
+  const locales = ['en', 'zh', 'ar', 'vi'];
+  const currentLocale = locales.find(locale =>
+    pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  // Helper function to get locale-aware href
+  const getLocalizedHref = (path: string) => {
+    if (currentLocale) {
+      return `/${currentLocale}${path}`;
+    }
+    return path;
+  };
+
   // Helper functions for tracking
   const handlePhoneClick = () => {
     trackPhoneCall(tHeader('phone'));
@@ -24,20 +38,20 @@ export default function Footer() {
   };
 
   const exploreLinks = [
-    { name: tHeader('nav.home'), href: '/' },
-    { name: tHeader('nav.about'), href: '/about-us' },
-    { name: tHeader('nav.services'), href: '/our-services' },
-    { name: tHeader('nav.career'), href: '/career' },
-    { name: tHeader('nav.contact'), href: '/contact-us' },
+    { name: tHeader('nav.home'), href: currentLocale ? `/${currentLocale}` : '/' },
+    { name: tHeader('nav.about'), href: getLocalizedHref('/about-us') },
+    { name: tHeader('nav.services'), href: getLocalizedHref('/our-services') },
+    { name: tHeader('nav.career'), href: getLocalizedHref('/career') },
+    { name: tHeader('nav.contact'), href: getLocalizedHref('/contact-us') },
   ];
 
   const services = [
-    { name: 'Daily Living Support', href: '/services/daily-living-in-home-support' },
-    { name: 'Community Nursing', href: '/services/community-nursing-complex-care' },
-    { name: 'Physiotherapy', href: '/services/physiotherapy-services' },
-    { name: 'Community Participation', href: '/services/community-participation-group-programs' },
-    { name: 'Transport Assistance', href: '/services/travel-transport-assistance' },
-    { name: 'Companionship', href: '/services/companionship' },
+    { name: 'Daily Living Support', href: getLocalizedHref('/services/daily-living-in-home-support') },
+    { name: 'Community Nursing', href: getLocalizedHref('/services/community-nursing-complex-care') },
+    { name: 'Physiotherapy', href: getLocalizedHref('/services/physiotherapy-services') },
+    { name: 'Community Participation', href: getLocalizedHref('/services/community-participation-group-programs') },
+    { name: 'Transport Assistance', href: getLocalizedHref('/services/travel-transport-assistance') },
+    { name: 'Companionship', href: getLocalizedHref('/services/companionship') },
   ];
 
   const socialLinks = [

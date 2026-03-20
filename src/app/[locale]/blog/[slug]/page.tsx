@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { getBlogPost, getRelatedPosts, getBlogPosts } from '@/lib/blog';
 
 interface BlogPostPageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 // Generate static paths for all blog posts (required for static export)
@@ -23,8 +23,9 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const post = getBlogPost(slug);
+  const BASE_URL = 'https://www.brightsupport.com.au';
 
   if (!post) {
     return {
@@ -32,15 +33,27 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
+  // Build hreflang alternate URLs for all locales
+  const languages: Record<string, string> = {};
+  for (const l of ['en', 'zh', 'ar', 'vi']) {
+    languages[l] = `${BASE_URL}/${l}/blog/${slug}/`;
+  }
+  languages['x-default'] = `${BASE_URL}/en/blog/${slug}/`;
+
   return {
     title: `${post.title} | Bright Support Shepparton`,
     description: post.metaDescription || post.excerpt,
     keywords: post.keywords,
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/blog/${slug}/`,
+      languages,
+    },
     openGraph: {
       title: post.title,
       description: post.metaDescription || post.excerpt,
       images: post.featuredImage ? [post.featuredImage] : [],
       type: 'article',
+      url: `${BASE_URL}/${locale}/blog/${slug}/`,
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
     },
