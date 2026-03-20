@@ -31,12 +31,8 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale?: Lo
             }
         }
 
-        // For English (default), we can use root path
-        // For other locales, add the prefix
-        if (locale === 'en') {
-            return pathWithoutLocale || '/';
-        }
-        return `/${locale}${pathWithoutLocale}`;
+        // Return path with new locale prefix
+        return `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
     };
 
     return (

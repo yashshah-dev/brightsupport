@@ -40,6 +40,7 @@ export default function Header() {
     { name: 'Home', href: currentLocale ? `/${currentLocale}` : '/' },
     { name: 'About Us', href: getLocalizedHref('/about-us') },
     { name: 'Our Services', href: getLocalizedHref('/our-services') },
+    { name: 'Blog', href: getLocalizedHref('/blog') },
     { name: 'Career', href: getLocalizedHref('/career') },
     { name: 'Contact Us', href: getLocalizedHref('/contact-us') },
   ];
@@ -166,18 +167,28 @@ export default function Header() {
               </Link>
             ))}
 
+            {/* NDIS Badge */}
             {/* CTA Button with modern styling */}
             <Link
               href={getLocalizedHref('/contact-us')}
               className="ml-4 group relative overflow-hidden bg-gradient-to-r from-[#DC3545] to-[#E74C5C] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/30 hover:-translate-y-0.5"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Send Us Referral
+                Book free consultation
                 <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
               </span>
               {/* Shimmer effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </Link>
+
+            {/* NDIS Badge */}
+            <div className="bg-white rounded-xl p-1 shadow-md flex items-center justify-center h-12 ml-2 border border-slate-100 hover:shadow-lg transition-all duration-300">
+              <img
+                src={getAssetPath('/images/ndis-badge.jpg')}
+                alt="NDIS Registered Provider"
+                className="h-10 w-auto object-contain"
+              />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -245,7 +256,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="flex items-center justify-center gap-2">
-                Send Us Referral
+                Book free consultation
                 <ChevronRight size={18} />
               </span>
             </Link>

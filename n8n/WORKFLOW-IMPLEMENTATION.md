@@ -281,13 +281,13 @@ Follow this exact HTML structure (start with H2, NOT H1):
 <p>[CTA based on {{ $('Google Sheets').item.json.CTA_Type }}]:</p>
 
 IF CTA_Type = "Free Consultation":
-<p><strong>Ready to get started?</strong> Contact Bright Support today for a free NDIS planning consultation. Call <a href="tel:0358315786" class="text-indigo-600 hover:underline">(03) 5831 5786</a> or visit us at 279 Wyndham St, Shepparton VIC 3630. <a href="/contact-us" class="text-indigo-600 hover:underline font-semibold">Book your free consultation</a>.</p>
+<p><strong>Ready to get started?</strong> Contact Bright Support today for a free NDIS planning consultation. Call <a href="tel:0358315786" class="text-indigo-600 hover:underline">1800 407 508</a> or visit us at 279 Wyndham St, Shepparton VIC 3630. <a href="/contact-us" class="text-indigo-600 hover:underline font-semibold">Book your free consultation</a>.</p>
 
 IF CTA_Type = "Download PDF":
-<p><strong>Want to learn more?</strong> Download our free NDIS Planning Checklist for Shepparton participants. <a href="/resources/ndis-checklist" class="text-indigo-600 hover:underline font-semibold">Get your free guide</a> or call (03) 5831 5786.</p>
+<p><strong>Want to learn more?</strong> Download our free NDIS Planning Checklist for Shepparton participants. <a href="/resources/ndis-checklist" class="text-indigo-600 hover:underline font-semibold">Get your free guide</a> or call 1800 407 508.</p>
 
 IF CTA_Type = "Book Assessment":
-<p><strong>Ready for personalized support?</strong> Book your NDIS assessment with Bright Support's experienced team in Shepparton. <a href="/contact-us" class="text-indigo-600 hover:underline font-semibold">Schedule your assessment</a> or call (03) 5831 5786 today.</p>
+<p><strong>Ready for personalized support?</strong> Book your NDIS assessment with Bright Support's experienced team in Shepparton. <a href="/contact-us" class="text-indigo-600 hover:underline font-semibold">Schedule your assessment</a> or call 1800 407 508 today.</p>
 
 ### 5. INTERNAL LINKING (3-5 links minimum)
 Link to relevant Bright Support pages:
@@ -341,7 +341,7 @@ Content Structure:
 
 - Founded: 2019
 - Location: 279 Wyndham St, Shepparton VIC 3630
-- Phone: (03) 5831 5786
+- Phone: 1800 407 508
 - Service areas: Shepparton, Mooroopna, Tatura, Greater Shepparton region
 - Core values: Independence, Choice, Dignity, Compassion
 - Services: Daily living support, community nursing, physiotherapy, community participation, hydrotherapy, personal training, positive behaviour support, companionship, transport, SIL, professional cleaning, travel assistance
@@ -929,7 +929,7 @@ const localTerms = [
   { term: 'greater shepparton', count: 0, minRequired: 0 },
   { term: 'victoria', count: 0, minRequired: 1 },
   { term: '279 wyndham st', count: 0, minRequired: 0 },
-  { term: '(03) 5831 5786', count: 0, minRequired: 0 }
+  { term: '1800 407 508', count: 0, minRequired: 0 }
 ];
 
 localTerms.forEach(item => {

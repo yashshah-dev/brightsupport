@@ -12,9 +12,10 @@ interface ServiceCardProps {
   href: string;
   icon?: React.ReactNode;
   imageSrc?: string;
+  disableResponsive?: boolean;
 }
 
-export default function ServiceCard({ title, description, href, icon, imageSrc }: ServiceCardProps) {
+export default function ServiceCard({ title, description, href, icon, imageSrc, disableResponsive }: ServiceCardProps) {
   const handleClick = () => {
     trackButtonClick('service_card_click', { service_name: title, href });
   };
@@ -32,6 +33,7 @@ export default function ServiceCard({ title, description, href, icon, imageSrc }
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               width={600}
               height={400}
+              disableResponsive={disableResponsive}
             />
           ) : icon ? (
             <div className="text-[#1E4D8C] group-hover:scale-110 transition-transform duration-300">{icon}</div>

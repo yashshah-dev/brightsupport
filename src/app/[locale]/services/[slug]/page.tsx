@@ -6,8 +6,12 @@ import StructuredData from '@/components/StructuredData';
 // SEO metadata for each service page
 const serviceMetadata: Record<string, { title: string; description: string }> = {
     'daily-living-in-home-support': {
-        title: 'Daily Living & In-Home Support - NDIS Services Shepparton',
-        description: 'Professional NDIS daily living & in-home support in Shepparton. Personal care, meal preparation, household tasks, and assistance to maintain independence at home.',
+        title: 'Daily Living & In-Home Support Services - NDIS Shepparton | Bright Support',
+        description: 'Empowering independence with expert daily living and in-home support for NDIS participants in Shepparton. Personal care, meal prep, and household assistance.',
+    },
+    'support-coordination': {
+        title: 'NDIS Support Coordination Shepparton | Bright Support',
+        description: 'Expert NDIS Support Coordination to help you navigate your plan, connect with the right providers, and achieve your personal goals.',
     },
     'community-nursing-complex-care': {
         title: 'Community Nursing & Complex Care - NDIS Services Shepparton',
@@ -89,7 +93,6 @@ interface ServicePageProps {
 }
 
 const imageMap: Record<string, string> = {
-    'daily-living-in-home-support': '/images/services/daily-living.webp',
     'community-nursing-complex-care': '/images/services/nursing.webp',
     'physiotherapy-services': '/images/services/physiotherapy.webp',
     'community-participation-group-programs': '/images/services/community-participation.webp',
@@ -98,9 +101,9 @@ const imageMap: Record<string, string> = {
     'hydrotherapy-pool-session': '/images/services/hydrotherapy.webp',
     'personal-training-sessions': '/images/services/personal-training.webp',
     'positive-behaviour-support': '/images/services/positive-behaviour-support.webp',
-    //'professional-cleaning': '/images/services/professional-cleaning.webp',
+    'daily-living-in-home-support': '/images/services/daily-living.webp',
+    'support-coordination': '/images/services/support-coordination.webp',
     'independent-living-accommodation-support': '/images/services/independent-living.webp',
-
 };
 
 const galleryMap: Record<string, string[]> = {
@@ -108,6 +111,11 @@ const galleryMap: Record<string, string[]> = {
         '/images/services/daily-living/gallery-1.webp',
         '/images/services/daily-living/gallery-2.webp',
         '/images/services/daily-living/gallery-3.webp',
+    ],
+    'support-coordination': [
+        '/images/services/support-coordination/gallery-1.webp',
+        '/images/services/support-coordination/gallery-2.webp',
+        '/images/services/support-coordination/gallery-3.webp',
     ],
     'community-nursing-complex-care': [
         '/images/services/community-nursing/gallery-3.webp',

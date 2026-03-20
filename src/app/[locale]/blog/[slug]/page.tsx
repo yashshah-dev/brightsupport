@@ -68,7 +68,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </li>
             <li>/</li>
             <li>
-              <Link href="/blog" className="hover:text-indigo-600">Blog</Link>
+              <Link href=".." className="hover:text-indigo-600">Blog</Link>
             </li>
             <li>/</li>
             <li className="text-gray-900 font-medium truncate max-w-xs">
@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <header className="mb-8">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <Link 
-              href={`/blog?category=${encodeURIComponent(post.category)}`}
+              href={`..?category=${encodeURIComponent(post.category)}`}
               className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-indigo-200 transition-colors"
             >
               {post.category}
@@ -155,7 +155,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.tags.map((tag) => (
                   <Link
                     key={tag}
-                    href={`/blog?tag=${encodeURIComponent(tag)}`}
+                    href={`..?tag=${encodeURIComponent(tag)}`}
                     className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md text-sm transition-colors"
                   >
                     #{tag}
@@ -164,32 +164,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </div>
           )}
-          {(post.seoScore || post.wordCount) && (
+          {post.wordCount && (
             <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-              {post.wordCount && (
-                <div className="flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  <span>{post.wordCount} words</span>
-                </div>
-              )}
-              {post.seoScore && (
-                <div className="flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                  <span>SEO Score: {post.seoScore}%</span>
-                </div>
-              )}
-              {(post as any).ndis?.complianceScore && (
-                <div className="flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>NDIS Compliance: {(post as any).ndis.complianceScore}%</span>
-                </div>
-              )}
+              <div className="flex items-center gap-1">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>{post.wordCount} words</span>
+              </div>
             </div>
           )}
         </div>
@@ -262,10 +244,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               Book Free Consultation
             </Link>
             <a
-              href="tel:0358315786"
+              href="tel:1800407508"
               className="bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-800 transition-colors border-2 border-white inline-block"
             >
-              Call (03) 5831 5786
+              Call 1800 407 508
             </a>
           </div>
         </div>
@@ -280,7 +262,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {relatedPosts.map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
-                  href={`/blog/${relatedPost.slug}`}
+                  href={`../${relatedPost.slug}`}
                   className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
                   <div className="relative h-48 bg-gradient-to-br from-slate-100 to-gray-100">

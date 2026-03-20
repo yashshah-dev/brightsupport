@@ -11,6 +11,7 @@ interface ResponsiveImageProps {
   priority?: boolean; // if true set fetchPriority="high"
   width?: number; // fallback <img> width attribute
   height?: number; // fallback <img> height attribute
+  disableResponsive?: boolean; // skip srcset Generation for single-format assets
 }
 
 // Default responsive breakpoints we generate variants for
@@ -33,8 +34,29 @@ export function ResponsiveImage({
   priority = false,
   width,
   height,
+  disableResponsive,
 }: ResponsiveImageProps) {
   const { base, ext } = splitSrc(src);
+  const fallbackSrc = getAssetPath(src);
+
+  // fetchPriority only if priority true (avoid invalid attribute on some browsers otherwise)
+  const fetchPriority = priority ? 'high' : undefined;
+
+  if (disableResponsive) {
+    return (
+      <img
+        src={fallbackSrc}
+        alt={alt}
+        loading={loading}
+        decoding="async"
+        fetchPriority={fetchPriority as any}
+        className={className}
+        sizes={sizes}
+        width={width}
+        height={height}
+      />
+    );
+  }
 
   // Build srcset strings for avif and webp variants
   const avifSet = widths
@@ -44,12 +66,6 @@ export function ResponsiveImage({
   const webpSet = widths
     .map(w => `${getAssetPath(`${base}-${w}.webp`)} ${w}w`)
     .join(', ');
-
-  // Fallback original asset path
-  const fallbackSrc = getAssetPath(src);
-
-  // fetchPriority only if priority true (avoid invalid attribute on some browsers otherwise)
-  const fetchPriority = priority ? 'high' : undefined;
 
   return (
     <picture>

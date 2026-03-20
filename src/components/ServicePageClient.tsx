@@ -20,6 +20,7 @@ const slugToKeyMap: Record<string, string> = {
     'positive-behaviour-support': 'behaviourSupport',
     'professional-cleaning': 'cleaning',
     'independent-living-accommodation-support': 'independentLiving',
+    'support-coordination': 'supportCoordination',
 };
 
 interface ServicePageClientProps {
@@ -111,6 +112,7 @@ export default function ServicePageClient({ slug, heroImage, galleryImages }: Se
                                         className="w-full h-full object-cover"
                                         sizes="(max-width: 1024px) 100vw, 50vw"
                                         priority
+                                        disableResponsive={slug === 'support-coordination' || slug === 'independent-living-accommodation-support'}
                                     />
                                 ) : (
                                     /* Hero Image Placeholder */
@@ -158,6 +160,7 @@ export default function ServicePageClient({ slug, heroImage, galleryImages }: Se
                                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                                         sizes="(max-width: 768px) 100vw, 33vw"
                                                         widths={[480, 768, 1024]}
+                                                        disableResponsive={slug === 'support-coordination' || slug === 'independent-living-accommodation-support'}
                                                     />
                                                 ) : (
                                                     /* Gallery Image Placeholder */

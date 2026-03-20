@@ -104,6 +104,22 @@
             "transport": {
                 "title": "旅行与交通协助",
                 "description": "由训练有素的支持工作者提供安全可靠的交通服务，带您前往预约、活动和社区参与。"
+            },
+            "hydrotherapy": {
+                "title": "水疗与泳池课程",
+                "description": "专为在安全温暖的环境中改善活动能力、管理疼痛和支持康复而设计的水疗。"
+            },
+            "personalTraining": {
+                "title": "个人训练课程",
+                "description": "由专业人士制定的定制健身计划，旨在增强力量、促进健康和提升整体福祉。"
+            },
+            "behaviourSupport": {
+                "title": "积极行为支持",
+                "description": "基于证据的策略和充满同情心的护理，帮助理解行为、减少挑战并建立积极的应对技能。"
+            },
+            "supportCoordination": {
+                "title": "支持协调",
+                "description": "专家指导，帮助您了解您的NDIS计划，联系合适的服务提供商，并实现您的个人目标。"
             }
         }
     },
@@ -1052,6 +1068,72 @@
                     {
                         "prompt": "Housemates enjoying meal together in shared living space, friendship and community, independence",
                         "caption": "社区与友谊"
+                    }
+                ]
+            }
+        },
+        "supportCoordination": {
+            "title": "支持协调",
+            "subtitle": "共同规划您的NDIS计划",
+            "description": "我们的支持协调服务帮助您充分利用NDIS资金。我们帮助您了解您的计划，建立能力，并联系合适的服务提供商以实现您的目标。",
+            "services": [
+                "了解您的NDIS计划和资金明细",
+                "寻找并联系服务提供商",
+                "协商服务协议和定价",
+                "协调支持和多项服务",
+                "为未来的审查制定计划",
+                "解决危机点并管理挑战",
+                "培养自主管理支持的技能",
+                "探索住房和住宿选择",
+                "准备NDIS审查会议",
+                "监控支持预算和支出"
+            ],
+            "features": {
+                "expert": {
+                    "title": "专家指导",
+                    "description": "对NDIS系统和提供商名录的广泛了解。"
+                },
+                "independent": {
+                    "title": "独立建议",
+                    "description": "无偏见的推荐，只关注您的目标和结果。"
+                },
+                "capacity": {
+                    "title": "能力建设",
+                    "description": "通过技能建设策略，使您能够随着时间的推移自行管理您的计划。"
+                },
+                "network": {
+                    "title": "强大的本地网络",
+                    "description": "与值得信赖的本地提供商建立的关系，为您匹配最佳护理。"
+                }
+            },
+            "faq": [
+                {
+                    "question": "支持协调和专家支持协调有什么区别？",
+                    "answer": "支持协调有助于应对复杂的专业干预，通常适用于风险较高且情况更复杂的情况。"
+                },
+                {
+                    "question": "我如何找到合适的服务提供商？",
+                    "answer": "我们的协调员利用他们广泛的网络和对当地提供商的了解，为您匹配满足您需求和偏好的服务。"
+                },
+                {
+                    "question": "支持协调员决定谁是服务提供商吗？",
+                    "answer": "不是。我们为您提供选择、建议和信息，以帮助您做出明智的决定。您始终可以根据自己的选择做出最终决定。"
+                }
+            ],
+            "images": {
+                "hero": "Professional support coordinator reviewing NDIS plan with a participant and their family at home, open communication, supportive environment, natural lighting",
+                "gallery": [
+                    {
+                        "prompt": "Support coordinator assisting participant on a laptop to find appropriate community services, encouraging interaction, organized office space",
+                        "caption": "与合适的服务提供商联系"
+                    },
+                    {
+                        "prompt": "Participant confidently engaging in a new community activity, smiling, empowerment and choice, outdoor setting",
+                        "caption": "赋予您独立性"
+                    },
+                    {
+                        "prompt": "Support coordinator meeting with participant's support network to discuss care strategies, collaboration, professional guidance",
+                        "caption": "合作规划目标"
                     }
                 ]
             }

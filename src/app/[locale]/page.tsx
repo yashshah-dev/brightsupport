@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
     Phone,
     CheckCircle,
@@ -16,6 +16,10 @@ import {
     Car,
     Sparkles,
     Shield,
+    ClipboardList,
+    Droplets,
+    Dumbbell,
+    Brain,
 } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
@@ -28,6 +32,18 @@ import { useVideoTracking } from '@/hooks/useAnalytics';
 
 // Service keys that map to translation keys
 const serviceKeys = [
+    {
+        key: 'independentLiving',
+        imageSrc: '/images/services/independent-living.webp',
+        href: '/services/independent-living-accommodation-support/',
+        icon: Home,
+    },
+    {
+        key: 'supportCoordination',
+        imageSrc: '/images/services/support-coordination.webp',
+        href: '/services/support-coordination/',
+        icon: ClipboardList,
+    },
     {
         key: 'dailyLiving',
         imageSrc: '/images/services/daily-living.webp',
@@ -53,16 +69,22 @@ const serviceKeys = [
         icon: Users,
     },
     {
-        key: 'companionship',
-        imageSrc: '/images/services/companionship.webp',
-        href: '/services/companionship/',
-        icon: Heart,
+        key: 'hydrotherapy',
+        imageSrc: '/images/services/hydrotherapy.webp',
+        href: '/services/hydrotherapy-pool-session/',
+        icon: Droplets,
     },
     {
-        key: 'transport',
-        imageSrc: '/images/services/transport.webp',
-        href: '/services/travel-transport-assistance/',
-        icon: Car,
+        key: 'personalTraining',
+        imageSrc: '/images/services/personal-training.webp',
+        href: '/services/personal-training-sessions/',
+        icon: Dumbbell,
+    },
+    {
+        key: 'behaviourSupport',
+        imageSrc: '/images/services/positive-behaviour-support.webp',
+        href: '/services/positive-behaviour-support/',
+        icon: Brain,
     },
 ];
 
@@ -70,6 +92,58 @@ export default function HomePage() {
     const t = useTranslations();
     const locale = useLocale();
     const { trackVideoPlay } = useVideoTracking();
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    // Auto-scroll logic for services
+    useEffect(() => {
+        const scrollContainer = scrollRef.current;
+        if (!scrollContainer) return;
+
+        let isHovered = false;
+        let animationFrameId: number;
+        let isDelaying = true;
+        let delayTimeoutId: ReturnType<typeof setTimeout>;
+
+        const autoScroll = () => {
+            if (!isHovered && !isDelaying && scrollContainer) {
+                const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+                
+                // If at the end (with small buffer), jump back to start instantly
+                if (scrollContainer.scrollLeft >= maxScroll - 1) {
+                    scrollContainer.scrollLeft = 0;
+                } else {
+                    // Continuous smooth scroll
+                    scrollContainer.scrollLeft += 1;
+                }
+            }
+            animationFrameId = requestAnimationFrame(autoScroll);
+        };
+
+        const handleMouseEnter = () => { isHovered = true; };
+        const handleMouseLeave = () => { isHovered = false; };
+
+        scrollContainer.addEventListener('mouseenter', handleMouseEnter);
+        scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+        scrollContainer.addEventListener('touchstart', handleMouseEnter, { passive: true });
+        scrollContainer.addEventListener('touchend', handleMouseLeave, { passive: true });
+
+        // Start 5-second delay before allowing scroll
+        delayTimeoutId = setTimeout(() => {
+            isDelaying = false;
+        }, 5000);
+
+        // Start animation loop
+        animationFrameId = requestAnimationFrame(autoScroll);
+
+        return () => {
+            clearTimeout(delayTimeoutId);
+            cancelAnimationFrame(animationFrameId);
+            scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
+            scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
+            scrollContainer.removeEventListener('touchstart', handleMouseEnter);
+            scrollContainer.removeEventListener('touchend', handleMouseLeave);
+        };
+    }, []);
 
     // Helper to get locale-aware href
     const getLocalizedHref = (path: string) => {
@@ -145,17 +219,28 @@ export default function HomePage() {
 
                                 {/* NDIS Registration Badges */}
                                 <div className="flex flex-wrap gap-3 items-center justify-center lg:justify-start">
-                                    <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-sky-100 flex items-center gap-2">
-                                        <Award size={18} className="text-[#1E4D8C]" />
-                                        <div className="text-left">
-                                            <p className="text-xs font-semibold text-slate-800">{t('Hero.trustBadge.registered')}</p>
-                                            <p className="text-xs text-slate-600">{t('Hero.trustBadge.since')}</p>
+                                    <div className="bg-white/90 backdrop-blur-md px-4 h-14 rounded-lg shadow-md border border-sky-100 flex items-center gap-3">
+                                        <div className="w-10 h-10 relative flex items-center justify-center shrink-0">
+                                            <img 
+                                                src="/images/ilove-ndis.png" 
+                                                alt="I love NDIS" 
+                                                className="w-full h-full object-contain" 
+                                            />
+                                        </div>
+                                        <div className="text-left leading-tight">
+                                            <p className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">Registered Provider</p>
+                                            <p className="text-sm font-bold text-[#1E4D8C]">ABN 32 659 000 978</p>
                                         </div>
                                     </div>
 
-                                    <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-sky-100 flex items-center gap-2">
-                                        <Clock size={16} className="text-green-600" />
-                                        <p className="text-xs font-semibold text-slate-800">{t('Hero.responseGuarantee')}</p>
+                                    <div className="bg-white/90 backdrop-blur-md px-4 h-14 rounded-lg shadow-md border border-sky-100 flex items-center gap-3">
+                                        <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center shrink-0">
+                                            <Clock size={20} className="text-green-600" />
+                                        </div>
+                                        <div className="text-left leading-tight">
+                                            <p className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">Our Support</p>
+                                            <p className="text-sm font-bold text-slate-800">{t('Hero.responseGuarantee')}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -172,18 +257,17 @@ export default function HomePage() {
                             <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center animate-in">
                                 <Link
                                     href={getLocalizedHref('/our-services/')}
-                                    className="bg-gradient-to-r from-[#1E4D8C] to-[#2563EB] hover:from-[#0F2D4D] hover:to-[#1E4D8C] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                                    className="bg-gradient-to-r from-[#1E4D8C] to-[#2563EB] hover:from-[#0F2D4D] hover:to-[#1E4D8C] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2"
                                     onClick={() => trackButtonClick('discover_services', { source: 'hero_section' })}
                                 >
                                     {t('Hero.cta.services')}
                                 </Link>
                                 <Link
                                     href={getLocalizedHref('/contact-us/')}
-                                    className="bg-white hover:bg-slate-50 text-slate-700 px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg border-2 border-slate-200 hover:border-indigo-300 flex items-center gap-2"
-                                    onClick={() => trackButtonClick('book_assessment', { source: 'hero_section' })}
+                                    className="bg-gradient-to-r from-[#DC3545] to-[#E74C5C] hover:from-[#BF202F] hover:to-[#DC3545] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-red-500/20 hover:shadow-red-500/30 flex items-center gap-2"
+                                    onClick={() => trackButtonClick('send_referral', { source: 'hero_section' })}
                                 >
-                                    <Phone size={20} className="text-[#1E4D8C]" />
-                                    {t('Hero.cta.contact')}
+                                    Send us referral
                                 </Link>
                             </div>
                         </div>
@@ -233,16 +317,22 @@ export default function HomePage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div 
+                        ref={scrollRef}
+                        className="flex overflow-x-auto gap-6 pb-8 -mx-4 px-4 md:mx-0 md:px-0 hide-scrollbar mb-12" 
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    >
                         {serviceKeys.map((service) => (
-                            <ServiceCard
-                                key={service.key}
-                                title={t(`Services.items.${service.key}.title`)}
-                                description={t(`Services.items.${service.key}.description`)}
-                                imageSrc={service.imageSrc}
-                                href={getLocalizedHref(service.href)}
-                                icon={<service.icon size={64} />}
-                            />
+                            <div key={service.key} className="w-[85vw] md:w-[350px] shrink-0">
+                                <ServiceCard
+                                    title={t(`Services.items.${service.key}.title`)}
+                                    description={t(`Services.items.${service.key}.description`)}
+                                    imageSrc={service.imageSrc}
+                                    href={getLocalizedHref(service.href)}
+                                    icon={<service.icon size={64} />}
+                                    disableResponsive={service.key === 'supportCoordination' || service.key === 'independentLiving'}
+                                />
+                            </div>
                         ))}
                     </div>
 

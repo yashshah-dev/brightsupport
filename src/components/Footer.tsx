@@ -62,25 +62,14 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-5">
             {/* Logos row */}
-            <div className="flex items-center gap-4">
-              <div className="bg-white rounded-xl p-1.5 shadow-lg">
-                <img
-                  src={getAssetPath('/images/logo/bright-support-logo.png')}
-                  alt="Bright Support Logo"
-                  width={200}
-                  height={120}
-                  className="h-20 w-auto object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-xl p-1.5 shadow-lg">
-                <img
-                  src={getAssetPath('/images/ndis-badge.jpg')}
-                  alt="NDIS Registered Provider"
-                  width={120}
-                  height={120}
-                  className="h-14 w-auto object-contain"
-                />
-              </div>
+            <div className="bg-white rounded-2xl p-2 shadow-xl flex items-center justify-center w-max">
+              <img
+                src={getAssetPath('/images/logo/bright-support-logo.png')}
+                alt="Bright Support Logo"
+                width={200}
+                height={200}
+                className="h-20 w-auto object-contain transform scale-105"
+              />
             </div>
 
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">

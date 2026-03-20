@@ -104,6 +104,22 @@
             "transport": {
                 "title": "المساعدة في السفر والنقل",
                 "description": "نقل آمن وموثوق إلى المواعيد والأنشطة والمشاركة المجتمعية مع عمال دعم مدربين."
+            },
+            "hydrotherapy": {
+                "title": "العلاج المائي وجلسات المسبح",
+                "description": "علاج مائي مصمم لتحسين الحركة وإدارة الألم ودعم إعادة التأهيل في بيئة آمنة ودافئة."
+            },
+            "personalTraining": {
+                "title": "جلسات التدريب الشخصي",
+                "description": "برامج لياقة مخصصة تم إنشاؤها بواسطة محترفين لبناء القوة وتحسين الصحة وتعزيز الرفاهية العامة."
+            },
+            "behaviourSupport": {
+                "title": "دعم السلوك الإيجابي",
+                "description": "استراتيجيات قائمة على الأدلة ورعاية رحيمة للمساعدة في فهم السلوك وتقليل التحديات وبناء مهارات التكيف الإيجابية."
+            },
+            "supportCoordination": {
+                "title": "تنسيق الدعم",
+                "description": "إرشاد الخبراء لمساعدتك على فهم خطة NDIS الخاصة بك والتواصل مع مقدمي الخدمة المناسبين وتحقيق أهدافك الشخصية."
             }
         }
     },
@@ -1052,6 +1068,68 @@
                     {
                         "prompt": "Housemates enjoying meal together in shared living space, friendship and community, independence",
                         "caption": "المجتمع والصداقة"
+                    }
+                ]
+            }
+        },
+        "supportCoordination": {
+            "title": "تنسيق الدعم",
+            "subtitle": "التنقل في خطة NDIS الخاصة بك معاً",
+            "description": "تساعدك خدمات تنسيق الدعم لدينا على تحقيق أقصى استفادة من تمويل NDIS الخاص بك. نساعدك على فهم خطتك وبناء قدراتك والتواصل مع مقدمي الخدمة المناسبين لتحقيق أهدافك.",
+            "services": [
+                "فهم خطة NDIS الخاصة بك وتفاصيل التمويل",
+                "العثور على مقدمي الخدمة والتواصل معهم",
+                "التفاوض على اتفاقيات الخدمة والتسعير",
+                "تنسيق الدعم والخدمات المتعددة",
+                "بناء خطتك للمراجعات المستقبلية",
+                "حل نقاط الأزمات وإدارة التحديات",
+                "تطوير المهارات لتوجيه دعمك الخاص",
+                "استكشاف خيارات السكن والإقامة",
+                "التحضير لاجتماعات مراجعة NDIS",
+                "مراقبة ميزانية الدعم والإنفاق"
+            ],
+            "features": {
+                "expert": {
+                    "title": "إرشاد الخبراء",
+                    "description": "خبرة واسعة في نظام NDIS وقوائم مقدمي الخدمة."
+                },
+                "independent": {
+                    "title": "نصيحة مستقلة",
+                    "description": "توصيات غير متحيزة تركز فقط على أهدافك ونتائجك."
+                },
+                "capacity": {
+                    "title": "بناء القدرات",
+                    "description": "تمكينك من إدارة خطتك الخاصة بمرور الوقت بإستراتيجيات بناء المهارات."
+                },
+                "network": {
+                    "title": "شبكة محلية قوية",
+                    "description": "علاقات راسخة مع مقدمي الخدمة المحليين الموثوق بهم لمطابقتك مع الرعاية الأفضل."
+                }
+            },
+            "faq": [
+                {
+                    "question": "كيف يمكنني العثور على مقدمي الخدمة المناسبين؟",
+                    "answer": "يستخدم منسقونا شبكتهم الواسعة ومعرفتهم بمقدمي الخدمة المحليين لمطابقتك مع الخدمات التي تلبي احتياجاتك وتفضيلاتك."
+                },
+                {
+                    "question": "هل يقرر منسق الدعم من هم مقدمو الخدمة؟",
+                    "answer": "لا. نحن نقدم لك الخيارات والتوصيات والمعلومات لمساعدتك في اتخاذ قرارات مدروسة. يمكنك دائماً اتخاذ القرار النهائي بناءً على اختيارك."
+                }
+            ],
+            "images": {
+                "hero": "Professional support coordinator reviewing NDIS plan with a participant and their family at home, open communication, supportive environment, natural lighting",
+                "gallery": [
+                    {
+                        "prompt": "Support coordinator assisting participant on a laptop to find appropriate community services, encouraging interaction, organized office space",
+                        "caption": "توصيلك بمقدمي الخدمة المناسبين"
+                    },
+                    {
+                        "prompt": "Participant confidently engaging in a new community activity, smiling, empowerment and choice, outdoor setting",
+                        "caption": "تمكين استقلاليتك"
+                    },
+                    {
+                        "prompt": "Support coordinator meeting with participant's support network to discuss care strategies, collaboration, professional guidance",
+                        "caption": "تخطيط الأهداف بشكل تعاوني"
                     }
                 ]
             }

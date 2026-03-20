@@ -104,6 +104,22 @@
             "transport": {
                 "title": "Hỗ trợ đi lại & Vận chuyển",
                 "description": "Vận chuyển an toàn và đáng tin cậy đến các cuộc hẹn, hoạt động và tham gia cộng đồng với nhân viên hỗ trợ được đào tạo."
+            },
+            "hydrotherapy": {
+                "title": "Thủy trị liệu & Buổi tập hồ bơi",
+                "description": "Thủy trị liệu được thiết kế để cải thiện khả năng vận động, kiểm soát cơn đau và hỗ trợ phục hồi sức khỏe trong môi trường an toàn, ấm áp."
+            },
+            "personalTraining": {
+                "title": "Buổi huấn luyện cá nhân",
+                "description": "Các chương trình thể dục tùy chỉnh được tạo bởi các chuyên gia để xây dựng sức mạnh, cải thiện sức khỏe và tăng cường sức khỏe tổng thể."
+            },
+            "behaviourSupport": {
+                "title": "Hỗ trợ hành vi tích cực",
+                "description": "Các chiến lược dựa trên bằng chứng và sự chăm sóc tận tâm để giúp hiểu nguyên nhân hành vi, giảm thiểu thách thức và xây dựng kỹ năng đối phó tích cực."
+            },
+            "supportCoordination": {
+                "title": "Điều phối hỗ trợ",
+                "description": "Hướng dẫn chuyên môn để giúp bạn hiểu kế hoạch NDIS của mình, kết nối với các nhà cung cấp dịch vụ phù hợp và đạt được mục tiêu cá nhân."
             }
         }
     },
@@ -1052,6 +1068,72 @@
                     {
                         "prompt": "Housemates enjoying meal together in shared living space, friendship and community, independence",
                         "caption": "Cộng đồng & tình bạn"
+                    }
+                ]
+            }
+        },
+        "supportCoordination": {
+            "title": "Điều phối hỗ trợ",
+            "subtitle": "Cùng nhau điều hướng Kế hoạch NDIS của bạn",
+            "description": "Dịch vụ Điều phối Hỗ trợ của chúng tôi giúp bạn tận dụng tối đa nguồn tài trợ NDIS. Chúng tôi giúp bạn hiểu kế hoạch của mình, xây dựng năng lực và kết nối với các nhà cung cấp phù hợp để đạt được mục tiêu.",
+            "services": [
+                "Hiểu Kế hoạch NDIS và chi tiết tài trợ của bạn",
+                "Tìm kiếm và kết nối với các nhà cung cấp dịch vụ",
+                "Đàm phán thỏa thuận dịch vụ và định giá",
+                "Điều phối hỗ trợ và nhiều dịch vụ khác nhau",
+                "Xây dựng kế hoạch cho các lần đánh giá trong tương lai",
+                "Giải quyết các điểm khủng hoảng và quản lý thách thức",
+                "Phát triển kỹ năng để tự định hướng hỗ trợ của bạn",
+                "Khám phá các lựa chọn nhà ở và chỗ ở",
+                "Chuẩn bị cho các cuộc họp đánh giá NDIS",
+                "Theo dõi ngân sách hỗ trợ và chi tiêu"
+            ],
+            "features": {
+                "expert": {
+                    "title": "Hướng dẫn chuyên môn",
+                    "description": "Kiến thức sâu rộng về hệ thống NDIS và danh sách nhà cung cấp."
+                },
+                "independent": {
+                    "title": "Tư vấn độc lập",
+                    "description": "Các khuyến nghị khách quan chỉ tập trung vào mục tiêu và kết quả của bạn."
+                },
+                "capacity": {
+                    "title": "Xây dựng năng lực",
+                    "description": "Trao quyền cho bạn tự quản lý kế hoạch của mình theo thời gian bằng các chiến lược xây dựng kỹ năng."
+                },
+                "network": {
+                    "title": "Mạng lưới địa phương mạnh mẽ",
+                    "description": "Mối quan hệ lâu dài với các nhà cung cấp đáng tin cậy tại địa phương để kết nối bạn với sự chăm sóc tốt nhất."
+                }
+            },
+            "faq": [
+                {
+                    "question": "Sự khác biệt giữa Điều phối Hỗ trợ và Điều phối Hỗ trợ Chuyên gia là gì?",
+                    "answer": "Điều phối Hỗ trợ giúp điều hướng các can thiệp phức tạp chuyên biệt, nơi có rủi ro cao và tình hình phức tạp hơn."
+                },
+                {
+                    "question": "Làm thế nào tôi có thể tìm được nhà cung cấp dịch vụ phù hợp?",
+                    "answer": "Điều phối viên của chúng tôi sử dụng mạng lưới rộng lớn và kiến thức về các nhà cung cấp địa phương để kết nối bạn với các dịch vụ đáp ứng nhu cầu và sở thích của bạn."
+                },
+                {
+                    "question": "Điều phối viên Hỗ trợ có quyết định nhà cung cấp dịch vụ là ai không?",
+                    "answer": "Không. Chúng tôi cung cấp cho bạn các lựa chọn, đề xuất và thông tin để giúp bạn đưa ra quyết định sáng suốt. Bạn luôn đưa ra quyết định cuối cùng dựa trên sự lựa chọn của mình."
+                }
+            ],
+            "images": {
+                "hero": "Professional support coordinator reviewing NDIS plan with a participant and their family at home, open communication, supportive environment, natural lighting",
+                "gallery": [
+                    {
+                        "prompt": "Support coordinator assisting participant on a laptop to find appropriate community services, encouraging interaction, organized office space",
+                        "caption": "Kết nối với đúng nhà cung cấp"
+                    },
+                    {
+                        "prompt": "Participant confidently engaging in a new community activity, smiling, empowerment and choice, outdoor setting",
+                        "caption": "Trao quyền cho sự độc lập của bạn"
+                    },
+                    {
+                        "prompt": "Support coordinator meeting with participant's support network to discuss care strategies, collaboration, professional guidance",
+                        "caption": "Lập kế hoạch mục tiêu hợp tác"
                     }
                 ]
             }

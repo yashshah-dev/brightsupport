@@ -86,7 +86,7 @@ Use these exact values for `CTA_Type` column:
 - "Free Consultation" → Links to /contact-us
 - "Download PDF" → Lead magnet download
 - "Book Assessment" → Service-specific booking
-- "Call Now" → Phone CTA (03) 5831 5786
+- "Call Now" → Phone CTA 1800 407 508
 
 ### 1.5 Get Sheet ID
 
@@ -382,7 +382,7 @@ For each article, verify:
 **Local SEO**
 - [ ] "Shepparton" mentioned 3-5 times naturally
 - [ ] "Victoria" or "Greater Shepparton" mentioned 1-2 times
-- [ ] Contact info: 279 Wyndham St, (03) 5831 5786
+- [ ] Contact info: 279 Wyndham St, 1800 407 508
 - [ ] Australian spelling: realise, centre, programme
 
 **Content Quality**

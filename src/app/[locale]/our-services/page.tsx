@@ -5,7 +5,7 @@ import Link from 'next/link';
 import ServiceCard from '@/components/ServiceCard';
 import {
     Home, Building2, Stethoscope, Users, Activity, Dumbbell,
-    Droplets, Brain, Heart, Car, Sparkles, ShieldCheck
+    Droplets, Brain, Heart, Car, Sparkles, ShieldCheck, ClipboardList
 } from 'lucide-react';
 
 export default function OurServicesPage() {
@@ -14,6 +14,20 @@ export default function OurServicesPage() {
     const locale = useLocale();
 
     const services = [
+        {
+            icon: Building2,
+            titleKey: 'independentLiving.title',
+            descriptionKey: 'independentLiving.subtitle',
+            link: '/services/independent-living-accommodation-support',
+            imageSrc: '/images/services/independent-living.webp',
+        },
+        {
+            icon: ClipboardList,
+            titleKey: 'supportCoordination.title',
+            descriptionKey: 'supportCoordination.subtitle',
+            link: '/services/support-coordination',
+            imageSrc: '/images/services/support-coordination.webp',
+        },
         {
             icon: Home,
             titleKey: 'dailyLiving.title',
@@ -42,20 +56,20 @@ export default function OurServicesPage() {
             link: '/services/community-participation-group-programs',
             imageSrc: '/images/services/community-participation.webp',
         },
-        {
-            icon: Heart,
-            titleKey: 'companionship.title',
-            descriptionKey: 'companionship.subtitle',
-            link: '/services/companionship',
-            imageSrc: '/images/services/companionship.webp',
-        },
-        {
-            icon: Car,
-            titleKey: 'transport.title',
-            descriptionKey: 'transport.subtitle',
-            link: '/services/travel-transport-assistance',
-            imageSrc: '/images/services/transport.webp',
-        },
+        // {
+        //     icon: Heart,
+        //     titleKey: 'companionship.title',
+        //     descriptionKey: 'companionship.subtitle',
+        //     link: '/services/companionship',
+        //     imageSrc: '/images/services/companionship.webp',
+        // },
+        // {
+        //     icon: Car,
+        //     titleKey: 'transport.title',
+        //     descriptionKey: 'transport.subtitle',
+        //     link: '/services/travel-transport-assistance',
+        //     imageSrc: '/images/services/transport.webp',
+        // },
         {
             icon: Droplets,
             titleKey: 'hydrotherapy.title',
@@ -78,18 +92,12 @@ export default function OurServicesPage() {
             imageSrc: '/images/services/positive-behaviour-support.webp',
 
         },
-        {
-            icon: Sparkles,
-            titleKey: 'cleaning.title',
-            descriptionKey: 'cleaning.subtitle',
-            link: '/services/professional-cleaning',
-        },
-        {
-            icon: Building2,
-            titleKey: 'independentLiving.title',
-            descriptionKey: 'independentLiving.subtitle',
-            link: '/services/independent-living-accommodation-support',
-        },
+        // {
+        //     icon: Sparkles,
+        //     titleKey: 'cleaning.title',
+        //     descriptionKey: 'cleaning.subtitle',
+        //     link: '/services/professional-cleaning',
+        // },
     ];
 
     return (
@@ -118,6 +126,7 @@ export default function OurServicesPage() {
                                     href={`/${locale}${service.link}`}
                                     icon={<service.icon size={64} />}
                                     imageSrc={service.imageSrc}
+                                    disableResponsive={service.titleKey === 'supportCoordination.title' || service.titleKey === 'independentLiving.title'}
                                 />
                             </div>
                         ))}

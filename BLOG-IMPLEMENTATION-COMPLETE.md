@@ -105,7 +105,7 @@ Success Notification
 2. **Local SEO Requirements**
    - Shepparton mentions: 3-5 times minimum
    - Victoria/Greater Shepparton: 1-2 times
-   - Contact info: 279 Wyndham St, (03) 5831 5786
+   - Contact info: 279 Wyndham St, 1800 407 508
    - Australian spelling: realise, centre, programme
 
 3. **Content Quality Gates**
