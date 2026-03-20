@@ -1089,21 +1089,21 @@
                 "مراقبة ميزانية الدعم والإنفاق"
             ],
             "features": {
-                "expert": {
-                    "title": "إرشاد الخبراء",
-                    "description": "خبرة واسعة في نظام NDIS وقوائم مقدمي الخدمة."
+                "connection": {
+                    "title": "Support Connection",
+                    "description": "Short-term assistance to understand your plan."
                 },
-                "independent": {
-                    "title": "نصيحة مستقلة",
-                    "description": "توصيات غير متحيزة تركز فقط على أهدافك ونتائجك."
+                "coordination": {
+                    "title": "Coordination of Supports",
+                    "description": "Ongoing support to build your skills."
+                },
+                "specialist": {
+                    "title": "Specialist Support Coordination",
+                    "description": "Higher-level support for complex situations."
                 },
                 "capacity": {
                     "title": "بناء القدرات",
                     "description": "تمكينك من إدارة خطتك الخاصة بمرور الوقت بإستراتيجيات بناء المهارات."
-                },
-                "network": {
-                    "title": "شبكة محلية قوية",
-                    "description": "علاقات راسخة مع مقدمي الخدمة المحليين الموثوق بهم لمطابقتك مع الرعاية الأفضل."
                 }
             },
             "faq": [

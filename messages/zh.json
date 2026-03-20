@@ -1089,21 +1089,21 @@
                 "监控支持预算和支出"
             ],
             "features": {
-                "expert": {
-                    "title": "专家指导",
-                    "description": "对NDIS系统和提供商名录的广泛了解。"
+                "connection": {
+                    "title": "Support Connection",
+                    "description": "Short-term assistance to understand your plan."
                 },
-                "independent": {
-                    "title": "独立建议",
-                    "description": "无偏见的推荐，只关注您的目标和结果。"
+                "coordination": {
+                    "title": "Coordination of Supports",
+                    "description": "Ongoing support to build your skills."
+                },
+                "specialist": {
+                    "title": "Specialist Support Coordination",
+                    "description": "Higher-level support for complex situations."
                 },
                 "capacity": {
                     "title": "能力建设",
                     "description": "通过技能建设策略，使您能够随着时间的推移自行管理您的计划。"
-                },
-                "network": {
-                    "title": "强大的本地网络",
-                    "description": "与值得信赖的本地提供商建立的关系，为您匹配最佳护理。"
                 }
             },
             "faq": [

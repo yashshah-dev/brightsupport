@@ -1089,21 +1089,21 @@
                 "Theo dõi ngân sách hỗ trợ và chi tiêu"
             ],
             "features": {
-                "expert": {
-                    "title": "Hướng dẫn chuyên môn",
-                    "description": "Kiến thức sâu rộng về hệ thống NDIS và danh sách nhà cung cấp."
+                "connection": {
+                    "title": "Support Connection",
+                    "description": "Short-term assistance to understand your plan."
                 },
-                "independent": {
-                    "title": "Tư vấn độc lập",
-                    "description": "Các khuyến nghị khách quan chỉ tập trung vào mục tiêu và kết quả của bạn."
+                "coordination": {
+                    "title": "Coordination of Supports",
+                    "description": "Ongoing support to build your skills."
+                },
+                "specialist": {
+                    "title": "Specialist Support Coordination",
+                    "description": "Higher-level support for complex situations."
                 },
                 "capacity": {
                     "title": "Xây dựng năng lực",
                     "description": "Trao quyền cho bạn tự quản lý kế hoạch của mình theo thời gian bằng các chiến lược xây dựng kỹ năng."
-                },
-                "network": {
-                    "title": "Mạng lưới địa phương mạnh mẽ",
-                    "description": "Mối quan hệ lâu dài với các nhà cung cấp đáng tin cậy tại địa phương để kết nối bạn với sự chăm sóc tốt nhất."
                 }
             },
             "faq": [
