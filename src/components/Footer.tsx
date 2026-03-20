@@ -5,6 +5,7 @@ import { getAssetPath } from '@/lib/utils';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { trackPhoneCall, trackEmailClick } from '@/lib/analytics';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -12,6 +13,15 @@ export default function Footer() {
   const t = useTranslations('Footer');
   const tHeader = useTranslations('Header');
   const tContact = useTranslations('ContactUs');
+
+  // Helper functions for tracking
+  const handlePhoneClick = () => {
+    trackPhoneCall(tHeader('phone'));
+  };
+
+  const handleEmailClick = () => {
+    trackEmailClick(tHeader('email'));
+  };
 
   const exploreLinks = [
     { name: tHeader('nav.home'), href: '/' },
@@ -138,13 +148,21 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href={`tel:${tHeader('phone').replace(/\s/g, '')}`} className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#05A5C6] transition-colors group">
+                <a 
+                  href={`tel:${tHeader('phone').replace(/\s/g, '')}`} 
+                  onClick={handlePhoneClick}
+                  className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#05A5C6] transition-colors group"
+                >
                   <Phone size={15} className="text-[#05A5C6] shrink-0" />
                   <span>{tHeader('phone')}</span>
                 </a>
               </li>
               <li>
-                <a href={`mailto:${tHeader('email')}`} className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#05A5C6] transition-colors group">
+                <a 
+                  href={`mailto:${tHeader('email')}`}
+                  onClick={handleEmailClick}
+                  className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#05A5C6] transition-colors group"
+                >
                   <Mail size={15} className="text-[#05A5C6] shrink-0" />
                   <span className="break-all">{tHeader('email')}</span>
                 </a>

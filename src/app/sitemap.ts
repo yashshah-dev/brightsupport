@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { getBlogPosts } from '@/lib/blog';
 
 export const dynamic = "force-static";
 
@@ -24,6 +25,7 @@ const mainPages = [
   '',          // homepage
   '/about-us',
   '/our-services',
+  '/blog',     // Added blog listing page
   '/contact-us',
   '/career',
 ];
@@ -50,6 +52,7 @@ function generateAlternates(path: string) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
   const now = new Date().toISOString();
+  const blogPosts = getBlogPosts();
 
   // Canonical non-locale main pages (match what's in each layout's canonical tag)
   for (const page of mainPages) {
@@ -71,6 +74,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: page === '' ? 'weekly' : 'monthly',
         priority: page === '' ? 0.9 : 0.7,
         alternates: generateAlternates(page),
+      });
+    }
+  }
+
+  // Blog Post Pages (Canonical & Multilingual)
+  for (const post of blogPosts) {
+    const blogPath = `/blog/${post.slug}`;
+    const pubDate = post.publishedAt || now;
+    
+    // Canonical URL for blog posts
+    entries.push({
+      url: `${BASE_URL}${blogPath}/`,
+      lastModified: post.updatedAt || pubDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: generateAlternates(blogPath),
+      ...(post.coverImage && {
+        images: [`${BASE_URL}${post.coverImage}`],
+      }),
+    });
+
+    // Multilingual URLs for blog posts
+    for (const locale of locales) {
+      entries.push({
+        url: `${BASE_URL}/${locale}${blogPath}/`,
+        lastModified: post.updatedAt || pubDate,
+        changeFrequency: 'monthly',
+        priority: 0.6,
+        alternates: generateAlternates(blogPath),
       });
     }
   }

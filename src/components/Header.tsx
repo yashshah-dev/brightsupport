@@ -8,11 +8,21 @@ import { usePathname } from 'next/navigation';
 import { Phone, Mail, Clock, Menu, X, ChevronRight } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 import { locales, type Locale } from '@/i18n/config';
+import { trackPhoneCall, trackEmailClick } from '@/lib/analytics';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  // Helper functions for tracking
+  const handlePhoneClick = () => {
+    trackPhoneCall('1800 407 508');
+  };
+
+  const handleEmailClick = () => {
+    trackEmailClick('care@brightsupport.com.au');
+  };
 
   // Detect current locale from pathname
   const currentLocale = locales.find(locale =>
@@ -76,6 +86,7 @@ export default function Header() {
           {/* CTA - Simplified */}
           <a
             href="tel:1800407508"
+            onClick={handlePhoneClick}
             className="flex items-center gap-2 bg-[#1E4D8C] hover:bg-[#0F2D4D] text-white px-5 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg"
           >
             <Phone size={18} />
@@ -99,6 +110,7 @@ export default function Header() {
             <div className="hidden md:flex items-center gap-3">
               <a
                 href="tel:1800407508"
+                onClick={handlePhoneClick}
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
               >
                 <Phone size={14} className="text-[#7DD3FC]" />
@@ -106,6 +118,7 @@ export default function Header() {
               </a>
               <a
                 href="mailto:care@brightsupport.com.au"
+                onClick={handleEmailClick}
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
               >
                 <Mail size={14} className="text-[#7DD3FC]" />

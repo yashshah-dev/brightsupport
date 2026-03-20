@@ -4,22 +4,8 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown, Search, Filter, TrendingUp } from 'lucide-react';
-
-interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  content?: string;
-  category: string;
-  tags: string[];
-  featuredImage?: string;
-  coverImage?: string;
-  readingTime: number | string;
-  featured?: boolean;
-  seoScore?: number;
-  wordCount?: number;
-  publishedAt?: string;
-}
+import { trackButtonClick } from '@/lib/analytics';
+import { BlogPost } from '@/lib/blog';
 
 interface BlogHubProps {
   locale?: string;
@@ -389,12 +375,14 @@ export default function BlogHub({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact-us"
+              onClick={() => trackButtonClick('Blog Hub CTA - Book Consultation')}
               className="bg-white text-[#1E4D8C] px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-lg"
             >
               Book Free Consultation
             </Link>
             <Link
               href="/our-services"
+              onClick={() => trackButtonClick('Blog Hub CTA - Explore Services')}
               className="bg-[#DC3545] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#E74C5C] transition-colors border-2 border-white"
             >
               Explore Our Services
