@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
     const BASE_URL = 'https://www.brightsupport.com.au';
-    const canonical = `${BASE_URL}/about-us/`;
+    const pageUrl = `${BASE_URL}/about-us/`;
 
     return {
         title: 'About Us - Our Story & Mission',
@@ -12,8 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description: 'Meet our experienced team providing NDIS disability & support services in Shepparton & Mooroopna.',
         },
         alternates: {
-            canonical,
-            languages: { en: canonical, 'x-default': canonical },
+            languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };
 }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
     const BASE_URL = 'https://www.brightsupport.com.au';
-    const canonical = `${BASE_URL}/contact-us/`;
+    const pageUrl = `${BASE_URL}/contact-us/`;
 
     return {
         title: 'Contact Us - NDIS Support Services Shepparton',
@@ -12,8 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description: 'Get in touch with Bright Support for NDIS services. Call 1800 407 508 or visit our Shepparton office.',
         },
         alternates: {
-            canonical,
-            languages: { en: canonical, 'x-default': canonical },
+            languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };
 }

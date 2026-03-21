@@ -44,9 +44,6 @@ export const metadata: Metadata = {
     description: 'Trusted NDIS disability & support services provider. Daily living, nursing, physiotherapy & more.',
     images: ['/images/og-image.png'],
   },
-  alternates: {
-    canonical: 'https://www.brightsupport.com.au',
-  },
   metadataBase: new URL('https://www.brightsupport.com.au'),
 };
 

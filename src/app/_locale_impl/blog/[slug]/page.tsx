@@ -34,22 +34,21 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
-  const canonical = `${BASE_URL}/blog/${slug}/`;
+  const pageUrl = `${BASE_URL}/blog/${slug}/`;
 
   return {
     title: `${post.title} | Bright Support Shepparton`,
     description: post.metaDescription || post.excerpt,
     keywords: post.keywords,
     alternates: {
-      canonical,
-      languages: { en: canonical, 'x-default': canonical },
+      languages: { en: pageUrl, 'x-default': pageUrl },
     },
     openGraph: {
       title: post.title,
       description: post.metaDescription || post.excerpt,
       images: post.featuredImage ? [post.featuredImage] : [],
       type: 'article',
-      url: canonical,
+      url: pageUrl,
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
     },

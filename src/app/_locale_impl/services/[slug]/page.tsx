@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 
     const BASE_URL = 'https://www.brightsupport.com.au';
-    const canonical = `${BASE_URL}/${slug}/`;
+    const pageUrl = `${BASE_URL}/${slug}/`;
 
     return {
         title: meta.title,
@@ -75,8 +75,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: meta.description,
         },
         alternates: {
-            canonical,
-            languages: { en: canonical, 'x-default': canonical },
+            languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };
 }

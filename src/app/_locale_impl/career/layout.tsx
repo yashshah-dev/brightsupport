@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
     const BASE_URL = 'https://www.brightsupport.com.au';
-    const canonical = `${BASE_URL}/career/`;
+    const pageUrl = `${BASE_URL}/career/`;
 
     return {
         title: 'Careers - Join Our Disability Support Team',
@@ -12,8 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description: 'Build a rewarding career in disability support services. Join our growing team in Shepparton.',
         },
         alternates: {
-            canonical,
-            languages: { en: canonical, 'x-default': canonical },
+            languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };
 }

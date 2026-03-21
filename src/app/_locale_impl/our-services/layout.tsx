@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
     const BASE_URL = 'https://www.brightsupport.com.au';
-    const canonical = `${BASE_URL}/our-services/`;
+    const pageUrl = `${BASE_URL}/our-services/`;
 
     return {
         title: 'Our NDIS Services - Disability Support & Care',
@@ -12,8 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description: 'Comprehensive NDIS disability support services including daily living, nursing, physiotherapy, community programs, and more.',
         },
         alternates: {
-            canonical,
-            languages: { en: canonical, 'x-default': canonical },
+            languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };
 }
