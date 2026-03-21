@@ -179,6 +179,9 @@ To use a custom domain (e.g., brightsupport.com.au):
 Create `.env.local` for local development:
 ```env
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-2EXWNERWT2
+NEXT_PUBLIC_GOOGLE_ADS_ID=AW-17576617769
+NEXT_PUBLIC_CLARITY_ID=your-clarity-id
 ```
 
 ## 📊 SEO Features

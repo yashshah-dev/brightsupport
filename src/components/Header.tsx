@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Phone, Mail, Clock, Menu, X, ChevronRight } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
-import { locales, type Locale } from '@/i18n/config';
 import { trackPhoneCall, trackEmailClick } from '@/lib/analytics';
 
 export default function Header() {
@@ -24,18 +23,7 @@ export default function Header() {
     trackEmailClick('care@brightsupport.com.au');
   };
 
-  // Detect current locale from pathname
-  const currentLocale = locales.find(locale =>
-    pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
-
-  // Helper function to get locale-aware href
-  const getLocalizedHref = (path: string) => {
-    if (currentLocale) {
-      return `/${currentLocale}${path}`;
-    }
-    return path;
-  };
+  const getLocalizedHref = (path: string) => path;
 
   // Add scroll effect for header
   useEffect(() => {
@@ -47,7 +35,7 @@ export default function Header() {
   }, []);
 
   const navigation = [
-    { name: 'Home', href: currentLocale ? `/${currentLocale}` : '/' },
+    { name: 'Home', href: '/' },
     { name: 'About Us', href: getLocalizedHref('/about-us') },
     { name: 'Our Services', href: getLocalizedHref('/our-services') },
     { name: 'Blog', href: getLocalizedHref('/blog') },
@@ -144,7 +132,7 @@ export default function Header() {
         <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'py-3' : 'py-4'
           }`}>
           {/* Logo */}
-          <Link href={currentLocale ? `/${currentLocale}` : '/'} className="flex items-center gap-3 group relative">
+          <Link href="/" className="flex items-center gap-3 group relative">
             <div className="relative">
               <img
                 src={getAssetPath('/images/logo-new.jpg')}

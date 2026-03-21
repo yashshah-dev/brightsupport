@@ -1,6 +1,5 @@
-import { redirect } from 'next/navigation';
+import OurServicesPage from '@/app/_locale_impl/our-services/page';
 
-// Redirect non-locale /our-services to /en/our-services for consistency
-export default function OurServicesRedirect() {
-  redirect('/en/our-services');
+export default function OurServices() {
+  return <OurServicesPage />;
 }

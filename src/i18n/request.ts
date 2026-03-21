@@ -1,17 +1,10 @@
 import { getRequestConfig } from 'next-intl/server';
-import { locales, type Locale } from './config';
+import enMessages from '../../messages/en.json';
 
-export default getRequestConfig(async ({ requestLocale }) => {
-    let locale = await requestLocale;
-
-    // Validate that the incoming locale is valid
-    if (!locale || !locales.includes(locale as Locale)) {
-        locale = 'en';
-    }
-
+export default getRequestConfig(async () => {
     return {
-        locale,
-        messages: (await import(`../../messages/${locale}.json`)).default,
+        locale: 'en',
+        messages: enMessages,
         onError(error) {
             if (error.code === 'MISSING_MESSAGE') {
                 return;
@@ -21,7 +14,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
         getMessageFallback({ namespace, key, error }) {
             const path = [namespace, key].filter((part) => part != null).join('.');
             if (error.code === 'MISSING_MESSAGE') {
-                return ''; // Return empty string for missing translations instead of key
+                return '';
             }
             return 'FIXME: ' + path;
         }

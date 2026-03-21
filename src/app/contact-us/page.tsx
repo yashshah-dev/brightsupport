@@ -1,6 +1,5 @@
-import { redirect } from 'next/navigation';
+import ContactUsPage from '@/app/_locale_impl/contact-us/page';
 
-// Redirect non-locale /contact-us to /en/contact-us for consistency
-export default function ContactUsRedirect() {
-  redirect('/en/contact-us');
+export default function ContactUs() {
+  return <ContactUsPage />;
 }

@@ -1,6 +1,5 @@
-import { redirect } from 'next/navigation';
+import CareerPage from '@/app/_locale_impl/career/page';
 
-// Redirect non-locale /career to /en/career for consistency
-export default function CareerRedirect() {
-  redirect('/en/career');
+export default function Career() {
+  return <CareerPage />;
 }

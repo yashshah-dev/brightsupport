@@ -5,21 +5,23 @@ export const dynamic = "force-static";
 
 const BASE_URL = 'https://www.brightsupport.com.au';
 
-const locales = ['en', 'zh', 'ar', 'vi'] as const;
+// Mapping of internal slugs to live site URLs
+const serviceUrlMapping: Record<string, string> = {
+  'daily-living-in-home-support': '/dailylivingin-homesupport',
+  'community-nursing-complex-care': '/communitynursingandcomplexcare',
+  'physiotherapy-services': '/physiotherapyservices',
+  'community-participation-group-programs': '/communityparticipationgroupprograms',
+  'companionship': '/companion-care-services',
+  'travel-transport-assistance': '/ndis-transport-service-provider',
+  'hydrotherapy-pool-session': '/ndis-hydrotherapy-services',
+  'personal-training-sessions': '/ndispersonaltrainingsessions',
+  'positive-behaviour-support': '/positivebehavioursupport',
+  'professional-cleaning': '/ndis-cleaning-services',
+  'independent-living-accommodation-support': '/independent-living-accommodation-support',
+  'support-coordination': '/ndis-support-coordination',
+};
 
-const serviceSlugs = [
-  'daily-living-in-home-support',
-  'community-nursing-complex-care',
-  'physiotherapy-services',
-  'community-participation-group-programs',
-  'companionship',
-  'travel-transport-assistance',
-  'hydrotherapy-pool-session',
-  'personal-training-sessions',
-  'positive-behaviour-support',
-  'professional-cleaning',
-  'independent-living-accommodation-support',
-];
+const serviceSlugs = Object.keys(serviceUrlMapping);
 
 const mainPages = [
   '',          // homepage
@@ -28,6 +30,10 @@ const mainPages = [
   '/blog',     // Added blog listing page
   '/contact-us',
   '/career',
+  '/privacy-policy',
+  '/thank-you',
+  '/our-location',
+  '/accommodation-support-services',
 ];
 
 // Image mapping for service pages (for image sitemap)
@@ -38,14 +44,19 @@ const serviceImages: Record<string, string[]> = {
   'community-participation-group-programs': ['/images/services/community-participation.webp'],
   'companionship': ['/images/services/companionship.webp'],
   'travel-transport-assistance': ['/images/services/transport.webp'],
+  'hydrotherapy-pool-session': ['/images/services/hydrotherapy.webp'],
+  'personal-training-sessions': ['/images/services/personal-training.webp'],
+  'positive-behaviour-support': ['/images/services/positive-behaviour-support.webp'],
+  'professional-cleaning': ['/images/services/professional-cleaning.webp'],
+  'independent-living-accommodation-support': ['/images/services/independent-living.webp'],
+  'support-coordination': ['/images/services/support-coordination.webp'],
 };
 
 function generateAlternates(path: string) {
-  const languages: Record<string, string> = {};
-  for (const locale of locales) {
-    languages[locale] = `${BASE_URL}/${locale}${path}`;
-  }
-  languages['x-default'] = `${BASE_URL}/en${path}`;
+  const languages: Record<string, string> = {
+    en: `${BASE_URL}${path}`,
+    'x-default': `${BASE_URL}${path}`,
+  };
   return { languages };
 }
 
@@ -65,20 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Locale-prefixed main pages
-  for (const locale of locales) {
-    for (const page of mainPages) {
-      entries.push({
-        url: `${BASE_URL}/${locale}${page}`,
-        lastModified: now,
-        changeFrequency: page === '' ? 'weekly' : 'monthly',
-        priority: page === '' ? 0.9 : 0.7,
-        alternates: generateAlternates(page),
-      });
-    }
-  }
-
-  // Blog Post Pages (Canonical & Multilingual)
+  // Blog Post Pages
   for (const post of blogPosts) {
     const blogPath = `/blog/${post.slug}`;
     const pubDate = post.publishedAt || now;
@@ -95,48 +93,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     });
 
-    // Multilingual URLs for blog posts
-    for (const locale of locales) {
-      entries.push({
-        url: `${BASE_URL}/${locale}${blogPath}/`,
-        lastModified: post.updatedAt || pubDate,
-        changeFrequency: 'monthly',
-        priority: 0.6,
-        alternates: generateAlternates(blogPath),
-      });
-    }
   }
 
   // Canonical service pages (match the canonical tags set in service page metadata)
   for (const slug of serviceSlugs) {
     const images = serviceImages[slug];
+    const liveUrl = serviceUrlMapping[slug];
     entries.push({
-      url: `${BASE_URL}/services/${slug}/`,
+      url: `${BASE_URL}${liveUrl}/`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
-      alternates: generateAlternates(`/services/${slug}`),
+      alternates: generateAlternates(liveUrl),
       ...(images && {
         images: images.map(img => `${BASE_URL}${img}`),
       }),
     });
-  }
-
-  // Locale-prefixed service pages
-  for (const locale of locales) {
-    for (const slug of serviceSlugs) {
-      const images = serviceImages[slug];
-      entries.push({
-        url: `${BASE_URL}/${locale}/services/${slug}`,
-        lastModified: now,
-        changeFrequency: 'monthly' as const,
-        priority: 0.7,
-        alternates: generateAlternates(`/services/${slug}`),
-        ...(images && {
-          images: images.map(img => `${BASE_URL}${img}`),
-        }),
-      });
-    }
   }
 
   // Static pages
@@ -148,7 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   entries.push({
-    url: `${BASE_URL}/en/landing/ndis-support`,
+    url: `${BASE_URL}/landing/ndis-support`,
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.6,

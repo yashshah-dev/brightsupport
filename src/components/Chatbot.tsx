@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, ChevronRight, Send } from 'lucide-react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 interface Message {
@@ -20,7 +20,6 @@ interface Option {
 
 export default function Chatbot() {
     // We can add translations later, hardcoding for speed/demo first
-    const locale = useLocale();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
         {
@@ -64,8 +63,8 @@ export default function Chatbot() {
                         type: 'bot',
                         text: 'We offer a wide range of disability and support services. Any specific area?',
                         options: [
-                            { label: 'Community Nursing', action: 'link', payload: '/services/community-nursing-complex-care' },
-                            { label: 'Companionship', action: 'link', payload: '/services/companionship' },
+                            { label: 'Community Nursing', action: 'link', payload: '/communitynursingandcomplexcare' },
+                            { label: 'Companionship', action: 'link', payload: '/companion-care-services' },
                             { label: 'See All Services', action: 'link', payload: '/our-services' }
                         ]
                     };
@@ -113,7 +112,7 @@ export default function Chatbot() {
                     };
                     if (option.payload) {
                         const path = option.payload.startsWith('/') ? option.payload : `/${option.payload}`;
-                        window.location.href = `/${locale}${path}`;
+                        window.location.href = path;
                     }
                     break;
                 default:

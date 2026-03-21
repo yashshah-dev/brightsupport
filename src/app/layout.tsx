@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { NextIntlClientProvider } from 'next-intl';
 import "./globals.css";
 
 import StructuredData from "@/components/StructuredData";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
+import enMessages from '../../messages/en.json';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,6 +49,10 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://www.brightsupport.com.au'),
 };
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-2EXWNERWT2';
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-17576617769';
+const GTAG_SCRIPT_ID = GA_MEASUREMENT_ID || GOOGLE_ADS_ID;
 
 export default function RootLayout({
   children,
@@ -127,16 +136,16 @@ export default function RootLayout({
 })(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_ID}");`,
           }}
         />
-        {/* Google Analytics 4 Scripts */}
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+        {/* Google Analytics 4 + Google Ads Scripts */}
+        {GTAG_SCRIPT_ID && (
           <Script
             strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_SCRIPT_ID}`}
           />
         )}
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+        {GTAG_SCRIPT_ID && (
           <Script
-            id="google-analytics"
+            id="google-analytics-and-ads"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
@@ -154,7 +163,8 @@ export default function RootLayout({
                 });
 
                 // Configure GA4 with enhanced settings
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
+                ${GA_MEASUREMENT_ID ? `
+                gtag('config', '${GA_MEASUREMENT_ID}', {
                   page_title: document.title,
                   page_location: window.location.href,
                   send_page_view: true,
@@ -167,6 +177,12 @@ export default function RootLayout({
                     'custom_parameter_3': 'lead_source'
                   }
                 });
+                ` : ''}
+
+                // Configure Google Ads tag
+                ${GOOGLE_ADS_ID ? `
+                gtag('config', '${GOOGLE_ADS_ID}');
+                ` : ''}
 
                 // Track initial page load performance
                 if ('performance' in window && 'getEntriesByType' in performance) {
@@ -190,9 +206,14 @@ export default function RootLayout({
         )}
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
-        <AnalyticsProvider>
-          {children}
-        </AnalyticsProvider>
+        <NextIntlClientProvider locale="en" messages={enMessages}>
+          <Header />
+          <main className="min-h-screen">
+            <AnalyticsProvider>{children}</AnalyticsProvider>
+          </main>
+          <Footer />
+          <Chatbot />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
