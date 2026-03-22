@@ -44,10 +44,9 @@ const serviceImages: Record<string, string[]> = {
   'community-participation-group-programs': ['/images/services/community-participation.webp'],
   'companionship': ['/images/services/companionship.webp'],
   'travel-transport-assistance': ['/images/services/transport.webp'],
-  'hydrotherapy-pool-session': ['/images/services/hydrotherapy.webp'],
-  'personal-training-sessions': ['/images/services/personal-training.webp'],
-  'positive-behaviour-support': ['/images/services/positive-behaviour-support.webp'],
-  'professional-cleaning': ['/images/services/professional-cleaning.webp'],
+  'hydrotherapy-pool-session': ['/images/services/hydrotherapy.png'],
+  'personal-training-sessions': ['/images/services/personal-training.png'],
+  'positive-behaviour-support': ['/images/services/positive-behaviour-support.png'],
   'independent-living-accommodation-support': ['/images/services/independent-living.webp'],
   'support-coordination': ['/images/services/support-coordination.webp'],
 };

@@ -70,19 +70,19 @@ const serviceKeys = [
     },
     {
         key: 'hydrotherapy',
-        imageSrc: '/images/services/hydrotherapy.webp',
+        imageSrc: '/images/services/hydrotherapy.png',
         href: getServiceUrl('hydrotherapy-pool-session'),
         icon: Droplets,
     },
     {
         key: 'personalTraining',
-        imageSrc: '/images/services/personal-training.webp',
+        imageSrc: '/images/services/personal-training.png',
         href: getServiceUrl('personal-training-sessions'),
         icon: Dumbbell,
     },
     {
         key: 'behaviourSupport',
-        imageSrc: '/images/services/positive-behaviour-support.webp',
+        imageSrc: '/images/services/positive-behaviour-support.png',
         href: getServiceUrl('positive-behaviour-support'),
         icon: Brain,
     },
@@ -98,46 +98,118 @@ export default function HomePage() {
         const scrollContainer = scrollRef.current;
         if (!scrollContainer) return;
 
-        let isHovered = false;
-        let animationFrameId: number;
-        let isDelaying = true;
-        const delayTimeoutId: ReturnType<typeof setTimeout> = setTimeout(() => {
-            isDelaying = false;
-        }, 5000);
+        const AUTO_SCROLL_DELAY_MS = 5000;
+        const AUTO_SCROLL_SPEED_PX_PER_SEC = 120;
 
-        const autoScroll = () => {
-            if (!isHovered && !isDelaying && scrollContainer) {
-                const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-                
-                // If at the end (with small buffer), jump back to start instantly
-                if (scrollContainer.scrollLeft >= maxScroll - 1) {
-                    scrollContainer.scrollLeft = 0;
-                } else {
-                    // Continuous smooth scroll
-                    scrollContainer.scrollLeft += 1;
-                }
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            return;
+        }
+
+        let hasUserInteracted = false;
+        let isInView = true;
+        let canAutoScroll = false;
+        let lastTimestamp = 0;
+        let animationFrameId: number | null = null;
+
+        const stopAnimation = () => {
+            if (animationFrameId !== null) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
             }
-            animationFrameId = requestAnimationFrame(autoScroll);
         };
 
-        const handleMouseEnter = () => { isHovered = true; };
-        const handleMouseLeave = () => { isHovered = false; };
+        const shouldRun = () => {
+            if (!canAutoScroll || hasUserInteracted || !isInView || document.hidden) {
+                return false;
+            }
 
-        scrollContainer.addEventListener('mouseenter', handleMouseEnter);
-        scrollContainer.addEventListener('mouseleave', handleMouseLeave);
-        scrollContainer.addEventListener('touchstart', handleMouseEnter, { passive: true });
-        scrollContainer.addEventListener('touchend', handleMouseLeave, { passive: true });
+            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            return maxScroll > 0;
+        };
 
-        // Start animation loop
-        animationFrameId = requestAnimationFrame(autoScroll);
+        const tick = (timestamp: number) => {
+            if (!shouldRun()) {
+                stopAnimation();
+                return;
+            }
+
+            if (lastTimestamp === 0) {
+                lastTimestamp = timestamp;
+            }
+
+            const dt = Math.min(50, timestamp - lastTimestamp);
+            lastTimestamp = timestamp;
+
+            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            const distance = (AUTO_SCROLL_SPEED_PX_PER_SEC * dt) / 1000;
+
+            if (scrollContainer.scrollLeft >= maxScroll - 1) {
+                scrollContainer.scrollLeft = 0;
+            } else {
+                scrollContainer.scrollLeft = Math.min(maxScroll, scrollContainer.scrollLeft + distance);
+            }
+
+            animationFrameId = requestAnimationFrame(tick);
+        };
+
+        const startAnimation = () => {
+            if (animationFrameId !== null || !shouldRun()) {
+                return;
+            }
+            lastTimestamp = 0;
+            animationFrameId = requestAnimationFrame(tick);
+        };
+
+        const stopAutoScrollOnFirstInteraction = () => {
+            hasUserInteracted = true;
+            stopAnimation();
+        };
+
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                stopAnimation();
+            } else {
+                startAnimation();
+            }
+        };
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                isInView = entry.isIntersecting;
+                if (isInView) {
+                    startAnimation();
+                } else {
+                    stopAnimation();
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        observer.observe(scrollContainer);
+
+        const delayTimeoutId: ReturnType<typeof setTimeout> = setTimeout(() => {
+            canAutoScroll = true;
+            startAnimation();
+        }, AUTO_SCROLL_DELAY_MS);
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        scrollContainer.addEventListener('mouseenter', stopAutoScrollOnFirstInteraction);
+        scrollContainer.addEventListener('touchstart', stopAutoScrollOnFirstInteraction, { passive: true });
+        scrollContainer.addEventListener('pointerdown', stopAutoScrollOnFirstInteraction, { passive: true });
+        scrollContainer.addEventListener('wheel', stopAutoScrollOnFirstInteraction, { passive: true });
+        scrollContainer.addEventListener('scroll', stopAutoScrollOnFirstInteraction, { passive: true });
 
         return () => {
             clearTimeout(delayTimeoutId);
-            cancelAnimationFrame(animationFrameId);
-            scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
-            scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
-            scrollContainer.removeEventListener('touchstart', handleMouseEnter);
-            scrollContainer.removeEventListener('touchend', handleMouseLeave);
+            stopAnimation();
+            observer.disconnect();
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+            scrollContainer.removeEventListener('mouseenter', stopAutoScrollOnFirstInteraction);
+            scrollContainer.removeEventListener('touchstart', stopAutoScrollOnFirstInteraction);
+            scrollContainer.removeEventListener('pointerdown', stopAutoScrollOnFirstInteraction);
+            scrollContainer.removeEventListener('wheel', stopAutoScrollOnFirstInteraction);
+            scrollContainer.removeEventListener('scroll', stopAutoScrollOnFirstInteraction);
         };
     }, []);
 
@@ -221,8 +293,7 @@ export default function HomePage() {
                                             />
                                         </div>
                                         <div className="text-left leading-tight">
-                                            <p className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">Registered Provider</p>
-                                            <p className="text-sm font-bold text-[#1E4D8C]">ABN 32 659 000 978</p>
+                                            <p className="text-sm font-bold text-slate-800">Registered Provider</p>
                                         </div>
                                     </div>
 

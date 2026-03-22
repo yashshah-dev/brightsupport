@@ -95,28 +95,28 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-10">
             {/* Contact Pills */}
-            <div className="hidden md:flex items-center gap-3">
+            <div className="flex items-center gap-1 sm:gap-3">
               <a
                 href="tel:1800407508"
                 onClick={handlePhoneClick}
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
+                className="flex items-center gap-1 sm:gap-2 bg-white/10 hover:bg-white/20 px-2 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
               >
                 <Phone size={14} className="text-[#7DD3FC]" />
-                <span>1800 407 508</span>
+                <span className="hidden sm:inline">1800 407 508</span>
               </a>
               <a
                 href="mailto:care@brightsupport.com.au"
                 onClick={handleEmailClick}
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
+                className="flex items-center gap-1 sm:gap-2 bg-white/10 hover:bg-white/20 px-2 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
               >
                 <Mail size={14} className="text-[#7DD3FC]" />
-                <span>care@brightsupport.com.au</span>
+                <span className="hidden sm:inline">care@brightsupport.com.au</span>
               </a>
             </div>
 
             {/* Hours Badge + Language Switcher */}
             <div className="flex items-center gap-3 text-sm">
-              <div className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#38BDF8]/20 to-[#7DD3FC]/20 px-4 py-1.5 rounded-full border border-white/10">
+              <div className="flex items-center gap-1 sm:gap-2 bg-gradient-to-r from-[#38BDF8]/20 to-[#7DD3FC]/20 px-2 sm:px-4 py-1.5 rounded-full border border-white/10 text-[11px] sm:text-sm">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <Clock size={14} className="text-[#7DD3FC]" />
                 <span className="font-medium">Mon-Fri 8am-6pm</span>
@@ -212,7 +212,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation - Modern Slide Down */}
-        <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${mobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        <div className={`lg:hidden transition-all duration-500 ease-out ${mobileMenuOpen ? 'max-h-[calc(100vh-120px)] opacity-100 overflow-y-auto overscroll-contain' : 'max-h-0 opacity-0 overflow-hidden'
           }`}>
           <div className="py-6 space-y-2 border-t border-slate-100">
             {navigation.map((item, index) => (

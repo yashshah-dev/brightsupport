@@ -91,7 +91,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <header className="mb-8">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <Link 
-              href={`..?category=${encodeURIComponent(post.category)}`}
+              href={`../#category=${encodeURIComponent(post.category)}`}
               className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-indigo-200 transition-colors"
             >
               {post.category}
@@ -163,7 +163,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.tags.map((tag) => (
                   <Link
                     key={tag}
-                    href={`..?tag=${encodeURIComponent(tag)}`}
+                    href={`../#tag=${encodeURIComponent(tag)}`}
                     className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md text-sm transition-colors"
                   >
                     #{tag}

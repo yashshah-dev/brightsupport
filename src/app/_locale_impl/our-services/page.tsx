@@ -74,21 +74,21 @@ export default function OurServicesPage() {
             titleKey: 'hydrotherapy.title',
             descriptionKey: 'hydrotherapy.subtitle',
             link: '/ndis-hydrotherapy-services',
-            imageSrc: '/images/services/hydrotherapy.webp',
+            imageSrc: '/images/services/hydrotherapy.png',
         },
         {
             icon: Dumbbell,
             titleKey: 'personalTraining.title',
             descriptionKey: 'personalTraining.subtitle',
             link: '/ndispersonaltrainingsessions',
-            imageSrc: '/images/services/personal-training.webp',
+            imageSrc: '/images/services/personal-training.png',
         },
         {
             icon: Brain,
             titleKey: 'behaviourSupport.title',
             descriptionKey: 'behaviourSupport.subtitle',
             link: '/positivebehavioursupport',
-            imageSrc: '/images/services/positive-behaviour-support.webp',
+            imageSrc: '/images/services/positive-behaviour-support.png',
 
         },
         // {

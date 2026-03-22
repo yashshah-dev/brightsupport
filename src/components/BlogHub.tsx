@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown, Search, Filter, TrendingUp } from 'lucide-react';
@@ -27,6 +27,31 @@ export default function BlogHub({
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<'recent' | 'popular' | 'reading-time'>('recent');
   const [viewType, setViewType] = useState<'grid' | 'list'>('grid');
+
+  useEffect(() => {
+    const hash = window.location.hash.startsWith('#')
+      ? window.location.hash.slice(1)
+      : '';
+
+    if (!hash) {
+      return;
+    }
+
+    const hashParams = new URLSearchParams(hash);
+    const hashCategory = hashParams.get('category');
+    const hashTags = hashParams.getAll('tag');
+
+    if (hashCategory && categories.includes(hashCategory)) {
+      setSelectedCategory(hashCategory);
+    }
+
+    if (hashTags.length > 0) {
+      const validTags = hashTags.filter((tag) => tags.includes(tag));
+      if (validTags.length > 0) {
+        setSelectedTags(validTags);
+      }
+    }
+  }, [categories, tags]);
 
   // Filter and sort posts
   const filteredPosts = useMemo(() => {
