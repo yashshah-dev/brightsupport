@@ -9,6 +9,14 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
+const toFilterSlug = (value: string) =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+
 // Generate static paths for all blog posts (required for static export)
 export function generateStaticParams() {
   const posts = getBlogPosts();
@@ -91,7 +99,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <header className="mb-8">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <Link 
-              href={`../#category=${encodeURIComponent(post.category)}`}
+              href={`../#category=${toFilterSlug(post.category)}`}
               className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-indigo-200 transition-colors"
             >
               {post.category}
@@ -163,7 +171,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.tags.map((tag) => (
                   <Link
                     key={tag}
-                    href={`../#tag=${encodeURIComponent(tag)}`}
+                    href={`../#tag=${toFilterSlug(tag)}`}
                     className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md text-sm transition-colors"
                   >
                     #{tag}

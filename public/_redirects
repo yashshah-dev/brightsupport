@@ -2,6 +2,12 @@
 # Format: <old-path> <new-path> <status-code>
 # Compatible with: Netlify, Cloudflare Pages
 
+# Normalize legacy query-based blog filters to a single URL
+/blog/                                                /blog/                                              301!  category=:category
+/blog/                                                /blog/                                              301!  tag=:tag
+/blog                                                 /blog/                                              301!  category=:category
+/blog                                                 /blog/                                              301!  tag=:tag
+
 # Service page redirects (WordPress → New URL structure - ROOT LEVEL)
 /dailylivingin-homesupport/                             /daily-living-in-home-support/                      301
 /dailylivingin-homesupport                              /daily-living-in-home-support/                      301

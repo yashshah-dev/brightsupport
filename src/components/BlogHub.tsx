@@ -22,6 +22,14 @@ export default function BlogHub({
   categories,
   tags,
 }: BlogHubProps) {
+  const toSlug = (value: string) =>
+    value
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -40,15 +48,35 @@ export default function BlogHub({
     const hashParams = new URLSearchParams(hash);
     const hashCategory = hashParams.get('category');
     const hashTags = hashParams.getAll('tag');
+    const categorySlugMap = new Map(categories.map((category) => [toSlug(category), category]));
+    const tagSlugMap = new Map(tags.map((tag) => [toSlug(tag), tag]));
 
-    if (hashCategory && categories.includes(hashCategory)) {
-      setSelectedCategory(hashCategory);
+    if (hashCategory) {
+      const normalizedHashCategory = decodeURIComponent(hashCategory).toLowerCase();
+      const resolvedCategory =
+        categories.find((category) => category.toLowerCase() === normalizedHashCategory) ||
+        categorySlugMap.get(normalizedHashCategory) ||
+        null;
+
+      if (resolvedCategory) {
+        setSelectedCategory(resolvedCategory);
+      }
     }
 
     if (hashTags.length > 0) {
-      const validTags = hashTags.filter((tag) => tags.includes(tag));
+      const validTags = hashTags
+        .map((tag) => {
+          const normalizedHashTag = decodeURIComponent(tag).toLowerCase();
+          return (
+            tags.find((item) => item.toLowerCase() === normalizedHashTag) ||
+            tagSlugMap.get(normalizedHashTag) ||
+            null
+          );
+        })
+        .filter((tag): tag is string => Boolean(tag));
+
       if (validTags.length > 0) {
-        setSelectedTags(validTags);
+        setSelectedTags(Array.from(new Set(validTags)));
       }
     }
   }, [categories, tags]);
