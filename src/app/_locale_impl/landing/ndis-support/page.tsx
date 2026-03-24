@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { getAssetPath } from '@/lib/utils';
 import { Phone, CheckCircle, Star, Users, Clock, Shield, ArrowRight } from 'lucide-react';
@@ -11,6 +12,7 @@ import Link from 'next/link';
 
 export default function LandingPage() {
     const t = useTranslations('Index'); // Reusing existing translations where possible, or fallback to hardcoded for specific landing copy
+    const heroReviewsRef = useRef<HTMLDivElement>(null);
 
     // Hardcoded landing page specific content to ensure persuasive copy without waiting for full i18n
     const benefits = [
@@ -44,6 +46,157 @@ export default function LandingPage() {
         },
     ];
 
+    const heroReviews = [
+        {
+            name: 'Kaylene Matthey',
+            rating: 5,
+            text: 'Excellent service and very professional staff. They genuinely care about their clients and provide outstanding support.',
+        },
+        {
+            name: 'Julie Seaton',
+            rating: 5,
+            text: 'The team at Bright Support has been wonderful. They are reliable, compassionate, and always go the extra mile.',
+        },
+        {
+            name: 'Kenneth Mccoll',
+            rating: 5,
+            text: 'Highly recommend Bright Support. Their support workers are skilled, friendly, and make a real difference in our lives.',
+        },
+        {
+            name: 'Brenton Wilhelm',
+            rating: 5,
+            text: 'Professional and caring service. The staff are well-trained and understand the unique needs of each individual.',
+        },
+    ];
+
+    useEffect(() => {
+        const scrollContainer = heroReviewsRef.current;
+        if (!scrollContainer) return;
+
+        const AUTO_SCROLL_DELAY_MS = 1500;
+        const AUTO_SCROLL_SPEED_PX_PER_SEC = 38;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            return;
+        }
+
+        let isInView = true;
+        let isPaused = false;
+        let canAutoScroll = false;
+        let animationFrameId: number | null = null;
+        let lastTimestamp = 0;
+
+        const stopAnimation = () => {
+            if (animationFrameId !== null) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+        };
+
+        const shouldRun = () => {
+            if (!canAutoScroll || isPaused || !isInView || document.hidden) {
+                return false;
+            }
+
+            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            return maxScroll > 0;
+        };
+
+        const tick = (timestamp: number) => {
+            if (!shouldRun()) {
+                stopAnimation();
+                return;
+            }
+
+            if (lastTimestamp === 0) {
+                lastTimestamp = timestamp;
+            }
+
+            const dt = Math.min(50, timestamp - lastTimestamp);
+            lastTimestamp = timestamp;
+
+            const distance = (AUTO_SCROLL_SPEED_PX_PER_SEC * dt) / 1000;
+            const loopPoint = scrollContainer.scrollWidth / 2;
+
+            if (scrollContainer.scrollLeft >= loopPoint) {
+                scrollContainer.scrollLeft = 0;
+            } else {
+                scrollContainer.scrollLeft += distance;
+            }
+
+            animationFrameId = requestAnimationFrame(tick);
+        };
+
+        const startAnimation = () => {
+            if (animationFrameId !== null || !shouldRun()) {
+                return;
+            }
+            lastTimestamp = 0;
+            animationFrameId = requestAnimationFrame(tick);
+        };
+
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                stopAnimation();
+            } else {
+                startAnimation();
+            }
+        };
+
+        const pauseAutoScroll = () => {
+            isPaused = true;
+            stopAnimation();
+        };
+
+        const resumeAutoScroll = () => {
+            isPaused = false;
+            startAnimation();
+        };
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                isInView = entry.isIntersecting;
+                if (isInView) {
+                    startAnimation();
+                } else {
+                    stopAnimation();
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        observer.observe(scrollContainer);
+
+        const delayTimeoutId: ReturnType<typeof setTimeout> = setTimeout(() => {
+            canAutoScroll = true;
+            startAnimation();
+        }, AUTO_SCROLL_DELAY_MS);
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        scrollContainer.addEventListener('mouseenter', pauseAutoScroll);
+        scrollContainer.addEventListener('mouseleave', resumeAutoScroll);
+        scrollContainer.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+        scrollContainer.addEventListener('touchend', resumeAutoScroll, { passive: true });
+        scrollContainer.addEventListener('pointerdown', pauseAutoScroll, { passive: true });
+        scrollContainer.addEventListener('pointerup', resumeAutoScroll, { passive: true });
+        scrollContainer.addEventListener('wheel', pauseAutoScroll, { passive: true });
+
+        return () => {
+            clearTimeout(delayTimeoutId);
+            stopAnimation();
+            observer.disconnect();
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+            scrollContainer.removeEventListener('mouseenter', pauseAutoScroll);
+            scrollContainer.removeEventListener('mouseleave', resumeAutoScroll);
+            scrollContainer.removeEventListener('touchstart', pauseAutoScroll);
+            scrollContainer.removeEventListener('touchend', resumeAutoScroll);
+            scrollContainer.removeEventListener('pointerdown', pauseAutoScroll);
+            scrollContainer.removeEventListener('pointerup', resumeAutoScroll);
+            scrollContainer.removeEventListener('wheel', pauseAutoScroll);
+        };
+    }, []);
+
     return (
         <div className="flex flex-col min-h-screen">
 
@@ -54,9 +207,12 @@ export default function LandingPage() {
 
                         {/* Copy */}
                         <div className="space-y-8 animate-fade-in">
-                            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold text-sm">
-                                <Shield size={16} />
-                                <span>Registered NDIS Provider</span>
+                            <div className="inline-flex items-center bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl border border-sky-100 shadow-md">
+                                <img
+                                    src="/images/ndis-badge.jpg"
+                                    alt="Registered NDIS Provider"
+                                    className="h-10 md:h-12 w-auto object-contain"
+                                />
                             </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
@@ -66,6 +222,20 @@ export default function LandingPage() {
                             <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
                                 Experience personalized care with our compassionate team in Shepparton and surrounding areas. We help you achieve your goals with dignity and independence.
                             </p>
+
+                            <a
+                                href="tel:1800407508"
+                                className="group inline-flex items-center gap-4 w-full sm:w-auto bg-[#0F2D4D] text-white px-5 py-4 rounded-2xl border-2 border-[#38BDF8] shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5"
+                                aria-label="Call Bright Support on 1800 407 508"
+                            >
+                                <span className="w-11 h-11 rounded-full bg-[#38BDF8] text-[#0F2D4D] flex items-center justify-center animate-pulse">
+                                    <Phone size={22} />
+                                </span>
+                                <span className="leading-tight">
+                                    <span className="block text-xs uppercase tracking-widest text-sky-200">Call now for fast help</span>
+                                    <span className="block text-2xl md:text-3xl font-extrabold text-white">1800 407 508</span>
+                                </span>
+                            </a>
 
                             <div className="flex flex-col sm:flex-row gap-4">
                                 {benefits.map((benefit, i) => (
@@ -79,7 +249,7 @@ export default function LandingPage() {
                             <div className="pt-4 flex flex-col sm:flex-row gap-4">
                                 <a
                                     href="tel:1800407508"
-                                    className="bg-[#1E4D8C] hover:bg-[#0F2D4D] text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
+                                    className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-8 py-4 rounded-full font-extrabold text-lg shadow-lg shadow-red-500/25 hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
                                 >
                                     <Phone size={20} />
                                     Call 1800 407 508
@@ -90,6 +260,33 @@ export default function LandingPage() {
                                 >
                                     Get Free Consultation
                                 </a>
+                            </div>
+
+                            <div className="pt-2 max-w-full">
+                                <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+                                    Hear What People Say About Us
+                                </h2>
+                                <div
+                                    ref={heroReviewsRef}
+                                    className="flex overflow-x-auto gap-4 pb-2 hide-scrollbar"
+                                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                                    aria-label="Auto-scrolling customer reviews"
+                                >
+                                    {[...heroReviews, ...heroReviews].map((review, index) => (
+                                        <article
+                                            key={`${review.name}-${index}`}
+                                            className="shrink-0 w-[280px] bg-white/90 backdrop-blur-sm border border-slate-200 rounded-2xl p-4 shadow-sm"
+                                        >
+                                            <div className="flex items-center gap-1 mb-2">
+                                                {[...Array(review.rating)].map((_, i) => (
+                                                    <Star key={i} size={14} className="fill-amber-400 text-amber-400" />
+                                                ))}
+                                            </div>
+                                            <p className="text-sm text-slate-700 leading-relaxed mb-2">{review.text}</p>
+                                            <p className="text-sm font-semibold text-slate-900">{review.name}</p>
+                                        </article>
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
