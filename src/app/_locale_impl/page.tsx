@@ -25,6 +25,7 @@ import { ResponsiveImage } from '@/components/ResponsiveImage';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { trackPhoneCall, trackButtonClick } from '@/lib/analytics';
 import { useVideoTracking } from '@/hooks/useAnalytics';
 import { getServiceUrl } from '@/lib/serviceUrls';
@@ -90,6 +91,7 @@ const serviceKeys = [
 
 export default function HomePage() {
     const t = useTranslations();
+    const pathname = usePathname();
     const { trackVideoPlay } = useVideoTracking();
     const scrollRef = useRef<HTMLDivElement>(null);
     const heroReviewsRef = useRef<HTMLDivElement>(null);
@@ -116,6 +118,12 @@ export default function HomePage() {
             text: 'Professional and caring service. The staff are well-trained and understand the unique needs of each individual.',
         },
     ];
+
+    useEffect(() => {
+        if (pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+    }, [pathname]);
 
     // Auto-scroll logic for services
     useEffect(() => {
@@ -419,16 +427,29 @@ export default function HomePage() {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
+            <section className="relative pt-10 pb-20 lg:pt-10 lg:pb-32 overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1 space-y-8 animate-fade-in">
-                            <div className="inline-flex items-center bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl border border-sky-100 shadow-md">
-                                <img
-                                    src="/images/ndis-badge.jpg"
-                                    alt="Registered NDIS Provider"
-                                    className="h-10 md:h-12 w-auto object-contain"
-                                />
+                            <div className="flex flex-row items-center gap-3 w-full sm:w-auto">
+                                <div className="inline-flex items-center bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl border border-sky-100 shadow-md w-fit">
+                                    <img
+                                        src="/images/ndis-badge.jpg"
+                                        alt="Registered NDIS Provider"
+                                        className="h-10 md:h-12 w-auto object-contain"
+                                    />
+                                </div>
+                                <a
+                                    href="tel:1800407508"
+                                    className="inline-flex items-center gap-3 bg-[#0F2D4D] text-white px-6 py-3 rounded-2xl border-2 border-[#38BDF8] shadow-md hover:shadow-lg transition-all duration-300 w-fit"
+                                    aria-label="Call Bright Support on 1800 407 508"
+                                >
+                                    <Phone size={20} className="text-[#7DD3FC]" />
+                                    <span className="leading-tight text-left">
+                                        <span className="block text-xs uppercase tracking-wider text-sky-200">Contact us</span>
+                                        <span className="block text-base md:text-xl font-bold text-white">1800 407 508</span>
+                                    </span>
+                                </a>
                             </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 text-center lg:text-left">
@@ -440,20 +461,6 @@ export default function HomePage() {
                             <p className="text-xl text-slate-600 leading-relaxed max-w-lg text-center lg:text-left">
                                 {t('Hero.description')}
                             </p>
-
-                            <a
-                                href="tel:1800407508"
-                                className="group inline-flex items-center gap-4 w-full sm:w-auto bg-[#0F2D4D] text-white px-5 py-4 rounded-2xl border-2 border-[#38BDF8] shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5"
-                                aria-label="Call Bright Support on 1800 407 508"
-                            >
-                                <span className="w-11 h-11 rounded-full bg-[#38BDF8] text-[#0F2D4D] flex items-center justify-center animate-pulse">
-                                    <Phone size={22} />
-                                </span>
-                                <span className="leading-tight text-left">
-                                    <span className="block text-xs uppercase tracking-widest text-sky-200">Call now for fast help</span>
-                                    <span className="block text-2xl md:text-3xl font-extrabold text-white">1800 407 508</span>
-                                </span>
-                            </a>
 
                             <div className="pt-2 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center">
                                 <Link

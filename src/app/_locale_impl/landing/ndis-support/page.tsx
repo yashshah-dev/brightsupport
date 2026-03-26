@@ -207,12 +207,18 @@ export default function LandingPage() {
 
                         {/* Copy */}
                         <div className="space-y-8 animate-fade-in">
-                            <div className="inline-flex items-center bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl border border-sky-100 shadow-md">
+                            <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl border border-sky-100 shadow-md">
                                 <img
                                     src="/images/ndis-badge.jpg"
                                     alt="Registered NDIS Provider"
                                     className="h-10 md:h-12 w-auto object-contain"
                                 />
+                                <div className="w-px self-stretch bg-slate-200" />
+                                <div className="text-left leading-tight">
+                                    <p className="text-[10px] md:text-[11px] uppercase tracking-wider text-slate-500 font-semibold">Contact Us</p>
+                                    <a href="tel:1800407508" className="block text-sm md:text-base font-bold text-slate-900 hover:text-[#1E4D8C]">1800 407 508</a>
+                                    <a href="mailto:care@brightsupport.com.au" className="block text-xs md:text-sm text-slate-600 hover:text-[#1E4D8C]">care@brightsupport.com.au</a>
+                                </div>
                             </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
