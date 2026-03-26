@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
-    const BASE_URL = 'https://www.brightsupport.com.au';
+    const BASE_URL = 'https://brightsupport.com.au';
     const pageUrl = `${BASE_URL}/our-services/`;
 
     return {

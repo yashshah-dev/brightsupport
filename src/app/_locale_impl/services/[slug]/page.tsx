@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         description: 'NDIS disability and support services by Bright Support in Shepparton.',
     };
 
-    const BASE_URL = 'https://www.brightsupport.com.au';
+    const BASE_URL = 'https://brightsupport.com.au';
     const pageUrl = `${BASE_URL}/${slug}/`;
 
     return {
@@ -175,7 +175,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     name: meta.title,
                     description: meta.description,
                     serviceType: meta.title,
-                    url: `https://www.brightsupport.com.au/services/${slug}/`,
+                    url: `https://brightsupport.com.au/services/${slug}/`,
                     areaServed: {
                         '@type': 'City',
                         name: 'Shepparton',
