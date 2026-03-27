@@ -25,6 +25,7 @@ import { ResponsiveImage } from '@/components/ResponsiveImage';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { trackPhoneCall, trackButtonClick } from '@/lib/analytics';
 import { useVideoTracking } from '@/hooks/useAnalytics';
 import { getServiceUrl } from '@/lib/serviceUrls';
@@ -90,8 +91,39 @@ const serviceKeys = [
 
 export default function HomePage() {
     const t = useTranslations();
+    const pathname = usePathname();
     const { trackVideoPlay } = useVideoTracking();
     const scrollRef = useRef<HTMLDivElement>(null);
+    const heroReviewsRef = useRef<HTMLDivElement>(null);
+
+    const heroReviews = [
+        {
+            name: 'Kaylene Matthey',
+            rating: 5,
+            text: 'Excellent service and very professional staff. They genuinely care about their clients and provide outstanding support.',
+        },
+        {
+            name: 'Julie Seaton',
+            rating: 5,
+            text: 'The team at Bright Support has been wonderful. They are reliable, compassionate, and always go the extra mile.',
+        },
+        {
+            name: 'Kenneth Mccoll',
+            rating: 5,
+            text: 'Highly recommend Bright Support. Their support workers are skilled, friendly, and make a real difference in our lives.',
+        },
+        {
+            name: 'Brenton Wilhelm',
+            rating: 5,
+            text: 'Professional and caring service. The staff are well-trained and understand the unique needs of each individual.',
+        },
+    ];
+
+    useEffect(() => {
+        if (pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+    }, [pathname]);
 
     // Auto-scroll logic for services
     useEffect(() => {
@@ -213,6 +245,134 @@ export default function HomePage() {
         };
     }, []);
 
+    useEffect(() => {
+        const scrollContainer = heroReviewsRef.current;
+        if (!scrollContainer) return;
+
+        const AUTO_SCROLL_DELAY_MS = 1500;
+        const AUTO_SCROLL_SPEED_PX_PER_SEC = 38;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            return;
+        }
+
+        let isInView = true;
+        let isPaused = false;
+        let canAutoScroll = false;
+        let animationFrameId: number | null = null;
+        let lastTimestamp = 0;
+
+        const stopAnimation = () => {
+            if (animationFrameId !== null) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+        };
+
+        const shouldRun = () => {
+            if (!canAutoScroll || isPaused || !isInView || document.hidden) {
+                return false;
+            }
+
+            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            return maxScroll > 0;
+        };
+
+        const tick = (timestamp: number) => {
+            if (!shouldRun()) {
+                stopAnimation();
+                return;
+            }
+
+            if (lastTimestamp === 0) {
+                lastTimestamp = timestamp;
+            }
+
+            const dt = Math.min(50, timestamp - lastTimestamp);
+            lastTimestamp = timestamp;
+
+            const distance = (AUTO_SCROLL_SPEED_PX_PER_SEC * dt) / 1000;
+            const loopPoint = scrollContainer.scrollWidth / 2;
+
+            if (scrollContainer.scrollLeft >= loopPoint) {
+                scrollContainer.scrollLeft = 0;
+            } else {
+                scrollContainer.scrollLeft += distance;
+            }
+
+            animationFrameId = requestAnimationFrame(tick);
+        };
+
+        const startAnimation = () => {
+            if (animationFrameId !== null || !shouldRun()) {
+                return;
+            }
+            lastTimestamp = 0;
+            animationFrameId = requestAnimationFrame(tick);
+        };
+
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                stopAnimation();
+            } else {
+                startAnimation();
+            }
+        };
+
+        const pauseAutoScroll = () => {
+            isPaused = true;
+            stopAnimation();
+        };
+
+        const resumeAutoScroll = () => {
+            isPaused = false;
+            startAnimation();
+        };
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                isInView = entry.isIntersecting;
+                if (isInView) {
+                    startAnimation();
+                } else {
+                    stopAnimation();
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        observer.observe(scrollContainer);
+
+        const delayTimeoutId: ReturnType<typeof setTimeout> = setTimeout(() => {
+            canAutoScroll = true;
+            startAnimation();
+        }, AUTO_SCROLL_DELAY_MS);
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        scrollContainer.addEventListener('mouseenter', pauseAutoScroll);
+        scrollContainer.addEventListener('mouseleave', resumeAutoScroll);
+        scrollContainer.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+        scrollContainer.addEventListener('touchend', resumeAutoScroll, { passive: true });
+        scrollContainer.addEventListener('pointerdown', pauseAutoScroll, { passive: true });
+        scrollContainer.addEventListener('pointerup', resumeAutoScroll, { passive: true });
+        scrollContainer.addEventListener('wheel', pauseAutoScroll, { passive: true });
+
+        return () => {
+            clearTimeout(delayTimeoutId);
+            stopAnimation();
+            observer.disconnect();
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+            scrollContainer.removeEventListener('mouseenter', pauseAutoScroll);
+            scrollContainer.removeEventListener('mouseleave', resumeAutoScroll);
+            scrollContainer.removeEventListener('touchstart', pauseAutoScroll);
+            scrollContainer.removeEventListener('touchend', resumeAutoScroll);
+            scrollContainer.removeEventListener('pointerdown', pauseAutoScroll);
+            scrollContainer.removeEventListener('pointerup', resumeAutoScroll);
+            scrollContainer.removeEventListener('wheel', pauseAutoScroll);
+        };
+    }, []);
+
     const getLocalizedHref = (path: string) => path;
 
     // Lazy Video Embed Component
@@ -267,58 +427,42 @@ export default function HomePage() {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-50 text-slate-800 pt-8 pb-24 md:pt-12 md:pb-36 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDk5LCAxMDIsIDI0MSwgMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-40"></div>
+            <section className="relative pt-10 pb-20 lg:pt-10 lg:pb-32 overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 lg:order-1">
-                            {/* Trust Badges & Acceptance Banner */}
-                            <div className="mb-8 space-y-4">
-                                {/* Accepting Participants Banner */}
-                                <div className="inline-flex items-center gap-2 bg-green-50 border-2 border-green-200 px-6 py-3 rounded-full shadow-sm">
-                                    <CheckCircle size={20} className="text-green-600" />
-                                    <span className="text-sm md:text-base font-semibold text-green-700">
-                                        {t('Hero.acceptingBanner')}
+                        <div className="order-2 lg:order-1 space-y-8 animate-fade-in">
+                            <div className="flex flex-row items-center gap-3 w-full sm:w-auto">
+                                <div className="inline-flex items-center bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl border border-sky-100 shadow-md w-fit">
+                                    <img
+                                        src="/images/ndis-badge.jpg"
+                                        alt="Registered NDIS Provider"
+                                        className="h-10 md:h-12 w-auto object-contain"
+                                    />
+                                </div>
+                                <a
+                                    href="tel:1800407508"
+                                    className="inline-flex items-center gap-3 bg-[#0F2D4D] text-white px-6 py-3 rounded-2xl border-2 border-[#38BDF8] shadow-md hover:shadow-lg transition-all duration-300 w-fit"
+                                    aria-label="Call Bright Support on 1800 407 508"
+                                >
+                                    <Phone size={20} className="text-[#7DD3FC]" />
+                                    <span className="leading-tight text-left">
+                                        <span className="block text-xs uppercase tracking-wider text-sky-200">Contact us</span>
+                                        <span className="block text-base md:text-xl font-bold text-white">1800 407 508</span>
                                     </span>
-                                </div>
-
-                                {/* NDIS Registration Badges */}
-                                <div className="flex flex-wrap gap-3 items-center justify-center lg:justify-start">
-                                    <div className="bg-white/90 backdrop-blur-md px-4 h-14 rounded-lg shadow-md border border-sky-100 flex items-center gap-3">
-                                        <div className="w-10 h-10 relative flex items-center justify-center shrink-0">
-                                            <img 
-                                                src="/images/ilove-ndis.png" 
-                                                alt="I love NDIS" 
-                                                className="w-full h-full object-contain" 
-                                            />
-                                        </div>
-                                        <div className="text-left leading-tight">
-                                            <p className="text-sm font-bold text-slate-800">Registered Provider</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="bg-white/90 backdrop-blur-md px-4 h-14 rounded-lg shadow-md border border-sky-100 flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center shrink-0">
-                                            <Clock size={20} className="text-green-600" />
-                                        </div>
-                                        <div className="text-left leading-tight">
-                                            <p className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">Our Support</p>
-                                            <p className="text-sm font-bold text-slate-800">{t('Hero.responseGuarantee')}</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent animate-scale-in text-center lg:text-left">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 text-center lg:text-left">
                                 {t('Hero.title')}
                             </h1>
-                            <p className="text-2xl md:text-3xl mb-6 font-light bg-gradient-to-r from-[#1E4D8C] to-[#38BDF8] bg-clip-text text-transparent text-center lg:text-left">
+                            <p className="text-2xl md:text-3xl font-light text-[#1E4D8C] text-center lg:text-left">
                                 {t('Hero.subtitle')}
                             </p>
-                            <p className="text-lg md:text-xl mb-12 leading-relaxed text-slate-600 text-center lg:text-left">
+                            <p className="text-xl text-slate-600 leading-relaxed max-w-lg text-center lg:text-left">
                                 {t('Hero.description')}
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center animate-in">
+
+                            <div className="pt-2 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center">
                                 <Link
                                     href={getLocalizedHref('/our-services/')}
                                     className="bg-gradient-to-r from-[#1E4D8C] to-[#2563EB] hover:from-[#0F2D4D] hover:to-[#1E4D8C] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2"
@@ -334,9 +478,37 @@ export default function HomePage() {
                                     Send us referral
                                 </Link>
                             </div>
+
+                            <div className="pt-2 max-w-full">
+                                <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 text-center lg:text-left">
+                                    Hear What People Say About Us
+                                </h2>
+                                <div
+                                    ref={heroReviewsRef}
+                                    className="flex overflow-x-auto gap-4 pb-2 hide-scrollbar"
+                                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                                    aria-label="Auto-scrolling customer reviews"
+                                >
+                                    {[...heroReviews, ...heroReviews].map((review, index) => (
+                                        <article
+                                            key={`${review.name}-${index}`}
+                                            className="shrink-0 w-[280px] bg-white/90 backdrop-blur-sm border border-slate-200 rounded-2xl p-4 shadow-sm"
+                                        >
+                                            <div className="flex items-center gap-1 mb-2">
+                                                {[...Array(review.rating)].map((_, i) => (
+                                                    <Star key={i} size={14} className="fill-amber-400 text-amber-400" />
+                                                ))}
+                                            </div>
+                                            <p className="text-sm text-slate-700 leading-relaxed mb-2">{review.text}</p>
+                                            <p className="text-sm font-semibold text-slate-900">{review.name}</p>
+                                        </article>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
-                        <div className="order-1 lg:order-2">
-                            <div className="relative rounded-3xl overflow-hidden shadow-elegant-lg">
+
+                        <div className="order-1 lg:order-2 relative lg:h-auto">
+                            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
                                 <ResponsiveImage
                                     src="/images/hero/hero-main.webp"
                                     alt="NDIS support worker providing compassionate care to participant"
@@ -346,6 +518,15 @@ export default function HomePage() {
                                     width={1200}
                                     height={800}
                                 />
+                                <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl flex items-center gap-3 max-w-xs animate-slide-up">
+                                    <div className="bg-green-100 p-2 rounded-full text-green-600">
+                                        <Star size={24} fill="currentColor" />
+                                    </div>
+                                    <div>
+                                        <p className="font-bold text-slate-900">5-Star Care</p>
+                                        <p className="text-xs text-slate-500">Trusted by local families</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

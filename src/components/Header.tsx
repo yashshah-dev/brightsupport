@@ -4,7 +4,8 @@ import Link from 'next/link';
 // import Image from 'next/image';
 import { getAssetPath } from '@/lib/utils';
 import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import type { MouseEvent } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { Phone, Mail, Clock, Menu, X, ChevronRight } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 import { trackPhoneCall, trackEmailClick } from '@/lib/analytics';
@@ -13,6 +14,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   // Helper functions for tracking
   const handlePhoneClick = () => {
@@ -25,12 +27,44 @@ export default function Header() {
 
   const getLocalizedHref = (path: string) => path;
 
+  const handleHomeNavigation = (event: MouseEvent, closeMobileMenu = false) => {
+    event.preventDefault();
+
+    if (closeMobileMenu) {
+      setMobileMenuOpen(false);
+    }
+
+    if (pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    router.push('/', { scroll: true });
+  };
+
   // Add scroll effect for header
   useEffect(() => {
+    const SCROLL_ON_THRESHOLD = 28;
+    const SCROLL_OFF_THRESHOLD = 4;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentY = window.scrollY;
+
+      setScrolled((previous) => {
+        if (!previous && currentY > SCROLL_ON_THRESHOLD) {
+          return true;
+        }
+
+        if (previous && currentY < SCROLL_OFF_THRESHOLD) {
+          return false;
+        }
+
+        return previous;
+      });
     };
-    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -132,7 +166,11 @@ export default function Header() {
         <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'py-3' : 'py-4'
           }`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group relative">
+          <Link
+            href="/"
+            className="flex items-center gap-3 group relative"
+            onClick={(event) => handleHomeNavigation(event)}
+          >
             <div className="relative">
               <img
                 src={getAssetPath('/images/logo-new.jpg')}
@@ -161,6 +199,11 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className="relative px-4 py-2.5 text-slate-600 hover:text-[#1E4D8C] font-medium transition-all duration-300 rounded-xl hover:bg-slate-50 group"
+                onClick={(event) => {
+                  if (item.href === '/') {
+                    handleHomeNavigation(event);
+                  }
+                }}
               >
                 <span className="relative z-10">{item.name}</span>
                 {/* Animated underline */}
@@ -220,7 +263,13 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className="flex items-center justify-between px-4 py-3.5 text-slate-700 hover:text-[#1E4D8C] font-medium rounded-xl hover:bg-gradient-to-r hover:from-slate-50 hover:to-sky-50/50 transition-all duration-300"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(event) => {
+                  if (item.href === '/') {
+                    handleHomeNavigation(event, true);
+                    return;
+                  }
+                  setMobileMenuOpen(false);
+                }}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <span>{item.name}</span>
