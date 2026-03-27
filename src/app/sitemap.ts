@@ -3,7 +3,7 @@ import { getBlogPosts } from '@/lib/blog';
 
 export const dynamic = "force-static";
 
-const BASE_URL = 'https://brightsupport.com.au';
+const BASE_URL = 'https://www.brightsupport.com.au';
 
 // Mapping of internal slugs to live site URLs
 const serviceUrlMapping: Record<string, string> = {
