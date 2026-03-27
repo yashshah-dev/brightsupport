@@ -44,10 +44,27 @@ export default function Header() {
 
   // Add scroll effect for header
   useEffect(() => {
+    const SCROLL_ON_THRESHOLD = 28;
+    const SCROLL_OFF_THRESHOLD = 4;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentY = window.scrollY;
+
+      setScrolled((previous) => {
+        if (!previous && currentY > SCROLL_ON_THRESHOLD) {
+          return true;
+        }
+
+        if (previous && currentY < SCROLL_OFF_THRESHOLD) {
+          return false;
+        }
+
+        return previous;
+      });
     };
-    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
