@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy | Bright Support Australia',
     description: 'How Bright Support collects, uses, and protects your personal information in accordance with Australian privacy law.',
-    url: 'https://brightsupport.com.au/privacy-policy',
+    url: 'https://www.brightsupport.com.au/privacy-policy',
   },
 };
 

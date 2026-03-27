@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/blog?*', '/blog/?*'],
       },
     ],
-    sitemap: 'https://brightsupport.com.au/sitemap.xml',
+    sitemap: 'https://www.brightsupport.com.au/sitemap.xml',
   };
 }

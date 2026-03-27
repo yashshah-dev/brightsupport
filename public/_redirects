@@ -2,6 +2,10 @@
 # Format: <old-path> <new-path> <status-code>
 # Compatible with: Netlify, Cloudflare Pages
 
+# Canonical host redirect: apex -> www
+https://brightsupport.com.au/*                          https://www.brightsupport.com.au/:splat                301!
+http://brightsupport.com.au/*                           https://www.brightsupport.com.au/:splat                301!
+
 # Normalize legacy query-based blog filters to a single URL
 /blog/                                                /blog/                                              301!  category=:category
 /blog/                                                /blog/                                              301!  tag=:tag

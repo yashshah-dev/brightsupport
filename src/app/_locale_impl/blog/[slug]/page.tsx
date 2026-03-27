@@ -34,7 +34,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
-  const BASE_URL = 'https://brightsupport.com.au';
+  const BASE_URL = 'https://www.brightsupport.com.au';
 
   if (!post) {
     return {

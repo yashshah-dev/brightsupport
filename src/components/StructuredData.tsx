@@ -5,7 +5,7 @@ interface StructuredDataProps {
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
   const getStructuredData = () => {
-    const baseUrl = 'https://brightsupport.com.au';
+    const baseUrl = 'https://www.brightsupport.com.au';
     
     switch (type) {
       case 'Organization':
