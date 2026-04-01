@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import { NextIntlClientProvider } from 'next-intl';
 import "./globals.css";
 
@@ -47,10 +46,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.brightsupport.com.au'),
 };
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-2EXWNERWT2';
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-17576617769';
-const GTAG_SCRIPT_ID = GA_MEASUREMENT_ID || GOOGLE_ADS_ID;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,6 +54,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PT83J47');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
         <StructuredData type="Organization" />
         <StructuredData type="LocalBusiness" />
         <StructuredData
@@ -133,76 +139,18 @@ export default function RootLayout({
 })(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_ID}");`,
           }}
         />
-        {/* Google Analytics 4 + Google Ads Scripts */}
-        {GTAG_SCRIPT_ID && (
-          <Script
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_SCRIPT_ID}`}
-          />
-        )}
-        {GTAG_SCRIPT_ID && (
-          <Script
-            id="google-analytics-and-ads"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                // Initialize consent settings
-                gtag('consent', 'default', {
-                  analytics_storage: 'granted',
-                  ad_storage: 'denied',
-                  functionality_storage: 'granted',
-                  personalization_storage: 'denied',
-                  security_storage: 'granted'
-                });
-
-                // Configure GA4 with enhanced settings
-                ${GA_MEASUREMENT_ID ? `
-                gtag('config', '${GA_MEASUREMENT_ID}', {
-                  page_title: document.title,
-                  page_location: window.location.href,
-                  send_page_view: true,
-                  allow_google_signals: false,
-                  allow_ad_personalization_signals: false,
-                  allow_ad_features: false,
-                  custom_map: {
-                    'custom_parameter_1': 'user_type',
-                    'custom_parameter_2': 'service_interest',
-                    'custom_parameter_3': 'lead_source'
-                  }
-                });
-                ` : ''}
-
-                // Configure Google Ads tag
-                ${GOOGLE_ADS_ID ? `
-                gtag('config', '${GOOGLE_ADS_ID}');
-                ` : ''}
-
-                // Track initial page load performance
-                if ('performance' in window && 'getEntriesByType' in performance) {
-                  window.addEventListener('load', function() {
-                    setTimeout(function() {
-                      var navigation = performance.getEntriesByType('navigation')[0];
-                      if (navigation) {
-                        gtag('event', 'page_load_time', {
-                          page_load_time: navigation.loadEventEnd - navigation.fetchStart,
-                          dom_content_loaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-                          first_paint: performance.getEntriesByName('first-paint')[0] ? performance.getEntriesByName('first-paint')[0].startTime : 0,
-                          first_contentful_paint: performance.getEntriesByName('first-contentful-paint')[0] ? performance.getEntriesByName('first-contentful-paint')[0].startTime : 0
-                        });
-                      }
-                    }, 0);
-                  });
-                }
-              `,
-            }}
-          />
-        )}
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PT83J47"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <NextIntlClientProvider locale="en" messages={enMessages}>
           <Header />
           <main className="min-h-screen">
