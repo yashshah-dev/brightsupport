@@ -5,6 +5,12 @@ export const dynamic = "force-static";
 
 const BASE_URL = 'https://www.brightsupport.com.au';
 
+function toCanonicalUrl(path: string) {
+  if (!path || path === '/') return BASE_URL;
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  return `${BASE_URL}${normalized.endsWith('/') ? normalized : `${normalized}/`}`;
+}
+
 // Mapping of internal slugs to live site URLs
 const serviceUrlMapping: Record<string, string> = {
   'daily-living-in-home-support': '/dailylivingin-homesupport',
@@ -32,8 +38,6 @@ const mainPages = [
   '/career',
   '/privacy-policy',
   '/thank-you',
-  '/our-location',
-  '/accommodation-support-services',
 ];
 
 // Image mapping for service pages (for image sitemap)
@@ -52,9 +56,10 @@ const serviceImages: Record<string, string[]> = {
 };
 
 function generateAlternates(path: string) {
+  const canonical = toCanonicalUrl(path);
   const languages: Record<string, string> = {
-    en: `${BASE_URL}${path}`,
-    'x-default': `${BASE_URL}${path}`,
+    en: canonical,
+    'x-default': canonical,
   };
   return { languages };
 }
@@ -67,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Canonical non-locale main pages (match what's in each layout's canonical tag)
   for (const page of mainPages) {
     entries.push({
-      url: page === '' ? BASE_URL : `${BASE_URL}${page}/`,
+      url: toCanonicalUrl(page),
       lastModified: now,
       changeFrequency: page === '' ? 'weekly' : 'monthly',
       priority: page === '' ? 1.0 : 0.8,
@@ -82,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     
     // Canonical URL for blog posts
     entries.push({
-      url: `${BASE_URL}${blogPath}/`,
+      url: toCanonicalUrl(blogPath),
       lastModified: post.updatedAt || pubDate,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -99,7 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const images = serviceImages[slug];
     const liveUrl = serviceUrlMapping[slug];
     entries.push({
-      url: `${BASE_URL}${liveUrl}/`,
+      url: toCanonicalUrl(liveUrl),
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
@@ -110,19 +115,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Static pages
+  // Additional landing pages not included in mainPages
   entries.push({
-    url: `${BASE_URL}/privacy-policy`,
-    lastModified: now,
-    changeFrequency: 'yearly',
-    priority: 0.3,
-  });
-
-  entries.push({
-    url: `${BASE_URL}/landing/ndis-support`,
+    url: toCanonicalUrl('/landing/ndis-support'),
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.6,
+    alternates: generateAlternates('/landing/ndis-support'),
   });
 
   return entries;

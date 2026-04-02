@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ServicePageClient from '@/components/ServicePageClient';
 import StructuredData from '@/components/StructuredData';
+import { getServiceUrl } from '@/lib/serviceUrls';
 
 // SEO metadata for each service page
 const serviceMetadata: Record<string, { title: string; description: string }> = {
@@ -65,7 +66,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 
     const BASE_URL = 'https://www.brightsupport.com.au';
-    const pageUrl = `${BASE_URL}/${slug}/`;
+    const livePath = getServiceUrl(slug);
+    const pageUrl = `${BASE_URL}${livePath}/`;
 
     return {
         title: meta.title,
@@ -73,6 +75,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         openGraph: {
             title: meta.title,
             description: meta.description,
+            url: pageUrl,
         },
         alternates: {
             languages: { en: pageUrl, 'x-default': pageUrl },
@@ -166,6 +169,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
     const heroImage = imageMap[slug];
     const galleryImages = galleryMap[slug];
     const meta = serviceMetadata[slug] || { title: 'NDIS Support Services', description: 'NDIS disability and support services by Bright Support in Shepparton.' };
+    const livePath = getServiceUrl(slug);
+    const liveUrl = `https://www.brightsupport.com.au${livePath}/`;
 
     return (
         <>
@@ -175,7 +180,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     name: meta.title,
                     description: meta.description,
                     serviceType: meta.title,
-                    url: `https://www.brightsupport.com.au/services/${slug}/`,
+                    url: liveUrl,
                     areaServed: {
                         '@type': 'City',
                         name: 'Shepparton',
