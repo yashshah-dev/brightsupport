@@ -2,14 +2,17 @@
 
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { trackFormSubmission, trackLeadGeneration } from '@/lib/analytics';
 
 export default function ContactUsPage() {
     const t = useTranslations('ContactUs');
     const tForm = useTranslations('ContactUs.form');
     const tInfo = useTranslations('ContactUs.info');
     const tLocations = useTranslations('ContactUs.locations');
+    const router = useRouter();
 
     // ... existing hook calls ...
 
@@ -52,8 +55,11 @@ export default function ContactUsPage() {
             // Simulate delay
             await new Promise(resolve => setTimeout(resolve, 1000));
             setSubmitStatus('success');
+            trackFormSubmission('contact_us', true, { channel: 'website' });
+            trackLeadGeneration('contact_form');
             setIsSubmitting(false);
             setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+            router.push('/thank-you');
             return;
         }
 
@@ -73,9 +79,16 @@ export default function ContactUsPage() {
             );
 
             setSubmitStatus('success');
+            trackFormSubmission('contact_us', true, {
+                channel: 'website',
+                selected_service: formData.service || 'not_selected',
+            });
+            trackLeadGeneration('contact_form');
             setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+            router.push('/thank-you');
         } catch (error) {
             console.error('EmailJS submission failed:', error);
+            trackFormSubmission('contact_us', false, { channel: 'website' });
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);

@@ -35,9 +35,9 @@ const mainPages = [
   '/our-services',
   '/blog',     // Added blog listing page
   '/contact-us',
+  '/thank-you',
   '/career',
   '/privacy-policy',
-  '/thank-you',
 ];
 
 // Image mapping for service pages (for image sitemap)
