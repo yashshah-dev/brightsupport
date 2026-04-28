@@ -675,6 +675,16 @@ export default function HomePage() {
                             </div>
                         ))}
                     </div>
+
+                    <div className="mt-10 text-center">
+                        <Link
+                            href={getLocalizedHref('/registered-ndis-provider-shepparton/')}
+                            className="inline-flex items-center gap-2 text-[#1E4D8C] font-semibold hover:text-[#2563EB] transition-colors"
+                        >
+                            Looking for a registered NDIS provider in Shepparton?
+                            <span aria-hidden="true">Learn how to compare providers</span>
+                        </Link>
+                    </div>
                 </div>
             </section>
 

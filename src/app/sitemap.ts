@@ -35,6 +35,7 @@ const mainPages = [
   '/our-services',
   '/blog',     // Added blog listing page
   '/contact-us',
+  '/registered-ndis-provider-shepparton',
   '/thank-you',
   '/career',
   '/privacy-policy',
