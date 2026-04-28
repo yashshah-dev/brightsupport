@@ -89,8 +89,8 @@
                 "description": "Assistance with everyday activities to help you maintain independence at home, including personal care, meal preparation, and household tasks."
             },
             "independentLiving": {
-                "title": "Independent Living & Accommodation Support",
-                "description": "Support to live independently in your own home or supported accommodation, with assistance tailored to your needs."
+                "title": "Supported Independent Living (SIL)",
+                "description": "Individualised SIL and disability accommodation in Shepparton and the Goulburn Valley, tailored to your NDIS goals. Enquire about current vacancies."
             },
             "communityParticipation": {
                 "title": "Community Participation & Group Programs",
@@ -470,6 +470,10 @@
                 {
                     "question": "Can you help me learn to do things independently?",
                     "answer": "Absolutely—that's our favorite kind of support! If your goal is to learn cooking, manage your household, or build other life skills, we'll teach, guide, and cheer you on at your own pace. It's about building YOUR confidence and capability."
+                },
+                {
+                    "question": "Do you also offer supported accommodation in Shepparton?",
+                    "answer": "Yes! If you are looking to move into your own home with ongoing support, our Supported Independent Living Shepparton programme may be the right next step. We offer SIL homes in Shepparton and Mooroopna where participants receive daily support in a comfortable, accessible environment. Ask our team for details."
                 }
             ]
         },
@@ -668,6 +672,10 @@
                 {
                     "question": "Can I bring a friend who isn't an NDIS participant?",
                     "answer": "Of course! Friends and family are welcome to join many activities as guests. If your friend is also an NDIS participant, they can join as a full participant."
+                },
+                {
+                    "question": "Do you offer accommodation support alongside community programmes?",
+                    "answer": "Yes! Many of our participants in Shepparton also access our Supported Independent Living (SIL) programme. If you are looking for disability accommodation in Shepparton alongside community participation, our team can coordinate both services seamlessly. Ask us about Supported Independent Living Shepparton when you call."
                 }
             ]
         },
@@ -1068,72 +1076,80 @@
             ]
         },
         "independentLiving": {
-            "title": "Independent Living & Accommodation Support",
-            "subtitle": "Your Home, Your Rules, Our Support",
-            "description": "Everyone deserves a place to call home. Our Independent Living & Accommodation Support services—including Supported Independent Living (SIL)—help you live in a home of your choosing with the level of support that's right for you. Whether you need 24-hour assistance, overnight support, or just a few hours a day to help with household tasks and skill-building, we're here to help you achieve your living goals.",
+            "title": "Supported Independent Living (SIL) in Shepparton",
+            "subtitle": "Tailored Disability Accommodation & Support",
+            "description": "Looking for Supported Independent Living in Shepparton or the Goulburn Valley? Bright Support offers compassionate, individualised SIL and disability accommodation tailored to your NDIS goals. Our homes are located in quiet, accessible pockets of Shepparton and Mooroopna, ensuring participants are close to local amenities, public transport, and the Goulburn Valley Health precinct. Whether you need 24-hour assistance, overnight support, or a few hours each day to build life skills and household independence, we are here to help you thrive in a home of your choosing. Make an NDIS Referral for SIL in Shepparton today by contacting our friendly team.",
             "images": {
-                "hero": "Modern accessible apartment interior, person cooking in adaptive kitchen, independence, bright and welcoming space",
+                "hero": "Modern, accessible kitchen in a Shepparton SIL home managed by Bright Support, participant cooking independently, bright and welcoming space",
                 "gallery": [
                     {
-                        "prompt": "Exterior of well-maintained supported living house, accessible entrance, welcoming Australian suburban setting",
-                        "caption": "Quality SIL Homes"
+                        "prompt": "Exterior of well-maintained supported living house in Shepparton, accessible entrance, welcoming Australian suburban setting",
+                        "caption": "Quality SIL Homes in Shepparton & Mooroopna"
                     },
                     {
-                        "prompt": "Participant learning budgeting skills with support worker, laptop and documents, skill building session",
-                        "caption": "Life Skills Development"
+                        "prompt": "NDIS participant learning budgeting skills with support worker, laptop and documents, life skills programme in Goulburn Valley",
+                        "caption": "Life Skills Programme"
                     },
                     {
-                        "prompt": "Housemates enjoying meal together in shared living space, friendship and community, independence",
-                        "caption": "Community & Friendship"
+                        "prompt": "Housemates enjoying a meal together in a Shepparton shared living space, friendship and community, specialised supported accommodation",
+                        "caption": "Specialised Community Living"
                     }
                 ]
             },
             "services": [
-                "Supported Independent Living (SIL) arrangements",
+                "Supported Independent Living (SIL) arrangements in Shepparton",
                 "24/7 on-site or on-call support options",
-                "Life skills development (cooking, cleaning, budgeting)",
+                "Life skills development — cooking, cleaning, budgeting",
                 "Tenancy skills and rental management",
                 "Housemate matching and compatibility assessment",
                 "Transition support from family home or other accommodation",
                 "Emergency response and crisis support",
-                "Community access and social participation",
+                "Community access and social participation in Goulburn Valley",
                 "Health and wellbeing monitoring",
-                "Coordination with housing providers"
+                "Coordination with housing providers and NDIS planners"
             ],
             "features": {
                 "personCentered": {
-                    "title": "You Choose Your Home",
-                    "description": "We support you to find accommodation that fits your lifestyle, preferences, and location."
+                    "title": "You Choose Your Home in Shepparton",
+                    "description": "We support participants to find accommodation in Shepparton and Mooroopna that fits their lifestyle, preferences, and location — close to amenities and the Goulburn Valley Health precinct."
                 },
                 "skillBuilding": {
-                    "title": "Build Independence",
-                    "description": "We actively teach skills so you can do more for yourself over time."
+                    "title": "Current SIL Vacancies in the Goulburn Valley",
+                    "description": "We maintain SIL homes across Shepparton and the wider Goulburn Valley. Contact us to enquire about current and upcoming vacancies in your preferred area."
                 },
                 "flexible": {
-                    "title": "Flexible Support Levels",
-                    "description": "From a few hours of drop-in support to 24/7 overnight care—tailored to your needs."
+                    "title": "Why Choose Bright Support for SIL?",
+                    "description": "We are a registered NDIS provider with local knowledge of Shepparton, Mooroopna, and the Goulburn Valley. Our support workers are trained, compassionate, and committed to your independence goals."
                 },
                 "quality": {
-                    "title": "Quality Accommodation",
-                    "description": "Modern, comfortable homes meeting SDA specifications where applicable."
+                    "title": "How to Apply for SIL Funding under the NDIS",
+                    "description": "To access SIL funding, you will need an NDIS plan with Supported Independent Living funding approved as 'reasonable and necessary'. Our team can assist you and your Support Coordinator through the process."
                 },
                 "accessible": {
-                    "title": "Accessible Design",
-                    "description": "Housing options with accessibility features for mobility, sensory, and other needs."
+                    "title": "Specialised Accessible Design",
+                    "description": "Our Shepparton SIL homes feature accessibility modifications for mobility, sensory, and high-support needs, meeting relevant Specialist Disability Accommodation (SDA) standards where applicable."
                 }
             },
             "faq": [
                 {
-                    "question": "What is SIL and how do I get it?",
-                    "answer": "Supported Independent Living (SIL) is NDIS funding for daily personal activities support in a shared living arrangement. To access SIL, you'll need an NDIS assessment and 'reasonable and necessary' determination. We can help guide you through the process."
+                    "question": "What is SIL funding under the NDIS?",
+                    "answer": "Supported Independent Living (SIL) is NDIS funding that covers the cost of support workers helping participants with daily personal activities in a shared or individual living arrangement. It is separate to your housing (rent) costs and is approved as part of your NDIS plan based on your individual support needs."
                 },
                 {
-                    "question": "Can I live on my own or do I have to share?",
-                    "answer": "Both options are available! Some people prefer living solo with drop-in support, while others enjoy the companionship of shared accommodation. We work with you to find the right fit."
+                    "question": "How do I find a SIL house in Shepparton?",
+                    "answer": "You can contact Bright Support directly to enquire about current SIL vacancies in Shepparton and Mooroopna. Our team will arrange a home visit and compatibility assessment to find the right fit for you. You can also ask your Support Coordinator to make a referral on your behalf."
                 },
                 {
-                    "question": "What if I don't get along with my housemates?",
-                    "answer": "We take housemate matching seriously. Before anyone moves in, we facilitate meetings to ensure compatibility. If issues arise, we work with everyone to resolve them or find alternative arrangements."
+                    "question": "How do I apply for SIL in Shepparton?",
+                    "answer": "To access SIL in Shepparton, you will need SIL funding approved in your NDIS plan. Your planner or Support Coordinator can request this during your plan review. Once approved, Bright Support will work with you to find suitable accommodation and match you with a compatible support team."
+                },
+                {
+                    "question": "Can I choose who I live with?",
+                    "answer": "Yes. We take participant matching seriously. Before anyone moves into a Bright Support SIL home in Shepparton, we facilitate meetings to ensure compatibility in lifestyle, routine, and goals. Your comfort and choice always come first."
+                },
+                {
+                    "question": "Does Bright Support have SIL vacancies in Shepparton right now?",
+                    "answer": "Our SIL homes across Shepparton and Mooroopna have varying availability. Contact us on 1800 407 508 or email care@brightsupport.com.au to ask about current and upcoming SIL vacancies in the Goulburn Valley. Even if a home is currently full, we encourage you to enquire so we can match you when a suitable vacancy arises."
                 }
             ]
         }

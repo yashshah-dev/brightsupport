@@ -9,6 +9,11 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
+function clampTitle(title: string, maxLength = 60): string {
+  if (title.length <= maxLength) return title;
+  return `${title.slice(0, maxLength - 3).trimEnd()}...`;
+}
+
 const toFilterSlug = (value: string) =>
   value
     .toLowerCase()
@@ -38,14 +43,15 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!post) {
     return {
-      title: 'Post Not Found | Bright Support',
+      title: 'Post Not Found',
     };
   }
 
   const pageUrl = `${BASE_URL}/blog/${slug}/`;
+  const seoTitle = post.seo?.metaTitle || post.title;
 
   return {
-    title: `${post.title} | Bright Support Shepparton`,
+    title: clampTitle(seoTitle),
     description: post.metaDescription || post.excerpt,
     keywords: post.keywords,
     alternates: {
