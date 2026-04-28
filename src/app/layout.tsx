@@ -72,53 +72,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager */}
         <StructuredData type="Organization" />
         <StructuredData type="LocalBusiness" />
-        <StructuredData
-          type="FAQPage"
-          data={{
-            questions: [
-              {
-                '@type': 'Question',
-                name: 'What is the NDIS and how does Bright Support help?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'The NDIS (National Disability Insurance Scheme) is an Australian government initiative funding support for people with permanent and significant disabilities. Bright Support is a registered NDIS provider in Shepparton offering daily living support, community nursing, physiotherapy, companionship, transport, and more.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What NDIS services does Bright Support offer in Shepparton?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Bright Support offers daily living & in-home support, community nursing & complex care, physiotherapy, community participation & group programs, companionship, travel & transport assistance, hydrotherapy, personal training, positive behaviour support, professional cleaning, and independent living accommodation support.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Can I access NDIS services from Bright Support if I already receive support from other programs?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Yes. You may access NDIS services even if you currently receive support from other programs. The NDIS works alongside existing supports where possible. Contact us to discuss your individual situation and plan.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Where does Bright Support provide NDIS services?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Bright Support provides NDIS disability support services across Shepparton, Mooroopna, and surrounding suburbs in Victoria, Australia.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How do I get started with Bright Support?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Call us on 1800 407 508 or fill in our online contact form. We respond within 24 hours and can help you understand your NDIS plan and which services suit your needs.',
-                },
-              },
-            ],
-          }}
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
