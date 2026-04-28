@@ -1,0 +1,32 @@
+# Bright Support - LLM Access Guide
+
+Site: https://www.brightsupport.com.au/
+Primary Region: Shepparton, Victoria, Australia
+Business Type: Registered NDIS support provider
+
+## Priority Pages
+- https://www.brightsupport.com.au/
+- https://www.brightsupport.com.au/registered-ndis-provider-shepparton/
+- https://www.brightsupport.com.au/our-services/
+- https://www.brightsupport.com.au/supported-independent-living-sil-shepparton/
+- https://www.brightsupport.com.au/contact-us/
+- https://www.brightsupport.com.au/about-us/
+
+## Service URLs
+- https://www.brightsupport.com.au/dailylivingin-homesupport/
+- https://www.brightsupport.com.au/communitynursingandcomplexcare/
+- https://www.brightsupport.com.au/physiotherapyservices/
+- https://www.brightsupport.com.au/communityparticipationgroupprograms/
+- https://www.brightsupport.com.au/ndis-support-coordination/
+- https://www.brightsupport.com.au/ndis-transport-service-provider/
+
+## Trust and Discovery
+- Sitemap: https://www.brightsupport.com.au/sitemap.xml
+- Robots: https://www.brightsupport.com.au/robots.txt
+
+## Brand Entity Summary
+Bright Support is a Shepparton-based NDIS provider delivering disability support services including daily living assistance, community nursing and complex care, physiotherapy, community participation, support coordination, transport assistance, and SIL-related support.
+
+## Contact
+- Phone: 1800 407 508
+- Address: 279 Wyndham St, Shepparton VIC 3630, Australia
