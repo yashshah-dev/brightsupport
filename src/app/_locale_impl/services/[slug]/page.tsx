@@ -6,11 +6,11 @@ import { getServiceUrl } from '@/lib/serviceUrls';
 // SEO metadata for each service page
 const serviceMetadata: Record<string, { title: string; description: string }> = {
     'daily-living-in-home-support': {
-        title: 'Daily Living & In-Home Support Services - NDIS Shepparton | Bright Support',
+        title: 'Daily Living & In-Home Support Services - NDIS Shepparton',
         description: 'Empowering independence with expert daily living and in-home support for NDIS participants in Shepparton. Personal care, meal prep, and household assistance.',
     },
     'support-coordination': {
-        title: 'NDIS Support Coordination Shepparton | Bright Support',
+        title: 'NDIS Support Coordination Shepparton',
         description: 'Expert NDIS Support Coordination to help you navigate your plan, connect with the right providers, and achieve your personal goals.',
     },
     'community-nursing-complex-care': {
@@ -50,8 +50,8 @@ const serviceMetadata: Record<string, { title: string; description: string }> = 
         description: 'NDIS professional cleaning services in Shepparton. Reliable house cleaning, laundry, and home maintenance support for NDIS participants.',
     },
     'independent-living-accommodation-support': {
-        title: 'Independent Living & Accommodation Support - NDIS Shepparton',
-        description: 'NDIS independent living and accommodation support in Shepparton. Assistance finding suitable accommodation, tenancy support, and supported independent living (SIL).',
+        title: 'Supported Independent Living (SIL) Shepparton',
+        description: 'Looking for Supported Independent Living in Shepparton? Bright Support offers compassionate, individualised SIL and disability accommodation tailored to your NDIS goals. View our current vacancies today.',
     },
 };
 

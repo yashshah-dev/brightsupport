@@ -2,10 +2,10 @@ import { Metadata } from 'next';
 import { Shield, Lock, Eye, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Bright Support Australia',
+  title: 'Privacy Policy',
   description: 'Learn how Bright Support collects, uses, and protects your personal information in accordance with Australian privacy legislation and the Public Records Act 1973.',
   openGraph: {
-    title: 'Privacy Policy | Bright Support Australia',
+    title: 'Privacy Policy',
     description: 'How Bright Support collects, uses, and protects your personal information in accordance with Australian privacy law.',
     url: 'https://www.brightsupport.com.au/privacy-policy',
   },

@@ -41,8 +41,10 @@ http://brightsupport.com.au/*                           https://www.brightsuppor
 /positive-behaviour-support                            /positivebehavioursupport/                           301
 /professional-cleaning/                                /ndis-cleaning-services/                             301
 /professional-cleaning                                 /ndis-cleaning-services/                             301
-/accommodation-support-services/                       /independent-living-accommodation-support/           301
-/accommodation-support-services                        /independent-living-accommodation-support/           301
+/accommodation-support-services/                       /supported-independent-living-sil-shepparton/        301
+/accommodation-support-services                        /supported-independent-living-sil-shepparton/        301
+/independent-living-accommodation-support/             /supported-independent-living-sil-shepparton/        301
+/independent-living-accommodation-support              /supported-independent-living-sil-shepparton/        301
 /support-coordination/                                 /ndis-support-coordination/                          301
 /support-coordination                                  /ndis-support-coordination/                          301
 

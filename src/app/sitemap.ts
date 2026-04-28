@@ -23,7 +23,7 @@ const serviceUrlMapping: Record<string, string> = {
   'personal-training-sessions': '/ndispersonaltrainingsessions',
   'positive-behaviour-support': '/positivebehavioursupport',
   'professional-cleaning': '/ndis-cleaning-services',
-  'independent-living-accommodation-support': '/independent-living-accommodation-support',
+  'independent-living-accommodation-support': '/supported-independent-living-sil-shepparton',
   'support-coordination': '/ndis-support-coordination',
 };
 
@@ -35,9 +35,9 @@ const mainPages = [
   '/our-services',
   '/blog',     // Added blog listing page
   '/contact-us',
+  '/thank-you',
   '/career',
   '/privacy-policy',
-  '/thank-you',
 ];
 
 // Image mapping for service pages (for image sitemap)
