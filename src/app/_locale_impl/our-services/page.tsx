@@ -17,7 +17,7 @@ export default function OurServicesPage() {
             icon: Building2,
             titleKey: 'independentLiving.title',
             descriptionKey: 'independentLiving.subtitle',
-            link: '/independent-living-accommodation-support',
+            link: '/supported-independent-living-sil-shepparton',
             imageSrc: '/images/services/independent-living.webp',
         },
         {
