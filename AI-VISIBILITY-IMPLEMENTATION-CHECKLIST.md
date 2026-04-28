@@ -20,8 +20,8 @@ Improve visibility in AI responses and AI overviews for local intent queries in 
 
 ## Sprint 2 (Next 2 Weeks)
 - [x] Add page-specific FAQ schema to top 5 transactional pages.
-- [ ] Add more entity-rich internal links from blog posts to service and location pages.
-- [ ] Add mention consistency pass: Bright Support + Shepparton + NDIS phrasing across key pages.
+- [x] Add more entity-rich internal links from blog posts to service and location pages.
+- [x] Add mention consistency pass: Bright Support + Shepparton + NDIS phrasing across key pages.
 
 ## Sprint 3 (Ongoing)
 - [ ] Build citation tracker sheet with NAP consistency checks.
