@@ -7,7 +7,7 @@ const BASE_URL = 'https://www.brightsupport.com.au';
 const PAGE_PATH = '/registered-ndis-provider-shepparton';
 
 export const metadata: Metadata = {
-  title: 'NDIS Providers Shepparton | Registered NDIS Provider Checklist | Bright Support',
+  title: 'Registered NDIS Provider Shepparton | Bright Support',
   description:
     'Compare NDIS providers in Shepparton. Bright Support is a registered NDIS provider with local staff, fast response times, and SIL vacancies. Use our free checklist to choose with confidence.',
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'NDIS Providers Shepparton | Registered NDIS Provider Checklist | Bright Support',
+    title: 'Registered NDIS Provider Shepparton | Bright Support',
     description:
       'Compare registered NDIS providers in Shepparton with our free checklist. Local staff, SIL vacancies, and transparent pricing — choose Bright Support with confidence.',
     url: `${BASE_URL}${PAGE_PATH}/`,

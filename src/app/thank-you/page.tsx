@@ -96,6 +96,28 @@ export default function ThankYouPage() {
               You can also review our service information to prepare questions before your callback.
             </p>
           </div>
+
+          <div className="max-w-3xl mx-auto mt-8 bg-white border border-slate-200 rounded-xl p-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">What to Prepare Before Our Callback</h2>
+            <p className="text-slate-700 mb-3">
+              To make your next conversation more useful, keep your NDIS plan summary nearby and write down the
+              outcomes you want support with first. This helps us provide clearer guidance on service matching,
+              onboarding expectations, and realistic commencement timelines.
+            </p>
+            <p className="text-slate-700 mb-4">
+              If you are supporting a family member or participant, include any preferred contact hours and key
+              accessibility needs so our team can tailor communication and service planning from the first call.
+            </p>
+            <ul className="list-disc list-inside text-slate-700 space-y-2 mb-4">
+              <li>Your preferred support type (daily living, nursing, coordination, or SIL).</li>
+              <li>Preferred suburb and days/times for support delivery.</li>
+              <li>Any urgency factors such as hospital discharge or care transition.</li>
+            </ul>
+            <p className="text-slate-700">
+              You can review our <Link href="/our-services" className="text-indigo-700 underline">NDIS services in Shepparton</Link>
+              {' '}or return to the <Link href="/blog" className="text-indigo-700 underline">NDIS blog</Link> for practical guides while waiting.
+            </p>
+          </div>
         </div>
       </section>
     </div>
