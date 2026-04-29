@@ -74,6 +74,43 @@ export default function OurLocation() {
                 </div>
               </div>
             </div>
+
+            <div className="mt-16 border-t border-slate-200 pt-12">
+              <h2 className="text-3xl font-bold text-navy-900 mb-5">NDIS Support in Shepparton and Nearby Areas</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Bright Support is based in Shepparton and supports participants across the broader region. Many families
+                contact us for local, reliable NDIS services that reduce travel complexity and improve consistency of care.
+                Our team works with participants, carers, and referrers to coordinate practical supports close to home.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                We regularly assist participants in Shepparton and surrounding communities including Mooroopna, Tatura,
+                and nearby suburbs where service accessibility matters. If you are unsure whether your area is covered,
+                call us and we will confirm availability, travel arrangements, and estimated start timelines.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                From daily living support and support coordination to community nursing and capacity-building services,
+                our local presence helps participants receive more responsive communication and clearer ongoing planning.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                <div className="bg-slate-50 rounded-xl border border-slate-200 p-5">
+                  <h3 className="text-xl font-semibold text-navy-900 mb-2">Before You Visit</h3>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Bring your NDIS plan details if you want service guidance.</li>
+                    <li>Note your preferred support start times and availability.</li>
+                    <li>Prepare questions about provider matching and onboarding.</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 rounded-xl border border-slate-200 p-5">
+                  <h3 className="text-xl font-semibold text-navy-900 mb-2">How We Can Help</h3>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2">
+                    <li>New participant enquiries and referral support.</li>
+                    <li>Service coordination across multiple support categories.</li>
+                    <li>Practical planning for local NDIS service delivery.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
