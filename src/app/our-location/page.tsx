@@ -53,7 +53,7 @@ export default function OurLocation() {
                     <MapPin className="w-6 h-6 text-coral-500 flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-navy-900 mb-2">Address</h3>
-                      <p className="text-gray-600">Shepparton, Victoria, Australia</p>
+                      <p className="text-gray-600">279 Wyndham Street, Shepparton VIC 3630</p>
                     </div>
                   </div>
 
