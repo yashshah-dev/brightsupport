@@ -4,9 +4,9 @@ import HomePage from '@/app/_locale_impl/page';
 const BASE_URL = 'https://www.brightsupport.com.au';
 
 export const metadata: Metadata = {
-  title: 'Bright Support | NDIS Disability & Support Services in Shepparton',
+  title: 'NDIS Provider Shepparton | Disability Support Services | Bright Support',
   description:
-    'Registered NDIS provider in Shepparton offering daily living support, community nursing, physiotherapy, SIL, and community participation services.',
+    'Bright Support is a registered NDIS provider in Shepparton delivering disability support services — daily living, SIL, support coordination, community nursing, and more. Local staff, fast response.',
   alternates: {
     languages: {
       en: `${BASE_URL}/`,
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Bright Support | NDIS Disability & Support Services in Shepparton',
+    title: 'NDIS Provider Shepparton | Disability Support Services | Bright Support',
     description:
-      'Trusted NDIS support across Shepparton and Mooroopna with personalised care plans and local, experienced teams.',
+      'Registered NDIS provider serving Shepparton and Mooroopna. Disability support services tailored to your plan and goals — with a 24-hour response guarantee.',
     url: `${BASE_URL}/`,
     type: 'website',
   },

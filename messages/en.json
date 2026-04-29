@@ -46,9 +46,9 @@
         },
         "acceptingBanner": "Currently Accepting New Participants",
         "responseGuarantee": "24-Hour Response Guaranteed",
-        "title": "NDIS Disability & Support Services Provider",
+        "title": "NDIS Provider & Disability Support Services in Shepparton",
         "subtitle": "Welcome To Bright Support",
-        "description": "Making navigating the NDIS easy with compassionate, professional support services tailored to your unique needs and goals.",
+        "description": "Making navigating the NDIS easy with compassionate, professional disability support services tailored to your unique needs and goals.",
         "cta": {
             "services": "Explore Our Services",
             "contact": "Book Free Assessment"
@@ -315,13 +315,13 @@
     },
     "OurServices": {
         "meta": {
-            "title": "Our Services | NDIS Support Services - Bright Support",
-            "description": "Comprehensive NDIS services including daily living support, community nursing, physiotherapy, community participation, personal training, hydrotherapy, and more."
+            "title": "NDIS Services Shepparton | Disability Services | Bright Support",
+            "description": "Disability services in Shepparton by Bright Support \u2014 daily living, community nursing, SIL, support coordination, transport, and more. Local NDIS support workers available now."
         },
         "hero": {
-            "title": "Our Services",
+            "title": "NDIS Services & Disability Support in Shepparton",
             "subtitle": "Comprehensive NDIS Support",
-            "description": "We offer a wide range of NDIS-funded services designed to support your independence and help you achieve your goals."
+            "description": "We offer a wide range of NDIS-funded disability services designed to support your independence and help you achieve your goals."
         },
         "categories": {
             "daily": "Daily Living Support",
@@ -342,8 +342,8 @@
     },
     "ServiceDetails": {
         "supportCoordination": {
-            "title": "NDIS Support Coordination",
-            "subtitle": "Capacity Building and Navigating Your NDIS Plan",
+            "title": "Support Coordination Shepparton",
+            "subtitle": "Navigate Your NDIS Plan with Local Expert Support",
             "description": "Support Coordination is a capacity building support which helps you to understand and use your NDIS plan. A dedicated Support Coordinator will work with you to ensure a mix of supports are used to increase your capacity to maintain relationships, manage service delivery tasks, live more independently and be included in your community.",
             "images": {
                 "hero": "Professional support coordinator reviewing NDIS plan with a participant and their family at home, open communication, supportive environment, natural lighting",
@@ -478,8 +478,8 @@
             ]
         },
         "communityNursing": {
-            "title": "Community Nursing & Complex Care",
-            "subtitle": "Hospital-Quality Care in the Comfort of Home",
+            "title": "Community Nursing Care Shepparton",
+            "subtitle": "Hospital-Quality Nursing Care in the Comfort of Your Home",
             "description": "Managing complex health needs doesn't mean you have to stay in a hospital. Our Community Nursing team brings expert clinical care directly to your doorstep. Led by experienced Registered Nurses, we provide specialized medical support, health assessments, and complex care management tailored to your specific condition—all while you relax in your own home, surrounded by the people and things you love.",
             "images": {
                 "hero": "Professional registered nurse in uniform checking blood pressure of seated participant in comfortable living room, medical equipment visible, calm reassuring atmosphere, soft natural lighting",
@@ -610,8 +610,8 @@
             ]
         },
         "communityParticipation": {
-            "title": "Community Participation & Group Programs",
-            "subtitle": "Connect, Belong, and Thrive Together",
+            "title": "NDIS Community Participation Shepparton",
+            "subtitle": "Connect, Belong, and Thrive in Your Local Community",
             "description": "Life is better shared! Our Community Participation programs are all about building genuine connections, discovering new passions, and being an active, valued member of your community. Whether you want to join a cooking class, try your hand at art, attend local events, or simply catch up for coffee with new friends, we make it happen. Our supported group activities are designed to be safe, inclusive, and—most importantly—fun!",
             "images": {
                 "hero": "Diverse group of people laughing and enjoying outdoor picnic in sunny Australian park, genuine friendship, vibrant colors, lifestyle photography",
@@ -746,8 +746,8 @@
             ]
         },
         "transport": {
-            "title": "Travel & Transport Assistance",
-            "subtitle": "Getting You Where Life Takes You",
+            "title": "NDIS Transport Shepparton",
+            "subtitle": "Reliable Transport to Appointments, Activities, and Beyond",
             "description": "Don't let transport be a barrier to living your life. Our Travel & Transport Assistance ensures you can get from A to B safely, reliably, and comfortably. Whether it's a critical medical appointment, a weekly grocery shop, or a trip to catch up with friends, our friendly support workers are ready to help. We provide more than just a ride—we offer door-to-door support, helping you into the vehicle and accompanying you to your destination if needed.",
             "images": {
                 "hero": "Friendly driver helping participant into modern accessible vehicle with wheelchair ramp, welcoming smile, suburban setting, safe transport",
@@ -1010,8 +1010,8 @@
             ]
         },
         "cleaning": {
-            "title": "Professional Cleaning Services",
-            "subtitle": "A Clean Home, A Clear Mind",
+            "title": "NDIS Cleaning Services Shepparton",
+            "subtitle": "House Cleaning You Can Trust \u2014 A Clear Mind at Home",
             "description": "A tidy home isn't a luxury—it's essential for health, comfort, and peace of mind. Our Professional Cleaning services help you maintain a spotless living space without the stress. Whether it's a weekly surface clean, a deep bathroom scrub, or help organizing your space, our friendly cleaners work to YOUR standards and preferences. Sit back, relax, and enjoy coming home to a fresh, clean space.",
             "images": {
                 "hero": "Professional cleaner vacuuming in bright, organized living room, clean surfaces, professional and friendly service",
@@ -1076,8 +1076,8 @@
             ]
         },
         "independentLiving": {
-            "title": "Supported Independent Living (SIL) in Shepparton",
-            "subtitle": "Tailored Disability Accommodation & Support",
+            "title": "NDIS Accommodation & SIL in Shepparton",
+            "subtitle": "Tailored Disability Accommodation & Independent Living Support",
             "description": "Looking for Supported Independent Living in Shepparton or the Goulburn Valley? Bright Support offers compassionate, individualised SIL and disability accommodation tailored to your NDIS goals. Our homes are located in quiet, accessible pockets of Shepparton and Mooroopna, ensuring participants are close to local amenities, public transport, and the Goulburn Valley Health precinct. Whether you need 24-hour assistance, overnight support, or a few hours each day to build life skills and household independence, we are here to help you thrive in a home of your choosing. Make an NDIS Referral for SIL in Shepparton today by contacting our friendly team.",
             "images": {
                 "hero": "Modern, accessible kitchen in a Shepparton SIL home managed by Bright Support, participant cooking independently, bright and welcoming space",
