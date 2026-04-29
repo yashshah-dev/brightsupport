@@ -2,7 +2,7 @@
     "Header": {
         "phone": "1800 407 508",
         "email": "care@brightsupport.com.au",
-        "hours": "Thứ 2-6 8h-18h",
+        "hours": "Thứ 2-7 8h-18h | CN 8h-12h",
         "nav": {
             "home": "Trang chủ",
             "about": "Về chúng tôi",
@@ -244,7 +244,7 @@
             "phone": "Điện thoại",
             "email": "Email",
             "hours": "Giờ làm việc",
-            "hoursValue": "Thứ 2 - Thứ 6: 8h - 18h"
+            "hoursValue": "Thứ 2 - Thứ 7: 8h - 18h | Chủ nhật: 8h - 12h"
         },
         "locations": {
             "title": "Địa điểm của chúng tôi",

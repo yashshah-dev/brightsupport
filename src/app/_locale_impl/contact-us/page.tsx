@@ -240,6 +240,16 @@ export default function ContactUsPage() {
                                             <div className="text-gray-600">{tLocations('shepparton.address')}</div>
                                         </div>
                                     </div>
+                                    <div className="h-72 overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+                                        <iframe
+                                            src="https://storage.googleapis.com/maps-solutions-5f7baa1wxw/locator-plus/1mfj/locator-plus.html"
+                                            width="100%"
+                                            height="100%"
+                                            style={{ border: 0 }}
+                                            loading="lazy"
+                                            title="Bright Support business location"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>

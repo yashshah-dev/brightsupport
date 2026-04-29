@@ -2,7 +2,7 @@
     "Header": {
         "phone": "1800 407 508",
         "email": "care@brightsupport.com.au",
-        "hours": "周一至周五 早8点-晚6点",
+        "hours": "周一至周六 早8点-晚6点 | 周日 早8点-中午12点",
         "nav": {
             "home": "首页",
             "about": "关于我们",
@@ -244,7 +244,7 @@
             "phone": "电话",
             "email": "电子邮件",
             "hours": "营业时间",
-            "hoursValue": "周一至周五：早8点 - 晚6点"
+            "hoursValue": "周一至周六：早8点 - 晚6点 | 周日：早8点 - 中午12点"
         },
         "locations": {
             "title": "我们的地点",
