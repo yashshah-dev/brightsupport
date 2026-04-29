@@ -27,6 +27,22 @@ const silFaqs = [
       text: 'Yes. SIL supports are planned around your NDIS goals, daily living needs, and preferred level of independence to create a practical long-term support setup.',
     },
   },
+  {
+    '@type': 'Question',
+    name: 'Does Bright Support offer NDIS accommodation in Shepparton?',
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: 'Yes. Bright Support offers NDIS disability accommodation in Shepparton through Supported Independent Living (SIL). Our homes are located in accessible areas of Shepparton and Mooroopna with 24-hour support options. Contact us to check current vacancies.',
+    },
+  },
+  {
+    '@type': 'Question',
+    name: 'What is the difference between SIL and NDIS accommodation?',
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: 'NDIS accommodation refers to where you live (the dwelling), while SIL (Supported Independent Living) refers to the support provided within that home. Bright Support provides both — purpose-fit homes and the daily support you need to live independently in Shepparton.',
+    },
+  },
 ];
 
 export async function generateMetadata(): Promise<Metadata> {

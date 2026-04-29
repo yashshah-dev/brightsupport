@@ -246,6 +246,31 @@ export default function ContactUsPage() {
                     </div>
                 </div>
             </section>
+
+            <section className="py-16 bg-slate-50 border-t border-slate-200">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <h2 className="text-3xl font-bold text-navy-900 mb-5">Contact Our NDIS Team in Shepparton</h2>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                        We support participants, families, and referrers who need clear guidance on NDIS services in Shepparton.
+                        You can contact us for help with new referrals, service availability, plan implementation, and next steps
+                        after a planning meeting or review.
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                        If you are unsure which service category applies to your situation, our team can explain practical options
+                        and connect you with the right support stream. We regularly assist with daily living, community nursing,
+                        support coordination, physiotherapy, community participation, and SIL enquiries.
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                        For faster triage, include your suburb, preferred contact method, and any time-sensitive needs in your message.
+                        This helps us respond with relevant information and suitable appointment times.
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 space-y-2">
+                        <li>New participant enquiries and NDIS referrals.</li>
+                        <li>Provider coordination and service commencement timelines.</li>
+                        <li>General support information for Shepparton and nearby areas.</li>
+                    </ul>
+                </div>
+            </section>
         </div>
     );
 }

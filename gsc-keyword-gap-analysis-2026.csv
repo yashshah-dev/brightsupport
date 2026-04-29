@@ -1,0 +1,21 @@
+query,clicks,impressions,ctr,position,status,reason,recommended_action,target_page
+ndis shepparton,3,321,0.93%,10.62,ADD_PRIORITY,High impressions and relevant local head term not in exact target set,Add as primary variant and optimize homepage title/H1 copy,/
+support coordination shepparton,1,185,0.54%,7.62,ADD_PRIORITY,High impression commercial term with existing relevant service page,Add exact keyword to tracking and on-page headings,/ndis-support-coordination
+ndis service provider shepparton,0,141,0%,4.85,ADD_PRIORITY,Near page-1 ranking but zero CTR indicates snippet mismatch,Add as target variant and improve title/meta messaging,/
+ndis providers shepparton,0,93,0%,3.44,ADD_PRIORITY,Very strong average position but no clicks signals weak SERP appeal,Create variant title/meta on provider page,/registered-ndis-provider-shepparton
+shepparton disability services,0,101,0%,10.21,ADD_PRIORITY,Strong local service intent currently untracked exact phrase,Add as secondary and include in services hub intro,/our-services
+disability services shepparton,1,84,1.19%,10.8,ADD_PRIORITY,Relevant local term with position improvement potential,Add exact phrase to homepage/services page copy,/our-services
+community nursing care shepparton,0,86,0%,18.99,ADD,Relevant to nursing page but weak position,Add supporting content section and internal links,/communitynursingandcomplexcare
+ndis accommodation shepparton,0,88,0%,12.81,KEEP_AND_IMPROVE,Already targeted but underperforming,Strengthen SIL page with FAQ and availability intent,/supported-independent-living-sil-shepparton
+ndis community participation shepparton,0,169,0%,11.47,KEEP_AND_IMPROVE,Already targeted with high impressions but low CTR,Refine title/meta and add program examples,/communityparticipationgroupprograms
+disability support services shepparton,1,207,0.48%,7.3,KEEP_AND_IMPROVE,Already targeted and high-impression but weak CTR,Rewrite homepage/services meta for stronger value proposition,/
+ndis provider shepparton,1,183,0.55%,7.38,KEEP_AND_IMPROVE,Already targeted with strong opportunity,Improve provider page snippet and schema alignment,/registered-ndis-provider-shepparton
+disability support shepparton,5,22,22.73%,2.64,KEEP_WINNER,Current winner with good CTR and ranking,Protect ranking and build supporting links,/
+ndis transport shepparton,0,31,0%,19.68,ADD,Relevant long-tail to transport page,Add exact-match subheading and FAQ line,/ndis-transport-service-provider
+house cleaning shepparton,0,22,0%,26.5,ADD,Relevant local modifier for cleaning service page,Add local non-NDIS cleaning variant copy,/ndis-cleaning-services
+ndis support worker shepparton,0,43,0%,12.81,ADD,Commercial relevant intent not explicitly targeted,Add supporting copy block on homepage/services pages,/our-services
+ndis plan management shepparton,0,31,0%,4.77,MONITOR_NEW_PAGE,High-intent adjacent service not currently a dedicated page,Consider dedicated plan management page or section,/ndis-support-coordination
+physio shepparton,0,44,0%,58.75,LOW_PRIORITY,Very weak ranking and broad term,Target only as tertiary variant on physio page,/physiotherapyservices
+ndis provider brighton,0,225,0%,53.09,DEPRIORITIZE_OFF_LOCATION,Out-of-service-area location likely legacy/noise,Do not target; reinforce Shepparton geo signals,/
+ndis provider brighton north,0,176,0%,56.48,DEPRIORITIZE_OFF_LOCATION,Out-of-service-area location noise,Exclude from priority tracking and content,/
+ndis service provider boronia,0,118,0%,75.03,DEPRIORITIZE_OFF_LOCATION,Out-of-service-area location noise,Exclude from target list; check legacy citations,/

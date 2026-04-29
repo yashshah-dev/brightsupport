@@ -31,28 +31,28 @@ export default function OurServicesPage() {
             icon: Home,
             titleKey: 'dailyLiving.title',
             descriptionKey: 'dailyLiving.subtitle',
-            link: '/dailylivingin-homesupport',
+            link: '/daily-living-in-home-support',
             imageSrc: '/images/services/daily-living.webp',
         },
         {
             icon: Stethoscope,
             titleKey: 'communityNursing.title',
             descriptionKey: 'communityNursing.subtitle',
-            link: '/communitynursingandcomplexcare',
+            link: '/community-nursing-complex-care',
             imageSrc: '/images/services/nursing.webp',
         },
         {
             icon: Activity,
             titleKey: 'physiotherapy.title',
             descriptionKey: 'physiotherapy.subtitle',
-            link: '/physiotherapyservices',
+            link: '/physiotherapy-services',
             imageSrc: '/images/services/physiotherapy.webp',
         },
         {
             icon: Users,
             titleKey: 'communityParticipation.title',
             descriptionKey: 'communityParticipation.subtitle',
-            link: '/communityparticipationgroupprograms',
+            link: '/community-participation-group-programs',
             imageSrc: '/images/services/community-participation.webp',
         },
         // {
@@ -80,14 +80,14 @@ export default function OurServicesPage() {
             icon: Dumbbell,
             titleKey: 'personalTraining.title',
             descriptionKey: 'personalTraining.subtitle',
-            link: '/ndispersonaltrainingsessions',
+            link: '/personal-training-sessions',
             imageSrc: '/images/services/personal-training.png',
         },
         {
             icon: Brain,
             titleKey: 'behaviourSupport.title',
             descriptionKey: 'behaviourSupport.subtitle',
-            link: '/positivebehavioursupport',
+            link: '/positive-behaviour-support',
             imageSrc: '/images/services/positive-behaviour-support.png',
 
         },
@@ -129,6 +129,36 @@ export default function OurServicesPage() {
                                 />
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-16 bg-slate-50 border-t border-slate-200">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <h2 className="text-3xl font-bold text-navy-900 mb-5">NDIS Services in Shepparton: How to Choose the Right Mix</h2>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                        Participants often need more than one support type to reach their goals. For example, daily living supports
+                        can be combined with community participation, while nursing or therapy supports may be scheduled alongside
+                        support coordination to keep services aligned and practical.
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                        Bright Support provides local NDIS services in Shepparton with a person-first approach. We focus on reliable
+                        rostering, clear communication, and measurable outcomes so participants and families understand what is
+                        being delivered and why it matters for plan goals.
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                        If you are comparing providers, review each service page above and then contact our team to discuss funding,
+                        service availability, and implementation timelines for your location.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+                        <div className="bg-white rounded-lg border border-slate-200 p-4">
+                            <h3 className="font-semibold text-navy-900 mb-1">For New Participants</h3>
+                            <p>Start with core supports, then add capacity-building services as your plan goals evolve.</p>
+                        </div>
+                        <div className="bg-white rounded-lg border border-slate-200 p-4">
+                            <h3 className="font-semibold text-navy-900 mb-1">For Plan Reviews</h3>
+                            <p>Use service outcomes and usage patterns to request realistic funding for the next plan period.</p>
+                        </div>
                     </div>
                 </div>
             </section>

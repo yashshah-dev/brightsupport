@@ -32,7 +32,7 @@ const communityNursingFaqs = [
     name: 'What does community nursing care in Shepparton include?',
     acceptedAnswer: {
       '@type': 'Answer',
-      text: 'Community nursing care in Shepparton through Bright Support includes wound care, medication management, catheter care, clinical health assessments, and coordination of complex care needs — all delivered by Registered Nurses at home.',
+      text: 'Community nursing care in Shepparton through Bright Support includes wound care, medication management, catheter care, clinical health assessments, and coordination of complex care needs, delivered by Registered Nurses at home.',
     },
   },
   {

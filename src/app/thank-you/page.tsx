@@ -81,6 +81,21 @@ export default function ThankYouPage() {
               Return to home
             </Link>
           </div>
+
+          <div className="max-w-3xl mx-auto mt-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">While You Wait</h2>
+            <p className="text-slate-700 mb-3">
+              Bright Support provides NDIS services in Shepparton across daily living support, support coordination,
+              community nursing, physiotherapy, community participation, and supported independent living.
+            </p>
+            <p className="text-slate-700 mb-3">
+              If your enquiry is time-sensitive, phone support is the fastest channel. For non-urgent requests,
+              our team will reply with next steps, service availability, and referral guidance based on your goals.
+            </p>
+            <p className="text-slate-700">
+              You can also review our service information to prepare questions before your callback.
+            </p>
+          </div>
         </div>
       </section>
     </div>
