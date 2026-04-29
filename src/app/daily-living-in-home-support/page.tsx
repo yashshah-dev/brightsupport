@@ -3,10 +3,10 @@ import ServicePage, { generateMetadata as generateServiceMetadata } from '@/app/
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateServiceMetadata({
-    params: Promise.resolve({ locale: 'en', slug: 'companionship' }),
+    params: Promise.resolve({ locale: 'en', slug: 'daily-living-in-home-support' }),
   });
 }
 
 export default function Page() {
-  return <ServicePage params={Promise.resolve({ locale: 'en', slug: 'companionship' })} />;
+  return <ServicePage params={Promise.resolve({ locale: 'en', slug: 'daily-living-in-home-support' })} />;
 }

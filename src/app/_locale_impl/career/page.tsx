@@ -69,6 +69,31 @@ export default function CareerPage() {
                 </div>
             </section>
 
+            <section className="py-16 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <h2 className="text-3xl font-bold text-navy-900 mb-5">Build a Long-Term NDIS Career in Shepparton</h2>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                        Bright Support hires team members who value person-centred care, consistent communication, and practical
+                        outcomes for participants. Whether you are applying for a disability support worker role, a nursing position,
+                        or a coordination role, we look for people who can deliver reliable support and uphold NDIS quality standards.
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                        Our Shepparton team supports participants across daily living, community access, clinical supports,
+                        and capacity-building services. This creates real professional growth opportunities for staff who want
+                        varied experience and clear development pathways in disability support.
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                        If you are searching for NDIS career opportunities in Shepparton with structured onboarding,
+                        supportive leadership, and meaningful participant impact, we encourage you to submit your interest.
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Flexible scheduling options across weekdays and weekends.</li>
+                        <li>Team-based support with clear escalation pathways.</li>
+                        <li>Ongoing training aligned to NDIS compliance and participant outcomes.</li>
+                    </ul>
+                </div>
+            </section>
+
             {/* CTA Section */}
             <section className="py-16 bg-gradient-to-r from-[#1E4D8C] to-[#38BDF8] text-white">
                 <div className="container mx-auto px-4 text-center">

@@ -13,16 +13,16 @@ http://brightsupport.com.au/*                           https://www.brightsuppor
 /blog                                                 /blog/                                              301!  tag=:tag
 
 # Service page redirects (WordPress → New URL structure - ROOT LEVEL)
-/daily-living-in-home-support/                         /dailylivingin-homesupport/                          301
-/daily-living-in-home-support                          /dailylivingin-homesupport/                          301
-/community-nursing-complex-care/                       /communitynursingandcomplexcare/                     301
-/community-nursing-complex-care                        /communitynursingandcomplexcare/                     301
-/physiotherapy-services/                               /physiotherapyservices/                              301
-/physiotherapy-services                                /physiotherapyservices/                              301
-/communityparticipationgroupactivities/                /communityparticipationgroupprograms/                301
-/communityparticipationgroupactivities                 /communityparticipationgroupprograms/                301
-/community-participation-group-programs/              /communityparticipationgroupprograms/                301
-/community-participation-group-programs               /communityparticipationgroupprograms/                301
+/daily-living-in-home-support/                         /daily-living-in-home-support/                       301
+/daily-living-in-home-support                          /daily-living-in-home-support/                       301
+/community-nursing-complex-care/                       /community-nursing-complex-care/                     301
+/community-nursing-complex-care                        /community-nursing-complex-care/                     301
+/physiotherapy-services/                               /physiotherapy-services/                             301
+/physiotherapy-services                                /physiotherapy-services/                             301
+/communityparticipationgroupactivities/                /community-participation-group-programs/             301
+/communityparticipationgroupactivities                 /community-participation-group-programs/             301
+/community-participation-group-programs/               /community-participation-group-programs/             301
+/community-participation-group-programs                /community-participation-group-programs/             301
 /companionship/                                        /companion-care-services/                            301
 /companionship                                         /companion-care-services/                            301
 /travelandtransportassistance/                         /ndis-transport-service-provider/                    301
@@ -33,12 +33,12 @@ http://brightsupport.com.au/*                           https://www.brightsuppor
 /hydrotherapyandpoolsessions                           /ndis-hydrotherapy-services/                         301
 /hydrotherapy-pool-session/                            /ndis-hydrotherapy-services/                         301
 /hydrotherapy-pool-session                             /ndis-hydrotherapy-services/                         301
-/personaltrainingsessions/                             /ndispersonaltrainingsessions/                       301
-/personaltrainingsessions                              /ndispersonaltrainingsessions/                       301
-/personal-training-sessions/                           /ndispersonaltrainingsessions/                       301
-/personal-training-sessions                            /ndispersonaltrainingsessions/                       301
-/positive-behaviour-support/                           /positivebehavioursupport/                           301
-/positive-behaviour-support                            /positivebehavioursupport/                           301
+/personaltrainingsessions/                             /personal-training-sessions/                         301
+/personaltrainingsessions                              /personal-training-sessions/                         301
+/personal-training-sessions/                           /personal-training-sessions/                         301
+/personal-training-sessions                            /personal-training-sessions/                         301
+/positive-behaviour-support/                           /positive-behaviour-support/                         301
+/positive-behaviour-support                            /positive-behaviour-support/                         301
 /professional-cleaning/                                /ndis-cleaning-services/                             301
 /professional-cleaning                                 /ndis-cleaning-services/                             301
 /accommodation-support-services/                       /supported-independent-living-sil-shepparton/        301
@@ -47,6 +47,24 @@ http://brightsupport.com.au/*                           https://www.brightsuppor
 /independent-living-accommodation-support              /supported-independent-living-sil-shepparton/        301
 /support-coordination/                                 /ndis-support-coordination/                          301
 /support-coordination                                  /ndis-support-coordination/                          301
+
+# Current non-friendly service paths -> SEO-friendly canonical paths
+/dailylivingin-homesupport/                            /daily-living-in-home-support/                       301
+/dailylivingin-homesupport                             /daily-living-in-home-support/                       301
+/communitynursingandcomplexcare/                       /community-nursing-complex-care/                     301
+/communitynursingandcomplexcare                        /community-nursing-complex-care/                     301
+/physiotherapyservices/                                /physiotherapy-services/                             301
+/physiotherapyservices                                 /physiotherapy-services/                             301
+/communityparticipationgroupprograms/                  /community-participation-group-programs/             301
+/communityparticipationgroupprograms                   /community-participation-group-programs/             301
+/ndispersonaltrainingsessions/                         /personal-training-sessions/                         301
+/ndispersonaltrainingsessions                          /personal-training-sessions/                         301
+/positivebehavioursupport/                             /positive-behaviour-support/                         301
+/positivebehavioursupport                              /positive-behaviour-support/                         301
+
+# Blog slug normalization
+/blog/understandingyourndisplanacompleteguideforsheppartonparticipants/  /blog/understanding-your-ndis-plan-complete-guide-shepparton-participants/  301
+/blog/understandingyourndisplanacompleteguideforsheppartonparticipants   /blog/understanding-your-ndis-plan-complete-guide-shepparton-participants/  301
 
 # Main page redirects
 /about-us                                              /about-us/                                          301
