@@ -71,7 +71,8 @@ export default function OurLocation() {
                     <Clock className="w-6 h-6 text-coral-500 flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-navy-900 mb-2">Business Hours</h3>
-                      <p className="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                      <p className="text-gray-600">Monday - Saturday: 8:00 AM - 6:00 PM</p>
+                      <p className="text-gray-600">Sunday: 8:00 AM - 12:00 PM</p>
                     </div>
                   </div>
                 </div>
@@ -88,11 +89,15 @@ export default function OurLocation() {
 
               {/* Map */}
               <div>
-                <div className="bg-gray-100 rounded-lg h-96 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                    <p className="text-gray-500">Map location - Shepparton, Victoria</p>
-                  </div>
+                <div className="h-96 overflow-hidden rounded-lg border border-slate-200 shadow-sm">
+                  <iframe
+                    src="https://storage.googleapis.com/maps-solutions-5f7baa1wxw/locator-plus/1mfj/locator-plus.html"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    title="Bright Support business location"
+                  />
                 </div>
               </div>
             </div>
