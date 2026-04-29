@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import ServicePage, { generateMetadata as generateServiceMetadata } from '@/app/_locale_impl/services/[slug]/page';
 import StructuredData from '@/components/StructuredData';
 
+const BASE_URL = 'https://www.brightsupport.com.au';
+const CANONICAL_PATH = '/community-nursing-complex-care/';
+
 const communityNursingFaqs = [
   {
     '@type': 'Question',
@@ -46,9 +49,27 @@ const communityNursingFaqs = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
-  return generateServiceMetadata({
+  const meta = await generateServiceMetadata({
     params: Promise.resolve({ locale: 'en', slug: 'community-nursing-complex-care' }),
   });
+
+  return {
+    ...meta,
+    title: 'Legacy URL: Community Nursing & Complex Care | Bright Support',
+    description:
+      'Legacy URL for community nursing and complex care. Please use the canonical community-nursing-complex-care page for current content.',
+    robots: {
+      index: false,
+      follow: true,
+    },
+    alternates: {
+      canonical: `${BASE_URL}${CANONICAL_PATH}`,
+      languages: {
+        en: `${BASE_URL}${CANONICAL_PATH}`,
+        'x-default': `${BASE_URL}${CANONICAL_PATH}`,
+      },
+    },
+  };
 }
 
 export default function Page() {

@@ -7,7 +7,7 @@ const BASE_URL = 'https://www.brightsupport.com.au';
 const PAGE_PATH = '/ndis-plan-management-shepparton';
 
 export const metadata: Metadata = {
-  title: 'NDIS Plan Management Shepparton | Local Plan Management Support | Bright Support',
+  title: 'NDIS Plan Management Shepparton | Bright Support',
   description:
     'Looking for NDIS plan management in Shepparton? Bright Support helps participants understand budgets, track spending, and pay providers on time with clear, local support.',
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'NDIS Plan Management Shepparton | Local Plan Management Support | Bright Support',
+    title: 'NDIS Plan Management Shepparton | Bright Support',
     description:
       'Local NDIS plan management support in Shepparton. Get help with invoices, budget tracking, and provider payments while keeping full choice and control.',
     url: `${BASE_URL}${PAGE_PATH}/`,
