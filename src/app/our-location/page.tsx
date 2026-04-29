@@ -1,7 +1,29 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Phone, Clock } from 'lucide-react';
+
+const BASE_URL = 'https://www.brightsupport.com.au';
+const PAGE_PATH = '/our-location';
+
+export const metadata: Metadata = {
+  title: 'Our Location in Shepparton | Bright Support',
+  description:
+    'Visit Bright Support in Shepparton. Find our location, contact details, business hours, and local NDIS service coverage information.',
+  alternates: {
+    canonical: PAGE_PATH,
+    languages: {
+      en: `${BASE_URL}${PAGE_PATH}/`,
+      'x-default': `${BASE_URL}${PAGE_PATH}/`,
+    },
+  },
+  openGraph: {
+    title: 'Our Location in Shepparton | Bright Support',
+    description:
+      'Find Bright Support in Shepparton, including phone number, business hours, and local NDIS service area details.',
+    url: `${BASE_URL}${PAGE_PATH}/`,
+    type: 'website',
+  },
+};
 
 export default function OurLocation() {
   return (
