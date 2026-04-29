@@ -59,43 +59,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PT83J47');`,
-          }}
-        />
-        {/* End Google Tag Manager */}
         <StructuredData type="Organization" />
         <StructuredData type="LocalBusiness" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preload a single AVIF hero variant (mid-size) + srcset to avoid double fetch */}
+        {/* Preload hero AVIF for LCP — browser picks the right size from imagesrcset */}
         <link
           rel="preload"
           as="image"
-          href="/images/hero/hero-main-1024.avif"
+          href="/images/hero/hero-main-480.avif"
           type="image/avif"
           imageSrcSet="/images/hero/hero-main-480.avif 480w, /images/hero/hero-main-768.avif 768w, /images/hero/hero-main-1024.avif 1024w, /images/hero/hero-main-1400.avif 1400w"
           imageSizes="(max-width: 768px) 100vw, 50vw"
-        />
-        {/* Microsoft Clarity Script */}
-        <script
-          id="microsoft-clarity"
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_ID}");`,
-          }}
         />
         {/* Google Analytics 4 + Google Ads Scripts */}
         {GTAG_SCRIPT_ID && (
@@ -113,8 +87,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-
-                // Initialize consent settings
                 gtag('consent', 'default', {
                   analytics_storage: 'granted',
                   ad_storage: 'denied',
@@ -122,45 +94,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   personalization_storage: 'denied',
                   security_storage: 'granted'
                 });
-
-                // Configure GA4 with enhanced settings
-                ${GA_MEASUREMENT_ID ? `
-                gtag('config', '${GA_MEASUREMENT_ID}', {
-                  page_title: document.title,
-                  page_location: window.location.href,
-                  send_page_view: true,
-                  allow_google_signals: false,
-                  allow_ad_personalization_signals: false,
-                  allow_ad_features: false,
-                  custom_map: {
-                    'custom_parameter_1': 'user_type',
-                    'custom_parameter_2': 'service_interest',
-                    'custom_parameter_3': 'lead_source'
-                  }
-                });
-                ` : ''}
-
-                // Configure Google Ads tag
-                ${GOOGLE_ADS_ID ? `
-                gtag('config', '${GOOGLE_ADS_ID}');
-                ` : ''}
-
-                // Track initial page load performance
-                if ('performance' in window && 'getEntriesByType' in performance) {
-                  window.addEventListener('load', function() {
-                    setTimeout(function() {
-                      var navigation = performance.getEntriesByType('navigation')[0];
-                      if (navigation) {
-                        gtag('event', 'page_load_time', {
-                          page_load_time: navigation.loadEventEnd - navigation.fetchStart,
-                          dom_content_loaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-                          first_paint: performance.getEntriesByName('first-paint')[0] ? performance.getEntriesByName('first-paint')[0].startTime : 0,
-                          first_contentful_paint: performance.getEntriesByName('first-contentful-paint')[0] ? performance.getEntriesByName('first-contentful-paint')[0].startTime : 0
-                        });
-                      }
-                    }, 0);
-                  });
-                }
+                ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: true, allow_google_signals: false });` : ''}
+                ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
               `,
             }}
           />
@@ -177,6 +112,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        {/* Google Tag Manager — deferred to avoid render-blocking */}
+        <Script
+          id="gtm"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PT83J47');`,
+          }}
+        />
+        {/* Microsoft Clarity — lazyOnload to avoid blocking */}
+        <Script
+          id="microsoft-clarity"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script','${process.env.NEXT_PUBLIC_CLARITY_ID}');`,
+          }}
+        />
         <NextIntlClientProvider locale="en" messages={enMessages}>
           <Header />
           <main className="min-h-screen">
