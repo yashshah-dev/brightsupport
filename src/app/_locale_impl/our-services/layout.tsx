@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description: 'Comprehensive NDIS disability support services including daily living, nursing, physiotherapy, community programs, and more.',
         },
         alternates: {
+            canonical: pageUrl,
             languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };

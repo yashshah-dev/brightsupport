@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description: 'Get in touch with Bright Support for NDIS services. Call 1800 407 508 or visit our Shepparton office.',
         },
         alternates: {
+            canonical: pageUrl,
             languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };

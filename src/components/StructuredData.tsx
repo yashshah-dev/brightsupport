@@ -1,6 +1,11 @@
+interface BreadcrumbItem {
+  name: string;
+  item?: string;
+}
+
 interface StructuredDataProps {
-  type: 'Organization' | 'LocalBusiness' | 'Service' | 'FAQPage';
-  data?: Record<string, unknown>;
+  type: 'Organization' | 'LocalBusiness' | 'Service' | 'FAQPage' | 'WebSite' | 'BreadcrumbList';
+  data?: Record<string, unknown> & { items?: BreadcrumbItem[] };
 }
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
@@ -182,6 +187,40 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           '@type': 'FAQPage',
           mainEntity: data?.questions || [],
         };
+
+      case 'WebSite':
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          '@id': `${baseUrl}/#website`,
+          url: baseUrl,
+          name: 'Bright Support',
+          description: 'NDIS Disability & Support Services Provider in Shepparton, Victoria',
+          publisher: { '@id': `${baseUrl}/#organization` },
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: `${baseUrl}/?s={search_term_string}`,
+            },
+            'query-input': 'required name=search_term_string',
+          },
+          inLanguage: 'en-AU',
+        };
+
+      case 'BreadcrumbList': {
+        const items = data?.items ?? [];
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items.map((crumb, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: crumb.name,
+            ...(crumb.item ? { item: crumb.item } : {}),
+          })),
+        };
+      }
 
       default:
         return null;

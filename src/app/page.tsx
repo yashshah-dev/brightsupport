@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     'Bright Support is a registered NDIS provider in Shepparton delivering disability support services — daily living, SIL, support coordination, community nursing, and more. Local staff, fast response.',
   alternates: {
+    canonical: `${BASE_URL}/`,
     languages: {
       en: `${BASE_URL}/`,
       'x-default': `${BASE_URL}/`,
