@@ -85,6 +85,15 @@ export default function RegisteredNdisProviderPage() {
         }}
       />
       <StructuredData type="FAQPage" data={{ questions: faqs }} />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{
+          items: [
+            { name: 'Home', item: `${BASE_URL}/` },
+            { name: 'Registered NDIS Provider Shepparton', item: `${BASE_URL}${PAGE_PATH}/` },
+          ],
+        }}
+      />
 
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-navy-900 via-navy-800 to-sky-900 text-white pt-32 pb-16">

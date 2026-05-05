@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description: 'Meet our experienced team providing NDIS disability & support services in Shepparton & Mooroopna.',
         },
         alternates: {
+            canonical: pageUrl,
             languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };

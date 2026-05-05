@@ -78,6 +78,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             url: pageUrl,
         },
         alternates: {
+            canonical: pageUrl,
             languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };
@@ -190,6 +191,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
                             containedInPlace: { '@type': 'Country', name: 'Australia' },
                         },
                     },
+                }}
+            />
+            <StructuredData
+                type="BreadcrumbList"
+                data={{
+                    items: [
+                        { name: 'Home', item: 'https://www.brightsupport.com.au/' },
+                        { name: 'Our Services', item: 'https://www.brightsupport.com.au/our-services' },
+                        { name: meta.title.split('|')[0].trim(), item: liveUrl },
+                    ],
                 }}
             />
             <ServicePageClient slug={slug} heroImage={heroImage} galleryImages={galleryImages} />

@@ -55,6 +55,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     description: post.metaDescription || post.excerpt,
     keywords: post.keywords,
     alternates: {
+      canonical: pageUrl,
       languages: { en: pageUrl, 'x-default': pageUrl },
     },
     openGraph: {

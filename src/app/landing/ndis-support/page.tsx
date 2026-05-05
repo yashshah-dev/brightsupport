@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     'Get personalised NDIS support in Shepparton with fast intake and compassionate local staff. Speak with Bright Support about your care goals today.',
   alternates: {
+    canonical: `${BASE_URL}/landing/ndis-support/`,
     languages: {
       en: `${BASE_URL}/landing/ndis-support/`,
       'x-default': `${BASE_URL}/landing/ndis-support/`,

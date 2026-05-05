@@ -17,6 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: 'Explore our complete collection of NDIS blog posts, disability support guides, and community resources for participants and families in Shepparton, Victoria.',
     keywords: ['NDIS blog', 'disability support tips', 'NDIS Shepparton', 'NDIS resources', 'NDIS guides', 'disability information', 'person-first language'],
     alternates: {
+      canonical: pageUrl,
       languages: { en: pageUrl, 'x-default': pageUrl },
     },
   };

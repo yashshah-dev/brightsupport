@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description: 'Build a rewarding career in disability support services. Join our growing team in Shepparton.',
         },
         alternates: {
+            canonical: pageUrl,
             languages: { en: pageUrl, 'x-default': pageUrl },
         },
     };

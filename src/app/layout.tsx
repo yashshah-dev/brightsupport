@@ -61,6 +61,7 @@ export default function RootLayout({
       <head>
         <StructuredData type="Organization" />
         <StructuredData type="LocalBusiness" />
+        <StructuredData type="WebSite" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         {/* Preload hero AVIF for LCP — browser picks the right size from imagesrcset */}
         <link
