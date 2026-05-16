@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import dynamic from 'next/dynamic';
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import "./globals.css";
@@ -9,11 +8,8 @@ import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import DeferredThirdPartyScripts from '@/components/DeferredThirdPartyScripts';
+import LazyChatbot from '@/components/LazyChatbot';
 import enMessages from '../../messages/en.json';
-
-const Chatbot = dynamic(() => import('@/components/Chatbot'), {
-  ssr: false,
-});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -91,7 +87,7 @@ export default function RootLayout({
             <AnalyticsProvider>{children}</AnalyticsProvider>
           </main>
           <Footer />
-          <Chatbot />
+          <LazyChatbot />
         </NextIntlClientProvider>
       </body>
     </html>

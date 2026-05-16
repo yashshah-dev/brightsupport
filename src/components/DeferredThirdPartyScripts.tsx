@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 
 declare global {
   interface Window {
-    dataLayer?: unknown[];
-    gtag?: (...args: unknown[]) => void;
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
     clarity?: (...args: unknown[]) => void;
     __thirdPartyScriptsLoaded?: boolean;
   }
