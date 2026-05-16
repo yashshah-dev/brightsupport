@@ -38,6 +38,8 @@ export function ResponsiveImage({
 }: ResponsiveImageProps) {
   const { base, ext } = splitSrc(src);
   const fallbackSrc = getAssetPath(src);
+  const effectiveLoading = priority ? 'eager' : loading;
+  const decoding = priority ? 'sync' : 'async';
 
   // fetchPriority only if priority true (avoid invalid attribute on some browsers otherwise)
   const fetchPriority = priority ? 'high' : undefined;
@@ -47,8 +49,8 @@ export function ResponsiveImage({
       <img
         src={fallbackSrc}
         alt={alt}
-        loading={loading}
-        decoding="async"
+        loading={effectiveLoading}
+        decoding={decoding}
         fetchPriority={fetchPriority as any}
         className={className}
         sizes={sizes}
@@ -77,8 +79,8 @@ export function ResponsiveImage({
       <img
         src={fallbackSrc}
         alt={alt}
-        loading={loading}
-        decoding="async"
+        loading={effectiveLoading}
+        decoding={decoding}
         fetchPriority={fetchPriority as any}
         className={className}
         sizes={sizes}

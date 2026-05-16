@@ -7,63 +7,92 @@ https://brightsupport.com.au/*                          https://www.brightsuppor
 http://brightsupport.com.au/*                           https://www.brightsupport.com.au/:splat                301!
 
 # Service page redirects (WordPress → New URL structure - ROOT LEVEL)
-/daily-living-in-home-support                          /daily-living-in-home-support/                       301
-/community-nursing-complex-care                        /community-nursing-complex-care/                     301
-/physiotherapy-services                                /physiotherapy-services/                             301
-/communityparticipationgroupactivities/                /community-participation-group-programs/             301
-/communityparticipationgroupactivities                 /community-participation-group-programs/             301
-/community-participation-group-programs                /community-participation-group-programs/             301
-/companionship/                                        /companion-care-services/                            301
-/companionship                                         /companion-care-services/                            301
-/travelandtransportassistance/                         /ndis-transport-service-provider/                    301
-/travelandtransportassistance                          /ndis-transport-service-provider/                    301
-/travel-transport-assistance/                          /ndis-transport-service-provider/                    301
-/travel-transport-assistance                           /ndis-transport-service-provider/                    301
-/hydrotherapyandpoolsessions/                          /ndis-hydrotherapy-services/                         301
-/hydrotherapyandpoolsessions                           /ndis-hydrotherapy-services/                         301
-/hydrotherapy-pool-session/                            /ndis-hydrotherapy-services/                         301
-/hydrotherapy-pool-session                             /ndis-hydrotherapy-services/                         301
-/personaltrainingsessions/                             /personal-training-sessions/                         301
-/personaltrainingsessions                              /personal-training-sessions/                         301
-/personal-training-sessions                            /personal-training-sessions/                         301
-/positive-behaviour-support                            /positive-behaviour-support/                         301
-/professional-cleaning/                                /ndis-cleaning-services/                             301
-/professional-cleaning                                 /ndis-cleaning-services/                             301
-/accommodation-support-services/                       /supported-independent-living-sil-shepparton/        301
-/accommodation-support-services                        /supported-independent-living-sil-shepparton/        301
-/independent-living-accommodation-support/             /supported-independent-living-sil-shepparton/        301
-/independent-living-accommodation-support              /supported-independent-living-sil-shepparton/        301
-/support-coordination/                                 /ndis-support-coordination/                          301
-/support-coordination                                  /ndis-support-coordination/                          301
+/daily-living-in-home-support                          /daily-living-in-home-support/                       301!
+/community-nursing-complex-care                        /community-nursing-complex-care/                     301!
+/physiotherapy-services                                /physiotherapy-services/                             301!
+/communityparticipationgroupactivities/                /community-participation-group-programs/             301!
+/communityparticipationgroupactivities                 /community-participation-group-programs/             301!
+/community-participation-group-programs                /community-participation-group-programs/             301!
+/companionship/                                        /companion-care-services/                            301!
+/companionship                                         /companion-care-services/                            301!
+/travelandtransportassistance/                         /ndis-transport-service-provider/                    301!
+/travelandtransportassistance                          /ndis-transport-service-provider/                    301!
+/travel-transport-assistance/                          /ndis-transport-service-provider/                    301!
+/travel-transport-assistance                           /ndis-transport-service-provider/                    301!
+/hydrotherapyandpoolsessions/                          /ndis-hydrotherapy-services/                         301!
+/hydrotherapyandpoolsessions                           /ndis-hydrotherapy-services/                         301!
+/hydrotherapy-pool-session/                            /ndis-hydrotherapy-services/                         301!
+/hydrotherapy-pool-session                             /ndis-hydrotherapy-services/                         301!
+/personaltrainingsessions/                             /personal-training-sessions/                         301!
+/personaltrainingsessions                              /personal-training-sessions/                         301!
+/personal-training-sessions                            /personal-training-sessions/                         301!
+/positive-behaviour-support                            /positive-behaviour-support/                         301!
+/professional-cleaning/                                /ndis-cleaning-services/                             301!
+/professional-cleaning                                 /ndis-cleaning-services/                             301!
+/accommodation-support-services/                       /supported-independent-living-sil-shepparton/        301!
+/accommodation-support-services                        /supported-independent-living-sil-shepparton/        301!
+/independent-living-accommodation-support/             /supported-independent-living-sil-shepparton/        301!
+/independent-living-accommodation-support              /supported-independent-living-sil-shepparton/        301!
+/support-coordination/                                 /ndis-support-coordination/                          301!
+/support-coordination                                  /ndis-support-coordination/                          301!
 
 # Current non-friendly service paths -> SEO-friendly canonical paths
-/dailylivingin-homesupport/                            /daily-living-in-home-support/                       301
-/dailylivingin-homesupport                             /daily-living-in-home-support/                       301
-/communitynursingandcomplexcare/                       /community-nursing-complex-care/                     301
-/communitynursingandcomplexcare                        /community-nursing-complex-care/                     301
-/physiotherapyservices/                                /physiotherapy-services/                             301
-/physiotherapyservices                                 /physiotherapy-services/                             301
-/communityparticipationgroupprograms/                  /community-participation-group-programs/             301
-/communityparticipationgroupprograms                   /community-participation-group-programs/             301
-/ndispersonaltrainingsessions/                         /personal-training-sessions/                         301
-/ndispersonaltrainingsessions                          /personal-training-sessions/                         301
-/positivebehavioursupport/                             /positive-behaviour-support/                         301
-/positivebehavioursupport                              /positive-behaviour-support/                         301
+/dailylivingin-homesupport/                            /daily-living-in-home-support/                       301!
+/dailylivingin-homesupport                             /daily-living-in-home-support/                       301!
+/dailylivingin-homesupport///                          /daily-living-in-home-support/                       301!
+/communitynursingandcomplexcare/                       /community-nursing-complex-care/                     301!
+/communitynursingandcomplexcare                        /community-nursing-complex-care/                     301!
+/physiotherapyservices/                                /physiotherapy-services/                             301!
+/physiotherapyservices                                 /physiotherapy-services/                             301!
+/physiotherapyservices//                               /physiotherapy-services/                             301!
+/physiotherapyservices///                              /physiotherapy-services/                             301!
+/physiotherapyservices////                             /physiotherapy-services/                             301!
+/communityparticipationgroupprograms/                  /community-participation-group-programs/             301!
+/communityparticipationgroupprograms                   /community-participation-group-programs/             301!
+/communityparticipationgroupprograms//                 /community-participation-group-programs/             301!
+/communityparticipationgroupprograms///                /community-participation-group-programs/             301!
+/ndispersonaltrainingsessions/                         /personal-training-sessions/                         301!
+/ndispersonaltrainingsessions                          /personal-training-sessions/                         301!
+/positivebehavioursupport/                             /positive-behaviour-support/                         301!
+/positivebehavioursupport                              /positive-behaviour-support/                         301!
+/positivebehavioursupport///                           /positive-behaviour-support/                         301!
+/positivebehavioursupport////                          /positive-behaviour-support/                         301!
+/independent-living-accommodation-support//            /supported-independent-living-sil-shepparton/       301!
 
 # Blog slug normalization
-/blog/understandingyourndisplanacompleteguideforsheppartonparticipants/  /blog/understanding-your-ndis-plan-complete-guide-shepparton-participants/  301
-/blog/understandingyourndisplanacompleteguideforsheppartonparticipants   /blog/understanding-your-ndis-plan-complete-guide-shepparton-participants/  301
+/blog/understandingyourndisplanacompleteguideforsheppartonparticipants/  /blog/understanding-your-ndis-plan-complete-guide-shepparton-participants/  301!
+/blog/understandingyourndisplanacompleteguideforsheppartonparticipants   /blog/understanding-your-ndis-plan-complete-guide-shepparton-participants/  301!
 
 # Main page redirects
-/about-us                                              /about-us/                                          301
-/our-services                                          /our-services/                                      301
-/contact-us                                            /contact-us/                                        301
-/contact                                               /contact-us/                                        301
-/career/ndis                                           /career/                                            301
+/about-us                                              /about-us/                                          301!
+/our-services                                          /our-services/                                      301!
+/contact-us                                            /contact-us/                                        301!
+/contact                                               /contact-us/                                        301!
+/career/ndis                                           /career/                                            301!
+/career                                                /career/                                            301!
+/privacy-policy                                        /privacy-policy/                                    301!
+/blog                                                  /blog/                                              301!
+/ndis-plan-management-shepparton                       /ndis-plan-management-shepparton/                   301!
+/ndis-support-coordination                             /ndis-support-coordination/                         301!
+/companion-care-services                               /companion-care-services/                           301!
+/ndis-transport-service-provider                       /ndis-transport-service-provider/                   301!
+/ndis-hydrotherapy-services                            /ndis-hydrotherapy-services/                        301!
+/ndis-cleaning-services                                /ndis-cleaning-services/                            301!
+/accommodation-support-services                        /supported-independent-living-sil-shepparton/       301!
+/independent-living-accommodation-support              /supported-independent-living-sil-shepparton/       301!
+/communitynursingandcomplexcare///                     /community-nursing-complex-care/                    301!
+
+# Blog trailing-slash normalization
+/blog/how-choose-right-ndis-provider-10-point-checklist                 /blog/how-choose-right-ndis-provider-10-point-checklist/                 301!
+/blog/day-in-life-ndis-support-shepparton-community                      /blog/day-in-life-ndis-support-shepparton-community/                      301!
+/blog/what-is-ndis-daily-living-support-everything-you-need-know         /blog/what-is-ndis-daily-living-support-everything-you-need-know/         301!
+/blog/ndis-community-nursing-complex-care-need-know                      /blog/ndis-community-nursing-complex-care-need-know/                      301!
+/blog/independent-living-accommodation-sil-shepparton-guide              /blog/independent-living-accommodation-sil-shepparton-guide/              301!
+/blog/positive-behaviour-support-pbs-under-ndis-explained                /blog/positive-behaviour-support-pbs-under-ndis-explained/                301!
+/blog/positive-behaviour-support-pbs-under-ndis-explained//              /blog/positive-behaviour-support-pbs-under-ndis-explained/                301!
+/blog/positive-behaviour-support-pbs-under-ndis-explained///             /blog/positive-behaviour-support-pbs-under-ndis-explained/                301!
 
 # WordPress-specific page redirects
-/our-location/                                         /contact-us/                                        301
-/our-location                                          /contact-us/                                        301
 /privacy-policy                                        /privacy-policy/                                    301
 /thank-you                                             /thank-you/                                         301
 
@@ -76,6 +105,8 @@ http://brightsupport.com.au/*                           https://www.brightsuppor
 /wp-admin/*                                            /                                                  301
 /wp-login.php                                          /                                                  301
 /xmlrpc.php                                            /                                                  301
+/wp-includes/js/wp-emoji-release.min.js               /                                                  410!
+/wp-includes/*                                         /                                                  410!
 
 # Sitemap redirects (old sitemap locations)
 /sitemap_index.xml                                     /sitemap.xml                                        301

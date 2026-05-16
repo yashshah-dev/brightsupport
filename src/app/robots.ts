@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/blog?*', '/blog/?*'],
+        disallow: ['/api/', '/admin/', '/blog?*', '/blog/?*', '/wp-includes/'],
       },
     ],
     sitemap: 'https://www.brightsupport.com.au/sitemap.xml',

@@ -1,10 +1,10 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import {
     Phone,
-    CheckCircle,
     Star,
     Users,
     Award,
@@ -22,13 +22,14 @@ import {
 } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
-import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { trackPhoneCall, trackButtonClick } from '@/lib/analytics';
 import { useVideoTracking } from '@/hooks/useAnalytics';
 import { getServiceUrl } from '@/lib/serviceUrls';
+
+const DeferredTestimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
+const DeferredFAQ = dynamic(() => import('@/components/FAQ'), { ssr: false });
 
 
 // Service keys that map to translation keys
@@ -95,6 +96,8 @@ export default function HomePage() {
     const { trackVideoPlay } = useVideoTracking();
     const scrollRef = useRef<HTMLDivElement>(null);
     const heroReviewsRef = useRef<HTMLDivElement>(null);
+    const deferredSectionRef = useRef<HTMLDivElement>(null);
+    const [loadDeferredSections, setLoadDeferredSections] = useState(false);
 
     const heroReviews = [
         {
@@ -372,6 +375,29 @@ export default function HomePage() {
             scrollContainer.removeEventListener('wheel', pauseAutoScroll);
         };
     }, []);
+
+    useEffect(() => {
+        if (loadDeferredSections) return;
+
+        const target = deferredSectionRef.current;
+        if (!target) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setLoadDeferredSections(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: '400px 0px' }
+        );
+
+        observer.observe(target);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [loadDeferredSections]);
 
     const getLocalizedHref = (path: string) => path;
 
@@ -719,11 +745,14 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Testimonials */}
-            <Testimonials />
-
-            {/* FAQ */}
-            <FAQ />
+            {/* Deferred below-the-fold sections to reduce initial JavaScript */}
+            <div ref={deferredSectionRef} />
+            {loadDeferredSections && (
+                <>
+                    <DeferredTestimonials />
+                    <DeferredFAQ />
+                </>
+            )}
 
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-br from-[#1E4D8C] via-[#2563EB] to-[#38BDF8] text-white overflow-hidden relative">

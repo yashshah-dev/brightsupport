@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Visit Bright Support in Shepparton. Find our location, contact details, business hours, and local NDIS service coverage information.',
   alternates: {
-    canonical: PAGE_PATH,
+    canonical: `${BASE_URL}${PAGE_PATH}/`,
     languages: {
       en: `${BASE_URL}${PAGE_PATH}/`,
       'x-default': `${BASE_URL}${PAGE_PATH}/`,

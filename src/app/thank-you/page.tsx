@@ -9,8 +9,12 @@ export const metadata: Metadata = {
   title: 'Thank You - Contact Request Received',
   description:
     'Thank you for contacting Bright Support. Your inquiry has been received and our team will respond soon.',
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
-    canonical: THANK_YOU_PATH,
+    canonical: `${BASE_URL}${THANK_YOU_PATH}/`,
     languages: {
       en: `${BASE_URL}${THANK_YOU_PATH}/`,
       'x-default': `${BASE_URL}${THANK_YOU_PATH}/`,

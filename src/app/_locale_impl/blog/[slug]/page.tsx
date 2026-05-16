@@ -261,7 +261,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact-us"
+              href="/contact-us/"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors shadow-lg inline-block"
             >
               Book Free Consultation
@@ -285,7 +285,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {relatedPosts.map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
-                  href={`../${relatedPost.slug}`}
+                  href={`../${relatedPost.slug}/`}
                   className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
                   <div className="relative h-48 bg-gradient-to-br from-slate-100 to-gray-100">
