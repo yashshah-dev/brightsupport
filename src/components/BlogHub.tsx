@@ -320,7 +320,7 @@ export default function BlogHub({
             {filteredPosts.map((post) => (
               <Link
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={`/blog/${post.slug}/`}
                 className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="relative aspect-square bg-slate-100 overflow-hidden">
@@ -427,14 +427,14 @@ export default function BlogHub({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact-us"
+                href="/contact-us/"
               onClick={() => trackButtonClick('Blog Hub CTA - Book Consultation')}
               className="bg-white text-[#1E4D8C] px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-lg"
             >
               Book Free Consultation
             </Link>
             <Link
-              href="/our-services"
+                href="/our-services/"
               onClick={() => trackButtonClick('Blog Hub CTA - Explore Services')}
               className="bg-[#DC3545] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#E74C5C] transition-colors border-2 border-white"
             >

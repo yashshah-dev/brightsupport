@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import dynamic from 'next/dynamic';
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import { NextIntlClientProvider } from 'next-intl';
 import "./globals.css";
 
@@ -8,8 +8,12 @@ import StructuredData from "@/components/StructuredData";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Chatbot from '@/components/Chatbot';
+import DeferredThirdPartyScripts from '@/components/DeferredThirdPartyScripts';
 import enMessages from '../../messages/en.json';
+
+const Chatbot = dynamic(() => import('@/components/Chatbot'), {
+  ssr: false,
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,10 +51,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.brightsupport.com.au'),
 };
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-2EXWNERWT2';
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-17576617769';
-const GTAG_SCRIPT_ID = GA_MEASUREMENT_ID || GOOGLE_ADS_ID;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -72,35 +72,6 @@ export default function RootLayout({
           imageSrcSet="/images/hero/hero-main-480.avif 480w, /images/hero/hero-main-768.avif 768w, /images/hero/hero-main-1024.avif 1024w, /images/hero/hero-main-1400.avif 1400w"
           imageSizes="(max-width: 768px) 100vw, 50vw"
         />
-        {/* Google Analytics 4 + Google Ads Scripts */}
-        {GTAG_SCRIPT_ID && (
-          <Script
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_SCRIPT_ID}`}
-          />
-        )}
-        {GTAG_SCRIPT_ID && (
-          <Script
-            id="google-analytics-and-ads"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('consent', 'default', {
-                  analytics_storage: 'granted',
-                  ad_storage: 'denied',
-                  functionality_storage: 'granted',
-                  personalization_storage: 'denied',
-                  security_storage: 'granted'
-                });
-                ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: true, allow_google_signals: false });` : ''}
-                ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
-              `,
-            }}
-          />
-        )}
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
@@ -113,22 +84,7 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        {/* Google Tag Manager — deferred to avoid render-blocking */}
-        <Script
-          id="gtm"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PT83J47');`,
-          }}
-        />
-        {/* Microsoft Clarity — lazyOnload to avoid blocking */}
-        <Script
-          id="microsoft-clarity"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script','${process.env.NEXT_PUBLIC_CLARITY_ID}');`,
-          }}
-        />
+        <DeferredThirdPartyScripts />
         <NextIntlClientProvider locale="en" messages={enMessages}>
           <Header />
           <main className="min-h-screen">

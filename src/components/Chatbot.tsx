@@ -63,9 +63,9 @@ export default function Chatbot() {
                         type: 'bot',
                         text: 'We offer a wide range of disability and support services. Any specific area?',
                         options: [
-                            { label: 'Community Nursing', action: 'link', payload: '/communitynursingandcomplexcare' },
-                            { label: 'Companionship', action: 'link', payload: '/companion-care-services' },
-                            { label: 'See All Services', action: 'link', payload: '/our-services' }
+                            { label: 'Community Nursing', action: 'link', payload: '/community-nursing-complex-care/' },
+                            { label: 'Companionship', action: 'link', payload: '/companion-care-services/' },
+                            { label: 'See All Services', action: 'link', payload: '/our-services/' }
                         ]
                     };
                     break;

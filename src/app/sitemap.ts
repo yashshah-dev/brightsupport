@@ -29,6 +29,21 @@ const serviceUrlMapping: Record<string, string> = {
 
 const serviceSlugs = Object.keys(serviceUrlMapping);
 
+const priorityServicePaths = new Set([
+  '/daily-living-in-home-support',
+  '/physiotherapy-services',
+  '/registered-ndis-provider-shepparton',
+  '/supported-independent-living-sil-shepparton',
+]);
+
+const priorityBlogSlugs = new Set([
+  'how-to-choose-the-best-ndis-provider-in-shepparton',
+  'how-to-verify-registered-ndis-provider-shepparton',
+  'ndis-success-stories-our-participants-achieved-goals',
+  'physiotherapy-under-ndis-services-costs-how-access',
+  'understanding-your-ndis-plan-complete-guide-shepparton-participants',
+]);
+
 const mainPages = [
   '',          // homepage
   '/about-us',
@@ -37,7 +52,6 @@ const mainPages = [
   '/contact-us',
   '/registered-ndis-provider-shepparton',
   '/ndis-plan-management-shepparton',
-  '/thank-you',
   '/career',
   '/privacy-policy',
 ];
@@ -77,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: toCanonicalUrl(page),
       lastModified: now,
       changeFrequency: page === '' ? 'weekly' : 'monthly',
-      priority: page === '' ? 1.0 : 0.8,
+      priority: page === '' ? 1.0 : priorityServicePaths.has(page) ? 0.95 : 0.8,
       alternates: generateAlternates(page),
     });
   }
@@ -91,8 +105,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({
       url: toCanonicalUrl(blogPath),
       lastModified: post.updatedAt || pubDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: priorityBlogSlugs.has(post.slug) ? 'weekly' : 'monthly',
+      priority: priorityBlogSlugs.has(post.slug) ? 0.9 : 0.7,
       alternates: generateAlternates(blogPath),
       ...(post.coverImage && {
         images: [`${BASE_URL}${post.coverImage}`],
@@ -108,8 +122,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({
       url: toCanonicalUrl(liveUrl),
       lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
+      changeFrequency: priorityServicePaths.has(liveUrl) ? 'weekly' : 'monthly',
+      priority: priorityServicePaths.has(liveUrl) ? 0.95 : 0.8,
       alternates: generateAlternates(liveUrl),
       ...(images && {
         images: images.map(img => `${BASE_URL}${img}`),

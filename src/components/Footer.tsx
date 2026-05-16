@@ -34,12 +34,12 @@ export default function Footer() {
   ];
 
   const services = [
-    { name: 'Daily Living Support', href: getLocalizedHref('/dailylivingin-homesupport') },
-    { name: 'Community Nursing', href: getLocalizedHref('/communitynursingandcomplexcare') },
-    { name: 'Physiotherapy', href: getLocalizedHref('/physiotherapyservices') },
-    { name: 'Community Participation', href: getLocalizedHref('/communityparticipationgroupprograms') },
-    { name: 'Transport Assistance', href: getLocalizedHref('/ndis-transport-service-provider') },
-    { name: 'Companionship', href: getLocalizedHref('/companion-care-services') },
+    { name: 'Daily Living Support', href: getLocalizedHref('/daily-living-in-home-support/') },
+    { name: 'Community Nursing', href: getLocalizedHref('/community-nursing-complex-care/') },
+    { name: 'Physiotherapy', href: getLocalizedHref('/physiotherapy-services/') },
+    { name: 'Community Participation', href: getLocalizedHref('/community-participation-group-programs/') },
+    { name: 'Transport Assistance', href: getLocalizedHref('/ndis-transport-service-provider/') },
+    { name: 'Companionship', href: getLocalizedHref('/companion-care-services/') },
   ];
 
   const socialLinks = [
