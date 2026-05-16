@@ -9,6 +9,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import DeferredThirdPartyScripts from '@/components/DeferredThirdPartyScripts';
 import LazyChatbot from '@/components/LazyChatbot';
+import NonCriticalStylesLoader from '@/components/NonCriticalStylesLoader';
 import enMessages from '../../messages/en.json';
 
 const inter = Inter({
@@ -68,6 +69,9 @@ export default function RootLayout({
           imageSrcSet="/images/hero/hero-main-480.avif 480w, /images/hero/hero-main-768.avif 768w, /images/hero/hero-main-1024.avif 1024w, /images/hero/hero-main-1400.avif 1400w"
           imageSizes="(max-width: 768px) 100vw, 50vw"
         />
+        <noscript>
+          <link rel="stylesheet" href="/styles/non-critical.css" />
+        </noscript>
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
@@ -81,6 +85,7 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <DeferredThirdPartyScripts />
+        <NonCriticalStylesLoader />
         <NextIntlClientProvider locale="en" messages={enMessages}>
           <Header />
           <main className="min-h-screen">
