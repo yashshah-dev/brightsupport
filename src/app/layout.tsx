@@ -18,6 +18,11 @@ const inter = Inter({
   preload: true,
 });
 
+const NON_CRITICAL_CSS_HREF =
+  process.env.NEXT_PUBLIC_DEPLOY_TARGET === 'gh-pages'
+    ? '/brightsupport/styles/non-critical.css'
+    : '/styles/non-critical.css';
+
 export const metadata: Metadata = {
   title: {
     default: "Bright Support | NDIS Support Services Shepparton",
@@ -70,7 +75,7 @@ export default function RootLayout({
           imageSizes="(max-width: 768px) 100vw, 50vw"
         />
         <noscript>
-          <link rel="stylesheet" href="/styles/non-critical.css" />
+          <link rel="stylesheet" href={NON_CRITICAL_CSS_HREF} />
         </noscript>
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
