@@ -5,9 +5,11 @@ import StructuredData from '@/components/StructuredData';
 const BASE_URL = 'https://www.brightsupport.com.au';
 
 export const metadata: Metadata = {
-  title: 'NDIS Services Shepparton | Disability Services | Bright Support',
+  title: 'NDIS Services Shepparton | Disability Care & Support Services',
   description:
-    'Disability services in Shepparton by Bright Support — daily living, community nursing, SIL, support coordination, transport, and more. Local NDIS support workers available now.',
+    'Explore professional NDIS services in Shepparton including personal care, home support & community participation. Tailored care plans available.',
+  keywords:
+    'NDIS provider Shepparton, Disability support Shepparton, NDIS services Shepparton, Support worker Shepparton, Home care Shepparton, best NDIS provider in Shepparton, affordable disability support Shepparton, registered NDIS provider Shepparton, how to apply for NDIS in Shepparton, disability support services near Shepparton, in-home care services Shepparton',
   alternates: {
     canonical: `${BASE_URL}/our-services/`,
     languages: {

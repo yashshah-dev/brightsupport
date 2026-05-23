@@ -4,26 +4,31 @@ import StructuredData from '@/components/StructuredData';
 import { getServiceUrl } from '@/lib/serviceUrls';
 
 // SEO metadata for each service page
-const serviceMetadata: Record<string, { title: string; description: string }> = {
+const serviceMetadata: Record<string, { title: string; description: string; keywords?: string }> = {
     'daily-living-in-home-support': {
-        title: 'Daily Living & In-Home Support Services - NDIS Shepparton',
-        description: 'Empowering independence with expert daily living and in-home support for NDIS participants in Shepparton. Personal care, meal prep, and household assistance.',
+        title: 'Daily Living & In-Home Support Shepparton | NDIS Support Services',
+        description: 'Looking for reliable in-home disability support in Shepparton? Bright Support offers daily living assistance, personal care & NDIS services. Enquire today!',
+        keywords: 'daily living support Shepparton, in-home support Shepparton, NDIS daily living support, NDIS in-home care Shepparton, personal care services Shepparton, home assistance NDIS, disability support at home, NDIS personal care Shepparton, daily personal activities NDIS, home care services Shepparton, independent living support Shepparton',
     },
     'support-coordination': {
-        title: 'Support Coordination Shepparton | Bright Support',
-        description: 'Support coordination in Shepparton to help you navigate your NDIS plan, connect with local providers, and build long-term capacity. Bright Support also assists with NDIS plan management guidance.',
+        title: 'Support Coordination Shepparton | NDIS Plan Help & Service Guidance',
+        description: 'Get expert NDIS support coordination in Shepparton with Bright Support. We help you understand your plan, connect with providers & achieve your goals with confidence.',
+        keywords: 'ndis support coordination Shepparton, support coordinator Shepparton, ndis support services Shepparton, ndis plan support Shepparton, ndis provider Shepparton, disability support coordination, ndis service provider Shepparton, support coordination services, ndis assistance with plan management, ndis support worker Shepparton, ndis plan implementation support',
     },
     'community-nursing-complex-care': {
-        title: 'Community Nursing Shepparton | Bright Support',
-        description: 'Expert community nursing care in Shepparton for NDIS participants. Registered Nurses provide wound care, medication management, catheter care, and complex care in the comfort of your home.',
+        title: 'Community Nursing & Complex Care Shepparton | NDIS Nursing Support',
+        description: 'Get expert community nursing & complex care in Shepparton with Bright Support. We provide NDIS clinical support, medication management & 24/7 nursing care tailored to your needs.',
+        keywords: 'community nursing Shepparton, complex care Shepparton, NDIS nursing services, clinical care at home, disability nursing support, home nursing care Shepparton, complex medical care services',
     },
     'physiotherapy-services': {
-        title: 'Physiotherapy Services - NDIS Provider Shepparton',
-        description: 'NDIS physiotherapy services in Shepparton. Personalised treatment for neurological, musculoskeletal, and cardio-pulmonary conditions. Home visits available.',
+        title: 'Physiotherapy Services Shepparton | NDIS Rehabilitation & Mobility Support',
+        description: 'Get expert physiotherapy services in Shepparton with Bright Support. We provide NDIS rehabilitation, pain management & mobility support to help you recover and live independently.',
+        keywords: 'physiotherapy Shepparton, NDIS physiotherapy services, rehabilitation services Shepparton, pain management physiotherapy, mobility support therapy, injury recovery physiotherapy, home physiotherapy services',
     },
     'community-participation-group-programs': {
-        title: 'Community Participation Shepparton | Bright Support',
-        description: 'NDIS community participation programs in Shepparton — social activities, group outings, and skills development. Bright Support helps NDIS participants build connections and thrive locally.',
+        title: 'Community Participation & Group Programs Shepparton | NDIS Social Support',
+        description: 'Join engaging community participation & group programs in Shepparton with Bright Support. Build social skills, confidence & independence through NDIS-supported activities.',
+        keywords: 'community participation Shepparton, NDIS community participation, group programs Shepparton, social support services, NDIS social activities, community access support, disability group activities',
     },
     'companionship': {
         title: 'Companionship Services - NDIS Support Shepparton',
@@ -34,24 +39,28 @@ const serviceMetadata: Record<string, { title: string; description: string }> = 
         description: 'NDIS transport services in Shepparton — safe, reliable travel to medical appointments, social outings, and community activities. Wheelchair-accessible vehicles available.',
     },
     'hydrotherapy-pool-session': {
-        title: 'Hydrotherapy & Pool Sessions - NDIS Shepparton',
-        description: 'NDIS hydrotherapy and pool session services in Shepparton. Water-based therapy for pain management, mobility improvement, and rehabilitation.',
+        title: 'Hydrotherapy Shepparton | NDIS Water-Based Physiotherapy Services',
+        description: 'Get expert NDIS hydrotherapy services in Shepparton with Bright Support. Improve mobility, reduce pain & build strength with water-based physiotherapy tailored to your needs.',
+        keywords: 'hydrotherapy Shepparton, NDIS hydrotherapy services, aquatic therapy Shepparton, water-based physiotherapy, rehabilitation therapy Shepparton, pain relief therapy, mobility improvement therapy',
     },
     'personal-training-sessions': {
-        title: 'Personal Training Sessions - NDIS Shepparton',
-        description: 'NDIS personal training sessions in Shepparton. Tailored exercise programs to improve physical fitness, strength, and overall wellbeing.',
+        title: 'Personal Training Sessions Shepparton | NDIS Fitness & Strength Coaching',
+        description: 'Get expert personal training sessions in Shepparton with Bright Support. Improve strength, mobility & overall fitness with personalised NDIS-supported training programs.',
+        keywords: 'personal training Shepparton, personal trainer Shepparton, NDIS personal training, fitness training services, strength training Shepparton, rehabilitation fitness training, mobility improvement training',
     },
     'positive-behaviour-support': {
-        title: 'Positive Behaviour Support - NDIS Shepparton',
-        description: 'NDIS positive behaviour support services in Shepparton. Evidence-based strategies to understand behaviour and develop positive support plans.',
+        title: 'Positive Behaviour Support Shepparton | NDIS Behaviour Support Services',
+        description: 'Get expert Positive Behaviour Support in Shepparton with Bright Support. We create personalised NDIS behaviour support plans to improve quality of life & reduce behaviours of concern.',
+        keywords: 'positive behaviour support Shepparton, NDIS behaviour support, behaviour support services Shepparton, behaviour support plan NDIS, PBS services Australia, disability behaviour support, behaviour intervention support',
     },
     'professional-cleaning': {
         title: 'NDIS Cleaning Shepparton | Bright Support',
         description: 'NDIS cleaning services in Shepparton — house cleaning, laundry, and home maintenance for NDIS participants. Trusted local cleaners who work to your standards.',
     },
     'independent-living-accommodation-support': {
-        title: 'NDIS Accommodation Shepparton (SIL) | Bright Support',
-        description: 'NDIS accommodation and supported independent living (SIL) in Shepparton. Bright Support offers current SIL vacancies, 24-hour support, and individualised disability accommodation tailored to your NDIS goals.',
+        title: 'Supported Independent Living (SIL) Shepparton | NDIS Accommodation Support',
+        description: 'Get trusted SIL accommodation in Shepparton with Bright Support. We provide 24/7 support, personal care & independent living solutions under NDIS.',
+        keywords: 'supported independent living Shepparton, SIL Shepparton, NDIS SIL provider Shepparton, SIL accommodation Shepparton, NDIS supported independent living, disability accommodation Shepparton, NDIS housing support Shepparton, independent living support Shepparton, 24/7 disability support Shepparton, NDIS home and living support, SIL services Australia',
     },
 };
 
@@ -72,6 +81,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return {
         title: meta.title,
         description: meta.description,
+        ...(meta.keywords && { keywords: meta.keywords }),
         openGraph: {
             title: meta.title,
             description: meta.description,
