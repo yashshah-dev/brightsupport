@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Compare NDIS providers in Shepparton. Bright Support is a registered NDIS provider with local staff, fast response times, and SIL vacancies. Use our free checklist to choose with confidence.',
   alternates: {
-    canonical: PAGE_PATH,
+    canonical: `${BASE_URL}${PAGE_PATH}/`,
     languages: {
       en: `${BASE_URL}${PAGE_PATH}/`,
       'x-default': `${BASE_URL}${PAGE_PATH}/`,

@@ -368,7 +368,7 @@ export default function BlogHub({
             {filteredPosts.map((post) => (
               <Link
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={`/blog/${post.slug}/`}
                 className="group bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 flex gap-6 items-start hover:bg-indigo-50 border-l-4 border-transparent hover:border-indigo-600"
               >
                 <div className="relative aspect-square w-48 flex-shrink-0 bg-slate-100 rounded-lg overflow-hidden hidden sm:block">
