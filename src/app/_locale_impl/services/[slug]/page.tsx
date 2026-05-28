@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ServicePageClient from '@/components/ServicePageClient';
 import StructuredData from '@/components/StructuredData';
-import { getServiceUrl } from '@/lib/serviceUrls';
+import { getServiceCanonicalUrl, getServiceUrl } from '@/lib/serviceUrls';
 
 // SEO metadata for each service page
 const serviceMetadata: Record<string, { title: string; description: string; keywords?: string }> = {
@@ -74,9 +74,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         description: 'NDIS disability and support services by Bright Support in Shepparton.',
     };
 
-    const BASE_URL = 'https://www.brightsupport.com.au';
-    const livePath = getServiceUrl(slug);
-    const pageUrl = `${BASE_URL}${livePath}/`;
+    const pageUrl = getServiceCanonicalUrl(slug);
 
     return {
         title: meta.title,
@@ -180,8 +178,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     const heroImage = imageMap[slug];
     const galleryImages = galleryMap[slug];
     const meta = serviceMetadata[slug] || { title: 'NDIS Support Services', description: 'NDIS disability and support services by Bright Support in Shepparton.' };
-    const livePath = getServiceUrl(slug);
-    const liveUrl = `https://www.brightsupport.com.au${livePath}/`;
+    const liveUrl = getServiceCanonicalUrl(slug);
 
     return (
         <>

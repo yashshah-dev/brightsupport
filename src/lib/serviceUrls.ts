@@ -16,5 +16,13 @@ export const serviceUrlMapping: Record<string, string> = {
 };
 
 export function getServiceUrl(slug: string): string {
-  return serviceUrlMapping[slug] || `/${slug}`;
+  const path = serviceUrlMapping[slug] || `/${slug}`;
+  return path.endsWith('/') ? path : `${path}/`;
+}
+
+const SITE_ORIGIN = 'https://www.brightsupport.com.au';
+
+/** Absolute canonical URL for a service slug (no double trailing slash). */
+export function getServiceCanonicalUrl(slug: string): string {
+  return `${SITE_ORIGIN}${getServiceUrl(slug)}`;
 }
