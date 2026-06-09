@@ -67,6 +67,11 @@ const serviceMetadata: Record<string, { title: string; description: string; keyw
         description: 'Looking for NDIS respite care or Short-Term Accommodation in Shepparton? Bright Support offers comfortable stays with 24/7 care, meals, and social outings. Enquire today!',
         keywords: 'respite care Shepparton, short-term accommodation Shepparton, NDIS STA Shepparton, NDIS respite care, disability respite support, STA provider Shepparton, respite accommodation Shepparton, short term accommodation and assistance, NDIS carer break Shepparton, overnight respite care Shepparton',
     },
+    'specialist-disability-accommodation-sda': {
+        title: 'Specialist Disability Accommodation (SDA) Shepparton | NDIS Housing',
+        description: 'Looking for NDIS Specialist Disability Accommodation (SDA) in Shepparton? Bright Support offers purpose-built disability housing and 24/7 care. Enquire today!',
+        keywords: 'sda shepparton, specialist disability accommodation shepparton, NDIS SDA housing, sda providers victoria, sil sda accommodation shepparton, NDIS accessible housing shepparton',
+    },
 };
 
 // Generate static params for all locale + service combinations
@@ -122,6 +127,7 @@ const imageMap: Record<string, string> = {
     'support-coordination': '/images/services/support-coordination.webp',
     'independent-living-accommodation-support': '/images/services/independent-living.webp',
     'respite-care': '/images/services/respite-care.png',
+    'specialist-disability-accommodation-sda': '/images/services/sda.png',
 };
 
 const galleryMap: Record<string, string[]> = {
@@ -181,6 +187,11 @@ const galleryMap: Record<string, string[]> = {
         '/images/services/respite-care/gallery-1.png',
         '/images/services/respite-care/gallery-2.png',
         '/images/services/respite-care/gallery-3.png',
+    ],
+    'specialist-disability-accommodation-sda': [
+        '/images/services/independent-living/gallery-1.webp',
+        '/images/services/independent-living/gallery-2.webp',
+        '/images/services/independent-living/gallery-3.webp',
     ],
 };
 

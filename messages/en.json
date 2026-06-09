@@ -123,6 +123,10 @@
             "respiteCare": {
                 "title": "Respite Care & Short-Term Accommodation (STA)",
                 "description": "Comfortable short-term stays and respite care in Shepparton. Enjoy 24/7 support, delicious meals, and engaging activities while giving your carers a restful break."
+            },
+            "specialistDisabilityAccommodationSda": {
+                "title": "Specialist Disability Accommodation (SDA)",
+                "description": "Accessible, custom-built NDIS housing in Shepparton designed to support participants with extreme functional impairment or high physical needs."
             }
         }
     },
@@ -320,7 +324,7 @@
     "OurServices": {
         "meta": {
             "title": "NDIS Services Shepparton | Disability Services | Bright Support",
-            "description": "Disability services in Shepparton by Bright Support \u2014 daily living, community nursing, SIL, support coordination, transport, and more. Local NDIS support workers available now."
+            "description": "Disability services in Shepparton by Bright Support — daily living, community nursing, SIL, support coordination, transport, and more. Local NDIS support workers available now."
         },
         "hero": {
             "title": "NDIS Services & Disability Support in Shepparton",
@@ -347,8 +351,8 @@
     "ServiceDetails": {
         "supportCoordination": {
             "title": "Support Coordination Shepparton",
-            "subtitle": "Navigate Your NDIS Plan with Local Expert Support",
-            "description": "Support Coordination is a capacity building support which helps you to understand and use your NDIS plan. A dedicated Support Coordinator will work with you to ensure a mix of supports are used to increase your capacity to maintain relationships, manage service delivery tasks, live more independently and be included in your community.",
+            "subtitle": "Navigate Your NDIS Plan with a Local NDIS Support Coordinator",
+            "description": "Support Coordination is a capacity building support which helps you to understand and use your NDIS plan. A dedicated NDIS Support Coordinator will work with you to ensure a mix of supports are used to increase your capacity to maintain relationships, manage service delivery tasks, live more independently and be included in your community.",
             "images": {
                 "hero": "Professional support coordinator reviewing NDIS plan with a participant and their family at home, open communication, supportive environment, natural lighting",
                 "gallery": [
@@ -389,7 +393,7 @@
                 },
                 "specialist": {
                     "title": "Specialist Support Coordination",
-                    "description": "Higher-level support for participants with complex situations, focusing on addressing barriers and reducing complexity in the support environment."
+                    "description": "Higher-level Level 3 Specialist Support Coordination for complex situations, focusing on addressing barriers and reducing complexity in the support environment."
                 },
                 "capacity": {
                     "title": "Capacity Building",
@@ -414,7 +418,7 @@
         "dailyLiving": {
             "title": "Daily Living & In-Home Support",
             "subtitle": "Empowering Your Independence, One Day at a Time",
-            "description": "Your home is where you feel most comfortable, and that's exactly where we believe you should thrive. Our Daily Living & In-Home Support services are designed around YOU—your routines, your preferences, and your goals. Whether you need a helping hand with morning routines, someone to share a home-cooked meal with, or support mastering new skills for independent living, our friendly team is here to make every day a little easier and a lot more enjoyable.",
+            "description": "Your home is where you feel most comfortable, and that's exactly where we believe you should thrive. Our Daily Living & In-Home Support services and home care services are designed around YOU—your routines, your preferences, and your goals. Guided by personal care workers and trained support workers, we help you with morning routines, cooking home-cooked meals, and building skills to live independently.",
             "images": {
                 "hero": "Friendly support worker helping participant prepare a healthy meal together in modern Australian kitchen, natural sunlight streaming through window, genuine smiles, warm lifestyle photography",
                 "gallery": [
@@ -441,7 +445,7 @@
                 "Medication reminders and health monitoring",
                 "Pet care assistance",
                 "Light gardening and outdoor maintenance",
-                "Skill building for independent living",
+                "Assistance with activities of daily living (ADLs) and independent living",
                 "Attending appointments with support"
             ],
             "features": {
@@ -1015,7 +1019,7 @@
         },
         "cleaning": {
             "title": "NDIS Cleaning Services Shepparton",
-            "subtitle": "House Cleaning You Can Trust \u2014 A Clear Mind at Home",
+            "subtitle": "House Cleaning You Can Trust — A Clear Mind at Home",
             "description": "A tidy home isn't a luxury—it's essential for health, comfort, and peace of mind. Our Professional Cleaning services help you maintain a spotless living space without the stress. Whether it's a weekly surface clean, a deep bathroom scrub, or help organizing your space, our friendly cleaners work to YOUR standards and preferences. Sit back, relax, and enjoy coming home to a fresh, clean space.",
             "images": {
                 "hero": "Professional cleaner vacuuming in bright, organized living room, clean surfaces, professional and friendly service",
@@ -1224,6 +1228,76 @@
                 {
                     "question": "Do I need specific funding in my NDIS plan for respite care?",
                     "answer": "Yes, you need funding for 'Short-Term Accommodation and Assistance' under your Core Supports (specifically, Assistance with Daily Life). If you are unsure whether you have this funding, our team can help you review your plan."
+                }
+            ]
+        },
+        "specialistDisabilityAccommodationSda": {
+            "title": "Specialist Disability Accommodation (SDA) Shepparton",
+            "subtitle": "Accessible, Custom-Built NDIS Housing with Specialized Support",
+            "description": "Specialist Disability Accommodation (SDA) refers to NDIS-funded housing designed for participants who have extreme functional impairment or very high support needs. At Bright Support, we partner with leading housing providers in the Goulburn Valley to offer fully modified, accessible, and robust homes. Combined with our Supported Independent Living (SIL) services, we deliver a complete, secure housing and care solution that enables you to live as independently as possible in your local Shepparton community.",
+            "images": {
+                "hero": "Modern, light-filled living room of an accessible Specialist Disability Accommodation (SDA) house, showing wide doorways, grab rails, and a wheelchair user smiling, warm home atmosphere",
+                "gallery": [
+                    {
+                        "prompt": "Accessible modern kitchen in a Specialist Disability Accommodation (SDA) home, with height-adjustable countertops and wide pathways, clean lifestyle photography",
+                        "caption": "Fully Accessible Kitchen Design"
+                    },
+                    {
+                        "prompt": "Accessible bathroom in an NDIS SDA home with secure grab rails, curbless roll-in shower, and ample space, clean modern design",
+                        "caption": "Safe & Accessible Bathrooms"
+                    },
+                    {
+                        "prompt": "Bright bedroom in an SDA house with assistive technology options, wide doorways, and large windows looking out to a garden",
+                        "caption": "Comfortable, Assistive Bedrooms"
+                    }
+                ]
+            },
+            "services": [
+                "Purpose-built Specialist Disability Accommodation (SDA)",
+                "High Physical Support design features (ceiling hoists, wide doors)",
+                "Fully Accessible houses with roll-in bathrooms and low countertops",
+                "Robust category homes with high-impact materials for participant safety",
+                "Improved Liveability designs with enhanced physical access",
+                "Integrated smart home automation and assistive technology",
+                "24/7 Supported Independent Living (SIL) staff on-site",
+                "Local housing matching in Shepparton and Mooroopna",
+                "Tenancy coordination and NDIS housing application support",
+                "Emergency backup power and communication systems"
+            ],
+            "features": {
+                "accessible": {
+                    "title": "Fully Accessible Living",
+                    "description": "Our homes feature step-free entries, wide corridors, and custom roll-in bathrooms designed for power wheelchair users and high mobility needs."
+                },
+                "assistive": {
+                    "title": "Smart Assistive Technology",
+                    "description": "Integrated smart locks, automated doors, height-adjustable surfaces, and sensory-friendly lighting to promote maximum daily independence."
+                },
+                "robust": {
+                    "title": "Robust & Safe Design",
+                    "description": "Safe, resilient living spaces built to Robust design standards, providing high safety for participants and staff alike."
+                },
+                "silSupport": {
+                    "title": "On-Site SIL Support",
+                    "description": "Seamlessly combine your SDA housing with Bright Support's daily living and personal care support workers, available 24/7."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What is NDIS Specialist Disability Accommodation (SDA)?",
+                    "answer": "SDA is funding in your NDIS plan that covers the cost of the physical home itself (bricks and mortar). It is designed for participants who need specialist housing modifications to live safely and independently."
+                },
+                {
+                    "question": "How do I qualify for SDA funding?",
+                    "answer": "You qualify if you have extreme functional impairment or very high support needs. The NDIA will require detailed housing assessments, usually conducted by an Occupational Therapist, to confirm eligibility."
+                },
+                {
+                    "question": "Is SIL different from SDA?",
+                    "answer": "Yes. SDA is the physical home, while SIL (Supported Independent Living) is the NDIS funding for the support workers who help you with personal care, cooking, and daily tasks inside that home."
+                },
+                {
+                    "question": "What SDA design categories do you offer in Shepparton?",
+                    "answer": "We work with SDA providers to offer homes across all NDIS categories: Improved Liveability, Fully Accessible, Robust, and High Physical Support in Shepparton and Mooroopna."
                 }
             ]
         }

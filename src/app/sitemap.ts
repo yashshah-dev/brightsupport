@@ -26,6 +26,7 @@ const serviceUrlMapping: Record<string, string> = {
   'independent-living-accommodation-support': '/supported-independent-living-sil-shepparton',
   'support-coordination': '/ndis-support-coordination',
   'respite-care': '/ndis-respite-care-short-term-accommodation',
+  'specialist-disability-accommodation-sda': '/specialist-disability-accommodation-sda-shepparton',
 };
 
 const serviceSlugs = Object.keys(serviceUrlMapping);
@@ -71,6 +72,7 @@ const serviceImages: Record<string, string[]> = {
   'independent-living-accommodation-support': ['/images/services/independent-living.webp'],
   'support-coordination': ['/images/services/support-coordination.webp'],
   'respite-care': ['/images/services/respite-care.png'],
+  'specialist-disability-accommodation-sda': ['/images/services/sda.png'],
 };
 
 function generateAlternates(path: string) {

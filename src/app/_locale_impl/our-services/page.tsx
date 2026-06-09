@@ -21,6 +21,13 @@ export default function OurServicesPage() {
             imageSrc: '/images/services/independent-living.webp',
         },
         {
+            icon: Building2,
+            titleKey: 'specialistDisabilityAccommodationSda.title',
+            descriptionKey: 'specialistDisabilityAccommodationSda.subtitle',
+            link: '/specialist-disability-accommodation-sda-shepparton',
+            imageSrc: '/images/services/sda.png',
+        },
+        {
             icon: ClipboardList,
             titleKey: 'supportCoordination.title',
             descriptionKey: 'supportCoordination.subtitle',

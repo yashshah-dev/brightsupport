@@ -41,6 +41,8 @@ export default function Footer() {
     { name: 'Transport Assistance', href: getLocalizedHref('/ndis-transport-service-provider/') },
     { name: 'Companionship', href: getLocalizedHref('/companion-care-services/') },
     { name: 'Respite Care / STA', href: getLocalizedHref('/ndis-respite-care-short-term-accommodation/') },
+    { name: 'Supported Independent Living (SIL)', href: getLocalizedHref('/supported-independent-living-sil-shepparton/') },
+    { name: 'Specialist Disability Accommodation (SDA)', href: getLocalizedHref('/specialist-disability-accommodation-sda-shepparton/') },
   ];
 
   const socialLinks = [
