@@ -40,6 +40,7 @@ export default function Footer() {
     { name: 'Community Participation', href: getLocalizedHref('/community-participation-group-programs/') },
     { name: 'Transport Assistance', href: getLocalizedHref('/ndis-transport-service-provider/') },
     { name: 'Companionship', href: getLocalizedHref('/companion-care-services/') },
+    { name: 'Respite Care / STA', href: getLocalizedHref('/ndis-respite-care-short-term-accommodation/') },
   ];
 
   const socialLinks = [

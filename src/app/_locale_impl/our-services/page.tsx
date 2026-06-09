@@ -5,7 +5,7 @@ import Link from 'next/link';
 import ServiceCard from '@/components/ServiceCard';
 import {
     Home, Building2, Stethoscope, Users, Activity, Dumbbell,
-    Droplets, Brain, Heart, Car, Sparkles, ShieldCheck, ClipboardList
+    Droplets, Brain, Heart, Car, Sparkles, ShieldCheck, ClipboardList, Bed
 } from 'lucide-react';
 
 export default function OurServicesPage() {
@@ -90,6 +90,13 @@ export default function OurServicesPage() {
             link: '/positive-behaviour-support',
             imageSrc: '/images/services/positive-behaviour-support.png',
 
+        },
+        {
+            icon: Bed,
+            titleKey: 'respiteCare.title',
+            descriptionKey: 'respiteCare.subtitle',
+            link: '/ndis-respite-care-short-term-accommodation',
+            imageSrc: '/images/services/respite-care.png',
         },
         // {
         //     icon: Sparkles,

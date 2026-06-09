@@ -62,6 +62,11 @@ const serviceMetadata: Record<string, { title: string; description: string; keyw
         description: 'Get trusted SIL accommodation in Shepparton with Bright Support. We provide 24/7 support, personal care & independent living solutions under NDIS.',
         keywords: 'supported independent living Shepparton, SIL Shepparton, NDIS SIL provider Shepparton, SIL accommodation Shepparton, NDIS supported independent living, disability accommodation Shepparton, NDIS housing support Shepparton, independent living support Shepparton, 24/7 disability support Shepparton, NDIS home and living support, SIL services Australia',
     },
+    'respite-care': {
+        title: 'NDIS Respite Care & Short-Term Accommodation (STA) Shepparton',
+        description: 'Looking for NDIS respite care or Short-Term Accommodation in Shepparton? Bright Support offers comfortable stays with 24/7 care, meals, and social outings. Enquire today!',
+        keywords: 'respite care Shepparton, short-term accommodation Shepparton, NDIS STA Shepparton, NDIS respite care, disability respite support, STA provider Shepparton, respite accommodation Shepparton, short term accommodation and assistance, NDIS carer break Shepparton, overnight respite care Shepparton',
+    },
 };
 
 // Generate static params for all locale + service combinations
@@ -116,6 +121,7 @@ const imageMap: Record<string, string> = {
     'daily-living-in-home-support': '/images/services/daily-living.webp',
     'support-coordination': '/images/services/support-coordination.webp',
     'independent-living-accommodation-support': '/images/services/independent-living.webp',
+    'respite-care': '/images/services/respite-care.png',
 };
 
 const galleryMap: Record<string, string[]> = {
@@ -170,6 +176,11 @@ const galleryMap: Record<string, string[]> = {
         '/images/services/independent-living/gallery-1.webp',
         '/images/services/independent-living/gallery-2.webp',
         '/images/services/independent-living/gallery-3.webp',
+    ],
+    'respite-care': [
+        '/images/services/respite-care/gallery-1.png',
+        '/images/services/respite-care/gallery-2.png',
+        '/images/services/respite-care/gallery-3.png',
     ],
 };
 
