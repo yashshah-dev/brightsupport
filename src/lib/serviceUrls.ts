@@ -13,6 +13,8 @@ export const serviceUrlMapping: Record<string, string> = {
   'professional-cleaning': '/ndis-cleaning-services/',
   'independent-living-accommodation-support': '/supported-independent-living-sil-shepparton/',
   'support-coordination': '/ndis-support-coordination/',
+  'respite-care': '/ndis-respite-care-short-term-accommodation/',
+  'specialist-disability-accommodation-sda': '/specialist-disability-accommodation-sda-shepparton/',
 };
 
 export function getServiceUrl(slug: string): string {

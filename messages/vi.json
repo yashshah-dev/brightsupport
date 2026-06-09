@@ -120,6 +120,10 @@
             "supportCoordination": {
                 "title": "Điều phối hỗ trợ",
                 "description": "Hướng dẫn chuyên môn để giúp bạn hiểu kế hoạch NDIS của mình, kết nối với các nhà cung cấp dịch vụ phù hợp và đạt được mục tiêu cá nhân."
+            },
+            "specialistDisabilityAccommodationSda": {
+                "title": "Specialist Disability Accommodation (SDA)",
+                "description": "Accessible, custom-built NDIS housing in Shepparton designed to support participants with extreme functional impairment or high physical needs."
             }
         }
     },
@@ -1137,6 +1141,76 @@
                     }
                 ]
             }
+        },
+        "specialistDisabilityAccommodationSda": {
+            "title": "Specialist Disability Accommodation (SDA) Shepparton",
+            "subtitle": "Accessible, Custom-Built NDIS Housing with Specialized Support",
+            "description": "Specialist Disability Accommodation (SDA) refers to NDIS-funded housing designed for participants who have extreme functional impairment or very high support needs. At Bright Support, we partner with leading housing providers in the Goulburn Valley to offer fully modified, accessible, and robust homes. Combined with our Supported Independent Living (SIL) services, we deliver a complete, secure housing and care solution that enables you to live as independently as possible in your local Shepparton community.",
+            "images": {
+                "hero": "Modern, light-filled living room of an accessible Specialist Disability Accommodation (SDA) house, showing wide doorways, grab rails, and a wheelchair user smiling, warm home atmosphere",
+                "gallery": [
+                    {
+                        "prompt": "Accessible modern kitchen in a Specialist Disability Accommodation (SDA) home, with height-adjustable countertops and wide pathways, clean lifestyle photography",
+                        "caption": "Fully Accessible Kitchen Design"
+                    },
+                    {
+                        "prompt": "Accessible bathroom in an NDIS SDA home with secure grab rails, curbless roll-in shower, and ample space, clean modern design",
+                        "caption": "Safe & Accessible Bathrooms"
+                    },
+                    {
+                        "prompt": "Bright bedroom in an SDA house with assistive technology options, wide doorways, and large windows looking out to a garden",
+                        "caption": "Comfortable, Assistive Bedrooms"
+                    }
+                ]
+            },
+            "services": [
+                "Purpose-built Specialist Disability Accommodation (SDA)",
+                "High Physical Support design features (ceiling hoists, wide doors)",
+                "Fully Accessible houses with roll-in bathrooms and low countertops",
+                "Robust category homes with high-impact materials for participant safety",
+                "Improved Liveability designs with enhanced physical access",
+                "Integrated smart home automation and assistive technology",
+                "24/7 Supported Independent Living (SIL) staff on-site",
+                "Local housing matching in Shepparton and Mooroopna",
+                "Tenancy coordination and NDIS housing application support",
+                "Emergency backup power and communication systems"
+            ],
+            "features": {
+                "accessible": {
+                    "title": "Fully Accessible Living",
+                    "description": "Our homes feature step-free entries, wide corridors, and custom roll-in bathrooms designed for power wheelchair users and high mobility needs."
+                },
+                "assistive": {
+                    "title": "Smart Assistive Technology",
+                    "description": "Integrated smart locks, automated doors, height-adjustable surfaces, and sensory-friendly lighting to promote maximum daily independence."
+                },
+                "robust": {
+                    "title": "Robust & Safe Design",
+                    "description": "Safe, resilient living spaces built to Robust design standards, providing high safety for participants and staff alike."
+                },
+                "silSupport": {
+                    "title": "On-Site SIL Support",
+                    "description": "Seamlessly combine your SDA housing with Bright Support's daily living and personal care support workers, available 24/7."
+                }
+            },
+            "faq": [
+                {
+                    "question": "What is NDIS Specialist Disability Accommodation (SDA)?",
+                    "answer": "SDA is funding in your NDIS plan that covers the cost of the physical home itself (bricks and mortar). It is designed for participants who need specialist housing modifications to live safely and independently."
+                },
+                {
+                    "question": "How do I qualify for SDA funding?",
+                    "answer": "You qualify if you have extreme functional impairment or very high support needs. The NDIA will require detailed housing assessments, usually conducted by an Occupational Therapist, to confirm eligibility."
+                },
+                {
+                    "question": "Is SIL different from SDA?",
+                    "answer": "Yes. SDA is the physical home, while SIL (Supported Independent Living) is the NDIS funding for the support workers who help you with personal care, cooking, and daily tasks inside that home."
+                },
+                {
+                    "question": "What SDA design categories do you offer in Shepparton?",
+                    "answer": "We work with SDA providers to offer homes across all NDIS categories: Improved Liveability, Fully Accessible, Robust, and High Physical Support in Shepparton and Mooroopna."
+                }
+            ]
         }
     }
 }

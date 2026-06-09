@@ -64,7 +64,6 @@ async function ensureVariants(file) {
   // Check if all variants already exist
   let allVariantsExist = true
   for (const w of widths) {
-    if (meta.width && meta.width < w) continue
     const webpPath = path.join(dir, variantName(file, w, 'webp'))
     const avifPath = path.join(dir, variantName(file, w, 'avif'))
     try {
@@ -83,7 +82,6 @@ async function ensureVariants(file) {
   }
 
   for (const w of widths) {
-    if (meta.width && meta.width < w) continue
     const webpPath = path.join(dir, variantName(file, w, 'webp'))
     const avifPath = path.join(dir, variantName(file, w, 'avif'))
     let needWebp = true

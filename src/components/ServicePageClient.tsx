@@ -21,6 +21,7 @@ const slugToKeyMap: Record<string, string> = {
     'professional-cleaning': 'cleaning',
     'independent-living-accommodation-support': 'independentLiving',
     'support-coordination': 'supportCoordination',
+    'respite-care': 'respiteCare',
 };
 
 interface ServicePageClientProps {

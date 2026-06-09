@@ -41,6 +41,12 @@ const serviceKeys = [
         icon: Home,
     },
     {
+        key: 'specialistDisabilityAccommodationSda',
+        imageSrc: '/images/services/sda.png',
+        href: getServiceUrl('specialist-disability-accommodation-sda'),
+        icon: Home,
+    },
+    {
         key: 'supportCoordination',
         imageSrc: '/images/services/support-coordination.webp',
         href: getServiceUrl('support-coordination'),
