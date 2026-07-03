@@ -1,0 +1,180 @@
+﻿ORGANIZATION SCHEMA
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bright Support",
+  "url": "https://www.brightsupport.com.au/",
+  "logo": "https://www.brightsupport.com.au/images/logo-new.jpg",
+  "sameAs": [
+    "https://www.facebook.com/brightsupportcare",
+    "https://www.instagram.com/bright.support/",
+    "https://www.linkedin.com/company/brightsupport"
+  ]
+}
+
+
+
+
+For Global Site Wide)
+MAIN LOCAL + MEDICAL BUSINESS SCHEMA
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "additionalType": "https://schema.org/MedicalBusiness",
+  "name": "Bright Support",
+  "url": "https://www.brightsupport.com.au/",
+  "logo": "https://www.brightsupport.com.au/images/logo-new.jpg",
+  "image": "https://www.brightsupport.com.au/images/hero/hero-main-1024.avif",
+
+
+  "description": "Bright Support is an NDIS registered disability support provider in Shepparton, Australia offering Supported Independent Living (SIL), Support Coordination, Community Nursing, Physiotherapy and daily living support services.",
+
+
+  "telephone": "+61 1800 407 508",
+  "email": "care@brightsupport.com.au",
+
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "279 Wyndham Street",
+    "addressLocality": "Shepparton",
+    "addressRegion": "VIC",
+    "postalCode": "3630",
+    "addressCountry": "AU"
+  },
+
+
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -36.3833,
+    "longitude": 145.4000
+  },
+
+
+  "hasMap": "https://www.google.com/maps?cid=REPLACE_WITH_YOUR_CID",
+
+
+  "areaServed": {
+    "@type": "Place",
+    "name": "Shepparton, Goulburn Valley, Victoria, Australia"
+  },
+
+
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+
+
+  "priceRange": "$$",
+
+
+  "sameAs": [
+    "https://www.facebook.com/brightsupportcare",
+    "https://www.instagram.com/bright.support/",
+    "https://www.linkedin.com/company/brightsupport"
+  ]
+}
+
+
+
+
+
+
+For Homepage
+SERVICE SCHEMA
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Supported Independent Living (SIL)",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Bright Support"
+  },
+  "areaServed": "Shepparton, Australia",
+  "description": "NDIS Supported Independent Living (SIL) services helping participants live independently with 24/7 support, personal care and daily living assistance."
+}
+
+
+
+
+For service pages
+
+
+Example::::
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "NDIS Support Coordination",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Bright Support"
+  },
+  "areaServed": "Shepparton, Australia",
+  "description": "We help NDIS participants understand and use their plan effectively, connect with providers, and achieve their goals."
+}
+
+
+
+
+FAQ SCHEMA
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Bright Support an NDIS registered provider?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Bright Support is a registered NDIS provider in Australia offering disability support services in Shepparton."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services does Bright Support provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide SIL, Support Coordination, Nursing, Physiotherapy and Community Participation services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Bright Support located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are located at 279 Wyndham Street, Shepparton VIC 3630, Australia."
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+For Homepage or Service page or Blog
+WEBSITE SCHEMA
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.brightsupport.com.au/",
+  "name": "Bright Support",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.brightsupport.com.au/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+
+
+
+
+For SEARCH BOX + ENTITY BOOST

@@ -25,6 +25,49 @@ export const metadata: Metadata = {
   },
 };
 
+import StructuredData from '@/components/StructuredData';
+
+const homepageFaqs = [
+  {
+    name: 'Is Bright Support an NDIS registered provider?',
+    acceptedAnswer: {
+      text: 'Yes, Bright Support is a registered NDIS provider in Australia offering disability support services in Shepparton.',
+    },
+  },
+  {
+    name: 'What services does Bright Support provide?',
+    acceptedAnswer: {
+      text: 'We provide SIL, Support Coordination, Nursing, Physiotherapy and Community Participation services.',
+    },
+  },
+  {
+    name: 'Where is Bright Support located?',
+    acceptedAnswer: {
+      text: 'We are located at 279 Wyndham Street, Shepparton VIC 3630, Australia.',
+    },
+  },
+];
+
 export default function RootPage() {
-  return <HomePage />;
+  return (
+    <>
+      <StructuredData
+        type="Service"
+        data={{
+          serviceType: 'Supported Independent Living (SIL)',
+          areaServed: 'Shepparton, Australia',
+          description:
+            'NDIS Supported Independent Living (SIL) services helping participants live independently with 24/7 support, personal care and daily living assistance.',
+          url: `${BASE_URL}/`,
+        }}
+      />
+      <StructuredData
+        type="FAQPage"
+        data={{
+          questions: homepageFaqs,
+        }}
+      />
+      <HomePage />
+    </>
+  );
 }

@@ -207,9 +207,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <StructuredData
                 type="Service"
                 data={{
-                    name: meta.title,
+                    name: meta.title.split('|')[0].trim(),
                     description: meta.description,
-                    serviceType: meta.title,
+                    serviceType: meta.title.split('|')[0].trim(),
                     url: liveUrl,
                     areaServed: {
                         '@type': 'City',
