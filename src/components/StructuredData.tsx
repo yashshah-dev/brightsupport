@@ -34,10 +34,14 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           name: 'Bright Support',
           alternateName: 'Bright Support Shepparton',
           legalName: 'Bright Support',
-          url: baseUrl,
-          logo: `${baseUrl}/logo.png`,
-          description: 'NDIS Disability & Support Services Provider in Australia',
+          url: `${baseUrl}/`,
+          logo: `${baseUrl}/images/logo-new.jpg`,
+          description: 'Bright Support is an NDIS registered disability support provider in Shepparton, Australia offering Supported Independent Living (SIL), Support Coordination, Community Nursing, Physiotherapy and daily living support services.',
           areaServed: [
+            {
+              '@type': 'Place',
+              name: 'Shepparton, Goulburn Valley, Victoria, Australia',
+            },
             { '@id': `${baseUrl}/#place-shepparton` },
             {
               '@type': 'Place',
@@ -52,10 +56,11 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             'Community nursing and complex care',
             'Support coordination',
             'Disability support in Shepparton',
+            'Physiotherapy services',
           ],
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '279 Wyndham St',
+            streetAddress: '279 Wyndham Street',
             addressLocality: 'Shepparton',
             addressRegion: 'VIC',
             postalCode: '3630',
@@ -63,7 +68,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           },
           contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+61-1800-407-508',
+            telephone: '+61 1800 407 508',
             contactType: 'customer service',
             email: 'care@brightsupport.com.au',
             availableLanguage: ['English', 'Chinese', 'Arabic', 'Vietnamese'],
@@ -71,6 +76,8 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           },
           sameAs: [
             'https://www.facebook.com/brightsupportcare',
+            'https://www.instagram.com/bright.support/',
+            'https://www.linkedin.com/company/brightsupport',
             'https://maps.google.com/?cid=2822930396149587949',
           ],
           aggregateRating: {
@@ -80,13 +87,13 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             bestRating: '5',
             worstRating: '1',
           },
-          mainEntityOfPage: baseUrl,
+          mainEntityOfPage: `${baseUrl}/`,
           hasPOS: {
             '@type': 'Place',
             name: 'Bright Support Shepparton Office',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: '279 Wyndham St',
+              streetAddress: '279 Wyndham Street',
               addressLocality: 'Shepparton',
               addressRegion: 'VIC',
               postalCode: '3630',
@@ -100,16 +107,21 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       case 'LocalBusiness':
         return {
           '@context': 'https://schema.org',
-          '@type': 'LocalBusiness',
+          '@type': ['LocalBusiness', 'MedicalBusiness'],
+          additionalType: 'https://schema.org/MedicalBusiness',
           '@id': `${baseUrl}/#business`,
           branchOf: { '@id': `${baseUrl}/#organization` },
           parentOrganization: { '@id': `${baseUrl}/#organization` },
           name: 'Bright Support',
-          image: `${baseUrl}/logo.png`,
-          description: 'Trusted NDIS support services provider offering disability care, aged care, and community support services',
+          url: `${baseUrl}/`,
+          logo: `${baseUrl}/images/logo-new.jpg`,
+          image: `${baseUrl}/images/hero/hero-main-1024.avif`,
+          description: 'Bright Support is an NDIS registered disability support provider in Shepparton, Australia offering Supported Independent Living (SIL), Support Coordination, Community Nursing, Physiotherapy and daily living support services.',
+          telephone: '+61 1800 407 508',
+          email: 'care@brightsupport.com.au',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '279 Wyndham St',
+            streetAddress: '279 Wyndham Street',
             addressLocality: 'Shepparton',
             addressRegion: 'VIC',
             postalCode: '3630',
@@ -117,41 +129,38 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           },
           geo: {
             '@type': 'GeoCoordinates',
-            latitude: -36.38,
-            longitude: 145.395,
+            latitude: -36.3833,
+            longitude: 145.4000,
           },
-          telephone: '+61-1800-407-508',
-          email: 'care@brightsupport.com.au',
+          hasMap: 'https://www.google.com/maps?cid=2822930396149587949',
+          areaServed: {
+            '@type': 'Place',
+            name: 'Shepparton, Goulburn Valley, Victoria, Australia',
+          },
           openingHoursSpecification: [
             {
               '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+              dayOfWeek: [
+                'Monday',
+                'Tuesday',
+                'Wednesday',
+                'Thursday',
+                'Friday',
+                'Saturday',
+                'Sunday',
+              ],
               opens: '08:00',
               closes: '18:00',
-            },
-            {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Sunday'],
-              opens: '08:00',
-              closes: '12:00',
             },
           ],
           priceRange: '$$',
           paymentAccepted: 'NDIS',
           currenciesAccepted: 'AUD',
           taxID: '32659000978',
-          url: baseUrl,
-          hasMap: 'https://maps.google.com/?cid=2822930396149587949',
-          areaServed: [
-            { '@id': `${baseUrl}/#place-shepparton` },
-            {
-              '@type': 'Place',
-              name: 'Mooroopna',
-              containedInPlace: { '@id': `${baseUrl}/#place-shepparton` },
-            },
-          ],
           sameAs: [
             'https://www.facebook.com/brightsupportcare',
+            'https://www.instagram.com/bright.support/',
+            'https://www.linkedin.com/company/brightsupport',
             'https://maps.google.com/?cid=2822930396149587949',
           ],
           containedInPlace: { '@id': `${baseUrl}/#place-shepparton` },
@@ -161,48 +170,63 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       case 'Service':
         {
           const serviceUrl = typeof data?.url === 'string' ? data.url : `${baseUrl}/`;
-        return {
-          '@context': 'https://schema.org',
-          '@type': 'Service',
-          '@id': `${serviceUrl}#service`,
-          serviceType: data?.serviceType || 'NDIS Support Services',
-          provider: {
-            '@id': `${baseUrl}/#organization`,
-          },
-          areaServed: {
-            '@id': `${baseUrl}/#place-shepparton`,
-          },
-          availableChannel: {
-            '@type': 'ServiceChannel',
-            serviceUrl,
-            availableLanguage: ['English', 'Chinese', 'Arabic', 'Vietnamese'],
-          },
-          ...data,
-        };
-      }
+          return {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            '@id': `${serviceUrl}#service`,
+            serviceType: data?.serviceType || 'Supported Independent Living (SIL)',
+            provider: {
+              '@type': 'LocalBusiness',
+              '@id': `${baseUrl}/#organization`,
+              name: 'Bright Support',
+            },
+            areaServed: data?.areaServed || 'Shepparton, Australia',
+            description:
+              data?.description ||
+              'NDIS Supported Independent Living (SIL) services helping participants live independently with 24/7 support, personal care and daily living assistance.',
+            availableChannel: {
+              '@type': 'ServiceChannel',
+              serviceUrl,
+              availableLanguage: ['English', 'Chinese', 'Arabic', 'Vietnamese'],
+            },
+            ...data,
+          };
+        }
 
       case 'FAQPage':
-        return {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: data?.questions || [],
-        };
+        {
+          const rawQuestions = (data?.questions as Array<Record<string, unknown>>) || [];
+          const formattedQuestions = rawQuestions.map((q) => {
+            if (q['@type'] === 'Question') return q;
+            return {
+              '@type': 'Question',
+              name: q.name || q.question || '',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: (q.acceptedAnswer as Record<string, string>)?.text || q.answer || '',
+              },
+            };
+          });
+
+          return {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: data?.mainEntity || formattedQuestions,
+          };
+        }
 
       case 'WebSite':
         return {
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           '@id': `${baseUrl}/#website`,
-          url: baseUrl,
+          url: `${baseUrl}/`,
           name: 'Bright Support',
-          description: 'NDIS Disability & Support Services Provider in Shepparton, Victoria',
+          description: 'Bright Support is an NDIS registered disability support provider in Shepparton, Victoria',
           publisher: { '@id': `${baseUrl}/#organization` },
           potentialAction: {
             '@type': 'SearchAction',
-            target: {
-              '@type': 'EntryPoint',
-              urlTemplate: `${baseUrl}/?s={search_term_string}`,
-            },
+            target: 'https://www.brightsupport.com.au/?s={search_term_string}',
             'query-input': 'required name=search_term_string',
           },
           inLanguage: 'en-AU',
