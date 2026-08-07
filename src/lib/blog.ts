@@ -42,6 +42,10 @@ export interface BlogPost {
     complianceScore: number;
     personFirstLanguage: boolean;
   };
+  faqItems?: {
+    question: string;
+    answer: string;
+  }[];
 }
 
 // Load blog posts from JSON file (automatically updated by n8n workflow)

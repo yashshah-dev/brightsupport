@@ -3,13 +3,16 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-interface FAQItem {
+export interface FAQItem {
   question: string;
   answer: string;
 }
 
-interface FAQProps {
+export interface FAQProps {
   items?: FAQItem[];
+  title?: string;
+  subtitle?: string;
+  className?: string;
 }
 
 const defaultFAQs: FAQItem[] = [
@@ -27,17 +30,26 @@ const defaultFAQs: FAQItem[] = [
   },
 ];
 
-export default function FAQ({ items = defaultFAQs }: FAQProps) {
+export default function FAQ({ 
+  items = defaultFAQs,
+  title = 'Frequently Asked Questions',
+  subtitle = 'Everything you need to know about our services',
+  className = 'py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30'
+}: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/30">
+    <section className={className}>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-center text-slate-600 mb-12">Everything you need to know about our services</p>
+          {title && (
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              {title}
+            </h2>
+          )}
+          {subtitle && (
+            <p className="text-center text-slate-600 mb-12">{subtitle}</p>
+          )}
           <div className="space-y-4">
             {items.map((item, index) => (
               <div

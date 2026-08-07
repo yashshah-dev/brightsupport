@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getBlogPost, getRelatedPosts, getBlogPosts } from '@/lib/blog';
 import { getServiceUrl } from '@/lib/serviceUrls';
+import FAQ from '@/components/FAQ';
+import StructuredData from '@/components/StructuredData';
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -70,6 +72,47 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
+function formatPostContent(content: string): string {
+  if (!content) return '';
+  let html = content;
+
+  // Convert raw markdown H3 (###) to styled H3 HTML elements if present
+  html = html.replace(/^###\s+(.+)$/gm, '<h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">$1</h3>');
+  // Convert raw markdown H2 (##) to styled H2 HTML elements if present
+  html = html.replace(/^##\s+(.+)$/gm, '<h2 class="text-3xl font-bold text-gray-900 mt-10 mb-5">$1</h2>');
+
+  // Format FAQ sections if written in markdown / bullet list format
+  html = html.replace(
+    /\*\s+<strong[^>]*>Q:\s*([\s\S]*?)<\/strong>\s*(?:<br\s*\/?>)?\s*A:\s*([\s\S]*?)(?=(?:\s*\*\s+<strong|\s*<h[1-6]|\s*<div|\s*$))/g,
+    (_, question, answer) => {
+      return `
+<div class="bg-indigo-50/60 border border-indigo-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow my-4">
+  <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-start gap-2">
+    <span class="text-indigo-600 font-bold">Q:</span> ${question.trim()}
+  </h4>
+  <p class="text-gray-700 leading-relaxed pl-6">
+    <strong>A:</strong> ${answer.trim()}
+  </p>
+</div>`;
+    }
+  );
+
+  // Convert remaining raw markdown bullets * Item to <ul class="..."><li>...</li></ul>
+  html = html.replace(/(?:^\*\s+.*(?:\r?\n|$))+/gm, (match) => {
+    const items = match
+      .trim()
+      .split(/\r?\n/)
+      .map((line) => {
+        const cleaned = line.replace(/^\*\s+/, '').trim();
+        return `<li class="mb-2">${cleaned}</li>`;
+      })
+      .join('');
+    return `<ul class="list-disc pl-6 space-y-2 mb-6 text-gray-700">${items}</ul>`;
+  });
+
+  return html;
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = getBlogPost(slug);
@@ -79,9 +122,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = getRelatedPosts(post, 3);
+  const faqItems = post.faqItems || [];
 
   return (
     <main className="min-h-screen bg-white">
+      {faqItems.length > 0 && (
+        <StructuredData type="FAQPage" data={{ questions: faqItems }} />
+      )}
       {/* Breadcrumbs */}
       <nav className="bg-gray-50 border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-4xl py-4">
@@ -166,8 +213,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Article Content */}
         <div 
           className="prose prose-lg prose-indigo max-w-none mb-12 prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-ul:my-6 prose-li:my-2 prose-strong:text-gray-900 prose-a:text-indigo-600 prose-a:no-underline hover:prose-a:underline"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: formatPostContent(post.content) }}
         />
+
+        {/* FAQ Section (Home page matching theme & interactive accordion) */}
+        {faqItems.length > 0 && (
+          <div className="mb-12">
+            <FAQ 
+              items={faqItems} 
+              title="Frequently Asked Questions (FAQs)"
+              subtitle="Here are answers to common questions about NDIS plans and support in Shepparton:"
+              className="rounded-2xl bg-gradient-to-br from-slate-50 to-indigo-50/30 p-6 md:p-10 border border-slate-100 shadow-sm"
+            />
+          </div>
+        )}
 
         {/* Tags & Metadata */}
         <div className="border-t border-gray-200 pt-8 mb-12">
