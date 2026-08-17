@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 const BASE_URL = 'https://www.brightsupport.com.au';
 
 function toCanonicalUrl(path: string) {
-  if (!path || path === '/') return BASE_URL;
+  if (!path || path === '/') return `${BASE_URL}/`;
   const normalized = path.startsWith('/') ? path : `/${path}`;
   return `${BASE_URL}${normalized.endsWith('/') ? normalized : `${normalized}/`}`;
 }
@@ -50,6 +50,7 @@ const mainPages = [
   '',          // homepage
   '/about-us',
   '/our-services',
+  '/our-location',
   '/blog',     // Added blog listing page
   '/contact-us',
   '/registered-ndis-provider-shepparton',
