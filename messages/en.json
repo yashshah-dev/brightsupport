@@ -352,7 +352,7 @@
         "supportCoordination": {
             "title": "Support Coordination Shepparton",
             "subtitle": "Navigate Your NDIS Plan with a Local NDIS Support Coordinator",
-            "description": "Support Coordination is a capacity building support which helps you to understand and use your NDIS plan. A dedicated NDIS Support Coordinator will work with you to ensure a mix of supports are used to increase your capacity to maintain relationships, manage service delivery tasks, live more independently and be included in your community.",
+            "description": "Support Coordination is a capacity building support which helps you to <a href=\"/blog/understanding-your-ndis-plan-complete-guide-shepparton-participants/\">understand and use your NDIS plan</a>. A dedicated NDIS Support Coordinator will work with you to ensure a <a href=\"/blog/complete-guide-ndis-services-shepparton-2025/\">mix of supports</a> are used to increase your capacity to maintain relationships, manage service delivery tasks, live more independently and be included in your community.",
             "images": {
                 "hero": "Professional support coordinator reviewing NDIS plan with a participant and their family at home, open communication, supportive environment, natural lighting",
                 "gallery": [
@@ -373,10 +373,10 @@
             "services": [
                 "Understand and use your NDIS plan",
                 "Make the most of your funded supports",
-                "Access community and mainstream services",
+                "<a href=\"/community-participation-group-programs/\">Access community and mainstream services</a>",
                 "Build your ability to exercise choice and control",
                 "Coordinate multiple supports and services",
-                "Assist you in times of crisis or complex situations",
+                "Assist you in times of crisis or <a href=\"/community-nursing-complex-care/\">complex situations</a>",
                 "Prepare for your NDIS plan review",
                 "Negotiate services and prices with providers",
                 "Resolve issues or conflicts with your support providers",
@@ -418,7 +418,7 @@
         "dailyLiving": {
             "title": "Daily Living & In-Home Support",
             "subtitle": "Empowering Your Independence, One Day at a Time",
-            "description": "Your home is where you feel most comfortable, and that's exactly where we believe you should thrive. Our Daily Living & In-Home Support services and home care services are designed around YOU—your routines, your preferences, and your goals. Guided by personal care workers and trained support workers, we help you with morning routines, cooking home-cooked meals, and building skills to live independently.",
+            "description": "Your home is where you feel most comfortable, and that's exactly where we believe you should thrive. Our Daily Living & In-Home Support services and home care services are designed around YOU—your routines, your preferences, and your goals. Guided by <a href=\"/community-nursing-complex-care/\">personal care workers</a> and <a href=\"/positive-behaviour-support/\">trained support workers</a>, we help you with morning routines, cooking home-cooked meals, and <a href=\"/blog/what-is-ndis-daily-living-support-everything-you-need-know/\">building skills to live independently</a>.",
             "images": {
                 "hero": "Friendly support worker helping participant prepare a healthy meal together in modern Australian kitchen, natural sunlight streaming through window, genuine smiles, warm lifestyle photography",
                 "gallery": [
@@ -437,16 +437,16 @@
                 ]
             },
             "services": [
-                "Personal hygiene support (showering, dressing, grooming)",
+                "<a href=\"/community-nursing-complex-care/\">Personal hygiene support</a> (showering, dressing, grooming)",
                 "Light housekeeping and home organization",
                 "Laundry, ironing, and linen changes",
                 "Meal planning, preparation, and cooking together",
                 "Grocery shopping and running errands",
-                "Medication reminders and health monitoring",
+                "Medication reminders and <a href=\"/community-nursing-complex-care/\">health monitoring</a>",
                 "Pet care assistance",
                 "Light gardening and outdoor maintenance",
-                "Assistance with activities of daily living (ADLs) and independent living",
-                "Attending appointments with support"
+                "Assistance with activities of daily living (ADLs) and <a href=\"/supported-independent-living-sil-shepparton/\">independent living</a>",
+                "<a href=\"/community-participation-group-programs/\">Attending appointments with support</a>"
             ],
             "features": {
                 "support247": {
@@ -459,7 +459,7 @@
                 },
                 "personCentered": {
                     "title": "Your Life, Your Way",
-                    "description": "We don't just complete tasks—we work alongside you, respecting your choices and helping you achieve your goals."
+                    "description": "We don't just complete tasks—we work alongside you, respecting your choices and helping you <a href=\"/ndis-support-coordination/\">achieve your goals</a>."
                 },
                 "flexible": {
                     "title": "Flexible & Reliable",
@@ -488,7 +488,7 @@
         "communityNursing": {
             "title": "Community Nursing Care Shepparton",
             "subtitle": "Hospital-Quality Nursing Care in the Comfort of Your Home",
-            "description": "Managing complex health needs doesn't mean you have to stay in a hospital. Our Community Nursing team brings expert clinical care directly to your doorstep. Led by experienced Registered Nurses, we provide specialized medical support, health assessments, and complex care management tailored to your specific condition—all while you relax in your own home, surrounded by the people and things you love.",
+            "description": "Managing <a href=\"/daily-living-in-home-support/\">complex health needs</a> doesn't mean you have to stay in a hospital. Our Community Nursing team brings expert clinical care directly to your doorstep. Led by experienced Registered Nurses, we provide <a href=\"/physiotherapy-services/\">specialized medical support</a>, health assessments, and complex care management tailored to your specific condition—all while you relax in your own home, surrounded by the people and things you love.",
             "images": {
                 "hero": "Professional registered nurse in uniform checking blood pressure of seated participant in comfortable living room, medical equipment visible, calm reassuring atmosphere, soft natural lighting",
                 "gallery": [
@@ -507,8 +507,8 @@
                 ]
             },
             "services": [
-                "Complex wound management and dressing changes",
-                "Medication administration and management",
+                "<a href=\"/blog/ndis-community-nursing-complex-care-need-know/\">Complex wound management and dressing changes</a>",
+                "<a href=\"/daily-living-in-home-support/\">Medication administration and management</a>",
                 "PEG feeding and enteral nutrition support",
                 "Urinary catheter care (SPC/IDC)",
                 "Tracheostomy care and airway management",
@@ -528,7 +528,7 @@
                     "description": "Consistent clinical support available weekends and public holidays—your health doesn't take days off."
                 },
                 "coordinated": {
-                    "title": "Integrated Healthcare",
+                    "title": "<a href=\"/ndis-support-coordination/\">Integrated Healthcare</a>",
                     "description": "We coordinate closely with your GP, specialists, and hospitals to ensure seamless, holistic care."
                 },
                 "training": {
@@ -554,7 +554,7 @@
         "physiotherapy": {
             "title": "Physiotherapy Services",
             "subtitle": "Restoring Movement, Enhancing Life",
-            "description": "Movement is freedom. Our Physiotherapy services are dedicated to helping you maximize your physical potential, reduce pain, and improve your daily function. Whether you live with a neurological condition, are recovering from surgery, or want to improve your balance and strength, our experienced Physiotherapists design personalized programs around what YOU want to achieve—making therapy meaningful and motivating.",
+            "description": "Movement is freedom. Our Physiotherapy services are dedicated to helping you maximize your physical potential, reduce pain, and <a href=\"/daily-living-in-home-support/\">improve your daily function</a>. Through <a href=\"/blog/physiotherapy-under-ndis-services-costs-how-access/\">physiotherapy under the NDIS</a>, whether you live with a neurological condition, are recovering from surgery, or want to improve your balance and strength, our experienced Physiotherapists design personalized programs around what YOU want to achieve—making therapy meaningful and motivating.",
             "images": {
                 "hero": "Professional physiotherapist guiding participant through mobility exercises in bright therapy room, resistance bands, genuine encouragement, healthcare photography",
                 "gallery": [
@@ -578,7 +578,7 @@
                 "Balance training and falls prevention",
                 "Chronic pain management strategies",
                 "Post-surgical rehabilitation",
-                "Neurological rehabilitation (Stroke, MS, Parkinson's)",
+                "<a href=\"/community-nursing-complex-care/\">Neurological rehabilitation</a> (Stroke, MS, Parkinson's)",
                 "Respiratory physiotherapy and chest care",
                 "Mobility aid and equipment prescription",
                 "Home exercise program design",
@@ -598,7 +598,7 @@
                     "description": "We build your program around what YOU want to achieve—walking to the shops, playing with grandkids, returning to work."
                 },
                 "equipment": {
-                    "title": "Assistive Technology",
+                    "title": "<a href=\"/specialist-disability-accommodation-sda-shepparton/\">Assistive Technology</a>",
                     "description": "Expert advice on wheelchairs, walkers, and mobility equipment with trials and NDIS report writing."
                 }
             },
@@ -620,7 +620,7 @@
         "communityParticipation": {
             "title": "NDIS Community Participation Shepparton",
             "subtitle": "Connect, Belong, and Thrive in Your Local Community",
-            "description": "Life is better shared! Our Community Participation programs are all about building genuine connections, discovering new passions, and being an active, valued member of your community. Whether you want to join a cooking class, try your hand at art, attend local events, or simply catch up for coffee with new friends, we make it happen. Our supported group activities are designed to be safe, inclusive, and—most importantly—fun!",
+            "description": "Life is better shared! Our Community Participation programs are all about building genuine connections, trying new activities, and actively engaging with the vibrant Shepparton community. Experience a <a href=\"/blog/day-in-life-ndis-support-shepparton-community/\">day in the life of NDIS community support</a>: whether it's joining a local art class, attending community events, volunteering, or simply catching up with friends at a local cafe, our support workers are by your side to help you participate with confidence.",
             "images": {
                 "hero": "Diverse group of people laughing and enjoying outdoor picnic in sunny Australian park, genuine friendship, vibrant colors, lifestyle photography",
                 "gallery": [
@@ -639,11 +639,11 @@
                 ]
             },
             "services": [
-                "Supported social outings (cafes, movies, museums)",
+                "<a href=\"/companion-care-services/\">Supported social outings</a>",
                 "Group skill-building workshops (cooking, art, music)",
                 "Recreational and leisure activities",
                 "Community volunteering opportunities",
-                "Local festivals and event attendance",
+                "<a href=\"/blog/day-in-life-ndis-support-shepparton-community/\">Local festivals and event attendance</a>",
                 "Sports and fitness groups",
                 "Travel training for public transport",
                 "Educational courses and classes",
@@ -652,11 +652,11 @@
             ],
             "features": {
                 "variety": {
-                    "title": "Something for Everyone",
+                    "title": "<a href=\"/blog/complete-guide-ndis-services-shepparton-2025/\">Something for Everyone</a>",
                     "description": "A diverse calendar of activities catering to different ages, interests, and abilities."
                 },
                 "inclusive": {
-                    "title": "Fully Inclusive",
+                    "title": "<a href=\"/blog/how-choose-right-ndis-provider-10-point-checklist/\">Fully Inclusive</a>",
                     "description": "We ensure all venues and activities are accessible and welcoming for everyone."
                 },
                 "skills": {
@@ -842,10 +842,10 @@
             },
             "services": [
                 "Individual hydrotherapy programs",
-                "Post-surgical aquatic rehabilitation",
+                "<a href=\"/physiotherapy-services/\">Post-surgical aquatic rehabilitation</a>",
                 "Pain management and muscle relaxation",
                 "Arthritis and joint mobility support",
-                "Neurological condition management in water",
+                "<a href=\"/community-nursing-complex-care/\">Neurological condition management in water</a>",
                 "Balance and coordination exercises",
                 "Deep water running and walking",
                 "Group aquatic fitness classes",
@@ -858,11 +858,11 @@
                     "description": "Sessions in heated pools (32-34°C) to relax muscles and ease joint pain."
                 },
                 "qualified": {
-                    "title": "Expert Guidance",
+                    "title": "<a href=\"/blog/ndis-community-nursing-complex-care-need-know/\">Expert Guidance</a>",
                     "description": "Sessions led by Physiotherapists or Exercise Physiologists for safety and results."
                 },
                 "individual": {
-                    "title": "Custom Programs",
+                    "title": "<a href=\"/personal-training-sessions/\">Custom Programs</a>",
                     "description": "Exercises tailored specifically to your condition and physical abilities."
                 },
                 "progress": {
@@ -888,7 +888,7 @@
         "personalTraining": {
             "title": "Personal Training Sessions",
             "subtitle": "Fitness for Everybody and Every Body",
-            "description": "Fitness is a journey, and we're here to walk (or run!) it with you. Our Personal Training services are inclusive, adaptive, and designed to help you feel your best. Whether you want to build muscle, improve your cardiovascular health, or simply have fun moving your body, our qualified trainers create safe programs adapted to YOUR abilities. We believe exercise promotes not just physical strength, but mental resilience and confidence too.",
+            "description": "Fitness is a journey, and we're here to walk (or run!) it with you. Our Personal Training services are <a href=\"/blog/ndis-community-nursing-complex-care-need-know/\">inclusive, adaptive, and designed to help you feel your best</a>. Whether you want to build muscle, improve your cardiovascular health, or simply have fun moving your body, our qualified trainers create safe programs adapted to YOUR abilities. We believe exercise promotes not just physical strength, but mental resilience and confidence too.",
             "images": {
                 "hero": "Energetic personal trainer high-fiving participant after completing exercise set, gym equipment, achievement and celebration, dynamic lighting",
                 "gallery": [
@@ -907,24 +907,24 @@
                 ]
             },
             "services": [
-                "One-on-one adaptive personal training",
+                "<a href=\"/ndis-hydrotherapy-services/\">One-on-one adaptive personal training</a>",
                 "Functional strength and conditioning",
                 "Cardiovascular fitness improvement",
                 "Weight management support",
                 "Mobility and flexibility training",
                 "Balance and coordination exercises",
                 "Inclusive group fitness classes",
-                "Home-based workout programs",
+                "<a href=\"/blog/physiotherapy-under-ndis-services-costs-how-access/\">Home-based workout programs</a>",
                 "Nutritional guidance and advice",
                 "Gym orientation and confidence building"
             ],
             "features": {
                 "qualified": {
-                    "title": "Adaptive Experts",
+                    "title": "<a href=\"/our-services/\">Adaptive Experts</a>",
                     "description": "Trainers qualified in disability fitness who know how to adapt exercises safely."
                 },
                 "personalized": {
-                    "title": "Tailored to You",
+                    "title": "<a href=\"/blog/ndis-success-stories-our-participants-achieved-goals/\">Tailored to You</a>",
                     "description": "No cookie-cutter programs. Every workout is designed around your specific goals and capacity."
                 },
                 "location": {
@@ -954,7 +954,7 @@
         "behaviourSupport": {
             "title": "Positive Behaviour Support",
             "subtitle": "Understanding, Not Judging",
-            "description": "Behind every behaviour is a need trying to be communicated. Our Positive Behaviour Support (PBS) service works to understand the 'why' behind behaviours of concern and develops evidence-based strategies to improve quality of life—for the participant AND their support network. We take a compassionate, person-centered approach, focusing on skill-building, environmental modifications, and reducing the need for restrictive practices.",
+            "description": "Behind every behaviour is a need trying to be communicated. Our <a href=\"/blog/positive-behaviour-support-pbs-under-ndis-explained/\">Positive Behaviour Support (PBS) service</a> works to understand the 'why' behind behaviours of concern and develops evidence-based strategies to improve quality of life—for the participant AND their support network. We take a compassionate, person-centered approach, focusing on <a href=\"/ndis-support-coordination/\">skill-building</a>, environmental modifications, and reducing the need for restrictive practices.",
             "images": {
                 "hero": "Behaviour support practitioner in calm, supportive discussion with participant and family member, comfortable office setting, understanding and collaboration",
                 "gallery": [
@@ -974,7 +974,7 @@
             },
             "services": [
                 "Comprehensive functional behaviour assessments",
-                "Individualized behaviour support plan development",
+                "<a href=\"/blog/positive-behaviour-support-pbs-under-ndis-explained/\">Individualized behaviour support plan development</a>",
                 "Crisis prevention and de-escalation strategies",
                 "Environmental and sensory modifications",
                 "Support worker and carer training",
@@ -986,7 +986,7 @@
             ],
             "features": {
                 "qualified": {
-                    "title": "Registered PBS Practitioners",
+                    "title": "<a href=\"/registered-ndis-provider-shepparton/\">Registered PBS Practitioners</a>",
                     "description": "NDIS-registered practitioners with specialized qualifications in complex behaviour."
                 },
                 "evidenceBased": {
@@ -994,7 +994,7 @@
                     "description": "Strategies grounded in Applied Behaviour Analysis (ABA) and contemporary PBS research."
                 },
                 "personCentered": {
-                    "title": "Dignity & Respect",
+                    "title": "<a href=\"/about-us/\">Dignity & Respect</a>",
                     "description": "We see the person first, working with them to improve their quality of life."
                 },
                 "collaborative": {
@@ -1086,7 +1086,7 @@
         "independentLiving": {
             "title": "NDIS Accommodation & SIL in Shepparton",
             "subtitle": "Tailored Disability Accommodation & Independent Living Support",
-            "description": "Looking for Supported Independent Living in Shepparton or the Goulburn Valley? Bright Support offers compassionate, individualised SIL and disability accommodation tailored to your NDIS goals. Our homes are located in quiet, accessible pockets of Shepparton and Mooroopna, ensuring participants are close to local amenities, public transport, and the Goulburn Valley Health precinct. Whether you need 24-hour assistance, overnight support, or a few hours each day to build life skills and household independence, we are here to help you thrive in a home of your choosing. Make an NDIS Referral for SIL in Shepparton today by contacting our friendly team.",
+            "description": "Looking for Supported Independent Living in Shepparton or the Goulburn Valley? Bright Support offers compassionate, individualised SIL and disability accommodation tailored to your NDIS goals. Our homes are located in quiet, accessible pockets of Shepparton and Mooroopna, ensuring participants are close to local amenities, public transport, and the Goulburn Valley Health precinct. Whether you need 24-hour assistance, overnight support, or a few hours each day to <a href=\"/daily-living-in-home-support/\">build life skills and household independence</a>, we are here to help you thrive in a home of your choosing. Make an NDIS Referral for SIL in Shepparton today by <a href=\"/contact-us/\">contacting our friendly team</a>.",
             "images": {
                 "hero": "Modern, accessible kitchen in a Shepparton SIL home managed by Bright Support, participant cooking independently, bright and welcoming space",
                 "gallery": [
@@ -1112,9 +1112,9 @@
                 "Housemate matching and compatibility assessment",
                 "Transition support from family home or other accommodation",
                 "Emergency response and crisis support",
-                "Community access and social participation in Goulburn Valley",
+                "<a href=\"/community-participation-group-programs/\">Community access and social participation</a> in Goulburn Valley",
                 "Health and wellbeing monitoring",
-                "Coordination with housing providers and NDIS planners"
+                "Coordination with housing providers and <a href=\"/ndis-support-coordination/\">NDIS planners</a>"
             ],
             "features": {
                 "personCentered": {
@@ -1123,7 +1123,7 @@
                 },
                 "skillBuilding": {
                     "title": "Current SIL Vacancies in the Goulburn Valley",
-                    "description": "We maintain SIL homes across Shepparton and the wider Goulburn Valley. Contact us to enquire about current and upcoming vacancies in your preferred area."
+                    "description": "We maintain SIL homes across Shepparton and the wider Goulburn Valley. <a href=\"/contact-us/\">Contact us</a> to enquire about current and upcoming vacancies in your preferred area."
                 },
                 "flexible": {
                     "title": "Why Choose Bright Support for SIL?",
@@ -1164,7 +1164,7 @@
         "respiteCare": {
             "title": "Respite Care & Short-Term Accommodation (STA)",
             "subtitle": "Comfortable Stays, Restful Breaks, and Tailored NDIS Support",
-            "description": "Short-Term Accommodation (STA), including respite care, is funding for support and accommodation for a short time away from your usual home. It provides an opportunity for you to try new things, meet new people, and build skills in a supportive, comfortable environment. At the same time, it gives your primary carers a well-deserved, peaceful break, knowing you are receiving professional, compassionate care.",
+            "description": "Short-Term Accommodation (STA), including respite care, is funding for <a href=\"/our-services/\">support and accommodation</a> for a short time away from your usual home. It provides an opportunity for you to try new things, meet new people, and build skills in a supportive, comfortable environment. At the same time, it gives your primary carers a well-deserved, peaceful break, knowing you are receiving <a href=\"/community-nursing-complex-care/\">professional, compassionate care</a>.",
             "images": {
                 "hero": "Modern, light-filled living room of a respite house with comfortable seating, a participant smiling, and a support worker offering a cup of tea, warm home-like atmosphere",
                 "gallery": [
@@ -1184,14 +1184,14 @@
             },
             "services": [
                 "24/7 personal care and support from trained staff",
-                "Comfortable, modern, and fully accessible accommodation",
+                "<a href=\"/supported-independent-living-sil-shepparton/\">Comfortable, modern, and fully accessible accommodation</a>",
                 "All nutritious meals, snacks, and drinks prepared on-site",
                 "Fun and engaging community excursions and outings",
                 "Recreational activities, games, arts, and crafts",
-                "Assistance with daily living activities and personal routines",
+                "<a href=\"/daily-living-in-home-support/\">Assistance with daily living activities</a> and personal routines",
                 "Social interaction and opportunities to build new friendships",
                 "Support with medication management and administration",
-                "Skill-building and independence development programs",
+                "<a href=\"/community-participation-group-programs/\">Skill-building and independence development programs</a>",
                 "A supportive, safe, and welcoming home away from home"
             ],
             "features": {
@@ -1208,7 +1208,7 @@
                     "description": "Our short-term accommodation options are designed for comfort, safety, and full accessibility to suit all mobility needs."
                 },
                 "skills": {
-                    "title": "Skill-Building Opportunities",
+                    "title": "<a href=\"/community-participation-group-programs/\">Skill-Building Opportunities</a>",
                     "description": "We focus on capacity building, helping you learn new skills like cooking, socialising, or daily tasks to foster independence."
                 }
             },
@@ -1234,7 +1234,7 @@
         "specialistDisabilityAccommodationSda": {
             "title": "Specialist Disability Accommodation (SDA) Shepparton",
             "subtitle": "Accessible, Custom-Built NDIS Housing with Specialized Support",
-            "description": "Specialist Disability Accommodation (SDA) refers to NDIS-funded housing designed for participants who have extreme functional impairment or very high support needs. At Bright Support, we partner with leading housing providers in the Goulburn Valley to offer fully modified, accessible, and robust homes. Combined with our Supported Independent Living (SIL) services, we deliver a complete, secure housing and care solution that enables you to live as independently as possible in your local Shepparton community.",
+            "description": "Specialist Disability Accommodation (SDA) refers to NDIS-funded housing designed for participants who have extreme functional impairment or very high support needs. At Bright Support, we partner with leading housing providers in the Goulburn Valley to offer fully modified, accessible, and robust homes. Combined with our <a href=\"/supported-independent-living-sil-shepparton/\">Supported Independent Living (SIL) services</a>, we deliver a complete, secure housing and care solution that enables you to live as independently as possible in your local Shepparton community.",
             "images": {
                 "hero": "Modern, light-filled living room of an accessible Specialist Disability Accommodation (SDA) house, showing wide doorways, grab rails, and a wheelchair user smiling, warm home atmosphere",
                 "gallery": [
@@ -1261,7 +1261,7 @@
                 "Integrated smart home automation and assistive technology",
                 "24/7 Supported Independent Living (SIL) staff on-site",
                 "Local housing matching in Shepparton and Mooroopna",
-                "Tenancy coordination and NDIS housing application support",
+                "Tenancy coordination and <a href=\"/ndis-support-coordination/\">NDIS housing application support</a>",
                 "Emergency backup power and communication systems"
             ],
             "features": {
@@ -1279,7 +1279,7 @@
                 },
                 "silSupport": {
                     "title": "On-Site SIL Support",
-                    "description": "Seamlessly combine your SDA housing with Bright Support's daily living and personal care support workers, available 24/7."
+                    "description": "Seamlessly combine your SDA housing with Bright Support's <a href=\"/daily-living-in-home-support/\">daily living and personal care support workers</a>, available 24/7."
                 }
             },
             "faq": [
