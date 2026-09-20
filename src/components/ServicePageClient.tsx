@@ -22,7 +22,39 @@ const slugToKeyMap: Record<string, string> = {
     'independent-living-accommodation-support': 'independentLiving',
     'support-coordination': 'supportCoordination',
     'respite-care': 'respiteCare',
+    'specialist-disability-accommodation-sda': 'specialistDisabilityAccommodationSda',
 };
+
+function renderLinkedText(text: string, isLightOnDark = false) {
+    if (!text || !text.includes('<a ')) return text;
+
+    const linkClass = isLightOnDark
+        ? 'text-sky-300 underline hover:text-white transition-colors decoration-sky-400/60 hover:decoration-white font-medium'
+        : 'text-sky-700 underline hover:text-navy-900 transition-colors decoration-sky-500/50 hover:decoration-navy-900 font-medium';
+
+    const regex = /<a\s+href="([^"]+)"(?:\s+[^>]*)?>([\s\S]*?)<\/a>/g;
+    const elements: (string | React.ReactNode)[] = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            elements.push(text.substring(lastIndex, match.index));
+        }
+        const href = match[1];
+        const anchorText = match[2];
+        elements.push(
+            <Link key={`${href}-${match.index}`} href={href} className={linkClass}>
+                {anchorText}
+            </Link>
+        );
+        lastIndex = regex.lastIndex;
+    }
+    if (lastIndex < text.length) {
+        elements.push(text.substring(lastIndex));
+    }
+    return elements;
+}
 
 interface ServicePageClientProps {
     slug: string;
@@ -102,7 +134,7 @@ export default function ServicePageClient({ slug, heroImage, galleryImages }: Se
                         <div className="max-w-xl">
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">{t('title')}</h1>
                             <p className="text-xl text-sky-200 mb-4 font-medium">{t('subtitle')}</p>
-                            <p className="text-lg text-gray-300 leading-relaxed">{t('description')}</p>
+                            <p className="text-lg text-gray-300 leading-relaxed">{renderLinkedText(t('description'), true)}</p>
                         </div>
                         <div className="relative block">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 aspect-[4/3]">
@@ -201,7 +233,7 @@ export default function ServicePageClient({ slug, heroImage, galleryImages }: Se
                                 {services.map((service, index) => (
                                     <div key={index} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
                                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                                        <span className="text-gray-700">{service}</span>
+                                        <span className="text-gray-700">{renderLinkedText(service)}</span>
                                     </div>
                                 ))}
                             </div>
@@ -219,8 +251,8 @@ export default function ServicePageClient({ slug, heroImage, galleryImages }: Se
                             <div className="grid md:grid-cols-2 gap-6">
                                 {features.slice(0, 4).map((feature, index) => (
                                     <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                                        <h3 className="text-lg font-bold text-navy-900 mb-2">{feature.title}</h3>
-                                        <p className="text-gray-600">{feature.description}</p>
+                                        <h3 className="text-lg font-bold text-navy-900 mb-2">{renderLinkedText(feature.title)}</h3>
+                                        <p className="text-gray-600">{renderLinkedText(feature.description)}</p>
                                     </div>
                                 ))}
                             </div>
